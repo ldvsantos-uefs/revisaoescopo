@@ -1,0 +1,162 @@
+RELATÓRIO DE FILTRAGEM - ML PARA INDICAÇÕES GEOGRÁFICAS
+==========================================================================================
+
+Total analisado: 123
+Relevantes: 123 (100.0%)
+Irrelevantes: 0 (0.0%)
+
+Excelência: 120
+Alta: 1
+Adequada: 2
+Baixa: 0
+
+
+1. Furia20118450 - Score: 66.5
+   Título:  Multielement fingerprinting as a tool in origin authentication of pgi food products: Tropea red onion J. Agric. Food Chem.
+   Ano:  2011
+   Termos: 🔴 PRIORITÁRIO (keywords): geographical indication, 🔴 PRIORITÁRIO (keywords): geographical indications, 🔴 PRIORITÁRIO (keywords): protected geographical indication, 🔴 PRIORITÁRIO (título): pgi, 🔴 PRIORITÁRIO (título): authentication, 🔴 PRIORITÁRIO (título): origin authentication, 🔴 PRIORITÁRIO (keywords): quality control, 🟠 ALTA: neural network, 🟠 ALTA: neural networks, 🟠 ALTA: classification
+
+2. Gazeli2020 - Score: 63.0
+   Título:  Laser-based classification of olive oils assisted by machine learning Food Chem.
+   Ano:  2020
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO (keywords): protected designation of origin, 🔴 PRIORITÁRIO: protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO: pdo, 🔴 PRIORITÁRIO: authentication, 🔴 PRIORITÁRIO (keywords): quality control, 🟠 ALTA: machine learning, 🟠 ALTA: support vector machine
+
+3. Ramos2025 - Score: 62.0
+   Título:  Pattern recognition in instrumental data analysis of fruit spirits: current status and future perspectives Trends Food Sci. Technol.
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO: traceability, 🔴 PRIORITÁRIO (keywords): authentication, 🔴 PRIORITÁRIO (keywords): quality control, 🔴 PRIORITÁRIO: terroir, 🟠 ALTA: machine learning, 🟠 ALTA: svm, 🟠 ALTA: classification, 🟠 ALTA: pattern recognition
+
+4. Kabir2021 - Score: 57.0
+   Título:  Geographic origin discrimination of millet using vis-nir spectroscopy combined with machine learning techniques Foods
+   Ano:  2021
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: protected designation of origin, 🔴 PRIORITÁRIO: protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO: pdo, 🔴 PRIORITÁRIO: authentication, 🟠 ALTA: machine learning, 🟠 ALTA: random forest, 🟠 ALTA: support vector machine, 🟠 ALTA: svm
+
+5. Santomá-Martí20251825 - Score: 55.5
+   Título:  Meat Authentication Based on Animal Species and Other Quality Meat Attributes (Protected Geographical Indication, Organic Production, and Halal and K
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO (título): protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: decision tree, 🟠 ALTA: classification, 🟠 ALTA: chemometrics, 🟠 ALTA: fingerprinting
+
+6. Tan2022 - Score: 52.5
+   Título:  Rapid authentication of Chinese oolong teas using atmospheric solids analysis probe-mass spectrometry (ASAP-MS) combined with supervised pattern reco
+   Ano:  2022
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO: traceability, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: knn, 🟠 ALTA: classification, 🟠 ALTA: pattern recognition, 🟠 ALTA: chemometrics, 🟠 ALTA: fingerprinting
+
+7. Li2025 - Score: 51.0
+   Título:  Promoting LC-QToF based non-targeted fingerprinting and biomarker selection with machine learning for the discrimination of black tea geographical or
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO: traceability, 🔴 PRIORITÁRIO (keywords): authentication, 🔴 PRIORITÁRIO (keywords): origin authentication, 🟠 ALTA: machine learning, 🟠 ALTA: classification, 🟠 ALTA: chemometrics, 🟠 ALTA: metabolomics, 🟠 ALTA: fingerprinting
+
+8. Herrero-Latorre20133559 - Score: 49.5
+   Título:  A fast chemometric procedure based on NIR data for authentication of honey with protected geographical indication Food Chem.
+   Ano:  2013
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: neural network, 🟠 ALTA: neural networks, 🟠 ALTA: knn, 🟠 ALTA: classification, 🟠 ALTA: pattern recognition, 🟠 ALTA: chemometrics
+
+9. Resce2022 - Score: 47.0
+   Título:  Predicting agri-food quality across space: A Machine Learning model for the acknowledgment of Geographical Indications Food Policy
+   Ano:  2022
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): geographical indications, 🔴 PRIORITÁRIO: protected designation of origin, 🔴 PRIORITÁRIO: protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO: pdo, 🟠 ALTA: machine learning, 🟠 ALTA: random forest
+
+10. Decker20232559 - Score: 45.5
+   Título:  1H NMR spectroscopy combined with multivariate data analysis for authentication of “Swabian–Hall Quality Pork” with protected geographical indication
+   Ano:  2023
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO (título): authentication, 🔴 PRIORITÁRIO (keywords): quality control, 🟠 ALTA: classification
+
+11. Małyjurek2021 - Score: 44.5
+   Título:  Authentication of honeybush and rooibos herbal teas based on their elemental composition Food Control
+   Ano:  2021
+   Termos: 🔴 PRIORITÁRIO (keywords): geographical indication, 🔴 PRIORITÁRIO (keywords): geographical indications, 🔴 PRIORITÁRIO (título): authentication, 🔴 PRIORITÁRIO: quality control, 🔴 PRIORITÁRIO: origin verification, 🟠 ALTA: machine learning, 🟠 ALTA: classification
+
+12. Ji2023 - Score: 42.0
+   Título:  Protected Geographical Indication Discrimination of Zhejiang and Non-Zhejiang Ophiopogonis japonicus by Near-Infrared (NIR) Spectroscopy Combined wit
+   Ano:  2023
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): protected geographical indication, 🔴 PRIORITÁRIO: traceability, 🟠 ALTA: support vector machine, 🟠 ALTA: svm, 🟠 ALTA: classification, 🟠 ALTA: pattern recognition, 🟠 ALTA: chemometrics
+
+13. Shuai2022 - Score: 41.0
+   Título:  Geographical origin of American ginseng (Panax quinquefolius L.) based on chemical composition combined with chemometric J. Chromatogr. A
+   Ano:  2022
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO (keywords): protected designation of origin, 🔴 PRIORITÁRIO: pdo, 🟠 ALTA: random forest, 🟠 ALTA: decision tree, 🟠 ALTA: chemometrics, 🟠 ALTA: metabolomics
+
+14. Camin201254 - Score: 41.0
+   Título:  H, C, N and S stable isotopes and mineral profiles to objectively guarantee the authenticity of grated hard cheeses Anal. Chim. Acta
+   Ano:  2012
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO: pdo, 🔴 PRIORITÁRIO (keywords): traceability, 🟠 ALTA: random forest, 🟠 ALTA: decision tree, 🟠 ALTA: classification
+
+15. Oganesyants2024 - Score: 40.0
+   Título:  A Study of the Elemental Profiles of Wines from the North-Eastern Coast of the Black Sea Separations
+   Ano:  2024
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: protected designation of origin, 🔴 PRIORITÁRIO: protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO: pdo, 🔴 PRIORITÁRIO (keywords): authentication, 🟠 ALTA: random forest, 🟠 ALTA: supervised learning
+
+16. Li2025 - Score: 38.5
+   Título:  Multivariate discrimination of Chinese vinegars using multi-element: Implications for origin traceability and dietary safety J. Food Compos. Anal.
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO (título): traceability, 🔴 PRIORITÁRIO: authentication, 🔴 PRIORITÁRIO: quality control, 🟠 ALTA: machine learning, 🟠 ALTA: classification
+
+17. Meena20241005 - Score: 38.0
+   Título:  Geographical Origin Identification of Red Chili Powder Using NIR Spectroscopy Combined with SIMCA and Machine Learning Algorithms Food Anal. Methods.
+   Ano:  2024
+   Termos: 🔴 PRIORITÁRIO (keywords): geographical indication, 🟠 ALTA: machine learning, 🟠 ALTA: random forest, 🟠 ALTA: support vector machine, 🟠 ALTA: svm, 🟠 ALTA: decision tree, 🟠 ALTA: k-nearest neighbor, 🟠 ALTA: knn, 🟠 ALTA: classification
+
+18. Yang2024 - Score: 37.5
+   Título:  The authentication of Yanchi tan lamb based on lipidomic combined with particle swarm optimization-back propagation neural network Food Chem. X
+   Ano:  2024
+   Termos: 🔴 PRIORITÁRIO (keywords): geographical indication, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: machine learning, 🟠 ALTA: neural network, 🟠 ALTA: neural networks, 🟠 ALTA: classification, 🟠 ALTA: chemometrics
+
+19. Zheng2023 - Score: 37.5
+   Título:  Data fusion of FT-NIR and ATR-FTIR spectra for accurate authentication of geographical indications for Gastrodia elata Blume Food BioSci.
+   Ano:  2023
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): geographical indications, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: neural network, 🟠 ALTA: svm, 🟠 ALTA: chemometrics
+
+20. Sayago2025 - Score: 37.0
+   Título:  Multi-Elemental Analysis for Geographical Tracing of Chickpeas Produced in Nearby Locations Around a Protected Geographical Indication Plant Cell Env
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): protected geographical indication, 🔴 PRIORITÁRIO: traceability, 🔴 PRIORITÁRIO: authentication, 🟠 ALTA: machine learning, 🟠 ALTA: classification, 🟠 ALTA: predictive model, 🟠 ALTA: chemometrics
+
+21. Alonso-Salces2025 - Score: 36.5
+   Título:  Stepwise strategy based on untargeted metabolomic 1H NMR fingerprinting and pattern recognition for the geographical authentication of virgin olive o
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: random forest, 🟠 ALTA: decision tree, 🟠 ALTA: classification, 🟠 ALTA: pattern recognition, 🟠 ALTA: chemometrics, 🟠 ALTA: fingerprinting
+
+22. Liu2025 - Score: 36.5
+   Título:  Metabolomics for origin traceability of lamb: An ensemble learning approach based on random forest recursive feature elimination Food Chem. X
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO (título): traceability, 🟠 ALTA: machine learning, 🟠 ALTA: random forest, 🟠 ALTA: support vector machine, 🟠 ALTA: naive bayes, 🟠 ALTA: classification, 🟠 ALTA: metabolomics
+
+23. Fu2023 - Score: 36.5
+   Título:  Discrimination of geographical indication of Chinese green teas using an electronic nose combined with quantum neural networks: A portable strategy S
+   Ano:  2023
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🟠 ALTA: neural network, 🟠 ALTA: neural networks, 🟠 ALTA: support vector machine, 🟠 ALTA: svm, 🟠 ALTA: k-nearest neighbor, 🟠 ALTA: classification, 🟠 ALTA: pattern recognition
+
+24. Ríos-Reina201942 - Score: 36.5
+   Título:  Application of hierarchical classification models and reliability estimation by bootstrapping, for authentication and discrimination of wine vinegars
+   Ano:  2019
+   Termos: 🔴 PRIORITÁRIO: denomination of origin, 🔴 PRIORITÁRIO (keywords): protected designation of origin, 🔴 PRIORITÁRIO: pdo, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: classification, 🟠 ALTA: chemometrics
+
+25. Fdez-Vidal2024 - Score: 36.0
+   Título:  Neural networks allow the automatic verification of the type of flour, analysing the starch granule morphology, to ensure the protected geographical 
+   Ano:  2024
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): protected geographical indication, 🔴 PRIORITÁRIO: pgi, 🔴 PRIORITÁRIO: quality control, 🟠 ALTA: deep learning, 🟠 ALTA: neural network, 🟠 ALTA: neural networks
+
+26. Yang2024 - Score: 35.0
+   Título:  Geographical origin authentication of agricultural products in the China–EU Geographical Indications Agreement: A comprehensive review of Chinese pro
+   Ano:  2024
+   Termos: 🔴 PRIORITÁRIO (título): geographical indication, 🔴 PRIORITÁRIO (título): geographical indications, 🔴 PRIORITÁRIO (título): authentication, 🔴 PRIORITÁRIO (título): origin authentication, 🟠 ALTA: deep learning
+
+27. Cajka2010282 - Score: 34.5
+   Título:  Traceability of olive oil based on volatiles pattern and multivariate analysis Food Chem.
+   Ano:  2010
+   Termos: 🔴 PRIORITÁRIO: denomination of origin, 🔴 PRIORITÁRIO: pdo, 🔴 PRIORITÁRIO (título): traceability, 🟠 ALTA: neural network, 🟠 ALTA: neural networks, 🟠 ALTA: classification
+
+28. Jiang2025 - Score: 34.0
+   Título:  Benchtop Vis-NIR spectroscopy meets machine learning for multi-task analysis in Hongmeiren citrus: Geographical origin identification and antioxidant
+   Ano:  2025
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO (keywords): quality control, 🟠 ALTA: machine learning, 🟠 ALTA: neural network, 🟠 ALTA: neural networks, 🟠 ALTA: decision tree, 🟠 ALTA: classification
+
+29. Li2024 - Score: 34.0
+   Título:  Fingerprinting black tea: When spectroscopy meets machine learning a novel workflow for geographical origin identification Food Chem.
+   Ano:  2024
+   Termos: 🔴 PRIORITÁRIO (keywords): geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🟠 ALTA: machine learning, 🟠 ALTA: support vector machine, 🟠 ALTA: fingerprinting
+
+30. Zhang2020 - Score: 33.5
+   Título:  Categorization and authentication of Beijing-you chicken from four breeds of chickens using near-infrared hyperspectral imaging combined with chemome
+   Ano:  2020
+   Termos: 🔴 PRIORITÁRIO: geographical indication, 🔴 PRIORITÁRIO: geographical indications, 🔴 PRIORITÁRIO (título): authentication, 🟠 ALTA: support vector machine, 🟠 ALTA: k-nearest neighbor, 🟠 ALTA: classification, 🟠 ALTA: chemometrics

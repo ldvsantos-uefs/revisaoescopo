@@ -1,0 +1,122 @@
+================================================================================
+RELATÓRIO DE VERIFICAÇÃO - REVISÃO DE ESCOPO
+Tema: Machine Learning aplicado a Indicações Geográficas
+================================================================================
+
+📊 COBERTURA DE CITAÇÕES
+--------------------------------------------------------------------------------
+Manuscrito analisado: ../../1-MANUSCRITO/revisao_escopo.md
+Corpus bibliográfico: ../scopus_export_Nov 4-2025_d3228730-6773-48d3-8a0c-1aa5ad56f628.bib
+
+Total de citações no manuscrito: 26
+Citações encontradas no corpus: 26 (100.0%)
+Citações faltantes: 0 (0.0%)
+
+✅ CITAÇÕES PRESENTES (26):
+  • [2016] Almeida2016
+    Geographical Indication Re-signifying Artisanal Production o...
+  • [2011] Azevedo2011
+    55º Congresso Brasileiro de Cerâmica...
+  • [1996] Brasil1996
+    Lei nº 9.279, de 14 de maio de 1996. Regula direitos e obrig...
+  • [2018] Bureau2018
+    Artesanato faz parte da identidade sociocultural do Baixo Sã...
+  • [2015] DuranGuerrero2015
+    Evaluation of volatile aldehydes as discriminating parameter...
+  • [2020] FFFUE2020
+    Política de qualidade dos produtos agrícolas da UE...
+  • [2015] Fonzo2015
+    Designing geographical indication institutions when stakehol...
+  • [2020] GoncalvesMaduro2020
+    Soil water and fuel permeability of a Cambisol in southern B...
+  • [2025] Jiang2025
+    Food Chem....
+  • [2015] Kegel2015
+    O Instituto Jurídico da Indicação Geográfica na promoção do ...
+  • [2025] Li2025
+    Food Chem....
+  • [2025] Li2025vinegar
+    Multivariate discrimination of Chinese vinegars using multi-...
+  • [2008] Locatelli2008
+    Indicações Geográficas: A Proteção Jurídica sob a Perspectiv...
+  • [2002] Loureiro2002
+    Assessing Consumer Response to Protected Geographical Identi...
+  • [2020] MAPA2020
+    O que é Indicação Geográfica (IG)?...
+  • [2013] Niederle2013
+    Governança e institucionalização das indicações geográficas ...
+  • [2025] Peng2025
+    Food Chem. X...
+  • [2025] Ramos2025
+    Trends Food Sci. Technol....
+  • [2025] Santoma2025
+    Meat Authentication Based on Animal Species and Other Qualit...
+  • [2018] Santos2018
+    Sistema brasileiro de classificação de solos...
+  • [2019] SantosJC2019
+    Contribuições para indicação geográfica (IG): considerações ...
+  • [2007] Suh2007
+    The impact of geographical indication on the revitalisation ...
+  • [2009] Vandecandelaere2009
+    Linking people, places and products: A guide for promoting q...
+  • [2010] VazquezFontes2010
+    Microbiological Quality of Artisan-Made Mexican Botanero Che...
+  • [2018] WIPO2018
+    Patent cooperation treaty yearly review - 2018...
+  • [2025] Wang2025
+    Food Chem. X...
+
+
+📚 ESTATÍSTICAS DO CORPUS BIBLIOGRÁFICO
+--------------------------------------------------------------------------------
+Total de referências no corpus: 140
+Referências citadas no manuscrito: 26
+Referências NÃO citadas: 114
+
+📅 DISTRIBUIÇÃO TEMPORAL DAS REFERÊNCIAS
+--------------------------------------------------------------------------------
+1996:  (1)
+2002:  (1)
+2007:  (1)
+2008:  (1)
+2009:  (1)
+2010: █ (3)
+2011: █ (2)
+2012: █ (2)
+2013: ████ (8)
+2014: █ (2)
+2015: ███ (7)
+2016: █ (2)
+2017:  (1)
+2018: ██ (4)
+2019: █ (2)
+2020: █████ (10)
+2021: ███████ (14)
+2022: ██████ (13)
+2023: ███████████ (23)
+2024: █████████ (18)
+2025: ████████████ (24)
+
+
+👥 TOP 10 AUTORES MAIS PRESENTES NO CORPUS
+--------------------------------------------------------------------------------
+ 1. Wang                                     (5 refs)
+ 2. Li                                       (4 refs)
+ 3. Hu                                       (3 refs)
+ 4. Santos                                   (2 refs)
+ 5. V                                        (2 refs)
+ 6. Santomá-Martí                            (2 refs)
+ 7. Peng                                     (2 refs)
+ 8. Gong                                     (2 refs)
+ 9. Yang                                     (2 refs)
+10. Yu                                       (2 refs)
+
+
+💡 RECOMENDAÇÕES
+--------------------------------------------------------------------------------
+✅ EXCELENTE: Todas as citações estão no corpus!
+
+📈 Taxa de uso do corpus: 18.6%
+   → Considerar revisão do corpus (muitas refs não utilizadas)
+
+================================================================================

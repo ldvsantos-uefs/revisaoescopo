@@ -1,0 +1,52 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'primaryColor': '#FFF3E0', 'primaryBorderColor': '#E65100', 'lineColor': '#424242', 'tertiaryColor': '#FFE0B2'}, 'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'curve': 'basis'}}}%%
+
+flowchart TB
+    
+    START["<b>📚 REVISÃO SISTEMÁTICA - PARTE 1</b><br/>Protocolo PRISMA 2020<br/>ML + Conhecimentos Tradicionais"]
+    
+    START --> RS1["<b>FASE 1: ESTRATÉGIA DE BUSCA</b><br/>Definição do Protocolo"]
+    
+    RS1 --> RS1A["<b>Bases de Dados</b><br/>• Scopus, Web of Science<br/>• IEEE, ACM, PubMed<br/><b>Período:</b> 2014-2024"]
+    
+    RS1 --> RS1B["<b>String Booleana</b><br/><b>ML:</b> machine learning, AI<br/><b>AND CT:</b> traditional knowledge<br/><b>AND Agro:</b> agroecology"]
+    
+    RS1 --> RS1C["<b>Critérios</b><br/><b>Inclusão:</b> Peer-reviewed<br/>Idiomas: EN/PT/ES<br/><b>Exclusão:</b> Médico/urbano"]
+    
+    RS1A --> RS2["<b>FASE 2: FILTRAGEM AUTOMATIZADA</b><br/>Pontuação Ponderada"]
+    RS1B --> RS2
+    RS1C --> RS2
+    
+    RS2 --> RS2A["<b>Algoritmo</b><br/>Python + NLTK + spaCy<br/>Pesos: +5 CT, +3 ML<br/>Penalidades: -5 médico"]
+    
+    RS2 --> RS2B["<b>Multiplicadores</b><br/>Título ×1.5, Abstract ×1.0<br/>Limiar: Score ≥5.0<br/>605/1412 refs (42.8%)"]
+    
+    RS2 --> RS2C["<b>Estratificação</b><br/>Excelência (9-10): 7.8%<br/>Alta (7-8): 22.1%<br/>κ=0.89"]
+    
+    RS2A --> RS3["<b>FASE 3: AVALIAÇÃO QUALITATIVA</b><br/>Escala MMAT Adaptada"]
+    RS2B --> RS3
+    RS2C --> RS3
+    
+    RS3 --> RS3A["<b>Critérios MMAT</b><br/><b>Etnografia:</b> Imersão ≥6 meses<br/><b>ML:</b> Validação k-fold<br/>Reprodutibilidade"]
+    
+    RS3 --> RS3B["<b>Revisão Manual</b><br/>605 textos completos<br/>3 revisores independentes<br/>187 alta qualidade (30.9%)"]
+    
+    RS3A --> OUTPUT1["<b>✅ CORPUS REFINADO</b><br/>187 estudos validados"]
+    RS3B --> OUTPUT1
+    
+    %% ESTILOS
+    style START fill:#E65100,stroke:#BF360C,stroke-width:4px,color:#fff
+    
+    style RS1 fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff
+    style RS2 fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff
+    style RS3 fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff
+    
+    style RS1A fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS1B fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS1C fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS2A fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS2B fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS2C fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS3A fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style RS3B fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    
+    style OUTPUT1 fill:#2E7D32,stroke:#1B5E20,stroke-width:3px,color:#fff
