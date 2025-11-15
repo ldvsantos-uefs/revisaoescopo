@@ -1,52 +1,74 @@
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'primaryColor': '#FFF3E0', 'primaryBorderColor': '#E65100', 'lineColor': '#424242', 'tertiaryColor': '#FFE0B2'}, 'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'curve': 'basis'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'primaryColor': '#1B5E20', 'primaryBorderColor': '#0D3817', 'lineColor': '#424242', 'tertiaryColor': '#C8E6C9'}, 'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'curve': 'basis'}}}%%
 
-flowchart TB
+flowchart TD
     
-    START["<b>📚 REVISÃO SISTEMÁTICA - PARTE 1</b><br/>Protocolo PRISMA 2020<br/>ML + Conhecimentos Tradicionais"]
+    START["<b>REVISÃO DE ESCOPO PRISMA-ScR</b><br/>Aplicações de Machine Learning em Indicações Geográficas<br/>2010-2025"]
     
-    START --> RS1["<b>FASE 1: ESTRATÉGIA DE BUSCA</b><br/>Definição do Protocolo"]
+    START --> SEARCH["<b>FASE 1: ESTRATÉGIA DE BUSCA</b><br/>Definição de Critérios PCC"]
     
-    RS1 --> RS1A["<b>Bases de Dados</b><br/>• Scopus, Web of Science<br/>• IEEE, ACM, PubMed<br/><b>Período:</b> 2014-2024"]
+    SEARCH --> SEARCH_A["<b>Bases de Dados</b><br/>• Scopus • Web of Science<br/>• IEEE Xplore • ACM • PubMed<br/><b>Período:</b> 2010-2025"]
     
-    RS1 --> RS1B["<b>String Booleana</b><br/><b>ML:</b> machine learning, AI<br/><b>AND CT:</b> traditional knowledge<br/><b>AND Agro:</b> agroecology"]
+    SEARCH --> SEARCH_B["<b>String Booleana</b><br/><b>ML:</b> machine learning, AI, deep learning<br/><b>AND IG:</b> geographical indications, PDO<br/><b>AND:</b> authentication, traceability"]
     
-    RS1 --> RS1C["<b>Critérios</b><br/><b>Inclusão:</b> Peer-reviewed<br/>Idiomas: EN/PT/ES<br/><b>Exclusão:</b> Médico/urbano"]
+    SEARCH --> SEARCH_C["<b>Critérios</b><br/><b>Inclusão:</b> Peer-reviewed, EN/PT/ES<br/>Aplicações práticas de ML<br/><b>Exclusão:</b> Médico, urbano, financeiro"]
     
-    RS1A --> RS2["<b>FASE 2: FILTRAGEM AUTOMATIZADA</b><br/>Pontuação Ponderada"]
-    RS1B --> RS2
-    RS1C --> RS2
+    SEARCH_A --> FILTER["<b>FASE 2: FILTRAGEM AUTOMATIZADA</b><br/>Sistema de Pontuação Ponderada"]
+    SEARCH_B --> FILTER
+    SEARCH_C --> FILTER
     
-    RS2 --> RS2A["<b>Algoritmo</b><br/>Python + NLTK + spaCy<br/>Pesos: +5 CT, +3 ML<br/>Penalidades: -5 médico"]
+    FILTER --> FILTER_A["<b>Algoritmo Python 3.9</b><br/>NLTK + spaCy<br/><b>Termos Prioritários:</b> +5 pts<br/><b>Termos Contexto:</b> +1 pt<br/><b>Penalidades:</b> -2 a -5 pts"]
     
-    RS2 --> RS2B["<b>Multiplicadores</b><br/>Título ×1.5, Abstract ×1.0<br/>Limiar: Score ≥5.0<br/>605/1412 refs (42.8%)"]
+    FILTER --> FILTER_B["<b>Multiplicadores Semânticos</b><br/>Título ×1.5 | Abstract ×1.0<br/>Palavras-chave ×1.2<br/><b>Limiar mínimo:</b> Score ≥ valor calibrado"]
     
-    RS2 --> RS2C["<b>Estratificação</b><br/>Excelência (9-10): 7.8%<br/>Alta (7-8): 22.1%<br/>κ=0.89"]
+    FILTER --> FILTER_C["<b>Resultados Filtragem</b><br/><b>Precisão temática:</b> 94.2%<br/><b>Taxa de retenção:</b> 42.8%<br/><b>123 estudos identificados</b>"]
     
-    RS2A --> RS3["<b>FASE 3: AVALIAÇÃO QUALITATIVA</b><br/>Escala MMAT Adaptada"]
-    RS2B --> RS3
-    RS2C --> RS3
+    FILTER_A --> QUALITY["<b>FASE 3: ANÁLISE DE QUALIDADE</b><br/>Avaliação Manual Multidisciplinar"]
+    FILTER_B --> QUALITY
+    FILTER_C --> QUALITY
     
-    RS3 --> RS3A["<b>Critérios MMAT</b><br/><b>Etnografia:</b> Imersão ≥6 meses<br/><b>ML:</b> Validação k-fold<br/>Reprodutibilidade"]
+    QUALITY --> QUALITY_A["<b>Escala MMAT Adaptada</b><br/><b>Indicadores:</b> 8 critérios<br/>Rigor metodológico • Validação técnica<br/>Ética • Reprodutibilidade • Integração"]
     
-    RS3 --> RS3B["<b>Revisão Manual</b><br/>605 textos completos<br/>3 revisores independentes<br/>187 alta qualidade (30.9%)"]
+    QUALITY --> QUALITY_B["<b>Revisão por 3 Juízes</b><br/>Escala Likert 0-3 pontos<br/><b>ICC = 0.87 (IC 95%: 0.84-0.91)</b><br/>Concordância interavaliadores: excelente"]
     
-    RS3A --> OUTPUT1["<b>✅ CORPUS REFINADO</b><br/>187 estudos validados"]
-    RS3B --> OUTPUT1
+    QUALITY --> QUALITY_C["<b>Seleção Final</b><br/>123 estudos processados<br/>Critérios de qualidade rigorosos<br/>Base para análises posteriores"]
+    
+    QUALITY_A --> BIBLIO["<b>FASE 4: ANÁLISE BIBLIOMÉTRICA</b><br/>Síntese Qualitativa & Redes"]
+    QUALITY_B --> BIBLIO
+    QUALITY_C --> BIBLIO
+    
+    BIBLIO --> BIBLIO_A["<b>Análise Bibliométrica</b><br/>Lei de Lotka • Cocitação<br/>VOSviewer • Redes de colaboração<br/>Clusters temáticos"]
+    
+    BIBLIO --> BIBLIO_B["<b>Síntese Qualitativa</b><br/>Princípio de Pareto (80/20)<br/>Ponderação: 40% qualidade<br/>35% relevância • 25% impacto"]
+    
+    BIBLIO --> BIBLIO_C["<b>Análise Documental</b><br/>Marcos regulatórios<br/>Frameworks de certificação<br/>Diretrizes aplicáveis"]
+    
+    BIBLIO_A --> OUTPUT["<b>SÍNTESE FINAL</b><br/>Mapeamento completo de aplicações ML-IG<br/>145+ referências bibliográficas<br/>Diretrizes para implementação prática"]
+    BIBLIO_B --> OUTPUT
+    BIBLIO_C --> OUTPUT
+    
+    OUTPUT --> RESULT["<b>RESULTADOS INTEGRADOS</b><br/>Técnicas empregadas • Desempenho<br/>Produtos abrangidos • Direções futuras<br/>Impacto para sistemas de certificação"]
     
     %% ESTILOS
-    style START fill:#E65100,stroke:#BF360C,stroke-width:4px,color:#fff
+    style START fill:#0D3817,stroke:#051A0F,stroke-width:4px,color:#fff,font-weight:bold
     
-    style RS1 fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff
-    style RS2 fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff
-    style RS3 fill:#FF6F00,stroke:#E65100,stroke-width:3px,color:#fff
+    style SEARCH fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
+    style FILTER fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
+    style QUALITY fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
+    style BIBLIO fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
     
-    style RS1A fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS1B fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS1C fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS2A fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS2B fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS2C fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS3A fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
-    style RS3B fill:#FFE0B2,stroke:#F57C00,stroke-width:1px,color:#000
+    style SEARCH_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style SEARCH_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style SEARCH_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style FILTER_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style FILTER_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style FILTER_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style QUALITY_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style QUALITY_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style QUALITY_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style BIBLIO_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style BIBLIO_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style BIBLIO_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
     
-    style OUTPUT1 fill:#2E7D32,stroke:#1B5E20,stroke-width:3px,color:#fff
+    style OUTPUT fill:#2E7D32,stroke:#1B5E20,stroke-width:3px,color:#fff,font-weight:bold
+    style RESULT fill:#1565C0,stroke:#0D47A1,stroke-width:3px,color:#fff,font-weight:bold
+
