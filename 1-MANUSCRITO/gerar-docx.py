@@ -57,12 +57,11 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
         print(f"📎 Incluindo apêndices: {apendices_file.name}")
     
     # Adicionar processamento de citações
-    # Temporariamente desabilitado devido a problemas no arquivo .bib
-    # cmd.extend([
-    #     "--citeproc",
-    #     "--bibliography", str(bib_file),
-    #     "--csl", str(csl_file),
-    # ])
+    cmd.extend([
+        "--citeproc",
+        "--bibliography", str(bib_file),
+        "--csl", str(csl_file),
+    ])
     
     # Adicionar modelo de formatação se existir
     modelo = Path("modelo_formatacao.docx")
