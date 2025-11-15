@@ -1,0 +1,77 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '11px', 'fontFamily': 'arial', 'primaryColor': '#FFFFFF', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'tertiaryColor': '#F0F0F0', 'tertiaryTextColor': '#000000'}, 'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'curve': 'linear'}}}%%
+
+flowchart TD
+    
+    %% SEÇÃO IDENTIFICAÇÃO
+    IDENT["<b>IDENTIFICAÇÃO</b>"]
+    
+    DB["<b>Registros identificados<br/>em base de dados</b><br/>n = 3.547"]
+    REGISTER["<b>Registros identificados<br/>por outras fontes</b><br/>n = 245"]
+    
+    DB --> TOTAL["<b>Registros totais</b><br/>n = 3.792"]
+    REGISTER --> TOTAL
+    
+    %% SEÇÃO TRIAGEM
+    SCREEN["<b>TRIAGEM</b>"]
+    
+    TOTAL --> DEDUP["<b>Registros após<br/>remoção de duplicatas</b><br/>n = 3.245"]
+    
+    DEDUP --> SCREENED["<b>Registros rastreados</b><br/>n = 3.245"]
+    DEDUP --> EXCLUDED_SCREEN["<b>Registros excluídos</b><br/>n = 2.847"]
+    
+    SCREENED --> SOUGHT["<b>Artigos/relatórios<br/>buscados para avaliação</b><br/>n = 398"]
+    
+    %% SEÇÃO ELEGIBILIDADE  
+    ELIGIBLE["<b>ELEGIBILIDADE</b>"]
+    
+    SOUGHT --> NOT_RETRIEVED["<b>Artigos/relatórios<br/>não recuperados</b><br/>n = 45"]
+    SOUGHT --> ASSESSED["<b>Artigos/relatórios<br/>para avaliação completa</b><br/>n = 353"]
+    
+    ASSESSED --> EXCLUDED_FULL["<b>Estudos excluídos<br/>com motivos</b><br/>n = 230"]
+    
+    EXCLUDED_FULL --> REASON1["Fora do escopo temático<br/>(n = 145)"]
+    EXCLUDED_FULL --> REASON2["Sem dados primários<br/>(n = 52)"]
+    EXCLUDED_FULL --> REASON3["Artigos não científicos<br/>(n = 33)"]
+    
+    %% SEÇÃO INCLUSÃO
+    INCLUDE["<b>INCLUSÃO</b>"]
+    
+    ASSESSED --> INCLUDED["<b>Estudos inclusos<br/>na síntese qualitativa</b><br/>n = 123"]
+    
+    INCLUDED --> SYNTHESIS["<b>Estudos inclusos na síntese<br/>de dados</b><br/>n = 123"]
+    
+    SYNTHESIS --> OUTPUT["<b>SÍNTESE FINAL</b><br/>Mapeamento de ML em IG<br/>Técnicas, aplicações e impactos"]
+    
+    %% Posicionamento das seções
+    IDENT -.-> DB
+    SCREEN -.-> SCREENED
+    ELIGIBLE -.-> ASSESSED
+    INCLUDE -.-> SYNTHESIS
+    
+    %% Estilos - SEÇÕES
+    style IDENT fill:#E8E8E8,stroke:#000,stroke-width:2px,color:#000,font-weight:bold,text-align:center
+    style SCREEN fill:#E8E8E8,stroke:#000,stroke-width:2px,color:#000,font-weight:bold,text-align:center
+    style ELIGIBLE fill:#E8E8E8,stroke:#000,stroke-width:2px,color:#000,font-weight:bold,text-align:center
+    style INCLUDE fill:#E8E8E8,stroke:#000,stroke-width:2px,color:#000,font-weight:bold,text-align:center
+    
+    %% Estilos - CAIXAS BRANCAS (Processo/Resultado)
+    style DB fill:#FFFFFF,stroke:#000,stroke-width:1.5px,color:#000
+    style REGISTER fill:#FFFFFF,stroke:#000,stroke-width:1.5px,color:#000
+    style TOTAL fill:#FFFFFF,stroke:#000,stroke-width:2px,color:#000,font-weight:bold
+    
+    style DEDUP fill:#FFFFFF,stroke:#000,stroke-width:1.5px,color:#000
+    style SCREENED fill:#FFFFFF,stroke:#000,stroke-width:1.5px,color:#000
+    style EXCLUDED_SCREEN fill:#F5F5F5,stroke:#999,stroke-width:1px,color:#333
+    style SOUGHT fill:#FFFFFF,stroke:#000,stroke-width:1.5px,color:#000
+    
+    style NOT_RETRIEVED fill:#F5F5F5,stroke:#999,stroke-width:1px,color:#333
+    style ASSESSED fill:#FFFFFF,stroke:#000,stroke-width:1.5px,color:#000
+    style EXCLUDED_FULL fill:#F5F5F5,stroke:#999,stroke-width:1px,color:#333
+    
+    style REASON1 fill:#FFFACD,stroke:#DAA520,stroke-width:0.8px,color:#333,font-size:9px
+    style REASON2 fill:#FFFACD,stroke:#DAA520,stroke-width:0.8px,color:#333,font-size:9px
+    style REASON3 fill:#FFFACD,stroke:#DAA520,stroke-width:0.8px,color:#333,font-size:9px
+    
+    style INCLUDED fill:#FFFFFF,stroke:#000,stroke-width:2px,color:#000,font-weight:bold
+    style SYNTHESIS fill:#FFFFFF,stroke:#000,stroke-width:2px,color:#000,font-weight:bold
+    style OUTPUT fill:#90EE90,stroke:#228B22,stroke-width:2px,color:#000,font-weight:bold
