@@ -253,7 +253,7 @@ Para caracterizar sistematicamente o corpus bibliográfico e identificar padrõe
 
 ### 2.8.1 Análise de Componentes Principais (PCA)
 
-A Análise de Componentes Principais foi aplicada para reduzir dimensionalidade e identificar padrões latentes no corpus de 123 estudos. O método decompõe a matriz de dados multivariados em componentes principais não-correlacionados, maximizando variância explicada. A análise foi realizada utilizando o pacote `FactoMineR`, considerando variáveis categóricas (algoritmos ML, produtos, regiões geográficas, instrumentos analíticos) e numéricas (ano de publicação, métricas de desempenho reportadas).
+A Análise de Componentes Principais foi aplicada para reduzir dimensionalidade e identificar padrões latentes no corpus de 148 estudos. O método decompõe a matriz de dados multivariados em componentes principais não-correlacionados, maximizando variância explicada. A análise foi realizada utilizando o pacote `FactoMineR`, considerando variáveis categóricas (algoritmos ML, produtos, regiões geográficas, instrumentos analíticos) e numéricas (ano de publicação, métricas de desempenho reportadas).
 
 Os componentes principais foram extraídos segundo o critério de Kaiser (autovalores > 1.0), com rotação Varimax para maximizar interpretabilidade. A qualidade da representação foi avaliada através de cos² (proporção de variância explicada por cada dimensão) e contribuição relativa de variáveis. Biplots foram gerados para visualizar simultaneamente indivíduos (estudos) e variáveis, facilitando identificação de clusters temáticos e associações entre técnicas ML e contextos de aplicação.
 
@@ -297,7 +297,7 @@ A Tabela 3 apresenta síntese dos principais produtos e regiões geográficas es
 | Azeites                        | Azeite Extra Virgem, Azeite                                | Região Mediterrânea, Italia, España                           | Fingerprinting NIR, SVM                 | 8%                             |
 | Mel                            | Mel Floral, Mel Silvestre                                  | Lages (Brasil), Regiões Europa                                  | Espectrometria Elementar, PLS-DA        | 5%                             |
 
-*Tabela 3: Distribuição de produtos agroalimentares com Indicações Geográficas por categoria, regiões geográficas associadas, técnicas de Machine Learning predominantes e frequência relativa de estudos no corpus analisado (N=123).*
+*Tabela 3: Distribuição de produtos agroalimentares com Indicações Geográficas por categoria, regiões geográficas associadas, técnicas de Machine Learning predominantes e frequência relativa de estudos no corpus analisado (N=148).*
 
 A análise do corpus revelou que as aplicações de Machine Learning em Indicações Geográficas concentram-se predominantemente em produtos agroalimentares, com uma notável densidade de estudos na categoria de bebidas e bebidas alcoólicas. Investigações sobre vinhos de origem protegida, como os das denominações Douro, Rioja e Bordeaux, e chás com indicação geográfica, como o Wuyi Rock Tea da China, são recorrentes. Nesses estudos, a discriminação de origem é frequentemente explorada por meio de fingerprinting metabolômico e análise de traços elementares, demonstrando que o perfil químico das bebidas está intimamente acoplado às condições geográficas de produção e reflete os fatores ambientais associados ao terroir [@Ramos2025; @Xu2021].
 
