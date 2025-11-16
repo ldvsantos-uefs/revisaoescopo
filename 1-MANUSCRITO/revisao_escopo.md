@@ -453,4 +453,3 @@ O conjunto de dados completo que suporta os resultados deste estudo, incluindo o
 
 ## Referências
 
-## Referências
