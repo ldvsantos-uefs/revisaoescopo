@@ -435,13 +435,15 @@ O estudo demonstra que o Aprendizado de Máquina deixou de ser uma ferramenta au
 
 É recomendado que, futuras pesquisas devem se concentrar na integração de dados multimodais, no desenvolvimento de modelos interpretáveis (XAI) para apoiar decisões regulatórias e na aplicação dessas tecnologias para IGs de países em desenvolvimento, como o Brasil, onde o potencial de valorização territorial por meio da certificação de origem permanece largamente inexplorado. A convergência entre ciência de dados e certificação territorial estabelece, assim, uma nova fronteira para a proteção da propriedade intelectual e o desenvolvimento regional sustentável
 
-Conflitos de interesse
+## Conflitos de Interesse
+
+Os autores declaram não haver conflitos de interesse.
 
 
 
-Data Availability Statement
+## Declaração de Disponibilidade de Dados
 
-The study includes all the data that support the findings and conclusions, which can be found within the article and supplementary data file. The data were deposited in the Open Science Framework (OSF): doi10.XXXX
+O estudo inclui todos os dados que apoiam as descobertas e conclusões, que podem ser encontrados no artigo e no arquivo de dados suplementares. Os dados foram depositados no Open Science Framework (OSF): doi10.XXXX
 
 ## Referências
 
