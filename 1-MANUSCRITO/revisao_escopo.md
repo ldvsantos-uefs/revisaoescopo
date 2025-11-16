@@ -427,23 +427,30 @@ Finalmente, a implementação bem-sucedida de ML em sistemas de IGs depende de u
 
 Esta revisão de escopo mapeou sistematicamente o estado da arte da aplicação de Aprendizado de Máquina (ML) em Indicações Geográficas (IGs), confirmando a hipótese de que o campo está em rápida maturação e se estrutura em torno de eixos tecnológicos, geográficos e metodológicos bem definidos. A análise integrada do corpus de 148 estudos revelou que a intersecção entre ML e certificação de origem não é um domínio monolítico, mas um ecossistema de nichos especializados, onde a escolha do algoritmo e da plataforma analítica é fortemente condicionada pela matriz do produto, seu valor de mercado e o estágio de consolidação de sua IG.
 
-Os resultados da Análise de Correspondência Múltipla (MCA) foram fundamentais para desvelar a principal dualidade estrutural do campo. De um lado, um polo de consolidação, associando produtos europeus tradicionais (vinhos, azeites) a algoritmos clássicos (PLS-DA, SVM) e espectroscopia, focado na autenticação e conformidade de IGs estabelecidas. Do outro, uma fronteira de inovação, conectando produtos asiáticos emergentes (chás, plantas medicinais) a técnicas de alta resolução (metabolômica) e Deep Learning, orientada à caracterização e descoberta de marcadores para novas IGs. Esta oposição evidencia uma transição de paradigmas, de uma abordagem puramente confirmatória para uma exploratória, impulsionada pela complexidade de novas matrizes e pela busca de diferenciais competitivos.
+A Análise de Correspondência Múltipla (MCA) desvelou a principal dualidade estrutural do campo, opondo um polo de consolidação, que associa produtos europeus tradicionais (vinhos, azeites) a algoritmos clássicos (PLS-DA, SVM) para fins de autenticação, a uma fronteira de inovação, que conecta produtos asiáticos emergentes (chás, plantas medicinais) a técnicas de alta resolução (metabolômica) e Deep Learning para a descoberta de marcadores. Essa oposição evidencia uma transição de paradigmas, de uma abordagem puramente confirmatória para uma exploratória, impulsionada pela complexidade de novas matrizes e pela busca por diferenciais competitivos.
 
-A Análise de Redes reforçou essa visão, ao identificar quatro módulos temáticos principais que funcionam como ecossistemas tecnológicos coesos. A centralidade de "Vinhos" e "Espectroscopia" os posiciona como pilares conceituais, enquanto a emergência de clusters especializados, como o de "Carnes-Análise Elementar", demonstra uma crescente especialização metodológica. A análise temporal, por sua vez, quantificou a dinâmica dessa evolução, com um crescimento exponencial de publicações e uma transição clara de algoritmos quimiométricos tradicionais para modelos mais flexíveis como Random Forest e, mais recentemente, para arquiteturas de Deep Learning.
+A análise de redes e a análise temporal reforçaram essa interpretação. A primeira identificou módulos temáticos que funcionam como ecossistemas tecnológicos coesos, com "Vinhos" e "Espectroscopia" atuando como pilares conceituais. A segunda quantificou a dinâmica de evolução do campo, demonstrando um crescimento exponencial de publicações e uma transição clara de algoritmos quimiométricos tradicionais para modelos mais flexíveis, como Random Forest, e, mais recentemente, para arquiteturas de Deep Learning. O Aprendizado de Máquina, portanto, deixou de ser uma ferramenta auxiliar para se tornar um componente central na governança de Indicações Geográficas na era digital.
 
-O estudo demonstra que o Aprendizado de Máquina deixou de ser uma ferramenta auxiliar para se tornar um componente central na governança de Indicações Geográficas na era digital.
+Recomenda-se que pesquisas futuras se concentrem na integração de dados multimodais, no desenvolvimento de modelos interpretáveis (XAI) para apoiar decisões regulatórias e na aplicação dessas tecnologias para IGs de países em desenvolvimento, como o Brasil. A convergência entre ciência de dados e certificação territorial estabelece, assim, uma nova fronteira para a proteção da propriedade intelectual e o desenvolvimento regional sustentável.
 
-É recomendado que, futuras pesquisas devem se concentrar na integração de dados multimodais, no desenvolvimento de modelos interpretáveis (XAI) para apoiar decisões regulatórias e na aplicação dessas tecnologias para IGs de países em desenvolvimento, como o Brasil, onde o potencial de valorização territorial por meio da certificação de origem permanece largamente inexplorado. A convergência entre ciência de dados e certificação territorial estabelece, assim, uma nova fronteira para a proteção da propriedade intelectual e o desenvolvimento regional sustentável
+
+## Financiamento
+
+A publicação deste artigo foi financiada pelo Instituto Federal de Sergipe (IFS), por meio do Edital nº 29/2025/DPP/PROPEX/IFS.
+
+## Agradecimentos
+
+Os autores agradecem à Universidade Federal de Sergipe (UFS), à Universidade Estadual de Feira de Santana (UEFS) e ao Instituto Federal de Sergipe (IFS) pelo apoio institucional e infraestrutural que viabilizou a realização desta pesquisa.
+
 
 ## Conflitos de Interesse
 
 Os autores declaram não haver conflitos de interesse.
 
-
-
 ## Declaração de Disponibilidade de Dados
 
-O estudo inclui todos os dados que apoiam as descobertas e conclusões, que podem ser encontrados no artigo e no arquivo de dados suplementares. Os dados foram depositados no Open Science Framework (OSF): doi10.XXXX
+O conjunto de dados completo que suporta os resultados deste estudo, incluindo o corpus bibliográfico, os scripts de análise e os resultados intermediários, está publicamente disponível no repositório Open Science Framework (OSF) sob o DOI: https://doi.org/10.17605/OSF.IO/XXXXX.
 
 ## Referências
 
+## Referências
