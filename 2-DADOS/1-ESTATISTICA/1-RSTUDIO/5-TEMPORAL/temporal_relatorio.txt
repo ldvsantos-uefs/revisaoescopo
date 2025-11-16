@@ -1,0 +1,76 @@
+================================================================================
+RELATÓRIO DE ANÁLISE TEMPORAL - ML PARA INDICAÇÕES GEOGRÁFICAS
+================================================================================
+
+Data de execução: 2025-11-16 10:52:42.566131
+Período analisado: 2010-2025
+
+--------------------------------------------------------------------------------
+EVOLUÇÃO DAS PUBLICAÇÕES
+--------------------------------------------------------------------------------
+# A tibble: 16 × 2
+     Ano Total
+   <dbl> <int>
+ 1  2010     2
+ 2  2011     1
+ 3  2012     2
+ 4  2013     7
+ 5  2014     2
+ 6  2015     4
+ 7  2016     1
+ 8  2017     1
+ 9  2018     1
+10  2019     1
+11  2020     7
+12  2021    14
+13  2022    13
+14  2023    23
+15  2024    19
+16  2025    25
+
+--------------------------------------------------------------------------------
+TENDÊNCIAS TEMPORAIS SIGNIFICATIVAS (p < 0.05)
+--------------------------------------------------------------------------------
+                 Feature      Tipo Correlacao       PValue Significativo
+rho...1              SVM Algoritmo  0.7880607 0.0002879787          TRUE
+rho...2 GradientBoosting Algoritmo  0.7126549 0.0019466697          TRUE
+rho...3     RandomForest Algoritmo  0.6772466 0.0039506453          TRUE
+rho...4     DecisionTree Algoritmo  0.6721673 0.0043400675          TRUE
+rho...5             Wine   Produto  0.6151861 0.0111980541          TRUE
+rho...6    NeuralNetwork Algoritmo  0.5920394 0.0156847264          TRUE
+rho...7              KNN Algoritmo  0.5188223 0.0394740412          TRUE
+        Tendencia
+rho...1 Crescente
+rho...2 Crescente
+rho...3 Crescente
+rho...4 Crescente
+rho...5 Crescente
+rho...6 Crescente
+rho...7 Crescente
+
+--------------------------------------------------------------------------------
+ALGORITMOS MAIS UTILIZADOS (2020-2025)
+--------------------------------------------------------------------------------
+# A tibble: 6 × 2
+  Algoritmo        Total
+  <chr>            <int>
+1 NeuralNetwork       33
+2 SVM                 32
+3 RandomForest        21
+4 DecisionTree        13
+5 KNN                 10
+6 GradientBoosting     5
+
+--------------------------------------------------------------------------------
+PRODUTOS MAIS ESTUDADOS (2020-2025)
+--------------------------------------------------------------------------------
+# A tibble: 5 × 2
+  Produto Total
+  <chr>   <int>
+1 Wine       10
+2 Honey      10
+3 Olive       4
+4 Coffee      1
+5 Cheese      1
+
+================================================================================
