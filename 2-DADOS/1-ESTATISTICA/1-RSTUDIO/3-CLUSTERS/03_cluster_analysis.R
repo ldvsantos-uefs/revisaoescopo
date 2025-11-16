@@ -351,7 +351,7 @@ salvar_dados <- function(dados, kmeans_result, hc_result) {
 # EXECUÇÃO PRINCIPAL
 ################################################################################
 main <- function() {
-  caminho_bib <- "corpus.bib"
+  caminho_bib <- "../corpus.bib"
   
   if (!file.exists(caminho_bib)) {
     stop("❌ Erro: Arquivo .bib não encontrado em: ", caminho_bib)

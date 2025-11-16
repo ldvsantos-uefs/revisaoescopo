@@ -405,7 +405,7 @@ main <- function() {
   # setwd("caminho/para/seu/diretorio")
   
   # Caminho do arquivo .bib
-  caminho_bib <- "corpus.bib"
+  caminho_bib <- "../corpus.bib"
   
   # Verificar se arquivo existe
   if (!file.exists(caminho_bib)) {
