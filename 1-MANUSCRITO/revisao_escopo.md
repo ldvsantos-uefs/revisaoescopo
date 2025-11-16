@@ -296,7 +296,7 @@ A análise considerou métricas de produtividade científica (número de publica
 
 A revisão de escopo, estruturada segundo PRISMA-ScR (Figura 2), identificou e analisou 272 estudos (140 Scopus, 132 Web of Science) publicados entre 2010-2025, selecionando 148 artigos relevantes após filtragem automatizada e avaliação manual de qualidade metodológica. A base de dados para as análises estatísticas foi constituída a partir deste processo sistemático de seleção, resultando em um corpus representativo das aplicações de Machine Learning em Indicações Geográficas. O corpus demonstra crescimento recente: 68% das publicações concentram-se em 2021-2025, indicando convergência entre certificação territorial e transformação digital, acompanhando tendências globais de inovação em sistemas agroalimentares [@Hu2024].
 
-![Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas. ](2-FIGURAS/prisma_flowdiagram.png){#fig:prisma2020 width="80%"}
+![Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas. ](2-FIGURAS/prisma_flowdiagram_portugues.png){#fig:prisma2020 width="80%"}
 
 A filtragem automatizada por análise semântica e pontuação alcançou precisão temática de 94.2%, superando o limiar de 85% estabelecido. A abordagem de triagem computacional mostrou-se eficaz para revisões com grandes volumes bibliográficos, confirmando que sistemas automatizados calibrados reduzem vieses de seleção e aumentam reproducibilidade [@OforiBoateng2024]. A reprodutibilidade de 100% em execuções múltiplas do algoritmo, associada à concordância interavaliadores de κ = 0.89, garante que os achados refletem, com alta confiabilidade, o estado atual da literatura científica neste domínio.
 

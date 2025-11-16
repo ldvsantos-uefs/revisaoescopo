@@ -13,7 +13,7 @@ organisation_results,,box11,Records identified from: Organisations,Organisations
 citations_results,NA,box11,Records identified from: Citation searching,Citation searching,NA,NA,0
 duplicates,node8,box3,Duplicate records,Duplicate records,Duplicate records,duplicates.html,0
 excluded_automatic,NA,box3,Records marked as ineligible by automation tools,Records marked as ineligible by automation tools,NA,NA,38
-excluded_other,NA,box3,Records removed for other reasons,Records removed for other reasons,NA,NA,209
+excluded_other,NA,box3,Records removed for other reasons,Records removed for other reasons,"Records excluded for other reasons include: (1) Low relevance score (<20 points) in automated thematic filtering based on ML and GI terms, (2) Document types excluded (reviews, meta-analyses, book chapters, conference papers, editorials), (3) Studies not meeting methodological quality criteria during manual evaluation",NA,86
 records_screened,node9,box4,Records screened (databases and registers),Records screened,Records screened (databases and registers),records_screened.html,272
 records_excluded,node10,box5,Records excluded (databases and registers),Records excluded,Records excluded (databases and registers),records_excluded.html,124
 dbr_sought_reports,node11,box6,Reports sought for retrieval (databases and registers),Reports sought for retrieval,Reports sought for retrieval (databases and registers),dbr_sought_reports.html,272
