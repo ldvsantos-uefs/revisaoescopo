@@ -1,0 +1,877 @@
+Distribuição de autores (Lei de Lotka):
+Li: 28
+Wang: 27
+Liu: 25
+Zhang: 17
+Chen: 16
+Wu: 13
+Yu: 11
+Yang: 11
+Xu: 7
+Hong: 7
+Zhao: 7
+Peng: 6
+Tao: 5
+Yuanzhong: 5
+Lu: 5
+Feng: 5
+Fei: 4
+Jiang: 4
+Yuan: 4
+Guo: 4
+Zhu: 4
+Dong: 4
+Hu: 4
+Huang: 4
+Birse: 3
+Nicholas: 3
+Yunhe: 3
+Quinn: 3
+Brian P.: 3
+Elliott: 3
+Christopher T.: 3
+Di: 3
+Beata: 3
+Fu: 3
+Xiaoping: 3
+Cao: 3
+Cai: 3
+Marco: 3
+Min: 3
+Qi: 3
+Zheng: 3
+Jun: 3
+Yan: 3
+Cheng: 3
+Yao: 3
+Gao: 3
+Lin: 3
+Zuo: 3
+Yue: 3
+Luo: 3
+He: 3
+Jian: 3
+Yi: 3
+Ma: 3
+Wei: 3
+Xin: 3
+Jing: 3
+Terán-Bustamante: 3
+Antonia: 3
+Martínez-Velasco: 3
+Antonieta: 3
+Emilia: 2
+Giovanni: 2
+Tan: 2
+Zhou: 2
+Yicong: 2
+Logan: 2
+Natasha: 2
+Resce: 2
+Giuliano: 2
+Vaquero-Piñeiro: 2
+Cristina: 2
+Małyjurek: 2
+Zuzanna: 2
+De Beer: 2
+Dalene: 2
+Joubert: 2
+Elizabeth: 2
+Walczak: 2
+Ji: 2
+Xianshu: 2
+Liao: 2
+Ye: 2
+Zihong: 2
+Bai: 2
+Nocetti: 2
+Roberto: 2
+Qian: 2
+Han: 2
+Liang: 2
+Zhong: 2
+Dequan: 2
+Chongxin: 2
+Shaobo: 2
+Jieqing: 2
+Honggao: 2
+Ana María: 2
+Ping: 2
+Jana: 2
+Ding: 2
+Hao: 2
+Jia: 2
+Xue Steve: 2
+Xie: 2
+Deng: 2
+Haifeng: 2
+Cevoli: 2
+Chiara: 2
+Fabbri: 2
+Angelo: 2
+Gori: 2
+Alessandro: 2
+Caboni: 2
+Maria Fiorenza: 2
+Zeng: 2
+Zhitian: 2
+Gong: 2
+Mohammed: 2
+Emmanouil: 2
+Aikaterini: 2
+Nie: 2
+Gu: 2
+Palla: 2
+Juan: 2
+Wen: 2
+Xia: 2
+Shen: 2
+Lv: 2
+Roy: 2
+Bilbao: 2
+Vidushi: 2
+Çukur: 2
+Kızılaslan: 2
+Dou: 2
+Tang: 2
+Yin: 2
+Zhi: 2
+Sha: 2
+Samaddar: 2
+Shefalika Ghosh: 2
+Ramli: 2
+Leyva-Hernández: 2
+Sandra N.: 2
+Samuel: 2
+Furia: 1
+Naccarato: 1
+Attilio: 1
+Sindona: 1
+Stabile: 1
+Gaetano: 1
+Tagarelli: 1
+Antonio: 1
+Gazeli: 1
+Odhisea: 1
+Bellou: 1
+Elli: 1
+Stefas: 1
+Dimitrios: 1
+Couris: 1
+Stelios: 1
+Ramos: 1
+Hilthon Alves: 1
+Aguiar: 1
+Valdiênia Mendes: 1
+Fernandes: 1
+David Douglas De Sousa: 1
+Véras: 1
+Germano: 1
+Kabir: 1
+Muhammad Hilal: 1
+Guindo: 1
+Mahamed Lamine: 1
+Rongqin: 1
+Santomá-Martí: 1
+Alexandra: 1
+Aijon: 1
+Nil: 1
+Núñez: 1
+Óscar: 1
+Hui Ru: 1
+Chan: 1
+Liyan: 1
+Lee: 1
+Hueihong: 1
+Yongquan Quang: 1
+Weibiao: 1
+Jiao: 1
+Yanna: 1
+Herrero-Latorre: 1
+Carlos: 1
+Peña Crecente: 1
+Rosa M.: 1
+Martín: 1
+Sagrario García: 1
+Barciela-García: 1
+Julia: 1
+Decker: 1
+Christina: 1
+Krapf: 1
+Reiner: 1
+Kuballa: 1
+Thomas: 1
+Bunzel: 1
+Mirko: 1
+Zawisza: 1
+Qingge: 1
+Chaofeng: 1
+Jinyan: 1
+Xuezhen: 1
+Mingzhou: 1
+Qiu: 1
+Yulou: 1
+Shuai: 1
+Mengying: 1
+Fuqing: 1
+Lijun: 1
+Hou: 1
+Ruyan: 1
+Chuanyi: 1
+Huimei: 1
+Camin: 1
+Federica: 1
+Wehrens: 1
+Ron: 1
+Bertoldi: 1
+Daniela: 1
+Bontempo: 1
+Luana: 1
+Ziller: 1
+Luca: 1
+Perini: 1
+Matteo: 1
+Nicolini: 1
+Giorgio: 1
+Larcher: 1
+Oganesyants: 1
+Lev A.: 1
+Panasyuk: 1
+Alexander Lvovich: 1
+Sviridov: 1
+Dmitriy A.: 1
+Egorova: 1
+Olesya Sergeevna: 1
+Akbulatova: 1
+Dilyara R.: 1
+Ganin: 1
+Mikhail Yu: 1
+Shilkin: 1
+Aleksey A.: 1
+Il’in: 1
+Alexandr A.: 1
+Guilin: 1
+Jinrong: 1
+Daobing: 1
+Qiding: 1
+Meena: 1
+Deepoo: 1
+Chakraborty: 1
+Somsubhra: 1
+Mitra: 1
+Jayeeta: 1
+Le: 1
+Xiaochun: 1
+Chuanmao: 1
+Sayago: 1
+Ana: 1
+González-Domínguez: 1
+Raúl: 1
+Fernández Recamales: 1
+Ángeles: 1
+Alonso-Salces: 1
+Rosa Maria: 1
+Viacava: 1
+Gabriela Elena: 1
+Tres: 1
+Alba: 1
+Vichi: 1
+Stefania: 1
+Valli: 1
+Enrico: 1
+Bendini: 1
+Alessandra: 1
+Gallina Toschi: 1
+Tullia: 1
+Gallo: 1
+Blanca: 1
+Berrueta: 1
+Luis A.: 1
+Héberger: 1
+Károly: 1
+Grasso: 1
+Simona: 1
+Brunton: 1
+Nigel Patrick: 1
+Ruirui: 1
+Yufei: 1
+Xing: 1
+Jianguo: 1
+Ríos-Reina: 1
+Rocío: 1
+Azcarate: 1
+Silvana Mariela: 1
+Camiña: 1
+José Manuel: 1
+Callejón: 1
+Raquel M.: 1
+Amigo: 1
+J. M.: 1
+Fdez-Vidal: 1
+Xosé Ramon: 1
+Fernández-Canto: 1
+Nerea: 1
+Romero-Rodríguez: 1
+Ma Ángeles: 1
+Ramos-Cabrer: 1
+Pereira-Lorenzo: 1
+Santiago: 1
+Lombardero: 1
+Matilde: 1
+Xiaoting: 1
+Yalan: 1
+Shilin: 1
+Cajka: 1
+Tomas: 1
+Riddellová: 1
+Kateřina: 1
+Klimánková: 1
+Eva: 1
+Černá: 1
+Monika: 1
+Pudil: 1
+František: 1
+Hajŝlová: 1
+Jianjun: 1
+Shaofeng: 1
+Yuliang: 1
+Yahui: 1
+Hang: 1
+Weirong: 1
+Haughey: 1
+Simon A.: 1
+Binhui: 1
+Song: 1
+Xingmin: 1
+Tănase: 1
+Mihail Ovidiu: 1
+Nistoreanu: 1
+Puiu: 1
+Dina: 1
+Rǎzvan: 1
+Georgescu: 1
+Bogdan: 1
+Nicula: 1
+Virgil: 1
+Mirea: 1
+Cosmin Nicolae: 1
+Kuan: 1
+Zhiying: 1
+Wancui: 1
+Xiaobo: 1
+Wenxia: 1
+Xiaohui: 1
+Xinghua: 1
+Yaping: 1
+Xiujuan: 1
+Ke: 1
+Zhiyong: 1
+Wendou: 1
+Baijuan: 1
+Kong: 1
+Fanzhou: 1
+Shuofei: 1
+Weiyu: 1
+Guangtao: 1
+Cui: 1
+Ruting: 1
+Xiaoxia: 1
+Jishi: 1
+Yanyun: 1
+Ailiang: 1
+Shuming: 1
+Cervera-Gascó: 1
+Jorge: 1
+Rabadán: 1
+Adrián: 1
+López Mata: 1
+Eulogio: 1
+Álvarez-Ortí: 1
+Manuel: 1
+Pardo: 1
+J. E.: 1
+Guarnieri: 1
+Adriano: 1
+Cosme: 1
+Fernanda: 1
+Milheiro: 1
+Juliana: 1
+Pires: 1
+Joana: 1
+Guerra-Gomes: 1
+Fernanda Isabel: 1
+Filipe-Ribeiro: 1
+L.: 1
+Nunes: 1
+Fernando M.: 1
+Wenlu: 1
+Fan: 1
+Xinwei: 1
+Yanbo: 1
+Hiniesta-Valero: 1
+Jaime: 1
+Guerra-Castellano: 1
+Alejandra: 1
+Fernández-Veloso: 1
+Andrea: 1
+De la Rosa: 1
+Miguel A.: 1
+Díaz-Moreno: 1
+Irene: 1
+Zengyu: 1
+Mazarakioti: 1
+Eleni C.: 1
+Zotos: 1
+Anastasios: 1
+Verykios: 1
+Vassilios S.: 1
+Kokkotos: 1
+Efthymios: 1
+Thomatou: 1
+Anna Akrivi: 1
+Achilleas: 1
+Kontogeorgos N.: 1
+Patakas: 1
+Angelos A.: 1
+Ladavos: 1
+Athanasios K.: 1
+Revilla: 1
+I.: 1
+Vivar-Quintana: 1
+González-Martín: 1
+Inmaculada: 1
+Hernández-Jiménez: 1
+Miriam: 1
+Martínez-Martín: 1
+Iván: 1
+Hernández-Ramos: 1
+P. A.: 1
+Gerginova: 1
+Dessislava: 1
+Simova: 1
+Svetlana D.: 1
+Sheng: 1
+Juanru: 1
+Yushi: 1
+Ya'ning: 1
+Chenjuan: 1
+Yiping: 1
+Guerrero-Chanivet: 1
+María: 1
+Ortega-Gavilán: 1
+Fidel: 1
+Bagur-González: 1
+Mª Gracia: 1
+Valcárcel-Muñoz: 1
+Manuel J.: 1
+García-Moreno: 1
+M. Valme: 1
+Guillén-Sánchez: 1
+Dominico A.: 1
+Zhongyi: 1
+Zhenzhen: 1
+Yanli: 1
+Qiuju: 1
+Shuangyan: 1
+Qiang: 1
+Kharbach: 1
+Mourad: 1
+Kamal: 1
+Rabie: 1
+Bousrabat: 1
+Alaoui Mansouri: 1
+Barra: 1
+Issam: 1
+Alaoui: 1
+Katim: 1
+Cherrah: 1
+Yahya: 1
+Vander Heyden: 1
+Yvan: 1
+Bouklouze: 1
+Abdelaziz A.: 1
+Su: 1
+Haoran: 1
+Zhuozhen: 1
+Wenjie: 1
+Liping: 1
+Philippidis: 1
+Aggelos: 1
+Poulakis: 1
+Kontzedaki: 1
+Renate: 1
+Orfanakis: 1
+Symianaki: 1
+Zoumi: 1
+Velegrakis: 1
+Michalis: 1
+Zhiqi: 1
+Yong: 1
+Yanjie: 1
+Lei: 1
+Jincan: 1
+Dawei: 1
+Cuibus: 1
+Lucian: 1
+H. T.: 1
+Z. L.: 1
+Qu: 1
+X. N.: 1
+Xiaoran: 1
+Huixiang: 1
+Caligiani: 1
+Augusta: 1
+Coïsson: 1
+Jean Daniel: 1
+Travaglia: 1
+Fabiano: 1
+Acquotti: 1
+Domenico: 1
+Gerardo: 1
+Luigi: 1
+Arlorio: 1
+Torrecilla: 1
+José Santiago: 1
+Cancilla: 1
+John C.: 1
+Matute: 1
+Gemma: 1
+Díaz-Rodríguez: 1
+Pablo A.: 1
+Wenmiao: 1
+Chengjian: 1
+Zhijun: 1
+Jiangwei: 1
+Jiayu: 1
+Chao: 1
+Robbat: 1
+Albert: 1
+Liya: 1
+Changying: 1
+Mengping: 1
+Du: 1
+Guan: 1
+Xinhui: 1
+Runpeng: 1
+van Schoor: 1
+Hèlené: 1
+Colling: 1
+Janine: 1
+Dongbing: 1
+Manjiao: 1
+Xinqiang: 1
+Qianxi: 1
+Xinjun: 1
+Jianheng: 1
+Tian: 1
+Jianping: 1
+Shuhan: 1
+Hongyi: 1
+Deyi: 1
+Bingyu: 1
+Xiaoyi: 1
+Kai: 1
+Urvieta: 1
+Jones: 1
+Gregory V.: 1
+Buscema: 1
+Fernando G.: 1
+Bottini: 1
+Rubén R.: 1
+Fontana: 1
+Ariel Ramón: 1
+Siyuan: 1
+Lyu: 1
+Dan: 1
+Fiorentino: 1
+Costanza: 1
+D'Antonio: 1
+Paola: 1
+Toscano: 1
+Francesco: 1
+Capece: 1
+Nicola: 1
+Conceição: 1
+Luís Alcino: 1
+Scalcione: 1
+Emanuele: 1
+Modugno: 1
+Felice: 1
+Sannino: 1
+M.: 1
+Colonna: 1
+Lacetra: 1
+Di Mambro: 1
+Siqi: 1
+Yanji: 1
+Tianli: 1
+Simin: 1
+Chenbo: 1
+Xiaoli: 1
+Xiaolei: 1
+Yuxin: 1
+Wenhan: 1
+Yuting: 1
+Yueqin: 1
+Hua: 1
+Chanming: 1
+Chengcheng: 1
+Shi: 1
+Quanquan: 1
+Guiping: 1
+Jianghua: 1
+Javier: 1
+Imanol: 1
+Aparna: 1
+B.: 1
+Shoran: 1
+Preety: 1
+Tayfun: 1
+Nuray: 1
+Halil: 1
+Figen: 1
+Yaxuan: 1
+Jiaqi: 1
+Zhimin: 1
+Yijun: 1
+Hengyu: 1
+McCarron: 1
+Philip: 1
+Ch: 1
+Ratnasekhar: 1
+Uríčková: 1
+Veronika: 1
+Sádecká: 1
+Májek: 1
+Pavel: 1
+Guangmei: 1
+Xinjing: 1
+Xuefang: 1
+Mao: 1
+Liangxiao: 1
+Peiwu: 1
+Pu: 1
+Hongbin: 1
+Jingxiao: 1
+Sun: 1
+Da-Wen ‑w: 1
+Qingyi: 1
+Escobar-Talavera: 1
+Jorge F.: 1
+Martínez-Navarro: 1
+M. E.: 1
+Alonso: 1
+Gonzalo L.: 1
+Sánchez-Gómez: 1
+Rosario: 1
+Dibakar: 1
+Adhikary: 1
+Avishek: 1
+Lian: 1
+Xiaoqin: 1
+Shenmiao: 1
+Jingzhu: 1
+Yelan: 1
+Qun: 1
+Ying: 1
+Ling: 1
+Zongbin: 1
+Yiqing: 1
+Xiaoyu: 1
+Jingyi: 1
+Ruihan: 1
+Siqian: 1
+Jianxu: 1
+Tong: 1
+Shouji: 1
+Ziran: 1
+Haibo: 1
+Hongming: 1
+Teng: 1
+Cuiqin: 1
+Dai: 1
+Ziru: 1
+Huo: 1
+Lanjuan: 1
+Chuanpei: 1
+Xianhua: 1
+Yuee E.: 1
+Upputuri: 1
+Bindhiya: 1
+Noorullah: 1
+R. M.: 1
+Kolluru: 1
+Rishi: 1
+Gamarra: 1
+David: 1
+Taniguchi: 1
+Masaaki: 1
+Aldai: 1
+Noelia: 1
+Arakawa: 1
+Aisaku: 1
+López-Oceja: 1
+Andrés: 1
+de Pancorbo: 1
+M. M.: 1
+Liangcui: 1
+Fang: 1
+Xueting: 1
+Chang: 1
+Zhe: 1
+Xianqiao: 1
+Shuimei: 1
+Weixing: 1
+Yuntao: 1
+Mingxue: 1
+Kumar Barik: 1
+Rabindra Kumar: 1
+Nandy: 1
+Anirban: 1
+Nandi: 1
+Poulomi Chaki: 1
+Chatterjee: 1
+Mousumi: 1
+Mahato: 1
+Shankhadeep: 1
+Bandyopadhyay: 1
+Souradipt: 1
+Youyou: 1
+Xiong: 1
+Siman: 1
+Yuwei: 1
+Cun cun: 1
+Nan: 1
+Tiegui: 1
+Bin: 1
+Luqi: 1
+Linxia: 1
+Xinlu: 1
+Jianqiang: 1
+Ning: 1
+Meng: 1
+Ray: 1
+Sujit: 1
+Keserwani: 1
+Pankaj Kumar: 1
+Friedmann: 1
+Daniel: 1
+Kiewhuo: 1
+Kikrusenuo: 1
+Gogoi: 1
+Dipshikha: 1
+Mahanta: 1
+Hridoy Jyoti: 1
+Rawal: 1
+Ravindra K.: 1
+Das: 1
+Debabrata: 1
+S: 1
+Vaikundamani: 1
+Jamir: 1
+Esther: 1
+Sastry: 1
+Garikapati Narahari: 1
+Zhilong: 1
+Zheng Yong: 1
+Tasya Safiranita: 1
+Ahmad M.: 1
+Mayana: 1
+Ranti Fauza: 1
+Ramadayanti: 1
+Ega: 1
+Fauzi: 1
+Rizki: 1
+Gomes: 1
+Luís Alexandre Piteira: 1
+Nobre: 1
+Tania: 1
+Sousa: 1
+A. M.O.: 1
+Rei: 1
+Fernando Trindade: 1
+Guiomar: 1
+Nuno: 1
+Borisova: 1
+Denitsa: 1
+Jelev: 1
+Georgi: 1
+Atanassov: 1
+Valentin: 1
+Koprinkova-Hristova: 1
+Petia: 1
+Alexiev: 1
+Kiril M.: 1
+Zhiwu: 1
+Mingxin: 1
+Man: 1
+Shao: 1
+Yanan: 1
+Vandepitte: 1
+Leen: 1
+Bosch: 1
+Tyberghein: 1
+Lennert: 1
+Waumans: 1
+Filip: 1
+Vanhoorne: 1
+Bart: 1
+Hernandez: 1
+Francisco: 1
+de Clerck: 1
+Olivier: 1
+Mees: 1
+Jan: 1
+Cetó: 1
+Xavier: 1
+González-Calabuig: 1
+Andreu: 1
+Capdevila: 1
+Josefina: 1
+Puig-Pujol: 1
+Anna Castelló: 1
+del Valle: 1
+Manel: 1
+Sánchez: 1
+María Sagrario: 1
+Ortiz: 1
+M. C.: 1
+Sarabia: 1
+L. A.: 1
+Busto: 1
+Veronica: 1
+Pinu: 1
+Farhana R.: 1
+de Carvalho-Silva: 1
+Uetanabaro: 1
+Ana Paula Trovatti: 1
+Villas-Bôas: 1
+Silas G.: 1
+Ming: 1
+Xiuyun: 1
+Famin: 1
+Kaihui: 1
+Hengye: 1
+Xiaolong: 1
+Ratan: 1
+Mittem: 1
+Nath: 1
+Debajit: 1
+Deka: 1
+Nilakshi: 1
+
+Lei de Lotka - Número de autores com n artigos:
+1 artigos: 716 autores
+2 artigos: 83 autores
+3 artigos: 37 autores
+4 artigos: 8 autores
+5 artigos: 4 autores
+6 artigos: 1 autores
+7 artigos: 3 autores
+11 artigos: 2 autores
+13 artigos: 1 autores
+16 artigos: 1 autores
+17 artigos: 1 autores
+25 artigos: 1 autores
+27 artigos: 1 autores
+28 artigos: 1 autores

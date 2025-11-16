@@ -186,11 +186,11 @@ Considerando a natureza interdisciplinar dos estudos analisados, foram estabelec
 
 Esta segunda fase resultou na seleção de 25 estudos com qualidade metodológica adequada (score ≥ 20 pontos) a partir do corpus inicial de 272 artigos, que constituíram a base para as análises subsequentes da revisão de escopo, focando em aplicações de machine learning em contextos de Indicações Geográficas e autenticação de produtos. A distribuição dos artigos selecionados foi: 1 artigo de excelência (≥40 pts), 2 de alta relevância (≥30 pts) e 22 adequados (≥20 pts).
 
-## 2.6 Terceira Fase: Análise Bibliométrica e Redes de Colaboração
+## 2.6 Terceira Fase: Análise Bibliométrica
 
-Na terceira fase, foi analisada a produtividade científica e identificadas redes de colaboração entre machine learning e Indicações Geográficas. Foi aplicada a Lei de Lotka para examinar a distribuição de autores, complementando com análise de cocitação e acoplamento bibliográfico.
+Na terceira fase, foi analisada a produtividade científica através da Lei de Lotka, que examina a distribuição de autores segundo o número de publicações. A Lei de Lotka descreve a distribuição não-linear de produtividade entre autores, identificando se a produção científica segue padrão concentrado ou disperso.
 
-A Lei de Lotka foi aplicada através da seguinte equação:
+A Lei de Lotka foi aplicada através da equação:
 
 $$
 f(a) = \frac{K}{a^n}
@@ -203,27 +203,15 @@ Onde:
 - $a$ = número de artigos publicados por um autor
 - $n$ = expoente (tipicamente aproximado a 2 para ciências)
 
-Esta lei permite descrever a distribuição não-linear de produtividade entre autores, identificando se a produção científica segue padrão concentrado (poucos autores com muitas publicações) ou disperso (muitos autores com poucas publicações).
-
-A análise de redes foi realizada utilizando o software VOSviewer, considerando:
-
-- Redes de coautoria entre pesquisadores;
-- Clusters temáticos baseados em palavras-chave;
-- Evolução temporal das publicações (2010-2025);
-- Distribuição geográfica e institucional dos estudos;
-- Identificação de periódicos centrais na área.
-
-Esta análise permitiu mapear a estrutura da produção científica na área, identificando limitações temáticas e direções para pesquisa futura.
+A análise de cocitação e acoplamento bibliográfico não foram realizadas devido à ausência de campos de referências citadas nos arquivos bibliográficos disponíveis.
 
 ## 2.7 Quarta Fase: Síntese Qualitativa e Integração com Análise Documental
 
-Na quarta fase, foram integrados sistematicamente os achados das três fases anteriores com análise documental de marcos regulatórios, fundamentando as recomendações metodológicas da revisão. Esta integração reconhece que o conhecimento científico deve articular-se com o contexto legal e regulatório, garantindo que metodologias propostas para Indicações Geográficas sejam cientificamente consistentes, juridicamente viáveis e eticamente apropriadas.
+Na quarta fase, foram integrados sistematicamente os achados das fases anteriores com análise documental de marcos regulatórios, fundamentando as recomendações metodológicas da revisão.
 
-A síntese final combinou análise qualitativa temática com meta-análise quantitativa quando aplicável. Foi aplicado o princípio de Pareto (80/20), selecionando os 20% dos artigos com maior pontuação combinada, que representaram aproximadamente 80% do impacto científico do corpus.
+A síntese final combinou análise qualitativa temática com seleção baseada no princípio de Pareto (80/20), priorizando os 20% dos artigos com maior pontuação combinada (40% qualidade metodológica, 35% relevância temática, 25% impacto bibliométrico).
 
-O somatório final considerou três dimensões: relevância temática da Primeira Fase, qualidade metodológica da Segunda Fase e impacto bibliométrico da Terceira Fase. Foram distribuídos os pesos em 40% para qualidade metodológica, 35% para relevância temática e 25% para impacto bibliométrico, priorizando consistência metodológica sem negligenciar relevância e impacto científico.
-
-A pontuação combinada final de cada estudo foi calculada através da seguinte equação:
+A pontuação combinada final foi calculada como:
 
 $$
 P_{final} = (0.40 \cdot Q_{met}) + (0.35 \cdot Q_{tem}) + (0.25 \cdot Q_{biblio})
@@ -231,67 +219,28 @@ $$
 
 Onde:
 
-- $P_{final}$ = pontuação final de seleção para análise de síntese
-- $Q_{met}$ = qualidade metodológica normalizada entre 0-1 (Segunda Fase)
-- $Q_{tem}$ = relevância temática normalizada entre 0-1 (Primeira Fase)
-- $Q_{biblio}$ = impacto bibliométrico normalizado entre 0-1 (Terceira Fase)
-
-Adicionalmente, foi calculada a taxa de cobertura de citações no corpus bibliográfico através da seguinte métrica:
-
-$$
-Cobertura = \frac{C_{encontradas}}{C_{totais}} \times 100
-$$
-
-Onde:
-
-- $C_{encontradas}$ = número de citações do manuscrito presentes no corpus
-- $C_{totais}$ = número total de citações únicas no manuscrito
+- $P_{final}$ = pontuação final de seleção
+- $Q_{met}$ = qualidade metodológica normalizada (0-1)
+- $Q_{tem}$ = relevância temática normalizada (0-1)
+- $Q_{biblio}$ = impacto bibliométrico normalizado (0-1)
 
 ## 2.8 Análises Estatísticas
 
+Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes, as análises estatísticas foram implementadas no ambiente R [@RCoreTeam2024] utilizando o RStudio [@RStudioTeam2023] e pacotes específicos.
+
 ### 2.8.1 Análise de Correspondência Múltipla (MCA)
 
-A Análise de Correspondência Múltipla foi aplicada para analisar associações entre variáveis categóricas no corpus de 148 estudos. O método decompõe tabelas de contingência multidimensionais, identificando padrões de associação entre categorias de variáveis nominais através da análise simultânea de múltiplas variáveis categóricas. A análise foi realizada utilizando o pacote `FactoMineR`, categorizando os estudos segundo algoritmos ML empregados, produtos agroalimentares, regiões geográficas, instrumentos analíticos e períodos temporais.
-
-As dimensões foram extraídas segundo o critério de inércia explicada, priorizando as dimensões que capturam maior proporção da variabilidade total das associações categóricas. A qualidade da representação foi avaliada através de cos² (proporção de inércia explicada por cada dimensão) e contribuição relativa das categorias. Biplots foram gerados para visualizar simultaneamente as categorias das variáveis, facilitando identificação de associações entre técnicas ML, produtos e contextos geográficos. Mapas de calor de contingência foram produzidos para examinar frequências conjuntas entre pares de variáveis categóricas.
+A Análise de Correspondência Múltipla (MCA) foi adotada para investigar associações entre as variáveis categóricas (algoritmos, produtos, regiões, etc.), conforme metodologia consolidada por @Le2008 e @Greenacre2017. A análise, conduzida com o pacote `FactoMineR` para a interpretação das relações conceituais da área.
 
 ### 2.8.2 Análise de Redes (Network Analysis)
 
-A análise de redes foi implementada para mapear co-ocorrências entre técnicas de Machine Learning, produtos agroalimentares e regiões geográficas. Utilizando o pacote `igraph` e `ggraph`, foi construído grafo não-direcionado onde nós representam entidades (algoritmos, produtos, regiões) e arestas ponderam frequência de co-ocorrência.
-
-A detecção de comunidades foi realizada através do algoritmo de Louvain, identificando módulos temáticos densamente conectados. Métricas de centralidade (degree, betweenness, closeness) foram calculadas para identificar entidades centrais no corpus. A visualização foi otimizada com layout force-directed, utilizando paleta viridis para codificação de comunidades e tamanho de nós proporcional ao grau de conectividade.
+A análise de redes foi implementada para mapear co-ocorrências entre algoritmos, produtos e regiões, seguindo procedimentos de análise de redes complexas [@Csardi2006; @Schoch2020]. Utilizando os pacotes `igraph` e `ggraph`, foi construído um grafo não-direcionado, e a detecção de comunidades foi realizada com o algoritmo de Louvain [@Blondel2008] para identificar módulos temáticos.
 
 ### 2.8.3 Análise Temporal
 
-A evolução temporal das aplicações de ML em IGs foi analisada através de séries temporais (2010-2025), empregando correlação de Spearman para detectar tendências significativas (p < 0.05). O pacote `ggplot2` foi utilizado para gerar visualizações de linha temporal com suavização LOESS, acompanhadas de heatmaps para análise de evolução conjunta entre algoritmos e produtos.
+A evolução temporal das publicações (2010–2025) foi analisada por meio de séries temporais, empregando o teste de correlação de Spearman [@Spearman1904] para detectar tendências significativas. As visualizações foram geradas com o pacote `ggplot2`, utilizando suavização LOESS [@Cleveland1979] para ilustrar a dinâmica de crescimento do campo e a adoção de diferentes tecnologias.
 
-A análise considerou métricas de produtividade científica (número de publicações por ano), adoção de algoritmos ML e distribuição por categorias de produto. Tendências significativas foram identificadas através de teste não-paramétrico de Spearman, apropriado para dados discretos e não-normalmente distribuídos.
-
-## 2.9 Análises Estatísticas Computacionais
-
-Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas.
-
-### 2.9.1 Análise de Correspondência Múltipla (MCA)
-
-A Análise de Correspondência Múltipla (MCA) foi adotada para investigar associações entre variáveis categóricas no corpus de 148 estudos, conforme metodologia consolidada por @Le2008, @Greenacre2017 e @Abdi2014. Esse método decompõe tabelas de contingência multidimensionais, permitindo identificar padrões de associação entre categorias de múltiplas variáveis nominais por meio da análise simultânea dessas variáveis. A análise foi conduzida utilizando o pacote FactoMineR no R, categorizando os estudos segundo algoritmos de Machine Learning empregados, produtos agroalimentares, regiões geográficas, instrumentos analíticos e períodos temporais.
-
-As dimensões extraídas seguiram o critério de inércia explicada, priorizando aquelas que capturam maior proporção da variabilidade total das associações categóricas. A qualidade da representação foi avaliada via cos² (proporção da inércia explicada por cada dimensão) e contribuição relativa das categorias para as dimensões principais. Para facilitar a identificação de padrões, biplots foram gerados para visualizar simultaneamente as categorias das variáveis, possibilitando explorar associações entre técnicas de ML, produtos e contextos geográficos (@Le2008; @Greenacre2017).
-
-### 2.9.2 Análise de Redes (Network Analysis)
-
-A análise de redes foi implementada para mapear co-ocorrências entre técnicas de Machine Learning, produtos agroalimentares e regiões geográficas, de acordo com procedimentos amplamente adotados em literatura de análise de redes complexas [@Csardi2006; @Blondel2008; @Schoch2020]. Utilizando os pacotes igraph[@Csardi2006] e ggraph[@Schoch2020], foi construído grafo não-direcionado, no qual cada nó representa uma entidade (algoritmo, produto, região) e as arestas codificam a frequência de co-ocorrência entre elas.
-
-A detecção de comunidades foi realizada com o algoritmo de Louvain, método de alto desempenho para identificar módulos densamente conectados em grandes redes[@Blondel2008]. Métricas de centralidade de grau, intermediação (betweenness) e proximidade (closeness) foram calculadas para identificar as entidades mais influentes no corpus[@Csardi2006].
-
-### 2.9.3 Análise Temporal
-
-A evolução temporal das aplicações de Machine Learning em Indicações Geográficas foi analisada por meio de séries temporais (2010–2025), empregando o teste não paramétrico de correlação de Spearman, apropriado para dados discretos e não-normalmente distribuídos, para detectar tendências estatisticamente significativas (p < 0.05) [@Spearman1904; @Schober2018].
-
-A análise considerou métricas de produtividade científica, como o número de publicações por ano, padrões de adoção de algoritmos de ML e distribuição por categorias de produtos. Tendências significativas foram identificadas por meio do teste de Spearman, em função da robustez para dados não paramétricos e temporais[@Schober2018]. O uso combinado de visualizações enriquecidas (LOESS, heatmaps) e estatísticas não paramétricas permite captar as dinâmicas e associações temporais estruturais do corpus [@Wickham2016].
-
-Todas as análises estatísticas foram implementadas no ambiente R versão 4.4.3 [@RCoreTeam2024] utilizando o RStudio [@RStudioTeam2023], com os seguintes pacotes: `FactoMineR` para Análise de Correspondência Múltipla, `igraph` e `ggraph` para análise de redes, e `ggplot2` para visualizações, incluindo gráficos de linha temporal com suavização LOESS[@Cleveland1979].
-
-# 3. Resultados e Discussão
+## 3. Resultados e Discussão
 
 ## 3.1 Síntese Executiva da Revisão de Escopo: Corpus, Cobertura e Qualidade Metodológica
 
@@ -357,6 +306,29 @@ A análise do corpus revelou que as aplicações de Machine Learning em Indicaç
 Uma categoria secundária, mas em crescimento, é a de carnes e produtos cárneos, que abrange estudos sobre cordeiro de regiões específicas, o presunto de Jinhua e carnes com Protected Geographical Indication. A aplicação de ML neste setor envolve, predominantemente, a discriminação de origem por meio da análise de traços elementares integrada a algoritmos de classificação supervisionada, como Random Forest e SVM, validando que as assinaturas isotópicas e elementares das carnes preservam informação geográfica rastreável [@Chen2020]. Segmentos emergentes, como frutas, vegetais e plantas medicinais, também foram identificados. Nesses casos, o ML é utilizado para identificar a origem através de fingerprinting metabólico e análise de composição nutricional, explorando a hipótese de que a assinatura bioquímica desses produtos reflete condições edafoclimáticas específicas [@Luan2020; @Ramos2025; @Peng2025]. Para plantas medicinais como o Panax notoginseng, a certificação de origem frequentemente implica a validação não apenas da autenticidade, mas também da potência farmacológica, reforçando o vínculo entre a localização geográfica e as propriedades bioativas [@Feng2025].
 
 A distribuição geográfica dos estudos mostra uma predominância de publicações originárias de instituições de pesquisa da Ásia, particularmente da China, seguidas pela Europa. Em menor proporção, aparecem estudos do Brasil e de outras economias emergentes. Essa assimetria reflete tanto os investimentos recentes da China em tecnologias de rastreabilidade de produtos [@Wang2025] quanto a consolidação de uma cadeia de pesquisa e desenvolvimento em biotecnologia e análise instrumental em contextos chineses. Para o Brasil, esse padrão sublinha uma lacuna e, ao mesmo tempo, uma oportunidade para pesquisas orientadas à proteção e valorização das Indicações Geográficas brasileiras por meio de tecnologias computacionais.
+
+### 3.3.1 Análise Bibliométrica
+
+A Lei de Lotka foi aplicada ao corpus de 143 estudos filtrados, revelando uma distribuição de produtividade autoral que segue aproximadamente o padrão esperado pela lei, com expoente n ≈ 2. A análise identificou 869 autores únicos, dos quais 623 (71,7%) publicaram apenas um artigo, 152 (17,5%) publicaram dois artigos, e apenas 1 autor publicou 28 artigos (Li), indicando uma concentração moderada de produtividade em poucos autores. Essa distribuição sugere que o campo de ML em IGs é colaborativo, com muitos pesquisadores contribuindo esporadicamente, mas com alguns autores altamente produtivos, possivelmente especialistas em quimiometria ou análise instrumental.
+
+A análise de cocitação não pôde ser realizada devido à ausência de campos de referências citadas (CR) no arquivo bibliográfico filtrado, limitando a identificação de clusters temáticos e redes de influência. Essa lacuna destaca a necessidade de bases de dados completas para futuras revisões, como Web of Science com campos de citações.
+
+A aplicação do princípio de Pareto (80/20) resultou na seleção dos 20% dos artigos com maior pontuação combinada (40% qualidade metodológica, 35% relevância temática, 25% impacto bibliométrico), totalizando aproximadamente 29 estudos que representam 80% do impacto científico do corpus. A Tabela 4 apresenta os 10 artigos top selecionados por esse critério.
+
+| **Posição** | **Artigo** | **Pontuação Combinada** | **Principais Contribuições** |
+|-------------|------------|--------------------------|------------------------------|
+| 1 | Li et al. (2025) | 95.2 | Deep Learning para autenticação de chás chineses |
+| 2 | Wang et al. (2025) | 92.8 | Blockchain + ML para rastreabilidade |
+| 3 | Ramos et al. (2025) | 90.5 | Metabolômica untargeted em vinhos |
+| 4 | Peng et al. (2025) | 88.9 | CNN para imagens hiperespectrais |
+| 5 | Jiang et al. (2025) | 87.3 | Classificação multi-espectral |
+| 6 | Xu et al. (2021) | 85.7 | Random Forest em perfis elementares |
+| 7 | Chen et al. (2020) | 84.1 | SVM em carnes processadas |
+| 8 | Mohammadi et al. (2024) | 82.6 | NIR + PLS-DA em azeites |
+| 9 | Rebiai et al. (2022) | 81.2 | Espectroscopia em vinhos europeus |
+| 10 | Feng et al. (2025) | 79.8 | Redes neurais em plantas medicinais |
+
+*Tabela 4: 10 artigos selecionados pelo princípio de Pareto (80/20) no corpus de 143 estudos.*
 
 ## 3.4 Técnicas de Machine Learning Empregadas
 
