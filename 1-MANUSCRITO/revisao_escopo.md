@@ -291,7 +291,7 @@ A evolução temporal das aplicações de Machine Learning em Indicações Geogr
 
 A análise considerou métricas de produtividade científica, como o número de publicações por ano, padrões de adoção de algoritmos de ML e distribuição por categorias de produtos. Tendências significativas foram identificadas por meio do teste de Spearman, em função da robustez para dados não paramétricos e temporais[@Schober2018]. O uso combinado de visualizações enriquecidas (LOESS, heatmaps) e estatísticas não paramétricas permite captar as dinâmicas e associações temporais estruturais do corpus [@Wickham2016].
 
-Todas as análises estatísticas foram implementadas no ambiente R, utilizando pacotes especializados para cada técnica: `FactoMineR` para Análise de Correspondência Múltipla, `igraph` e `ggraph` para análise de redes, e `ggplot2` para visualizações. As visualizações foram geradas utilizando o pacote ggplot2, incluindo gráficos de linha temporal com suavização LOESS[@Cleveland1979].
+Todas as análises estatísticas foram implementadas no ambiente R, utilizando pacotes, `FactoMineR` para Análise de Correspondência Múltipla, `igraph` e `ggraph` para análise de redes As visualizações foram geradas utilizando o pacote `ggplot2`, incluindo gráficos de linha temporal com suavização LOESS[@Cleveland1979].
 
 # 3. Resultados e Discussão
 
