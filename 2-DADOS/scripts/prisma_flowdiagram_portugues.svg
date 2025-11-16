@@ -109,7 +109,7 @@
     <g id="node1" class="node">
       <title>identification</title>
       <g id="a_node1">
-        <a xlink:title="Blue identification box">
+        <a xlink:title="Caixa azul de identificação">
           <path fill="#bcd2ee" stroke="#bcd2ee" d="M19.3333,-594C19.3333,-594 9.6667,-594 9.6667,-594 4.8333,-594 0,-589.1667 0,-584.3333 0,-584.3333 0,-459.6667 0,-459.6667 0,-454.8333 4.8333,-450 9.6667,-450 9.6667,-450 19.3333,-450 19.3333,-450 24.1667,-450 29,-454.8333 29,-459.6667 29,-459.6667 29,-584.3333 29,-584.3333 29,-589.1667 24.1667,-594 19.3333,-594"/>
           <text text-anchor="middle" x="518.4" y="16.5" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000" transform="rotate(-90)">IDENTIFICAÇÃO</text>
         </a>
@@ -119,7 +119,7 @@
     <g id="node2" class="node">
       <title>screening</title>
       <g id="a_node2">
-        <a xlink:title="Blue screening box">
+        <a xlink:title="Caixa azul de triagem">
           <path fill="#bcd2ee" stroke="#bcd2ee" d="M19.3333,-396C19.3333,-396 9.6667,-396 9.6667,-396 4.8333,-396 0,-391.1667 0,-386.3333 0,-386.3333 0,-207.6667 0,-207.6667 0,-202.8333 4.8333,-198 9.6667,-198 9.6667,-198 19.3333,-198 19.3333,-198 24.1667,-198 29,-202.8333 29,-207.6667 29,-207.6667 29,-386.3333 29,-386.3333 29,-391.1667 24.1667,-396 19.3333,-396"/>
           <text text-anchor="middle" x="293.4" y="16.5" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000" transform="rotate(-90)">TRIAGEM</text>
         </a>
@@ -129,7 +129,7 @@
     <g id="node3" class="node">
       <title>included</title>
       <g id="a_node3">
-        <a xlink:title="Blue included box">
+        <a xlink:title="Caixa azul de inclusão">
           <path fill="#bcd2ee" stroke="#bcd2ee" d="M19.3333,-180C19.3333,-180 9.6667,-180 9.6667,-180 4.8333,-180 0,-175.1667 0,-170.3333 0,-170.3333 0,-9.6667 0,-9.6667 0,-4.8333 4.8333,0 9.6667,0 9.6667,0 19.3333,0 19.3333,0 24.1667,0 29,-4.8333 29,-9.6667 29,-9.6667 29,-170.3333 29,-170.3333 29,-175.1667 24.1667,-180 19.3333,-180"/>
           <text text-anchor="middle" x="86.4" y="16.5" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000" transform="rotate(-90)">INCLUSÃO</text>
         </a>
@@ -139,9 +139,9 @@
     <g id="node4" class="node">
       <title>3</title>
       <g id="a_node4">
-        <a xlink:title="Yellow title box; Identification of new studies via databases and registers">
+        <a xlink:title="Caixa amarela; Identificação de novos estudos via bases de dados e registros">
           <path fill="#ffc125" stroke="#ffc125" d="M580.8333,-640.9C580.8333,-640.9 60.1667,-640.9 60.1667,-640.9 55.3333,-640.9 50.5,-636.0667 50.5,-631.2333 50.5,-631.2333 50.5,-621.5667 50.5,-621.5667 50.5,-616.7333 55.3333,-611.9 60.1667,-611.9 60.1667,-611.9 580.8333,-611.9 580.8333,-611.9 585.6667,-611.9 590.5,-616.7333 590.5,-621.5667 590.5,-621.5667 590.5,-631.2333 590.5,-631.2333 590.5,-636.0667 585.6667,-640.9 580.8333,-640.9"/>
-          <text text-anchor="middle" x="320.5" y="-622.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Identification of new studies via databases and registers</text>
+          <text text-anchor="middle" x="320.5" y="-622.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Identificação de novos estudos via bases de dados e registros</text>
         </a>
       </g>
     </g>
@@ -149,13 +149,13 @@
     <g id="node5" class="node">
       <title>4</title>
       <g id="a_node5">
-        <a xlink:title="Records identified from: Databases and Registers">
+        <a xlink:title="Registros identificados de: Bases de dados e Registros">
           <polygon fill="none" stroke="#000000" points="302.5,-567 50.5,-567 50.5,-477 302.5,-477 302.5,-567"/>
           <text text-anchor="middle" x="176.5" y="-547.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records identified from:</text>
-          <text text-anchor="middle" x="176.5" y="-532.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Databases (n = 272):</text>
+          <text text-anchor="middle" x="176.5" y="-532.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Bases de dados (n = 272):</text>
           <text text-anchor="middle" x="176.5" y="-518.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Scopus (n = 140)</text>
           <text text-anchor="middle" x="176.5" y="-504" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Web of Science (n = 132)</text>
-          <text text-anchor="middle" x="176.5" y="-489.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registers (n = 0)</text>
+          <text text-anchor="middle" x="176.5" y="-489.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registros (n = 0)</text>
         </a>
       </g>
     </g>
@@ -163,14 +163,14 @@
     <g id="node6" class="node">
       <title>5</title>
       <g id="a_node6">
-        <a xlink:title="Duplicate records">
+        <a xlink:title="Registros duplicados">
           <polygon fill="none" stroke="#000000" points="590.5,-569.4009 338.5,-569.4009 338.5,-474.5991 590.5,-474.5991 590.5,-569.4009"/>
           <text text-anchor="middle" x="464.5" y="-554.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records removed before screening:</text>
-          <text text-anchor="middle" x="464.5" y="-540" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Duplicate records (n = 0)</text>
-          <text text-anchor="middle" x="464.5" y="-525.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records marked as ineligible by automation</text>
-          <text text-anchor="middle" x="464.5" y="-511.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">tools (n = 38)</text>
-          <text text-anchor="middle" x="464.5" y="-496.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records removed for other reasons (n =</text>
-          <text text-anchor="middle" x="464.5" y="-482.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">209)</text>
+          <text text-anchor="middle" x="464.5" y="-540" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registros duplicados (n = 0)</text>
+          <text text-anchor="middle" x="464.5" y="-525.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registros marcados como inelegíveis por</text>
+          <text text-anchor="middle" x="464.5" y="-511.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">ferramentas automatizadas (n = 38)</text>
+          <text text-anchor="middle" x="464.5" y="-496.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registros removidos por outros motivos (n</text>
+          <text text-anchor="middle" x="464.5" y="-482.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">= 209)</text>
         </a>
       </g>
     </g>
@@ -178,9 +178,9 @@
     <g id="node7" class="node">
       <title>6</title>
       <g id="a_node7">
-        <a xlink:title="Records screened (databases and registers)">
+        <a xlink:title="Registros triados (bases de dados e registros)">
           <polygon fill="none" stroke="#000000" points="302.5,-396.3005 50.5,-396.3005 50.5,-359.6995 302.5,-359.6995 302.5,-396.3005"/>
-          <text text-anchor="middle" x="176.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records screened</text>
+          <text text-anchor="middle" x="176.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registros triados</text>
           <text text-anchor="middle" x="176.5" y="-367.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 272)</text>
         </a>
       </g>
@@ -189,9 +189,9 @@
     <g id="node8" class="node">
       <title>7</title>
       <g id="a_node8">
-        <a xlink:title="Records excluded (databases and registers)">
+        <a xlink:title="Registros excluídos (bases de dados e registros)">
           <polygon fill="none" stroke="#000000" points="590.5,-396.3005 338.5,-396.3005 338.5,-359.6995 590.5,-359.6995 590.5,-396.3005"/>
-          <text text-anchor="middle" x="464.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records excluded</text>
+          <text text-anchor="middle" x="464.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Registros excluídos</text>
           <text text-anchor="middle" x="464.5" y="-367.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 124)</text>
         </a>
       </g>
@@ -200,9 +200,9 @@
     <g id="node9" class="node">
       <title>8</title>
       <g id="a_node9">
-        <a xlink:title="Reports sought for retrieval (databases and registers)">
+        <a xlink:title="Relatórios procurados para recuperação (bases de dados e registros)">
           <polygon fill="none" stroke="#000000" points="302.5,-324.3005 50.5,-324.3005 50.5,-287.6995 302.5,-287.6995 302.5,-324.3005"/>
-          <text text-anchor="middle" x="176.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports sought for retrieval</text>
+          <text text-anchor="middle" x="176.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios procurados para recuperação</text>
           <text text-anchor="middle" x="176.5" y="-295.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 272)</text>
         </a>
       </g>
@@ -211,9 +211,9 @@
     <g id="node10" class="node">
       <title>9</title>
       <g id="a_node10">
-        <a xlink:title="Reports not retrieved (databases and registers)">
+        <a xlink:title="Relatórios não recuperados (bases de dados e registros)">
           <polygon fill="none" stroke="#000000" points="590.5,-324.3005 338.5,-324.3005 338.5,-287.6995 590.5,-287.6995 590.5,-324.3005"/>
-          <text text-anchor="middle" x="464.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports not retrieved</text>
+          <text text-anchor="middle" x="464.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios não recuperados</text>
           <text text-anchor="middle" x="464.5" y="-295.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 0)</text>
         </a>
       </g>
@@ -222,9 +222,9 @@
     <g id="node11" class="node">
       <title>10</title>
       <g id="a_node11">
-        <a xlink:title="Reports assessed for eligibility (databases and registers)">
+        <a xlink:title="Relatórios avaliados para elegibilidade (bases de dados e registros)">
           <polygon fill="none" stroke="#000000" points="302.5,-243.3005 50.5,-243.3005 50.5,-206.6995 302.5,-206.6995 302.5,-243.3005"/>
-          <text text-anchor="middle" x="176.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports assessed for eligibility</text>
+          <text text-anchor="middle" x="176.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios avaliados para elegibilidade</text>
           <text text-anchor="middle" x="176.5" y="-214.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 272)</text>
         </a>
       </g>
@@ -233,9 +233,9 @@
     <g id="node12" class="node">
       <title>11</title>
       <g id="a_node12">
-        <a xlink:title="Reports excluded (databases and registers)">
+        <a xlink:title="Relatórios excluídos (bases de dados e registros)">
           <polygon fill="#ffffff" stroke="#000000" points="590.5,-250.7004 338.5,-250.7004 338.5,-199.2996 590.5,-199.2996 590.5,-250.7004"/>
-          <text text-anchor="middle" x="464.5" y="-235.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports excluded:</text>
+          <text text-anchor="middle" x="464.5" y="-235.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios excluídos:</text>
           <text text-anchor="middle" x="464.5" y="-221.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Baixa relevância (&lt; 20 pts) (n = 124)</text>
           <text text-anchor="middle" x="464.5" y="-207" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Artigos excluídos (n = 0)</text>
         </a>
@@ -245,11 +245,11 @@
     <g id="node13" class="node">
       <title>12</title>
       <g id="a_node13">
-        <a xlink:title="New studies included in review">
+        <a xlink:title="Novos estudos incluídos na revisão">
           <polygon fill="none" stroke="#000000" points="302.5,-126 50.5,-126 50.5,-54 302.5,-54 302.5,-126"/>
-          <text text-anchor="middle" x="176.5" y="-108" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">New studies included in review</text>
+          <text text-anchor="middle" x="176.5" y="-108" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Novos estudos incluídos na revisão</text>
           <text text-anchor="middle" x="176.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 148)</text>
-          <text text-anchor="middle" x="176.5" y="-79.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports of new included studies</text>
+          <text text-anchor="middle" x="176.5" y="-79.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios de novos estudos incluídos</text>
           <text text-anchor="middle" x="176.5" y="-64.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 148)</text>
         </a>
       </g>
@@ -258,9 +258,9 @@
     <g id="node14" class="node">
       <title>13</title>
       <g id="a_node14">
-        <a xlink:title="Grey title box; Identification of new studies via other methods">
+        <a xlink:title="Caixa cinza; Identificação de novos estudos via outros métodos">
           <path fill="#dcdcdc" stroke="#dcdcdc" d="M1156.8333,-640.9C1156.8333,-640.9 636.1667,-640.9 636.1667,-640.9 631.3333,-640.9 626.5,-636.0667 626.5,-631.2333 626.5,-631.2333 626.5,-621.5667 626.5,-621.5667 626.5,-616.7333 631.3333,-611.9 636.1667,-611.9 636.1667,-611.9 1156.8333,-611.9 1156.8333,-611.9 1161.6667,-611.9 1166.5,-616.7333 1166.5,-621.5667 1166.5,-621.5667 1166.5,-631.2333 1166.5,-631.2333 1166.5,-636.0667 1161.6667,-640.9 1156.8333,-640.9"/>
-          <text text-anchor="middle" x="896.5" y="-622.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Identification of new studies via other methods</text>
+          <text text-anchor="middle" x="896.5" y="-622.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Identificação de novos estudos via outros métodos</text>
         </a>
       </g>
     </g>
@@ -268,12 +268,12 @@
     <g id="node15" class="node">
       <title>14</title>
       <g id="a_node15">
-        <a xlink:title="Records identified from: Websites, Organisations and Citation Searching">
+        <a xlink:title="Registros identificados de: Sites web, Organizações e Busca por citações">
           <polygon fill="#dcdcdc" stroke="#dcdcdc" points="878.5,-558 626.5,-558 626.5,-486 878.5,-486 878.5,-558"/>
           <text text-anchor="middle" x="752.5" y="-540" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records identified from:</text>
-          <text text-anchor="middle" x="752.5" y="-525.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Websites (n = 0)</text>
-          <text text-anchor="middle" x="752.5" y="-511.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Organisations (n = 0)</text>
-          <text text-anchor="middle" x="752.5" y="-496.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Citation searching (n = 0)</text>
+          <text text-anchor="middle" x="752.5" y="-525.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Sites web (n = 0)</text>
+          <text text-anchor="middle" x="752.5" y="-511.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Organizações (n = 0)</text>
+          <text text-anchor="middle" x="752.5" y="-496.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Busca por citações (n = 0)</text>
         </a>
       </g>
     </g>
@@ -281,9 +281,9 @@
     <g id="node16" class="node">
       <title>15</title>
       <g id="a_node16">
-        <a xlink:title="Reports sought for retrieval (other)">
+        <a xlink:title="Relatórios procurados para recuperação (outros)">
           <polygon fill="#dcdcdc" stroke="#dcdcdc" points="878.5,-324.3005 626.5,-324.3005 626.5,-287.6995 878.5,-287.6995 878.5,-324.3005"/>
-          <text text-anchor="middle" x="752.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports sought for retrieval</text>
+          <text text-anchor="middle" x="752.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios procurados para recuperação</text>
           <text text-anchor="middle" x="752.5" y="-295.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 0)</text>
         </a>
       </g>
@@ -292,9 +292,9 @@
     <g id="node17" class="node">
       <title>16</title>
       <g id="a_node17">
-        <a xlink:title="Reports not retrieved (other)">
+        <a xlink:title="Relatórios não recuperados (outros)">
           <polygon fill="#dcdcdc" stroke="#dcdcdc" points="1166.5,-324.3005 914.5,-324.3005 914.5,-287.6995 1166.5,-287.6995 1166.5,-324.3005"/>
-          <text text-anchor="middle" x="1040.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports not retrieved</text>
+          <text text-anchor="middle" x="1040.5" y="-309.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios não recuperados</text>
           <text text-anchor="middle" x="1040.5" y="-295.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 0)</text>
         </a>
       </g>
@@ -303,9 +303,9 @@
     <g id="node18" class="node">
       <title>17</title>
       <g id="a_node18">
-        <a xlink:title="Reports assessed for eligibility (other)">
+        <a xlink:title="Relatórios avaliados para elegibilidade (outros)">
           <polygon fill="#dcdcdc" stroke="#dcdcdc" points="878.5,-243.3005 626.5,-243.3005 626.5,-206.6995 878.5,-206.6995 878.5,-243.3005"/>
-          <text text-anchor="middle" x="752.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports assessed for eligibility</text>
+          <text text-anchor="middle" x="752.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios avaliados para elegibilidade</text>
           <text text-anchor="middle" x="752.5" y="-214.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 0)</text>
         </a>
       </g>
@@ -314,9 +314,9 @@
     <g id="node19" class="node">
       <title>18</title>
       <g id="a_node19">
-        <a xlink:title="Reports excluded (other)">
+        <a xlink:title="Relatórios excluídos (outros)">
           <polygon fill="#dcdcdc" stroke="#dcdcdc" points="1166.5,-243.3005 914.5,-243.3005 914.5,-206.6995 1166.5,-206.6995 1166.5,-243.3005"/>
-          <text text-anchor="middle" x="1040.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports excluded:</text>
+          <text text-anchor="middle" x="1040.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Relatórios excluídos:</text>
           <text text-anchor="middle" x="1040.5" y="-214.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000"> (n = NA)</text>
         </a>
       </g>

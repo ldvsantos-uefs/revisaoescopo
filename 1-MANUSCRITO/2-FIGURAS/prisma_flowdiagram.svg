@@ -192,7 +192,7 @@
         <a xlink:title="Records excluded (databases and registers)">
           <polygon fill="none" stroke="#000000" points="590.5,-396.3005 338.5,-396.3005 338.5,-359.6995 590.5,-359.6995 590.5,-396.3005"/>
           <text text-anchor="middle" x="464.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Records excluded</text>
-          <text text-anchor="middle" x="464.5" y="-367.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 247)</text>
+          <text text-anchor="middle" x="464.5" y="-367.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 124)</text>
         </a>
       </g>
     </g>
@@ -236,8 +236,8 @@
         <a xlink:title="Reports excluded (databases and registers)">
           <polygon fill="#ffffff" stroke="#000000" points="590.5,-250.7004 338.5,-250.7004 338.5,-199.2996 590.5,-199.2996 590.5,-250.7004"/>
           <text text-anchor="middle" x="464.5" y="-235.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports excluded:</text>
-          <text text-anchor="middle" x="464.5" y="-221.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Baixa relevância (&lt; 20 pts) (n = 209)</text>
-          <text text-anchor="middle" x="464.5" y="-207" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Artigos excluídos (n = 38)</text>
+          <text text-anchor="middle" x="464.5" y="-221.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Baixa relevância (&lt; 20 pts) (n = 124)</text>
+          <text text-anchor="middle" x="464.5" y="-207" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Artigos excluídos (n = 0)</text>
         </a>
       </g>
     </g>
@@ -248,9 +248,9 @@
         <a xlink:title="New studies included in review">
           <polygon fill="none" stroke="#000000" points="302.5,-126 50.5,-126 50.5,-54 302.5,-54 302.5,-126"/>
           <text text-anchor="middle" x="176.5" y="-108" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">New studies included in review</text>
-          <text text-anchor="middle" x="176.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 25)</text>
+          <text text-anchor="middle" x="176.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 148)</text>
           <text text-anchor="middle" x="176.5" y="-79.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">Reports of new included studies</text>
-          <text text-anchor="middle" x="176.5" y="-64.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 25)</text>
+          <text text-anchor="middle" x="176.5" y="-64.8" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#000000">(n = 148)</text>
         </a>
       </g>
     </g>
