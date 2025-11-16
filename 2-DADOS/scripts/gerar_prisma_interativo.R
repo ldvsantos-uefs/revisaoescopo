@@ -12,23 +12,24 @@ options(warn = -1)
 options(repos = c(CRAN = "https://cran.rstudio.com"))
 
 # Verificar e instalar pacotes necessários
-pacotes_necessarios <- c("PRISMA2020", "DiagrammeR", "htmlwidgets")
+pacotes_necessarios <- c("devtools", "htmlwidgets", "DiagrammeR")
+
+# Forçar reinstalação do magrittr
+install.packages("magrittr", quiet = TRUE)
 
 for (pacote in pacotes_necessarios) {
   if (!require(pacote, character.only = TRUE)) {
     cat(sprintf("📦 Instalando pacote: %s\n", pacote))
-    
-    if (pacote == "PRISMA2020") {
-      # Instalar do GitHub
-      if (!require("devtools", character.only = TRUE)) {
-        install.packages("devtools", quiet = TRUE)
-      }
-      devtools::install_github("prisma-flowdiagram/PRISMA2020", quiet = TRUE)
-    } else {
-      install.packages(pacote, quiet = TRUE)
-    }
+    install.packages(pacote, quiet = TRUE)
   }
 }
+
+# Forçar reinstalação do PRISMA2020
+if (!require("PRISMA2020", character.only = TRUE)) {
+    cat("📦 Instalando PRISMA2020 do GitHub...\n")
+    devtools::install_github("prisma-flowdiagram/PRISMA2020", quiet = TRUE, force = TRUE)
+}
+
 
 library(PRISMA2020, quietly = TRUE)
 library(htmlwidgets, quietly = TRUE)

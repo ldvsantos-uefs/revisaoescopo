@@ -1,0 +1,472 @@
+==========================================================================================
+RELATÓRIO CONSOLIDADO - ARTIGOS RELEVANTES
+Tema: Machine Learning aplicado a Indicações Geográficas
+Fontes: Scopus + Web of Science (Combinados)
+==========================================================================================
+
+📊 RESUMO EXECUTIVO
+------------------------------------------------------------------------------------------
+Total analisado: 272
+✅ RELEVANTES SELECIONADOS: 25 (9.2%)
+❌ Não selecionados (baixa relevância + excluídos): 247 (90.8%)
+
+🏆 Excelência (≥40 pts): 1
+🥈 Alta relevância (≥30 pts): 2
+🥉 Adequada (≥20 pts): 22
+
+📚 DISTRIBUIÇÃO POR FONTE (Artigos Relevantes)
+------------------------------------------------------------------------------------------
+  • Scopus: 17 artigos
+    (1 excelência, 2 alta, 14 adequada)
+  • WoS: 8 artigos
+    (8 adequada)
+
+📅 DISTRIBUIÇÃO TEMPORAL (Artigos Relevantes)
+------------------------------------------------------------------------------------------
+  2011: ██ (2)
+  2012: █ (1)
+  2013: ██ (2)
+  2020: █ (1)
+  2021: ████ (4)
+  2022: █████ (5)
+  2023: ██ (2)
+  2024: ██ (2)
+  2025: ██████ (6)
+
+
+==========================================================================================
+📋 LISTA COMPLETA DOS 25 ARTIGOS RELEVANTES
+==========================================================================================
+
+
+------------------------------------------------------------------------------------------
+🏆 EXCELÊNCIA (1 artigos)
+------------------------------------------------------------------------------------------
+
+1. [Scopus] Furia20118450
+   📊 Score: 41.0 pontos
+   📅 Ano: 2011
+   👤 Autor(es): Furia, Emilia and Naccarato, Attilio and Sindona, Giovanni and Stabile, Gaetano and Tagarelli, Anton...
+   📖 Título: J. Agric. Food Chem.
+   🔍 Termos encontrados (13):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indications
+      • 🔴 PRIORITÁRIO (keywords, abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (conteúdo): authentication
+      • 🔴 PRIORITÁRIO (conteúdo): origin authentication
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): quality control
+      • 🟠 ALTA: neural network
+      • 🟠 ALTA: neural networks
+      • 🟠 ALTA: ann
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: mass spectrometry
+
+
+------------------------------------------------------------------------------------------
+🥈 ALTA RELEVÂNCIA (2 artigos)
+------------------------------------------------------------------------------------------
+
+2. [Scopus] Gazeli2020
+   📊 Score: 38.0 pontos
+   📅 Ano: 2020
+   👤 Autor(es): Gazeli, Odhisea and Bellou, Elli and Stefas, Dimitrios and Couris, Stelios
+   📖 Título: Food Chem.
+   🔍 Termos encontrados (14):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): geographical indications
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (keywords, abstract): protected designation of origin
+      • 🔴 PRIORITÁRIO (abstract): pdo
+      • 🔴 PRIORITÁRIO (abstract): authentication
+      • 🔴 PRIORITÁRIO (keywords, abstract): quality control
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: support vector machine
+      • 🟠 ALTA: svm
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: chemometrics
+      • 🟡 ADEQUADA: spectroscopy
+
+3. [Scopus] Li2025
+   📊 Score: 31.0 pontos
+   📅 Ano: 2025
+   👤 Autor(es): Li, Yicong and Birse, Nicholas and Hong, Yunhe and Quinn, Brian P. and Logan, Natasha and Jiao, Yann...
+   📖 Título: Food Chem.
+   🔍 Termos encontrados (13):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): geographical indications
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): authentication
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): origin authentication
+      • 🔴 PRIORITÁRIO (abstract): traceability
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: ann
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: metabolomics
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: chromatography
+      • 🟡 ADEQUADA: mass spectrometry
+
+
+------------------------------------------------------------------------------------------
+🥉 ADEQUADA (22 artigos)
+------------------------------------------------------------------------------------------
+
+4. [Scopus] Decker20232559
+   📊 Score: 29.0 pontos
+   📅 Ano: 2023
+   👤 Autor(es): Decker, Christina and Krapf, Reiner and Kuballa, Thomas and Bunzel, Mirko
+   📖 Título: Eur. Food Res. Technol.
+   🔍 Termos encontrados (7):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): authentication
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): quality control
+      • 🟠 ALTA: classification
+      • 🟡 ADEQUADA: spectroscopy
+
+5. [Scopus] Resce2022
+   📊 Score: 27.0 pontos
+   📅 Ano: 2022
+   👤 Autor(es): Resce, Giuliano and Vaquero-Piñeiro, Cristina
+   📖 Título: Food Policy
+   🔍 Termos encontrados (8):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indications
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (abstract): protected designation of origin
+      • 🔴 PRIORITÁRIO (abstract): pdo
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: random forest
+
+6. [WoS] WOS:000742856200003
+   📊 Score: 26.5 pontos
+   📅 Ano: 2022
+   👤 Autor(es): 
+   📖 Título: 
+   🔍 Termos encontrados (12):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): authentication
+      • 🔴 PRIORITÁRIO (conteúdo): traceability
+      • 🟠 ALTA: knn
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: pattern recognition
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: spectroscopy
+      • 🟡 ADEQUADA: mass spectrometry
+
+7. [Scopus] Tan2022
+   📊 Score: 26.0 pontos
+   📅 Ano: 2022
+   👤 Autor(es): Tan, Hui Ru and Chan, Liyan and Lee, Hueihong and Xu, Yongquan Quang and Zhou, Weibiao
+   📖 Título: Food Control
+   🔍 Termos encontrados (11):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): authentication
+      • 🔴 PRIORITÁRIO (abstract): traceability
+      • 🟠 ALTA: knn
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: pattern recognition
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: mass spectrometry
+
+8. [Scopus] Kabir2021
+   📊 Score: 26.0 pontos
+   📅 Ano: 2021
+   👤 Autor(es): Kabir, Muhammad Hilal and Guindo, Mahamed Lamine and Chen, Rongqin and Liu, Fei
+   📖 Título: Foods
+   🔍 Termos encontrados (12):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (abstract): protected designation of origin
+      • 🔴 PRIORITÁRIO (abstract): pdo
+      • 🔴 PRIORITÁRIO (abstract): authentication
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: random forest
+      • 🟠 ALTA: support vector machine
+      • 🟠 ALTA: svm
+      • 🟠 ALTA: k-nearest neighbor
+      • 🟡 ADEQUADA: spectroscopy
+
+9. [Scopus] Małyjurek2021
+   📊 Score: 25.5 pontos
+   📅 Ano: 2021
+   👤 Autor(es): Małyjurek, Zuzanna and Zawisza, Beata and De Beer, Dalene and Joubert, Elizabeth and Walczak, Beata
+   📖 Título: Food Control
+   🔍 Termos encontrados (8):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indications
+      • 🔴 PRIORITÁRIO (abstract): authentication
+      • 🔴 PRIORITÁRIO (abstract): quality control
+      • 🔴 PRIORITÁRIO (abstract): origin verification
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: ann
+      • 🟠 ALTA: classification
+
+10. [Scopus] Santomá-Martí20251825
+   📊 Score: 24.5 pontos
+   📅 Ano: 2025
+   👤 Autor(es): Santomá-Martí, Alexandra and Aijon, Nil and Núñez, Óscar
+   📖 Título: Food Anal. Methods.
+   🔍 Termos encontrados (10):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): geographical indications
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (keywords, abstract): authentication
+      • 🟠 ALTA: decision tree
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: chromatography
+
+11. [Scopus] Herrero-Latorre20133559
+   📊 Score: 24.5 pontos
+   📅 Ano: 2013
+   👤 Autor(es): Herrero-Latorre, Carlos and Peña Crecente, Rosa M. and Martín, Sagrario García and Barciela-García, ...
+   📖 Título: Food Chem.
+   🔍 Termos encontrados (11):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (keywords, abstract): authentication
+      • 🟠 ALTA: neural network
+      • 🟠 ALTA: neural networks
+      • 🟠 ALTA: knn
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: pattern recognition
+      • 🟠 ALTA: chemometrics
+      • 🟡 ADEQUADA: spectroscopy
+
+12. [WoS] WOS:000293355000051
+   📊 Score: 24.5 pontos
+   📅 Ano: 2011
+   👤 Autor(es): 
+   📖 Título: 
+   🔍 Termos encontrados (11):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indications
+      • 🔴 PRIORITÁRIO (conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (conteúdo): authentication
+      • 🔴 PRIORITÁRIO (conteúdo): origin authentication
+      • 🟠 ALTA: neural network
+      • 🟠 ALTA: ann
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: mass spectrometry
+
+13. [Scopus] Oganesyants2024
+   📊 Score: 24.0 pontos
+   📅 Ano: 2024
+   👤 Autor(es): Oganesyants, Lev A. and Panasyuk, Alexander Lvovich and Sviridov, Dmitriy A. and Egorova, Olesya Ser...
+   📖 Título: Separations
+   🔍 Termos encontrados (8):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🔴 PRIORITÁRIO (abstract): protected designation of origin
+      • 🔴 PRIORITÁRIO (abstract): pdo
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): authentication
+      • 🟠 ALTA: random forest
+      • 🟠 ALTA: supervised learning
+
+14. [WoS] WOS:000860616800001
+   📊 Score: 24.0 pontos
+   📅 Ano: 2022
+   👤 Autor(es): Resce, Giuliano and Vaquero-Pineiro, Cristina
+   📖 Título: 
+   🔍 Termos encontrados (9):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indications
+      • 🔴 PRIORITÁRIO (conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (conteúdo): protected designation of origin
+      • 🔴 PRIORITÁRIO (conteúdo): pdo
+      • 🔴 PRIORITÁRIO (conteúdo): terroir
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: random forest
+
+15. [Scopus] Sayago2025
+   📊 Score: 23.5 pontos
+   📅 Ano: 2025
+   👤 Autor(es): Sayago, Ana and González-Domínguez, Raúl and Fernández Recamales, Ángeles
+   📖 Título: Plant Cell Environ.
+   🔍 Termos encontrados (9):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): authentication
+      • 🔴 PRIORITÁRIO (abstract): traceability
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: chemometrics
+      • 🟡 ADEQUADA: predictive model
+      • 🟡 ADEQUADA: mass spectrometry
+
+16. [WoS] WOS:001395358500001
+   📊 Score: 23.5 pontos
+   📅 Ano: 2025
+   👤 Autor(es): 
+   📖 Título: 
+   🔍 Termos encontrados (12):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indications
+      • 🔴 PRIORITÁRIO (conteúdo): authentication
+      • 🔴 PRIORITÁRIO (conteúdo): origin authentication
+      • 🔴 PRIORITÁRIO (conteúdo): traceability
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: ann
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: metabolomics
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: chromatography
+      • 🟡 ADEQUADA: mass spectrometry
+
+17. [WoS] WOS:001511351400001
+   📊 Score: 23.0 pontos
+   📅 Ano: 2025
+   👤 Autor(es): Santoma-Marti, Alexandra and Aijon, Nil and Nunez, Oscar
+   📖 Título: 
+   🔍 Termos encontrados (11):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indications
+      • 🔴 PRIORITÁRIO (conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (conteúdo): authentication
+      • 🟠 ALTA: decision tree
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: metabolomics
+      • 🟠 ALTA: fingerprinting
+      • 🟡 ADEQUADA: chromatography
+
+18. [WoS] WOS:000324848000038
+   📊 Score: 22.5 pontos
+   📅 Ano: 2013
+   👤 Autor(es): 
+   📖 Título: 
+   🔍 Termos encontrados (9):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): authentication
+      • 🟠 ALTA: neural network
+      • 🟠 ALTA: neural networks
+      • 🟠 ALTA: knn
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: pattern recognition
+
+19. [WoS] WOS:001231289500001
+   📊 Score: 22.5 pontos
+   📅 Ano: 2024
+   👤 Autor(es): 
+   📖 Título: 
+   🔍 Termos encontrados (9):
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (conteúdo): pdo
+      • 🔴 PRIORITÁRIO (conteúdo): authentication
+      • 🔴 PRIORITÁRIO (conteúdo): traceability
+      • 🟠 ALTA: random forest
+      • 🟠 ALTA: supervised learning
+      • 🟠 ALTA: classification
+
+20. [Scopus] Zheng2023
+   📊 Score: 21.5 pontos
+   📅 Ano: 2023
+   👤 Autor(es): Zheng, Chuanmao and Li, Jieqing and Liu, Honggao and Wang, Yuanzhong
+   📖 Título: Food BioSci.
+   🔍 Termos encontrados (8):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (conteúdo): geographical indications
+      • 🔴 PRIORITÁRIO (keywords, abstract): authentication
+      • 🟠 ALTA: neural network
+      • 🟠 ALTA: convolutional neural network
+      • 🟠 ALTA: svm
+      • 🟠 ALTA: chemometrics
+      • 🟡 ADEQUADA: spectroscopy
+
+21. [Scopus] Di Donato2021
+   📊 Score: 21.5 pontos
+   📅 Ano: 2021
+   👤 Autor(es): Di Donato, Francesca and Gornati, Giulia and Biancolillo, Alessandra and D’Archivio, Angelo Antonio
+   📖 Título: J. Food Compos. Anal.
+   🔍 Termos encontrados (6):
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (keywords, conteúdo): protected designation of origin
+      • 🟠 ALTA: classification
+      • 🟠 ALTA: chemometrics
+      • 🟡 ADEQUADA: predictive model
+
+22. [WoS] WOS:000723446300001
+   📊 Score: 21.5 pontos
+   📅 Ano: 2021
+   👤 Autor(es): 
+   📖 Título: 
+   🔍 Termos encontrados (11):
+      • 🔴 PRIORITÁRIO (conteúdo): pgi
+      • 🔴 PRIORITÁRIO (conteúdo): protected designation of origin
+      • 🔴 PRIORITÁRIO (conteúdo): pdo
+      • 🔴 PRIORITÁRIO (conteúdo): authentication
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: random forest
+      • 🟠 ALTA: support vector machine
+      • 🟠 ALTA: svm
+      • 🟠 ALTA: k-nearest neighbor
+      • 🟠 ALTA: classification
+      • 🟡 ADEQUADA: spectroscopy
+
+23. [Scopus] Santoma2025
+   📊 Score: 21.0 pontos
+   📅 Ano: 2025
+   👤 Autor(es): Santomá-Martí, Alexandra and Aijon, Nil and Núñez, Óscar
+   📖 Título: Meat Authentication Based on Animal Species and Other Quality Meat Attributes (Protected Geographical Indication, Organic Production, and Halal and Kosher Products) by HPLC–UV Fingerprinting and Chemometrics
+   🔍 Termos encontrados (5):
+      • 🔴 PRIORITÁRIO (título, conteúdo): geographical indication
+      • 🔴 PRIORITÁRIO (título, conteúdo): protected geographical indication
+      • 🔴 PRIORITÁRIO (título, conteúdo): authentication
+      • 🟠 ALTA: chemometrics
+      • 🟠 ALTA: fingerprinting
+
+24. [Scopus] Zhao2022
+   📊 Score: 21.0 pontos
+   📅 Ano: 2022
+   👤 Autor(es): Zhao, Ruting and Liu, Xiaoxia and Wang, Jishi and Wang, Yanyun and Chen, Ailiang and Zhao, Yan and Y...
+   📖 Título: Foods
+   🔍 Termos encontrados (7):
+      • 🔴 PRIORITÁRIO (keywords, abstract): geographical indication
+      • 🔴 PRIORITÁRIO (keywords, abstract): protected geographical indication
+      • 🔴 PRIORITÁRIO (abstract): pgi
+      • 🟠 ALTA: machine learning
+      • 🟠 ALTA: ann
+      • 🟠 ALTA: svm
+      • 🟠 ALTA: knn
+
+25. [Scopus] Camin201254
+   📊 Score: 20.0 pontos
+   📅 Ano: 2012
+   👤 Autor(es): Camin, Federica and Wehrens, Ron and Bertoldi, Daniela and Bontempo, Luana and Ziller, Luca and Peri...
+   📖 Título: Anal. Chim. Acta
+   🔍 Termos encontrados (8):
+      • 🔴 PRIORITÁRIO (abstract): geographical indication
+      • 🔴 PRIORITÁRIO (abstract): geographical indications
+      • 🔴 PRIORITÁRIO (abstract): pdo
+      • 🔴 PRIORITÁRIO (keywords, abstract): traceability
+      • 🟠 ALTA: random forest
+      • 🟠 ALTA: decision tree
+      • 🟠 ALTA: classification
+      • 🟡 ADEQUADA: mass spectrometry
+

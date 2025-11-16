@@ -6,7 +6,7 @@ flowchart TD
     
     START --> SEARCH["<b>FASE 1: ESTRATÉGIA DE BUSCA</b><br/>Definição de Critérios PCC"]
     
-    SEARCH --> SEARCH_A["<b>Bases de Dados</b><br/>• Scopus • Web of Science<br/>• IEEE Xplore • ACM • PubMed<br/><b>Período:</b> 2010-2025"]
+    SEARCH --> SEARCH_A["<b>Bases de Dados</b><br/>• Scopus • Web of Science<br/><br/><b>Período:</b>2015-2025"]
     
     SEARCH --> SEARCH_B["<b>String Booleana</b><br/><b>ML:</b> machine learning, AI, deep learning<br/><b>AND IG:</b> geographical indications, PDO<br/><b>AND:</b> authentication, traceability"]
     
@@ -20,7 +20,7 @@ flowchart TD
     
     FILTER --> FILTER_B["<b>Multiplicadores Semânticos</b><br/>Título ×1.5 | Abstract ×1.0<br/>Palavras-chave ×1.2<br/><b>Limiar mínimo:</b> Score ≥ valor calibrado"]
     
-    FILTER --> FILTER_C["<b>Resultados Filtragem</b><br/><b>Precisão temática:</b> 94.2%<br/><b>Taxa de retenção:</b> 42.8%<br/><b>123 estudos identificados</b>"]
+    FILTER --> FILTER_C["<b>Resultados Filtragem</b><br/><b>Corpus inicial:</b> 272 estudos<br/>(140 Scopus + 132 WoS)<br/><b>Precisão temática:</b> 94.2%"]
     
     FILTER_A --> QUALITY["<b>FASE 3: ANÁLISE DE QUALIDADE</b><br/>Avaliação Manual Multidisciplinar"]
     FILTER_B --> QUALITY
@@ -30,7 +30,7 @@ flowchart TD
     
     QUALITY --> QUALITY_B["<b>Revisão por 3 Juízes</b><br/>Escala Likert 0-3 pontos<br/><b>ICC = 0.87 (IC 95%: 0.84-0.91)</b><br/>Concordância interavaliadores: excelente"]
     
-    QUALITY --> QUALITY_C["<b>Seleção Final</b><br/>123 estudos processados<br/>Critérios de qualidade rigorosos<br/>Base para análises posteriores"]
+    QUALITY --> QUALITY_C["<b>Seleção Final</b><br/>272 estudos processados<br/><b>25 artigos selecionados</b><br/>Base para análises posteriores"]
     
     QUALITY_A --> BIBLIO["<b>FASE 4: ANÁLISE BIBLIOMÉTRICA</b><br/>Síntese Qualitativa & Redes"]
     QUALITY_B --> BIBLIO
