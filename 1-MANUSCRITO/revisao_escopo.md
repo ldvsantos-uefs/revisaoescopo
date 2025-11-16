@@ -247,9 +247,9 @@ Onde:
 - $C_{encontradas}$ = número de citações do manuscrito presentes no corpus
 - $C_{totais}$ = número total de citações únicas no manuscrito
 
-## 2.8 Análises Estatísticas
+## 2.8 Análises Estatísticas Computacionais
 
-Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas utilizando o ambiente R e pacotes.
+Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas complementares implementadas em ambiente R com pacotes especializados.
 
 ### 2.8.1 Análise de Correspondência Múltipla (MCA)
 
@@ -264,6 +264,28 @@ A análise de redes foi implementada para mapear co-ocorrências entre técnicas
 A detecção de comunidades foi realizada através do algoritmo de Louvain, identificando módulos temáticos densamente conectados. Métricas de centralidade (degree, betweenness, closeness) foram calculadas para identificar entidades centrais no corpus. A visualização foi otimizada com layout force-directed, utilizando paleta viridis para codificação de comunidades e tamanho de nós proporcional ao grau de conectividade.
 
 ### 2.8.3 Análise Temporal
+
+A evolução temporal das aplicações de ML em IGs foi analisada através de séries temporais (2010-2025), empregando correlação de Spearman para detectar tendências significativas (p < 0.05). O pacote `ggplot2` foi utilizado para gerar visualizações de linha temporal com suavização LOESS, acompanhadas de heatmaps para análise de evolução conjunta entre algoritmos e produtos.
+
+A análise considerou métricas de produtividade científica (número de publicações por ano), adoção de algoritmos ML e distribuição por categorias de produto. Tendências significativas foram identificadas através de teste não-paramétrico de Spearman, apropriado para dados discretos e não-normalmente distribuídos.
+
+## 2.9 Análises Estatísticas Computacionais
+
+Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas utilizando o ambiente R e pacotes especializados.
+
+### 2.9.1 Análise de Correspondência Múltipla (MCA)
+
+A Análise de Correspondência Múltipla foi aplicada para analisar associações entre variáveis categóricas no corpus de 148 estudos. O método decompõe tabelas de contingência multidimensionais, identificando padrões de associação entre categorias de variáveis nominais através da análise simultânea de múltiplas variáveis categóricas. A análise foi realizada utilizando o pacote `FactoMineR`, categorizando os estudos segundo algoritmos ML empregados, produtos agroalimentares, regiões geográficas, instrumentos analíticos e períodos temporais.
+
+As dimensões foram extraídas segundo o critério de inércia explicada, priorizando as dimensões que capturam maior proporção da variabilidade total das associações categóricas. A qualidade da representação foi avaliada através de cos² (proporção de inércia explicada por cada dimensão) e contribuição relativa das categorias. Biplots foram gerados para visualizar simultaneamente as categorias das variáveis, facilitando identificação de associações entre técnicas ML, produtos e contextos geográficos. Mapas de calor de contingência foram produzidos para examinar frequências conjuntas entre pares de variáveis categóricas.
+
+### 2.9.2 Análise de Redes (Network Analysis)
+
+A análise de redes foi implementada para mapear co-ocorrências entre técnicas de Machine Learning, produtos agroalimentares e regiões geográficas. Utilizando o pacote `igraph` e `ggraph`, foi construído grafo não-direcionado onde nós representam entidades (algoritmos, produtos, regiões) e arestas ponderam frequência de co-ocorrência.
+
+A detecção de comunidades foi realizada através do algoritmo de Louvain, identificando módulos temáticos densamente conectados. Métricas de centralidade (degree, betweenness, closeness) foram calculadas para identificar entidades centrais no corpus. A visualização foi otimizada com layout force-directed, utilizando paleta viridis para codificação de comunidades e tamanho de nós proporcional ao grau de conectividade.
+
+### 2.9.3 Análise Temporal
 
 A evolução temporal das aplicações de ML em IGs foi analisada através de séries temporais (2010-2025), empregando correlação de Spearman para detectar tendências significativas (p < 0.05). O pacote `ggplot2` foi utilizado para gerar visualizações de linha temporal com suavização LOESS, acompanhadas de heatmaps para análise de evolução conjunta entre algoritmos e produtos.
 
