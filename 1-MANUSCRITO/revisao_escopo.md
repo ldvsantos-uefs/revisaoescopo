@@ -247,9 +247,8 @@ Onde:
 - $C_{encontradas}$ = número de citações do manuscrito presentes no corpus
 - $C_{totais}$ = número total de citações únicas no manuscrito
 
-## 2.8 Análises Estatísticas Computacionais
+## 2.8 Análises Estatísticas
 
-Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas complementares implementadas em ambiente R com pacotes especializados.
 
 ### 2.8.1 Análise de Correspondência Múltipla (MCA)
 
@@ -294,8 +293,7 @@ A análise considerou métricas de produtividade científica (número de publica
 # 3. Resultados e Discussão
 
 ## 3.1 Síntese Executiva da Revisão de Escopo: Corpus, Cobertura e Qualidade Metodológica
-
-Esta revisão de escopo, estruturada segundo PRISMA-ScR (Figura 2), identificou e analisou 272 estudos (140 Scopus, 132 Web of Science) publicados entre 2015-2025, selecionando 25 artigos relevantes após filtragem automatizada e análise manual de qualidade. O corpus demonstra crescimento recente das aplicações de Machine Learning em Indicações Geográficas: 68% das publicações concentram-se em 2021-2025. Os dados indicam convergência entre certificação territorial e transformação digital, acompanhando tendências globais de inovação em sistemas agroalimentares [@Hu2024].
+Esta revisão de escopo, estruturada segundo PRISMA-ScR (Figura 2), identificou e analisou 272 estudos (140 Scopus, 132 Web of Science) publicados entre 2010-2025, selecionando 148 artigos relevantes após filtragem automatizada e avaliação manual de qualidade metodológica. A base de dados para as análises estatísticas foi constituída a partir deste processo sistemático de seleção, resultando em um corpus representativo das aplicações de Machine Learning em Indicações Geográficas. O corpus demonstra crescimento recente: 68% das publicações concentram-se em 2021-2025, indicando convergência entre certificação territorial e transformação digital, acompanhando tendências globais de inovação em sistemas agroalimentares [@Hu2024].
 
 ![Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas. ](2-FIGURAS/prisma_flowdiagram.png){#fig:prisma2020 width="80%"}
 
