@@ -2,56 +2,56 @@
 RELATÓRIO DE ANÁLISE MCA - MACHINE LEARNING PARA INDICAÇÕES GEOGRÁFICAS
 ================================================================================
 
-Data de execução: 2025-11-16 10:47:14.795717
-Total de observações: 123
+Data de execução: 2025-11-16 14:42:25.568445
+Total de observações: 148
 
 --------------------------------------------------------------------------------
 INÉRCIA EXPLICADA POR DIMENSÃO
 --------------------------------------------------------------------------------
       eigenvalue percentage of variance cumulative percentage of variance
-dim 1  0.3564107               7.374015                          7.374015
-dim 2  0.3291079               6.809128                         14.183144
-dim 3  0.3044744               6.299469                         20.482613
-dim 4  0.2824445               5.843679                         26.326292
-dim 5  0.2632585               5.446728                         31.773020
+dim 1  0.3906889               8.083218                          8.083218
+dim 2  0.3308521               6.845215                         14.928433
+dim 3  0.3181710               6.582848                         21.511281
+dim 4  0.2845115               5.886445                         27.397726
+dim 5  0.2604718               5.389071                         32.786797
 
 --------------------------------------------------------------------------------
 COORDENADAS DAS CATEGORIAS - Dim1 e Dim2
 --------------------------------------------------------------------------------
-                                 Dim 1        Dim 2
-Algoritmo_DecisionTree     -0.76902211  3.408637786
-Algoritmo_GradientBoosting -1.16267609 -2.499798472
-Algoritmo_KNN              -0.34826891 -0.156524149
-Algoritmo_NeuralNetwork     0.65982084  0.070262005
-Algoritmo_Outros           -0.38362459  0.238575740
-Algoritmo_RandomForest      0.03081336 -0.153841828
-Algoritmo_SVM              -0.12192585 -0.613712346
-Instrumento_FTIR            0.55191269 -0.359893389
-Instrumento_GC-MS           0.21656885 -0.241367423
-Instrumento_ICP-MS         -0.24385940  1.035193844
-Instrumento_LC-MS           1.13623837  2.013420144
-Instrumento_NIR             0.90309328  0.007539053
-Instrumento_NMR            -0.95150542  1.736760726
-Instrumento_Outros         -0.33147473 -0.310710731
-Instrumento_Sensor          0.41867852 -1.033833359
-Produto_Cheese              3.89936254  0.668085113
-Produto_Coffee             -2.12746404  2.294786521
-Produto_Honey               0.35543967 -0.100940069
-Produto_Meat                0.36533652  2.497140464
-Produto_Olive               0.73813291  0.085880918
+                                 Dim 1         Dim 2
+Algoritmo_DecisionTree      0.01369475  3.5833621124
+Algoritmo_GradientBoosting  0.26595209 -2.4824021308
+Algoritmo_KNN               0.78868059  0.1290906817
+Algoritmo_NeuralNetwork     0.69594103  0.0809846584
+Algoritmo_Outros           -0.76684330  0.1226941966
+Algoritmo_RandomForest      0.59871362 -0.1291913306
+Algoritmo_SVM               0.43939671 -0.6401959901
+Instrumento_FTIR            0.56576318 -0.5422858909
+Instrumento_GC-MS           0.69970550 -0.2812563472
+Instrumento_ICP-MS          0.31928031  1.1779608551
+Instrumento_LC-MS           1.05601786  2.5461963419
+Instrumento_NIR             1.02464233 -0.0003665104
+Instrumento_NMR            -0.43873428  1.5570305299
+Instrumento_Outros         -0.44630179 -0.2577879820
+Instrumento_Sensor          0.93407679 -1.1768554691
+Produto_Cheese              2.86412410  0.9605567272
+Produto_Coffee             -1.47990701  1.7894613219
+Produto_Honey               0.83426147 -0.0669586390
+Produto_Meat                0.71739604  2.8272651172
+Produto_Olive               0.87540650 -0.0191593161
 
 --------------------------------------------------------------------------------
 CONTRIBUIÇÃO DAS CATEGORIAS - TOP 15 para Dim1
 --------------------------------------------------------------------------------
-           Produto_Cheese                  Americas                 2010-2014 
-                23.122781                 11.254489                  9.849849 
- Aplicacao_Classification Aplicacao_OriginDetection           Instrumento_NIR 
-                 9.058553                  7.500117                  5.581238 
-  Algoritmo_NeuralNetwork                    Europe         Instrumento_LC-MS 
-                 5.296572                  3.710121                  2.944984 
-          Instrumento_NMR        Instrumento_Outros          Algoritmo_Outros 
-                 2.753629                  2.715233                  2.126128 
-                2020-2025              Produto_Wine            Produto_Coffee 
-                 2.008865                  1.790372                  1.720748 
+        Aplicacao_Outros         Algoritmo_Outros Aplicacao_Classification 
+               14.661188                10.678489                10.248525 
+          Produto_Cheese          Instrumento_NIR       Instrumento_Outros 
+                9.458008                 5.447197                 5.109793 
+                Americas  Algoritmo_NeuralNetwork           Produto_Outros 
+                4.704802                 4.467359                 3.946607 
+                  Europe                   Global            Produto_Honey 
+                3.300713                 3.215280                 2.607977 
+                    Asia   Algoritmo_RandomForest        Instrumento_LC-MS 
+                2.594078                 2.273092                 2.250073 
 
 ================================================================================

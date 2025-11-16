@@ -2,17 +2,17 @@
 RELATÓRIO DE ANÁLISE DE REDES - ML PARA INDICAÇÕES GEOGRÁFICAS
 ================================================================================
 
-Data de execução: 2025-11-16 10:51:20.096745
+Data de execução: 2025-11-16 14:43:03.238536
 
 --------------------------------------------------------------------------------
 ESTATÍSTICAS GERAIS DA REDE
 --------------------------------------------------------------------------------
-Número de nós: 19
-Número de arestas: 57
-Densidade: 0.3333
-Transitividade (clustering coefficient): 0.5974
-Diâmetro da rede: 12
-Distância média: 7.01
+Número de nós: 20
+Número de arestas: 58
+Densidade: 0.3053
+Transitividade (clustering coefficient): 0.5948
+Diâmetro da rede: 14
+Distância média: 7.37
 
 --------------------------------------------------------------------------------
 TOP 15 NÓS POR GRAU (DEGREE CENTRALITY)
@@ -30,63 +30,63 @@ KNN                           KNN      5
 GCMS                         GCMS      5
 Europe                     Europe      5
 FTIR                         FTIR      3
+LCMS                         LCMS      3
 Sensor                     Sensor      3
 GradientBoosting GradientBoosting      2
-LCMS                         LCMS      2
 
 --------------------------------------------------------------------------------
 TOP 15 NÓS POR BETWEENNESS CENTRALITY
 --------------------------------------------------------------------------------
                              Node Betweenness
-NeuralNetwork       NeuralNetwork 0.319172113
-Honey                       Honey 0.154684096
-RandomForest         RandomForest 0.146514161
-GCMS                         GCMS 0.139433551
-SVM                           SVM 0.081699346
-NIR                           NIR 0.047930283
-Asia                         Asia 0.042483660
-Tea                           Tea 0.035947712
-DecisionTree         DecisionTree 0.035403050
-Europe                     Europe 0.032135076
-KNN                           KNN 0.004357298
+NeuralNetwork       NeuralNetwork 0.306042885
+GCMS                         GCMS 0.186159844
+RandomForest         RandomForest 0.145711501
+Honey                       Honey 0.144249513
+LCMS                         LCMS 0.105263158
+SVM                           SVM 0.081871345
+Asia                         Asia 0.070175439
+NIR                           NIR 0.042884990
+Tea                           Tea 0.032163743
+DecisionTree         DecisionTree 0.031676413
+Europe                     Europe 0.028752437
+KNN                           KNN 0.003898635
 FTIR                         FTIR 0.000000000
 Sensor                     Sensor 0.000000000
 GradientBoosting GradientBoosting 0.000000000
-LCMS                         LCMS 0.000000000
 
 --------------------------------------------------------------------------------
 TOP 15 NÓS POR EIGENVECTOR CENTRALITY
 --------------------------------------------------------------------------------
                              Node Eigenvector
 SVM                           SVM   1.0000000
-NeuralNetwork       NeuralNetwork   0.9751779
-Asia                         Asia   0.9205431
+NeuralNetwork       NeuralNetwork   0.9751763
+Asia                         Asia   0.9205678
 RandomForest         RandomForest   0.7305978
-Tea                           Tea   0.7210794
-NIR                           NIR   0.6736511
-Honey                       Honey   0.5374670
-DecisionTree         DecisionTree   0.4999597
-KNN                           KNN   0.3960947
-Europe                     Europe   0.3303397
-Sensor                     Sensor   0.2777823
-GCMS                         GCMS   0.2704747
-FTIR                         FTIR   0.2532235
-GradientBoosting GradientBoosting   0.1058324
-Wine                         Wine   0.1058324
+Tea                           Tea   0.7210765
+NIR                           NIR   0.6736476
+Honey                       Honey   0.5374647
+DecisionTree         DecisionTree   0.4999579
+KNN                           KNN   0.3960937
+Europe                     Europe   0.3303370
+Sensor                     Sensor   0.2777801
+GCMS                         GCMS   0.2704975
+FTIR                         FTIR   0.2532214
+GradientBoosting GradientBoosting   0.1058316
+Wine                         Wine   0.1058316
 
 --------------------------------------------------------------------------------
 COMUNIDADES DETECTADAS (LOUVAIN)
 --------------------------------------------------------------------------------
 
 1 2 3 
-6 5 8 
+6 6 8 
 
 
 === COMUNIDADE 1 (n=6) ===
 RandomForest, DecisionTree, GradientBoosting, Wine, Honey, Africa 
 
-=== COMUNIDADE 2 (n=5) ===
-SVM, KNN, GCMS, LCMS, Asia 
+=== COMUNIDADE 2 (n=6) ===
+SVM, KNN, GCMS, LCMS, Meat, Asia 
 
 === COMUNIDADE 3 (n=8) ===
 NeuralNetwork, NIR, FTIR, Sensor, Olive, Cheese, Tea, Europe 

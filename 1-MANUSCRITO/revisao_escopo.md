@@ -247,9 +247,9 @@ Onde:
 - $C_{encontradas}$ = número de citações do manuscrito presentes no corpus
 - $C_{totais}$ = número total de citações únicas no manuscrito
 
-## 2.8 Análises Estatísticas Computacionais
+## 2.8 Análises Estatísticas
 
-Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas complementares implementadas em ambiente R com pacotes especializados.
+Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas utilizando o ambiente R e pacotes.
 
 ### 2.8.1 Análise de Componentes Principais (PCA)
 
