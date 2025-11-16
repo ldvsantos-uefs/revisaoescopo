@@ -251,11 +251,11 @@ Onde:
 
 Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes nas aplicações de Machine Learning em Indicações Geográficas, foram empregadas três técnicas estatísticas utilizando o ambiente R e pacotes.
 
-### 2.8.1 Análise de Componentes Principais (PCA)
+### 2.8.1 Análise de Correspondência Múltipla (MCA)
 
-A Análise de Componentes Principais foi aplicada para reduzir dimensionalidade e identificar padrões latentes no corpus de 148 estudos. O método decompõe a matriz de dados multivariados em componentes principais não-correlacionados, maximizando variância explicada. A análise foi realizada utilizando o pacote `FactoMineR`, considerando variáveis categóricas (algoritmos ML, produtos, regiões geográficas, instrumentos analíticos) e numéricas (ano de publicação, métricas de desempenho reportadas).
+A Análise de Correspondência Múltipla foi aplicada para analisar associações entre variáveis categóricas no corpus de 148 estudos. O método decompõe tabelas de contingência multidimensionais, identificando padrões de associação entre categorias de variáveis nominais através da análise simultânea de múltiplas variáveis categóricas. A análise foi realizada utilizando o pacote `FactoMineR`, categorizando os estudos segundo algoritmos ML empregados, produtos agroalimentares, regiões geográficas, instrumentos analíticos e períodos temporais.
 
-Os componentes principais foram extraídos segundo o critério de Kaiser (autovalores > 1.0), com rotação Varimax para maximizar interpretabilidade. A qualidade da representação foi avaliada através de cos² (proporção de variância explicada por cada dimensão) e contribuição relativa de variáveis. Biplots foram gerados para visualizar simultaneamente indivíduos (estudos) e variáveis, facilitando identificação de clusters temáticos e associações entre técnicas ML e contextos de aplicação.
+As dimensões foram extraídas segundo o critério de inércia explicada, priorizando as dimensões que capturam maior proporção da variabilidade total das associações categóricas. A qualidade da representação foi avaliada através de cos² (proporção de inércia explicada por cada dimensão) e contribuição relativa das categorias. Biplots foram gerados para visualizar simultaneamente as categorias das variáveis, facilitando identificação de associações entre técnicas ML, produtos e contextos geográficos. Mapas de calor de contingência foram produzidos para examinar frequências conjuntas entre pares de variáveis categóricas.
 
 ### 2.8.2 Análise de Redes (Network Analysis)
 
