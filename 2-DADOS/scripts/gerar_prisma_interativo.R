@@ -50,7 +50,7 @@ if (!file.exists(csv_file)) {
 cat(sprintf("📂 Carregando dados de: %s\n", csv_file))
 
 # Ler os dados
-data <- read.csv(csv_file, stringsAsFactors = FALSE)
+data <- read.csv(csv_file, sep = ";", stringsAsFactors = FALSE)
 
 cat("✅ Dados carregados com sucesso\n\n")
 
