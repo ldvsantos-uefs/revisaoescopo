@@ -93,14 +93,16 @@ Onde:
 - $f_{ij}$ = frequência de ocorrência do termo $j$ no artigo $i$
 - $n$ = número total de termos avaliados
 
-O sistema de pontuação hierárquica foi estruturado em cinco categorias de termos com pesos diferenciados. Os **Termos Prioritários**, com peso de cinco pontos, incluem *geographical indications, denominations of origin, appellations of origin, protected designations of origin, traceability, authentication, quality control*, representando o núcleo conceitual da pesquisa. Os **Termos de Alta Relevância**, com peso de três pontos, abrangem *machine learning, artificial intelligence, deep learning, neural networks, fraud detection, geospatial analysis, pattern recognition*, constituindo conceitos centrais para a integração metodológica. 
-Os **Termos de Relevância Média**, com peso de dois pontos, compreendem *sustainability, agriculture, food quality, sensory analysis, chemometrics, data mining, classification*, conceitos complementares que fortalecem a relevância temática. Os **Termos de Contexto**, com peso de um ponto, incluem *regional products, origin verification, certification, algorithm, model, prediction, validation*, indicando contexto aplicativo apropriado. Por fim, os **Termos de Exclusão** aplicam penalidades: *medical, clinical, pharmaceutical* recebem menos cinco pontos; *urban planning, smart cities* recebem menos três pontos; e *finance, economics, business* recebem menos dois pontos, indicando baixa aderência ao escopo da pesquisa.
+O sistema de pontuação hierárquica na revisão de escopo foi estruturado conforme princípios do Método de Análise Hierárquica (AHP), que organiza critérios e termos em níveis de importância diferenciada para facilitar a avaliação e seleção dos conteúdos mais pertinentes ao tema investigado [@SAATY1991]. A metodologia deste trabalho adotou cinco categorias hierárquicas de termos, cada uma com pesos específicos que refletem sua importância para o objetivo da revisão, a saber: os **Termos Prioritários**, com peso de cinco pontos,  representam o núcleo conceitual da pesquisa, incluindo palavras-chave centrais como *geographical indications, denominations of origin, appellations of origin, protected designations of origin, traceability, authentication, quality control*, representando o núcleo conceitual da pesquisa; os **Termos de Alta Relevância**, com peso de três pontos, Abrangem conceitos metodológicos fundamentais para a integração tecnológica e analítica, e incluem *machine learning, artificial intelligence, deep learning, neural networks, fraud detection, geospatial analysis, pattern recognition*; os **Termos de Relevância Média**, com peso de dois pontos, incluem temas complementares que enriquecem a pesquisa, e compreendem *sustainability, agriculture, food quality, sensory analysis, chemometrics, data mining, classification*; os **Termos de Contexto**, com peso de um ponto, são termos que indicam o ambiente ou aplicação potencial da pesquisa, e incluem *regional products, origin verification, certification, algorithm, model, prediction, validation*, indicando contexto aplicativo apropriado; por fim, os **Termos de Exclusão**, com pontuação negativa, aplicam penalidades para termos que desviam do escopo da revisão, como expressões *medical, clinical, pharmaceutical* que recebem menos cinco pontos; *urban planning, smart cities* recebem menos três pontos; e *finance, economics, business* recebem menos dois pontos, indicando, assim, baixa aderência ao escopo da pesquisa.
+
+A definição dos pesos e categorias supracitadas segue a ideia de priorizar o núcleo temático e integrar conceitos colaborativos, enquanto utiliza penalidades para diminuir a interferência de termos menos relevantes ou não relacionados, modelando o escopo da revisão. Essa abordagem sistemática é recomendada para revisões de escopo com objetivos amplos, onde o gerenciamento do volume e da relevância dos dados é essencial [@MUNN2018; @tricco2018].
+
 
 ### 2.4.2 Implementação e Validação do Sistema Automatizado
 
 O algoritmo analisa títulos, abstracts e palavras-chave de cada entrada bibliográfica, aplicando pesos diferenciados por localização: títulos recebem multiplicador 1.5, abstracts 1.0, e palavras-chave 1.2, conforme a importância semântica de cada campo.
 
-Estabelecemos limiar de pontuação mínima através de análise estatística da distribuição de pontuações e validação manual em amostra representativa, verificando termos de machine learning, geographical indications e authentication nos metadados.
+Estabelecemos limiar de pontuação mínima através de análise estatística da distribuição de pontuações e validação manual em amostra representativa, verificando termos de *machine learning, geographical indications e authentication* nos metadados.
 
 ### 2.4.3 Validação Participativa e Refinamento Algorítmico
 
@@ -110,9 +112,9 @@ Para assegurar a validade científica do processo de seleção, foi implementado
 
 Foi desenvolvido sistema automatizado para verificar a cobertura bibliográfica das citações metodológicas. O procedimento avalia completude e consistência da base de referências, garantindo rastreabilidade entre citações textuais e arquivos bibliográficos.
 
-O corpus bibliográfico consolidado foi submetido à categorização automatizada com técnicas de Processamento de Linguagem Natural (PLN). Os registros foram identificados e organizados segundo domínios metodológicos relevantes, aplicando abordagens de revisões sistemáticas automatizadas [@OforiBoateng2024; @Sawicki2023]. Foi construído pipeline computacional que extrai, tokeniza e vetorializa metadados e resumos das referências, usando modelos supervisionados e regras semânticas para reconhecimento de padrões [@Young2019; @Casey2021]. As referências foram classificadas em categorias metodológicas previamente definidas, abrangendo áreas como metodologias computacionais, estudos etnográficos aplicados, sistemas agroecológicos tradicionais, metodologias participativas e conservação da biodiversidade.
+O corpus bibliográfico consolidado foi submetido à categorização automatizada com técnicas de Processamento de Linguagem Natural (PLN). Os registros foram identificados e organizados segundo domínios metodológicos relevantes, aplicando abordagens de revisões sistemáticas automatizadas [@OforiBoateng2024; @Sawicki2023]. Foi construído pipeline computacional que extrai, tokeniza e vetorializa metadados e resumos das referências, usando modelos supervisionados e regras semânticas para reconhecimento de padrões [@Young2019; @Casey2021]. As referências foram classificadas em categorias metodológicas previamente definidas, abrangendo áreas como técnicas de aprendizado de máquina e sistemas de indicações geográficas.
 
-Para quantificação da cobertura bibliográfica e adequação dos estudos selecionados, foram aplicadas duas métricas complementares. A primeira, de cobertura de citações, foi calculada através da seguinte equação:
+Para quantificação da cobertura bibliográfica e adequação dos estudos selecionados, foram aplicadas duas métricas complementares [@tranfield2003; @webster2002]. A primeira, de cobertura de citações, foi calculada através da seguinte equação:
 
 $$
 Cobertura = \frac{C_{encontradas}}{C_{totais}} \times 100
@@ -138,7 +140,7 @@ A partir dessas métricas é possivel avaliar quantitativamente a utilização e
 
 ## 2.5 Segunda Fase: Análise Manual de Qualidade Metodológica
 
-Na segunda fase, três revisores independentes avaliaram manualmente a qualidade metodológica dos estudos selecionados, assegurando análise multidisciplinar e reduzindo vieses interpretativos. Adaptamos a escala MMAT para estudos interdisciplinares envolvendo machine learning e sistemas de certificação geográfica, estruturando oito indicadores em escala Likert de 3 pontos. Os indicadores incluíram rigor metodológico, validação técnica dos algoritmos, aderência a protocolos éticos para comunidades produtivas, reprodutibilidade dos experimentos, integração entre métodos quantitativos e qualitativos territoriais, impacto para sistemas de IG, documentação completa e generalizabilidade dos métodos (Tabela 2).
+Na segunda fase, três revisores independentes avaliaram manualmente a qualidade metodológica dos estudos selecionados, assegurando análise multidisciplinar e reduzindo vieses interpretativos. Adaptamos a escala MMAT [@pluye2009; @hong2018] para estudos interdisciplinares envolvendo machine learning e sistemas de certificação geográfica, estruturando oito indicadores em escala Likert de 3 pontos. Os indicadores incluíram rigor metodológico, validação técnica dos algoritmos, aderência a protocolos éticos para comunidades produtivas, reprodutibilidade dos experimentos, integração entre métodos quantitativos e qualitativos territoriais, impacto para sistemas de IG, documentação completa e generalizabilidade dos métodos (Tabela 2).
 
 Cada indicador recebeu pontuação de 0 a 2, sendo zero quando o critério não foi atendido ou apresenta deficiências substantivas; um ponto quando atendido parcialmente com limitações reconhecidas; dois pontos quando completamente atendido com evidências claras. Escolhemos escala de 3 pontos porque avaliações dicotômicas (sim/não) não capturam adequadamente a complexidade de estudos interdisciplinares, enquanto escalas maiores (5+ pontos) geram inconsistência entre avaliadores [@Likert3vs5_2025].
 
@@ -159,7 +161,7 @@ Cada indicador recebeu pontuação de 0 a 2, sendo zero quando o critério não 
 
 O processo de avaliação manual incluiu protocolo de consenso entre avaliadores. Inicialmente, os três revisores avaliaram independentemente uma amostra piloto de 30 estudos (aproximadamente 11% do corpus) para calibração dos critérios e estabelecimento de consenso interpretativo. Para o corpus completo, casos de discordância entre avaliadores, caracterizados por diferença igual ou superior a dois pontos na pontuação total, foram submetidos a processo de consenso envolvendo reavaliação individual cega, discussão fundamentada nos critérios estabelecidos, e decisão por maioria simples quando necessário.
 
-O coeficiente de correlação intraclasse foi calculado através da seguinte equação:
+O coeficiente de correlação intraclasse foi calculado através da seguinte equação [@shrout1979]:
 
 $$
 ICC = \frac{BMS - EMS}{BMS + (k-1) \cdot EMS}
@@ -187,7 +189,7 @@ Esta segunda fase resultou na seleção de 25 estudos com qualidade metodológic
 
 ## 2.6 Terceira Fase: Análise Bibliométrica
 
-Na terceira fase, foi analisada a produtividade científica através da Lei de Lotka, que examina a distribuição de autores segundo o número de publicações. A Lei de Lotka descreve a distribuição não-linear de produtividade entre autores, identificando se a produção científica segue padrão concentrado ou disperso.
+Na terceira fase, foi analisada a produtividade científica através da Lei de Lotka [@lotka1926], que examina a distribuição de autores segundo o número de publicações. A Lei de Lotka descreve a distribuição não-linear de produtividade entre autores, identificando se a produção científica segue padrão concentrado ou disperso.
 
 A Lei de Lotka foi aplicada através da equação:
 
