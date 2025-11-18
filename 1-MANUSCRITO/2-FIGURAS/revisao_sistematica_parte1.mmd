@@ -1,6 +1,6 @@
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '14px', 'primaryColor': '#1B5E20', 'primaryBorderColor': '#0D3817', 'lineColor': '#424242', 'tertiaryColor': '#C8E6C9'}, 'flowchart': {'useMaxWidth': true, 'htmlLabels': true, 'curve': 'basis'}}}%%
 
-flowchart TD
+flowchart LR
     
     START["<b>REVISÃO DE ESCOPO PRISMA-ScR</b><br/>Aplicações de Machine Learning em Indicações Geográficas<br/>2010-2025"]
     
@@ -22,9 +22,7 @@ flowchart TD
     
     FILTER --> FILTER_C["<b>Resultados Filtragem</b><br/><b>Corpus inicial:</b> 272 estudos<br/>(140 Scopus + 132 WoS)<br/><b>Precisão temática:</b> 94.2%"]
     
-    FILTER_A --> QUALITY["<b>FASE 3: ANÁLISE DE QUALIDADE</b><br/>Avaliação Manual Multidisciplinar"]
-    FILTER_B --> QUALITY
-    FILTER_C --> QUALITY
+    FILTER_C --> QUALITY["<b>FASE 3: ANÁLISE DE QUALIDADE</b><br/>Avaliação Manual Multidisciplinar"]
     
     QUALITY --> QUALITY_A["<b>Escala MMAT Adaptada</b><br/><b>Indicadores:</b> 8 critérios<br/>Rigor metodológico • Validação técnica<br/>Ética • Reprodutibilidade • Integração"]
     
@@ -32,9 +30,7 @@ flowchart TD
     
     QUALITY --> QUALITY_C["<b>Seleção Final</b><br/>272 estudos processados<br/><b>25 artigos selecionados</b><br/>Base para análises posteriores"]
     
-    QUALITY_A --> BIBLIO["<b>FASE 4: ANÁLISE BIBLIOMÉTRICA</b><br/>Síntese Qualitativa & Redes"]
-    QUALITY_B --> BIBLIO
-    QUALITY_C --> BIBLIO
+    QUALITY_C --> BIBLIO["<b>FASE 4: ANÁLISE BIBLIOMÉTRICA</b><br/>Síntese Qualitativa & Redes"]
     
     BIBLIO --> BIBLIO_A["<b>Análise Bibliométrica</b><br/>Lei de Lotka • Cocitação<br/>VOSviewer • Redes de colaboração<br/>Clusters temáticos"]
     
