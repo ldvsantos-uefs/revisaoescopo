@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Script para gerar arquivos Word com referências a partir do Markdown
+Script para gerar arquivo Word da revisão de escopo a partir do Markdown.
+
 Uso: python gerar-docx.py
-Gera artigo.docx (Português) e artigo_ENGLISH.docx (English)
+
+Atualmente gera apenas o arquivo revisao_escopo.docx (versão em português).
 """
 
 import os
@@ -14,7 +16,7 @@ import time
 
 def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     """
-    Gera arquivo DOCX usando Pandoc
+    Gera arquivo DOCX usando Pandoc.
     
     Args:
         md_file: Arquivo Markdown de entrada
@@ -26,7 +28,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     Returns:
         0 se sucesso, 1 se erro
     """
-    print(f"\n🔄 Gerando {output_file.name}...")
+    print(f"\nGerando {output_file.name}...")
     
     # Remover arquivo antigo se existir
     if output_file.exists():
@@ -41,8 +43,8 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
                     print(f"⚠️  Tentativa {attempt + 1}/{max_attempts}: Arquivo em uso, aguardando...")
                     time.sleep(0.6)
                 else:
-                    print(f"❌ Erro: Não foi possível remover '{output_file.name}'.")
-                    print("   Certifique-se de que o arquivo não está aberto no Word ou OneDrive.")
+                    print(f"Erro: não foi possível remover '{output_file.name}'.")
+                    print("Certifique-se de que o arquivo não está aberto no Word ou OneDrive.")
                     return 1
     
     # Comando Pandoc
@@ -70,7 +72,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     
     cmd.extend(["-o", str(output_file)])
     
-    print(f"� Executando Pandoc...")
+    print("Executando Pandoc...")
     
     try:
         # Executar Pandoc
@@ -84,27 +86,34 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
         
         # Mostrar warnings/erros do Pandoc
         if result.stderr:
-            print(f"\n⚠️  Avisos do Pandoc para {output_file.name}:")
+            print(f"\nAvisos do Pandoc para {output_file.name}:")
             print(result.stderr)
+        
+        # Verificar código de saída do Pandoc
+        if result.returncode != 0:
+            print(f"\nErro: Pandoc retornou código {result.returncode} ao gerar {output_file.name}.")
+            if result.stdout:
+                print("Saída:", result.stdout)
+            return 1
         
         # Verificar se o arquivo foi criado
         if output_file.exists():
-            print(f"\n✅ Arquivo {output_file.name} gerado com sucesso!")
-            print(f"📍 Localização: {output_file.absolute()}")
-            print(f"📊 Tamanho: {output_file.stat().st_size / 1024:.1f} KB")
+            print(f"\nArquivo {output_file.name} gerado com sucesso.")
+            print(f"Localização: {output_file.absolute()}")
+            print(f"Tamanho: {output_file.stat().st_size / 1024:.1f} KB")
             return 0
         else:
-            print(f"\n❌ Erro: O arquivo {output_file.name} não foi gerado!")
+            print(f"\nErro: o arquivo {output_file.name} não foi gerado.")
             if result.stdout:
                 print("Saída:", result.stdout)
             return 1
             
     except FileNotFoundError:
-        print("\n❌ Erro: Pandoc não está instalado ou não está no PATH do sistema!")
-        print("   Instale o Pandoc em: https://pandoc.org/installing.html")
+        print("\nErro: Pandoc não está instalado ou não está no PATH do sistema.")
+        print("Instale o Pandoc em: https://pandoc.org/installing.html")
         return 1
     except Exception as e:
-        print(f"\n❌ Erro inesperado: {e}")
+        print(f"\nErro inesperado: {e}")
         return 1
 
 def main():
@@ -113,7 +122,7 @@ def main():
     os.chdir(script_dir)
     
     print("=" * 70)
-    print("📚 GERADOR DE REVISÃO DE ESCOPO - WORD")
+    print("GERADOR DE REVISÃO DE ESCOPO - WORD")
     print("=" * 70)
     
     # Arquivos comuns
@@ -126,7 +135,7 @@ def main():
     arquivos_faltando = [f for f in arquivos_necessarios if not f.exists()]
     
     if arquivos_faltando:
-        print("\n❌ Erro: Arquivos necessários não encontrados:")
+        print("\nErro: arquivos necessários não encontrados:")
         for arquivo in arquivos_faltando:
             print(f"   - {arquivo}")
         return 1
@@ -142,7 +151,7 @@ def main():
     docx_rs = Path("revisao_escopo.docx")
     
     if not md_rs.exists():
-        print(f"\n⚠️  Arquivo {md_rs} não encontrado, pulando...")
+        print(f"\nArquivo {md_rs} não encontrado, pulando...")
     else:
         result = gerar_docx(md_rs, docx_rs, bib_file, csl_file)
         if result == 0:
@@ -157,13 +166,13 @@ def main():
     print(f"✅ Arquivos gerados com sucesso: {sucessos}/{total}")
     
     if sucessos == total:
-        print("\n🎉 Todos os arquivos foram gerados com sucesso!")
+        print("\nTodos os arquivos foram gerados com sucesso.")
         return 0
     elif sucessos > 0:
-        print(f"\n⚠️  Alguns arquivos não foram gerados ({total - sucessos} falharam)")
+        print(f"\nAlguns arquivos não foram gerados ({total - sucessos} falharam).")
         return 1
     else:
-        print("\n❌ Nenhum arquivo foi gerado!")
+        print("\nNenhum arquivo foi gerado.")
         return 1
 
 if __name__ == "__main__":
