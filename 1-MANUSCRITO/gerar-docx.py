@@ -116,6 +116,63 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
         print(f"\nErro inesperado: {e}")
         return 1
 
+def gerar_pdf(md_file, output_file, bib_file, csl_file, pdf_engine="xelatex"):
+    """
+    Gera arquivo PDF usando Pandoc com um motor LaTeX (xelatex por padrão).
+
+    Args:
+        md_file: Arquivo Markdown de entrada
+        output_file: Arquivo PDF de saída
+        bib_file: Arquivo de bibliografia
+        csl_file: Arquivo de estilo de citação
+        pdf_engine: Motor de conversão para PDF (xelatex, lualatex, pdflatex)
+
+    Returns:
+        0 se sucesso, 1 se erro
+    """
+    print(f"\nGerando {output_file.name}...")
+
+    # Remover arquivo antigo se existir
+    if output_file.exists():
+        print(f"📝 Removendo arquivo antigo: {output_file.name}")
+        try:
+            output_file.unlink()
+        except PermissionError:
+            print(f"Erro: não foi possível remover '{output_file.name}'. Verifique se está aberto.")
+            return 1
+
+    cmd = [
+        "pandoc",
+        str(md_file),
+        "--citeproc",
+        "--bibliography", str(bib_file),
+        "--csl", str(csl_file),
+        "-o", str(output_file),
+        "--pdf-engine", pdf_engine,
+    ]
+
+    print("Executando Pandoc para PDF...")
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.stderr:
+            print("Avisos do Pandoc (PDF):")
+            print(result.stderr)
+        if result.returncode != 0:
+            print(f"Erro: Pandoc retornou código {result.returncode} ao gerar {output_file.name}.")
+            return 1
+        if output_file.exists():
+            print(f"Arquivo {output_file.name} gerado com sucesso.")
+            return 0
+        else:
+            print(f"Erro: o arquivo {output_file.name} não foi gerado.")
+            return 1
+    except FileNotFoundError:
+        print("Erro: Pandoc não encontrado. Instale Pandoc antes de continuar.")
+        return 1
+    except Exception as e:
+        print(f"Erro inesperado: {e}")
+        return 1
+
 def main():
     # Mudar para o diretório do script
     script_dir = Path(__file__).parent
@@ -155,6 +212,15 @@ def main():
     else:
         result = gerar_docx(md_rs, docx_rs, bib_file, csl_file)
         if result == 0:
+            sucessos += 1
+
+    # Gerar PDF opcionalmente
+    # Use argumento de linha de comando: python gerar-docx.py --pdf
+    if len(sys.argv) > 1 and sys.argv[1] in ("--pdf", "-p"):
+        pdf_rs = Path("revisao_escopo.pdf")
+        print("\n📄 Opção de PDF detectada — gerando PDF com xelatex...")
+        result_pdf = gerar_pdf(md_rs, pdf_rs, bib_file, csl_file, pdf_engine="xelatex")
+        if result_pdf == 0:
             sucessos += 1
     
     # ========================================================================
