@@ -209,8 +209,8 @@ def main():
     # ========================================================================
     # GERAR REVISÃO DE ESCOPO
     # ========================================================================
-    md_rs = Path("revisao_escopo_pt.md")
-    docx_rs = Path("revisao_escopo_pt.docx")
+    md_rs = Path("revisao_escopo_en.md")
+    docx_rs = Path("revisao_escopo_en.docx")
     
     if not md_rs.exists():
         print(f"\nArquivo {md_rs} não encontrado, pulando...")
@@ -222,7 +222,7 @@ def main():
     # Gerar PDF opcionalmente
     # Use argumento de linha de comando: python gerar-docx.py --pdf
     if len(sys.argv) > 1 and sys.argv[1] in ("--pdf", "-p"):
-        pdf_rs = Path("revisao_escopo_pt.pdf")
+        pdf_rs = Path("revisao_escopo_en.pdf")
         print("\n📄 Opção de PDF detectada — gerando PDF com xelatex...")
         result_pdf = gerar_pdf(md_rs, pdf_rs, bib_file, csl_file, pdf_engine="xelatex")
         if result_pdf == 0:
