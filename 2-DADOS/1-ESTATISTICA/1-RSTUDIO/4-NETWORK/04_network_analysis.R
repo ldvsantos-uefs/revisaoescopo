@@ -1,18 +1,18 @@
 ################################################################################
-# ANÁLISE DE REDES (NETWORK ANALYSIS) - GGPLOT2
-# Machine Learning para Indicações Geográficas
+# NETWORK ANALYSIS (CO-OCCURRENCE NETWORKS) - GGPLOT2
+# Machine Learning for Geographical Indications
 #
-# Este script realiza análise de redes de co-ocorrências usando igraph/ggraph
-# e gera visualizações com ggplot2
+# This script performs co-occurrence network analysis using igraph/ggraph
+# and generates visualizations with ggplot2
 #
 # Outputs:
-#   - network_completa.png (Rede completa de co-ocorrências)
-#   - network_algoritmo_produto.png (Rede específica)
-#   - network_instrumento_produto.png (Rede específica)
-#   - network_centrality_metrics.png (Métricas de centralidade)
-#   - network_communities.png (Detecção de comunidades)
-#   - network_relatorio.txt (Métricas de rede)
-#   - network_*.graphml (Arquivos para importar em Gephi)
+#   - network_completa.png (Complete co-occurrence network)
+#   - network_algoritmo_produto.png (Specific network)
+#   - network_instrumento_produto.png (Specific network)
+#   - network_centrality_metrics.png (Centrality metrics)
+#   - network_communities.png (Community detection)
+#   - network_relatorio.txt (Network metrics)
+#   - network_*.graphml (Files for import into Gephi)
 ################################################################################
 
 rm(list = ls())
@@ -29,10 +29,10 @@ for (pkg in packages) {
 }
 
 cat("\n")
-cat("================================================================================\n")
-cat("ANÁLISE DE REDES (NETWORK ANALYSIS) - GGRAPH + GGPLOT2\n")
-cat("Machine Learning para Indicações Geográficas\n")
-cat("================================================================================\n\n")
+cat("================================================================================")
+cat("NETWORK ANALYSIS (CO-OCCURRENCE NETWORKS) - GGRAPH + GGPLOT2\n")
+cat("Machine Learning for Geographical Indications\n")
+cat("================================================================================")
 
 ################################################################################
 # FUNÇÃO: Extrair co-ocorrências
@@ -178,11 +178,11 @@ plot_network_completa <- function(g, output_file = "network_completa.png") {
     scale_size_continuous(range = c(3, 12)) +
     scale_color_viridis_d(option = "plasma", begin = 0.1, end = 0.9) +
     labs(
-      title = "Rede de Co-ocorrências - Machine Learning para IG",
-      subtitle = sprintf("%d nós, %d arestas | Comunidades detectadas: %d", 
+      title = "Co-occurrence Network - Machine Learning for Geographical Indications",
+      subtitle = sprintf("%d nodes, %d edges | Communities detected: %d", 
                          vcount(g), ecount(g), length(unique(V(g)$community))),
-      color = "Comunidade",
-      size = "Grau"
+      color = "Community",
+      size = "Degree"
     ) +
     theme_graph(base_family = "sans") +
     theme(
@@ -310,10 +310,10 @@ plot_communities <- function(g, output_file = "network_communities.png") {
     scale_size_continuous(range = c(4, 14)) +
     scale_color_viridis_d(option = "turbo", begin = 0.1, end = 0.9) +
     labs(
-      title = "Detecção de Comunidades - Algoritmo de Louvain",
-      subtitle = sprintf("%d comunidades identificadas", length(unique(V(g)$community))),
-      color = "Comunidade",
-      size = "Grau"
+      title = "Community Detection: Louvain Algorithm",
+      subtitle = sprintf("%d communities identified in co-occurrence network", length(unique(V(g)$community))),
+      color = "Community",
+      size = "Degree Centrality"
     ) +
     theme_graph(base_family = "sans") +
     theme(
@@ -333,20 +333,20 @@ gerar_relatorio <- function(g, metricas, output_file = "network_relatorio.txt") 
   cat("\n📝 Gerando relatório estatístico...\n")
   
   sink(output_file)
-  cat("================================================================================\n")
-  cat("RELATÓRIO DE ANÁLISE DE REDES - ML PARA INDICAÇÕES GEOGRÁFICAS\n")
-  cat("================================================================================\n\n")
-  cat(sprintf("Data de execução: %s\n\n", Sys.time()))
+  cat("================================================================================")
+  cat("NETWORK ANALYSIS REPORT - ML FOR GEOGRAPHICAL INDICATIONS\n")
+  cat("================================================================================")
+  cat(sprintf("Execution date: %s\n\n", Sys.time()))
   
   cat("--------------------------------------------------------------------------------\n")
-  cat("ESTATÍSTICAS GERAIS DA REDE\n")
+  cat("GENERAL NETWORK STATISTICS\n")
   cat("--------------------------------------------------------------------------------\n")
-  cat(sprintf("Número de nós: %d\n", vcount(g)))
-  cat(sprintf("Número de arestas: %d\n", ecount(g)))
-  cat(sprintf("Densidade: %.4f\n", edge_density(g)))
-  cat(sprintf("Transitividade (clustering coefficient): %.4f\n", transitivity(g)))
-  cat(sprintf("Diâmetro da rede: %d\n", diameter(g)))
-  cat(sprintf("Distância média: %.2f\n\n", mean_distance(g)))
+  cat(sprintf("Number of nodes: %d\n", vcount(g)))
+  cat(sprintf("Number of edges: %d\n", ecount(g)))
+  cat(sprintf("Density: %.4f\n", edge_density(g)))
+  cat(sprintf("Transitivity (clustering coefficient): %.4f\n", transitivity(g)))
+  cat(sprintf("Network diameter: %d\n", diameter(g)))
+  cat(sprintf("Average distance: %.2f\n\n", mean_distance(g)))
   
   cat("--------------------------------------------------------------------------------\n")
   cat("TOP 15 NÓS POR GRAU (DEGREE CENTRALITY)\n")
@@ -415,13 +415,13 @@ main <- function() {
   # 4. Detectar comunidades
   g <- detectar_comunidades(g)
   
-  # 5. Visualizações
-  cat("📊 Gerando visualizações...\n")
+  # 5. Visualizations
+  cat("📊 Generating visualizations...\n")
   plot_network_completa(g)
   plot_network_especifica(dados$presenca, dados$algoritmos, dados$produtos,
-                          "Rede Algoritmo × Produto", "network_algoritmo_produto.png")
+                          "Algorithm × Product Network", "network_algoritmo_produto.png")
   plot_network_especifica(dados$presenca, dados$instrumentos, dados$produtos,
-                          "Rede Instrumento × Produto", "network_instrumento_produto.png")
+                          "Instrument × Product Network", "network_instrumento_produto.png")
   plot_centrality_metrics(metricas)
   plot_communities(g)
   
@@ -433,9 +433,9 @@ main <- function() {
   salvar_grafo(g)
   
   cat("\n")
-  cat("================================================================================\n")
-  cat("✅ ANÁLISE DE REDES CONCLUÍDA COM SUCESSO!\n")
-  cat("================================================================================\n")
+  cat("================================================================================")
+  cat("✅ NETWORK ANALYSIS COMPLETED SUCCESSFULLY!\n")
+  cat("================================================================================")
 }
 
 tryCatch({

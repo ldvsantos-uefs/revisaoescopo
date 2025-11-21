@@ -247,9 +247,9 @@ biplot_final <- ggplot(dados_plot, aes(x = Dim1, y = Dim2)) +
   ) +
 
   # Escalas
-  scale_color_manual(values = cores_periodo, name = "Time Periods") +
-  scale_fill_manual(values = fill_map, name = "Variable Categories") +
-  scale_shape_manual(values = shape_map, name = "Variable Categories") +
+  scale_color_manual(values = cores_periodo, name = "Períodos Temporais") +
+  scale_fill_manual(values = fill_map, name = "Categorias de Variáveis") +
+  scale_shape_manual(values = shape_map, name = "Categorias de Variáveis") +
 
   # Fundo limpo da legenda
   theme(
@@ -265,10 +265,10 @@ biplot_final <- ggplot(dados_plot, aes(x = Dim1, y = Dim2)) +
 
   # Títulos e texto
   labs(
-    title = "MCA Biplot: ML Applications Evolution for Geographical Indications Authentication",
-    subtitle = "Ellipses (95%): time periods | Shapes: variable categories",
-    x = paste0("Dimension 1 (", round(res.mca$eig[1, 2], 2), "%)"),
-    y = paste0("Dimension 2 (", round(res.mca$eig[2, 2], 2), "%)")
+    title = "Biplot da Análise de Correspondência Múltipla: Evolução das Aplicações de ML para Autenticação de Indicações Geográficas",
+    subtitle = "Elipses (95%): períodos temporais | Formas: categorias de variáveis",
+    x = paste0("Dimensão 1 (", round(res.mca$eig[1, 2], 2), "%)"),
+    y = paste0("Dimensão 2 (", round(res.mca$eig[2, 2], 2), "%)")
   ) +
 
   # Tema

@@ -58,6 +58,11 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
         cmd.append(str(apendices_file))
         print(f"📎 Incluindo apêndices: {apendices_file.name}")
     
+    # Adicionar resource-path para encontrar figuras
+    cmd.extend([
+        "--resource-path", ".:../2-FIGURAS:../2-FIGURAS/2-EN:../2-FIGURAS/1-PT",
+    ])
+    
     # Adicionar processamento de citações
     cmd.extend([
         "--citeproc",

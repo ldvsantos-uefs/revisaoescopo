@@ -110,14 +110,14 @@ determinar_k_otimo <- function(features_scaled, k_max = 10) {
   p1 <- ggplot(data.frame(k = 1:k_max, WSS = wss), aes(x = k, y = WSS)) +
     geom_line(color = "#2E86AB", size = 1.2) +
     geom_point(color = "#2E86AB", size = 3) +
-    labs(title = "Método Elbow", x = "Número de Clusters (k)", y = "Total Within SS") +
+    labs(title = "Elbow Method", x = "Number of Clusters (k)", y = "Within-Cluster Sum of Squares") +
     theme_minimal(base_size = 12) +
     theme(plot.title = element_text(face = "bold", hjust = 0.5))
   
   p2 <- ggplot(data.frame(k = 2:k_max, Silhouette = sil_width), aes(x = k, y = Silhouette)) +
     geom_line(color = "#A23B72", size = 1.2) +
     geom_point(color = "#A23B72", size = 3) +
-    labs(title = "Silhouette Score", x = "Número de Clusters (k)", y = "Silhouette médio") +
+    labs(title = "Silhouette Score", x = "Number of Clusters (k)", y = "Average Silhouette Width") +
     theme_minimal(base_size = 12) +
     theme(plot.title = element_text(face = "bold", hjust = 0.5))
   
@@ -260,7 +260,7 @@ plot_heatmap_profiles <- function(dados, kmeans_result, output_file = "cluster_h
     fontsize = 10,
     fontsize_row = 9,
     fontsize_col = 12,
-    main = "Perfil de Características por Cluster\nK-Means Clustering",
+    main = "Characteristic Profile by Cluster\nK-Means Clustering Analysis",
     angle_col = 0,
     border_color = NA,
     cellwidth = 30,

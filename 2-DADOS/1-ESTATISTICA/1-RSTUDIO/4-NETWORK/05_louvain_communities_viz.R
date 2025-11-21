@@ -1,14 +1,14 @@
 ################################################################################
-# VISUALIZAÇÃO AVANÇADA DAS COMUNIDADES DE LOUVAIN
-# Machine Learning para Indicações Geográficas
+# ADVANCED VISUALIZATION OF LOUVAIN COMMUNITIES
+# Machine Learning for Geographical Indications
 #
-# Este script gera visualizações detalhadas dos três módulos identificados
-# pelo algoritmo de Louvain, criando uma figura composta que complementa
-# a Tabela 5 do manuscrito.
+# This script generates detailed visualizations of the three modules identified
+# by the Louvain algorithm, creating a composite figure that complements
+# Table 5 of the manuscript.
 #
 # Outputs:
-#   - louvain_modules_detailed.png (Figura detalhada dos 3 módulos)
-#   - louvain_modules_summary.png (Figura resumo para o manuscrito)
+#   - louvain_modules_detailed.png (Detailed figure of 3 modules)
+#   - louvain_modules_summary.png (Summary figure for manuscript)
 ################################################################################
 
 rm(list = ls())
@@ -59,11 +59,11 @@ plot_module_detail <- function(g, module_id, module_name, module_color) {
   regioes <- c("Africa", "Asia", "Europe")
   
   V(g_sub)$category <- case_when(
-    V(g_sub)$name %in% algoritmos ~ "Algoritmo",
-    V(g_sub)$name %in% instrumentos ~ "Instrumento",
-    V(g_sub)$name %in% produtos ~ "Produto",
-    V(g_sub)$name %in% regioes ~ "Região",
-    TRUE ~ "Outro"
+    V(g_sub)$name %in% algoritmos ~ "Algorithm",
+    V(g_sub)$name %in% instrumentos ~ "Instrument",
+    V(g_sub)$name %in% produtos ~ "Product",
+    V(g_sub)$name %in% regioes ~ "Region",
+    TRUE ~ "Other"
   )
   
   # Converter para tidygraph
@@ -80,17 +80,17 @@ plot_module_detail <- function(g, module_id, module_name, module_color) {
     scale_size_continuous(range = c(5, 12), guide = "none") +
     scale_color_manual(
       values = c(
-        "Algoritmo" = "#E63946",
-        "Instrumento" = "#457B9D",
-        "Produto" = "#2A9D8F",
-        "Região" = "#F4A261"
+        "Algorithm" = "#E63946",
+        "Instrument" = "#457B9D",
+        "Product" = "#2A9D8F",
+        "Region" = "#F4A261"
       )
     ) +
     labs(
       title = module_name,
-      subtitle = sprintf("n=%d | Densidade=%.2f", 
+      subtitle = sprintf("n=%d | Density=%.2f", 
                         vcount(g_sub), edge_density(g_sub)),
-      color = "Categoria"
+      color = "Category"
     ) +
     theme_graph(base_family = "sans") +
     theme(
@@ -109,18 +109,18 @@ plot_module_detail <- function(g, module_id, module_name, module_color) {
 # FUNÇÃO: Criar figura composta dos três módulos
 ################################################################################
 plot_three_modules <- function(g) {
-  cat("📊 Gerando visualização dos três módulos de Louvain...\n")
+  cat("📊 Generating visualization of three Louvain modules...\n")
   
-  # Plotar cada módulo
-  p1 <- plot_module_detail(g, 1, "Módulo 1: Árvores + Espectroscopia", "#E76F51")
-  p2 <- plot_module_detail(g, 2, "Módulo 2: SVM/KNN + Cromatografia", "#2A9D8F")
-  p3 <- plot_module_detail(g, 3, "Módulo 3: Redes Neurais + Sensores", "#264653")
+  # Plot each module
+  p1 <- plot_module_detail(g, 1, "Module 1: Trees + Spectroscopy", "#E76F51")
+  p2 <- plot_module_detail(g, 2, "Module 2: SVM/KNN + Chromatography", "#2A9D8F")
+  p3 <- plot_module_detail(g, 3, "Module 3: Neural Networks + Sensors", "#264653")
   
-  # Combinar com patchwork
+  # Combine with patchwork
   combined <- (p1 | p2 | p3) +
     plot_annotation(
-      title = "Módulos Tecnológicos Identificados pelo Algoritmo de Louvain",
-      subtitle = "Rede de Coocorrências: 20 nós, 58 arestas | Densidade=0.305 | Clustering=0.595",
+      title = "Technological Modules Identified by Louvain Algorithm",
+      subtitle = "Co-occurrence Network: 20 nodes, 58 edges | Density=0.305 | Clustering=0.595",
       theme = theme(
         plot.title = element_text(face = "bold", size = 18, hjust = 0.5),
         plot.subtitle = element_text(hjust = 0.5, color = "gray40", size = 12)
@@ -141,15 +141,15 @@ plot_three_modules <- function(g) {
 # FUNÇÃO: Criar figura resumo com anotações para manuscrito
 ################################################################################
 plot_modules_summary <- function(g) {
-  cat("📊 Gerando figura resumo para o manuscrito...\n")
+  cat("📊 Generating summary figure for manuscript...\n")
   
-  # Adicionar mais informações aos nós
+  # Add more information to nodes
   V(g)$size_scaled <- degree(g)
   V(g)$module_name <- case_when(
-    V(g)$community == 1 ~ "M1: Árvores",
+    V(g)$community == 1 ~ "M1: Trees",
     V(g)$community == 2 ~ "M2: SVM/KNN",
-    V(g)$community == 3 ~ "M3: Redes Neurais",
-    TRUE ~ "Outro"
+    V(g)$community == 3 ~ "M3: Neural Networks",
+    TRUE ~ "Other"
   )
   
   # Converter para tidygraph
@@ -167,22 +167,22 @@ plot_modules_summary <- function(g) {
     scale_edge_alpha(range = c(0.3, 0.7), guide = "none") +
     scale_size_continuous(range = c(3, 15), guide = "none") +
     scale_fill_manual(
-      name = "Módulo Tecnológico",
+      name = "Technological Module",
       values = c(
         "1" = "#E76F51",
         "2" = "#2A9D8F", 
         "3" = "#264653"
       ),
       labels = c(
-        "1" = "M1: Árvores + Espectroscopia (n=6)",
-        "2" = "M2: SVM/KNN + Cromatografia (n=6)",
-        "3" = "M3: Redes Neurais + Sensores (n=8)"
+        "1" = "M1: Trees + Spectroscopy (n=6)",
+        "2" = "M2: SVM/KNN + Chromatography (n=6)",
+        "3" = "M3: Neural Networks + Sensors (n=8)"
       )
     ) +
     labs(
-      title = "Estrutura Modular da Rede de ML para Indicações Geográficas",
-      subtitle = "Comunidades detectadas pelo algoritmo de Louvain | Tamanhos proporcionais ao grau de centralidade",
-      caption = "Densidade da rede = 0.305 | Coeficiente de clustering = 0.595\nNós mais centrais: NeuralNetwork (degree=15), SVM (degree=12), RandomForest (degree=11)"
+      title = "Modular Structure of ML Network for Geographical Indications",
+      subtitle = "Communities detected by Louvain algorithm | Sizes proportional to degree centrality",
+      caption = "Network density = 0.305 | Clustering coefficient = 0.595\nMost central nodes: NeuralNetwork (degree=15), SVM (degree=12), RandomForest (degree=11)"
     ) +
     theme_graph(base_family = "sans") +
     theme(
@@ -292,16 +292,16 @@ main_viz <- function() {
   p_table <- create_module_table_visual(g)
   
   cat("\n")
-  cat("================================================================================\n")
-  cat("✅ VISUALIZAÇÕES AVANÇADAS CONCLUÍDAS!\n")
-  cat("================================================================================\n")
-  cat("\nArquivos gerados:\n")
-  cat("  1. louvain_modules_detailed.png - Figura detalhada dos 3 módulos\n")
-  cat("  2. louvain_modules_summary.png - Figura resumo para manuscrito\n")
-  cat("  3. louvain_modules_table_visual.png - Tabela visual complementar\n")
-  cat("\nRecomendação: Use louvain_modules_summary.png como Figura 9\n")
-  cat("              A Tabela 5 (markdown) permanece no texto\n")
-  cat("================================================================================\n")
+  cat("================================================================================")
+  cat("✅ ADVANCED VISUALIZATIONS COMPLETED!\n")
+  cat("================================================================================")
+  cat("\nGenerated files:\n")
+  cat("  1. louvain_modules_detailed.png - Detailed figure of 3 modules\n")
+  cat("  2. louvain_modules_summary.png - Summary figure for manuscript\n")
+  cat("  3. louvain_modules_table_visual.png - Complementary visual table\n")
+  cat("\nRecommendation: Use louvain_modules_summary.png as Figure 9\n")
+  cat("                Table 5 (markdown) remains in text\n")
+  cat("================================================================================")
 }
 
 tryCatch({

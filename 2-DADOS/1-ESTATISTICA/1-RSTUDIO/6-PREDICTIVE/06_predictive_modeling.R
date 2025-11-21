@@ -298,10 +298,10 @@ plot_feature_importance_reg <- function(reg_results, output_file = "model_featur
     geom_col(fill = "#2E86AB", alpha = 0.8) +
     coord_flip() +
     labs(
-      title = "Importância de Features - Random Forest (Regressão)",
-      subtitle = "Top 15 features mais importantes",
-      x = "Feature",
-      y = "Importância"
+      title = "Variable Importance: Random Forest (Regression)",
+      subtitle = "Top 15 most important variables for quality index prediction",
+      x = "Variable",
+      y = "Relative Importance"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -327,10 +327,10 @@ plot_feature_importance_clf <- function(clf_results, output_file = "model_featur
     geom_col(fill = "#A23B72", alpha = 0.8) +
     coord_flip() +
     labs(
-      title = "Importância de Features - Random Forest (Classificação)",
-      subtitle = "Top 15 features mais importantes",
-      x = "Feature",
-      y = "Importância"
+      title = "Variable Importance: Random Forest (Classification)",
+      subtitle = "Top 15 most important variables for high-impact study classification",
+      x = "Variable",
+      y = "Relative Importance"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -355,11 +355,11 @@ plot_confusion_matrix <- function(clf_results, output_file = "model_confusion_ma
     geom_text(aes(label = Freq), color = "white", size = 8, fontface = "bold") +
     scale_fill_viridis_c(option = "magma", direction = -1) +
     labs(
-      title = "Matriz de Confusão - Random Forest (Classificação)",
-      subtitle = sprintf("Acurácia: %.2f%%", 
+      title = "Confusion Matrix: Random Forest (Classification)",
+      subtitle = sprintf("Overall Accuracy: %.2f%% | High-Impact Study Prediction", 
                          100 * clf_results$confusion_matrices$rf$overall["Accuracy"]),
-      x = "Classe Real",
-      y = "Classe Predita"
+      x = "Observed Class",
+      y = "Predicted Class"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -388,11 +388,11 @@ plot_metricas_classificacao <- function(clf_results, output_file = "model_metric
     scale_fill_viridis_d(option = "plasma", begin = 0.2, end = 0.8) +
     scale_y_continuous(limits = c(0, 1.1), breaks = seq(0, 1, 0.2)) +
     labs(
-      title = "Comparação de Métricas - Classificação",
-      subtitle = "Accuracy | Precision | Recall | F1-Score",
-      x = "Métrica",
-      y = "Valor",
-      fill = "Modelo"
+      title = "Performance Metrics Comparison: Classification Models",
+      subtitle = "Accuracy | Precision | Sensitivity | F1-Score",
+      x = "Performance Metric",
+      y = "Value (0–1)",
+      fill = "Predictive Model"
     ) +
     theme_minimal(base_size = 14) +
     theme(

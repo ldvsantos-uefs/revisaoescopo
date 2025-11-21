@@ -2,45 +2,45 @@
 
 flowchart TD
     
-    %% SEÇÃO IDENTIFICAÇÃO
-    IDENT["<b>IDENTIFICAÇÃO</b>"]
+    %% IDENTIFICATION SECTION
+    IDENT["<b>IDENTIFICATION</b>"]
     
-    DB["<b>Registros identificados<br/>em base de dados</b><br/>n = 3.547"]
-    REGISTER["<b>Registros identificados<br/>por outras fontes</b><br/>n = 245"]
+    DB["<b>Records identified<br/>from databases</b><br/>n = 3,547"]
+    REGISTER["<b>Records identified<br/>from other sources</b><br/>n = 245"]
     
-    DB --> TOTAL["<b>Registros totais</b><br/>n = 3.792"]
+    DB --> TOTAL["<b>Total records</b><br/>n = 3,792"]
     REGISTER --> TOTAL
     
-    %% SEÇÃO TRIAGEM
-    SCREEN["<b>TRIAGEM</b>"]
+    %% SCREENING SECTION
+    SCREEN["<b>SCREENING</b>"]
     
-    TOTAL --> DEDUP["<b>Registros após<br/>remoção de duplicatas</b><br/>n = 3.245"]
+    TOTAL --> DEDUP["<b>Records after<br/>duplicate removal</b><br/>n = 3,245"]
     
-    DEDUP --> SCREENED["<b>Registros rastreados</b><br/>n = 3.245"]
-    DEDUP --> EXCLUDED_SCREEN["<b>Registros excluídos</b><br/>n = 2.847"]
+    DEDUP --> SCREENED["<b>Records screened</b><br/>n = 3,245"]
+    DEDUP --> EXCLUDED_SCREEN["<b>Records excluded</b><br/>n = 2,847"]
     
-    SCREENED --> SOUGHT["<b>Artigos/relatórios<br/>buscados para avaliação</b><br/>n = 398"]
+    SCREENED --> SOUGHT["<b>Articles/reports<br/>sought for evaluation</b><br/>n = 398"]
     
-    %% SEÇÃO ELEGIBILIDADE  
-    ELIGIBLE["<b>ELEGIBILIDADE</b>"]
+    %% ELIGIBILITY SECTION  
+    ELIGIBLE["<b>ELIGIBILITY</b>"]
     
-    SOUGHT --> NOT_RETRIEVED["<b>Artigos/relatórios<br/>não recuperados</b><br/>n = 45"]
-    SOUGHT --> ASSESSED["<b>Artigos/relatórios<br/>para avaliação completa</b><br/>n = 353"]
+    SOUGHT --> NOT_RETRIEVED["<b>Articles/reports<br/>not retrieved</b><br/>n = 45"]
+    SOUGHT --> ASSESSED["<b>Articles/reports<br/>assessed for eligibility</b><br/>n = 353"]
     
-    ASSESSED --> EXCLUDED_FULL["<b>Estudos excluídos<br/>com motivos</b><br/>n = 230"]
+    ASSESSED --> EXCLUDED_FULL["<b>Studies excluded<br/>with reasons</b><br/>n = 230"]
     
-    EXCLUDED_FULL --> REASON1["Fora do escopo temático<br/>(n = 145)"]
-    EXCLUDED_FULL --> REASON2["Sem dados primários<br/>(n = 52)"]
-    EXCLUDED_FULL --> REASON3["Artigos não científicos<br/>(n = 33)"]
+    EXCLUDED_FULL --> REASON1["Out of thematic scope<br/>(n = 145)"]
+    EXCLUDED_FULL --> REASON2["No primary data<br/>(n = 52)"]
+    EXCLUDED_FULL --> REASON3["Non-scientific articles<br/>(n = 33)"]
     
-    %% SEÇÃO INCLUSÃO
-    INCLUDE["<b>INCLUSÃO</b>"]
+    %% INCLUSION SECTION
+    INCLUDE["<b>INCLUSION</b>"]
     
-    ASSESSED --> INCLUDED["<b>Estudos inclusos<br/>na síntese qualitativa</b><br/>n = 123"]
+    ASSESSED --> INCLUDED["<b>Studies included<br/>in qualitative synthesis</b><br/>n = 123"]
     
-    INCLUDED --> SYNTHESIS["<b>Estudos inclusos na síntese<br/>de dados</b><br/>n = 123"]
+    INCLUDED --> SYNTHESIS["<b>Studies included in<br/>data synthesis</b><br/>n = 123"]
     
-    SYNTHESIS --> OUTPUT["<b>SÍNTESE FINAL</b><br/>Mapeamento de ML em IG<br/>Técnicas, aplicações e impactos"]
+    SYNTHESIS --> OUTPUT["<b>FINAL SYNTHESIS</b><br/>Mapping of ML in GI<br/>Techniques, applications and impacts"]
     
     %% Posicionamento das seções
     IDENT -.-> DB

@@ -1,18 +1,15 @@
-================================================================================
-RELATÓRIO DE ANÁLISE DE REDES - ML PARA INDICAÇÕES GEOGRÁFICAS
-================================================================================
-
-Data de execução: 2025-11-19 06:41:14.488302
+================================================================================NETWORK ANALYSIS REPORT - ML FOR GEOGRAPHICAL INDICATIONS
+================================================================================Execution date: 2025-11-20 21:36:37.96259
 
 --------------------------------------------------------------------------------
-ESTATÍSTICAS GERAIS DA REDE
+GENERAL NETWORK STATISTICS
 --------------------------------------------------------------------------------
-Número de nós: 20
-Número de arestas: 58
-Densidade: 0.3053
-Transitividade (clustering coefficient): 0.5948
-Diâmetro da rede: 14
-Distância média: 7.37
+Number of nodes: 20
+Number of edges: 58
+Density: 0.3053
+Transitivity (clustering coefficient): 0.5948
+Network diameter: 14
+Average distance: 7.37
 
 --------------------------------------------------------------------------------
 TOP 15 NÓS POR GRAU (DEGREE CENTRALITY)

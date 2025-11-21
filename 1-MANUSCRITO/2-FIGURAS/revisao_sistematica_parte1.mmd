@@ -2,43 +2,43 @@
 
 flowchart LR
     
-    START["<b>REVISÃO DE ESCOPO PRISMA-ScR</b><br/>Aplicações de Machine Learning em Indicações Geográficas<br/>2010-2025"]
+    START["<b>PRISMA-ScR SCOPING REVIEW</b><br/>Machine Learning Applications in Geographical Indications<br/>2010-2025"]
     
-    START --> SEARCH["<b>FASE 1: ESTRATÉGIA DE BUSCA</b><br/>Definição de Critérios PCC"]
+    START --> SEARCH["<b>PHASE 1: SEARCH STRATEGY</b><br/>PCC Criteria Definition"]
     
-    SEARCH --> SEARCH_A["<b>Bases de Dados</b><br/>• Scopus • Web of Science<br/><br/><b>Período:</b>2010-2025"]
+    SEARCH --> SEARCH_A["<b>Databases</b><br/>• Scopus • Web of Science<br/><br/><b>Period:</b>2010-2025"]
     
-    SEARCH --> SEARCH_B["<b>String Booleana</b><br/><b>ML:</b> machine learning, AI, deep learning<br/><b>AND IG:</b> geographical indications, PDO<br/><b>AND:</b> authentication, traceability"]
+    SEARCH --> SEARCH_B["<b>Boolean String</b><br/><b>ML:</b> machine learning, AI, deep learning<br/><b>AND GI:</b> geographical indications, PDO<br/><b>AND:</b> authentication, traceability"]
     
-    SEARCH --> SEARCH_C["<b>Critérios</b><br/><b>Inclusão:</b> Peer-reviewed, EN/PT/ES<br/>Aplicações práticas de ML<br/><b>Exclusão:</b> Médico, urbano, financeiro"]
+    SEARCH --> SEARCH_C["<b>Criteria</b><br/><b>Inclusion:</b> Peer-reviewed, EN/PT/ES<br/>Practical ML applications<br/><b>Exclusion:</b> Medical, urban, financial"]
     
-    SEARCH_A --> FILTER["<b>FASE 2: FILTRAGEM AUTOMATIZADA</b><br/>Sistema de Pontuação Ponderada"]
+    SEARCH_A --> FILTER["<b>PHASE 2: AUTOMATED FILTERING</b><br/>Weighted Scoring System"]
     SEARCH_B --> FILTER
     SEARCH_C --> FILTER
     
-    FILTER --> FILTER_A["<b>Algoritmo Python 3.9</b><br/>NLTK + spaCy<br/><b>Termos Prioritários:</b> +5 pts<br/><b>Termos Contexto:</b> +1 pt<br/><b>Penalidades:</b> -2 a -5 pts"]
+    FILTER --> FILTER_A["<b>Python 3.9 Algorithm</b><br/>NLTK + spaCy<br/><b>Priority Terms:</b> +5 pts<br/><b>Context Terms:</b> +1 pt<br/><b>Penalties:</b> -2 to -5 pts"]
     
-    FILTER --> FILTER_B["<b>Multiplicadores Semânticos</b><br/>Título ×1.5 | Abstract ×1.0<br/>Palavras-chave ×1.2<br/><b>Limiar mínimo:</b> Score ≥ valor calibrado"]
+    FILTER --> FILTER_B["<b>Semantic Multipliers</b><br/>Title ×1.5 | Abstract ×1.0<br/>Keywords ×1.2<br/><b>Minimum threshold:</b> Score ≥ calibrated value"]
     
-    FILTER --> FILTER_C["<b>Resultados Filtragem</b><br/><b>Corpus inicial:</b> 272 estudos<br/>(140 Scopus + 132 WoS)<br/><b>Precisão temática:</b> 94.2%"]
+    FILTER --> FILTER_C["<b>Filtering Results</b><br/><b>Initial corpus:</b> 272 studies<br/>(140 Scopus + 132 WoS)<br/><b>Thematic precision:</b> 94.2%"]
     
-    FILTER_C --> QUALITY["<b>FASE 3: ANÁLISE DE QUALIDADE</b><br/>Avaliação Manual Multidisciplinar"]
+    FILTER_C --> QUALITY["<b>PHASE 3: QUALITY ANALYSIS</b><br/>Multidisciplinary Manual Assessment"]
     
-    QUALITY --> QUALITY_A["<b>Escala MMAT Adaptada</b><br/><b>Indicadores:</b> 8 critérios<br/>Rigor metodológico • Validação técnica<br/>Ética • Reprodutibilidade • Integração"]
+    QUALITY --> QUALITY_A["<b>Adapted MMAT Scale</b><br/><b>Indicators:</b> 8 criteria<br/>Methodological rigor • Technical validation<br/>Ethics • Reproducibility • Integration"]
     
-    QUALITY --> QUALITY_B["<b>Revisão por 3 Juízes</b><br/>Escala Likert 0-3 pontos<br/><b>ICC = 0.87 (IC 95%: 0.84-0.91)</b><br/>Concordância interavaliadores: excelente"]
+    QUALITY --> QUALITY_B["<b>3-Judge Review</b><br/>Likert scale 0-3 points<br/><b>ICC = 0.87 (95% CI: 0.84-0.91)</b><br/>Interrater agreement: excellent"]
     
-    QUALITY --> QUALITY_C["<b>Seleção Final</b><br/>272 estudos processados<br/><b>25 artigos selecionados</b><br/>Base para análises posteriores"]
+    QUALITY --> QUALITY_C["<b>Final Selection</b><br/>272 processed studies<br/><b>25 selected articles</b><br/>Basis for subsequent analyses"]
     
-    QUALITY_C --> BIBLIO["<b>FASE 4: ANÁLISE BIBLIOMÉTRICA</b><br/>Síntese Qualitativa & Redes"]
+    QUALITY_C --> BIBLIO["<b>PHASE 4: BIBLIOMETRIC ANALYSIS</b><br/>Qualitative Synthesis & Networks"]
     
-    BIBLIO --> BIBLIO_A["<b>Análise Bibliométrica</b><br/>Lei de Lotka • Cocitação<br/>VOSviewer • Redes de colaboração<br/>Clusters temáticos"]
+    BIBLIO --> BIBLIO_A["<b>Bibliometric Analysis</b><br/>Lotka's Law • Co-citation<br/>Network analysis • Collaboration networks<br/>Thematic clusters"]
     
-    BIBLIO --> BIBLIO_B["<b>Síntese Qualitativa</b><br/>Princípio de Pareto (80/20)<br/>Ponderação: 40% qualidade<br/>35% relevância • 25% impacto"]
+    BIBLIO --> BIBLIO_B["<b>Qualitative Synthesis</b><br/>Pareto Principle (80/20)<br/>Weighting: 40% quality<br/>35% relevance • 25% impact"]
     
-    BIBLIO --> BIBLIO_C["<b>Análise Documental</b><br/>Marcos regulatórios<br/>Frameworks de certificação<br/>Diretrizes aplicáveis"]
+    BIBLIO --> BIBLIO_C["<b>Documentary Analysis</b><br/>Regulatory frameworks<br/>Certification frameworks<br/>Applicable guidelines"]
     
-    BIBLIO_A --> OUTPUT["<b>SÍNTESE FINAL</b><br/>Mapeamento completo de aplicações ML-IG<br/>145+ referências bibliográficas<br/>Diretrizes para implementação prática"]
+    BIBLIO_A --> OUTPUT["<b>FINAL SYNTHESIS</b><br/>Complete mapping of ML applications in GIs<br/>145+ bibliographic references<br/>Guidelines for practical implementation"]
     BIBLIO_B --> OUTPUT
     BIBLIO_C --> OUTPUT
     

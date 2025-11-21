@@ -1,32 +1,32 @@
 #!/usr/bin/env Rscript
-# GERADOR DE FLUXOGRAMA PRISMA 2020 - VERSÃO R OFICIAL
-# Script para gerar diagramas PRISMA 2020 profissionais usando o pacote R oficial
-# PRISMA2020 baseado no repositório: https://github.com/prisma-flowdiagram/PRISMA2020
-# Author: Adaptado para português
-# Data: 2025
+# PRISMA 2020 FLOWCHART GENERATOR - OFFICIAL R VERSION
+# Script to generate professional PRISMA 2020 diagrams using the official R package
+# PRISMA2020 based on repository: https://github.com/prisma-flowdiagram/PRISMA2020
+# Author: Adapted for English
+# Date: 2025
 
-# Supprimir avisos
+# Suppress warnings
 options(warn = -1)
 
-# Configurar CRAN mirror
+# Configure CRAN mirror
 options(repos = c(CRAN = "https://cran.rstudio.com"))
 
-# Verificar e instalar pacotes necessários
-pacotes_necessarios <- c("devtools", "htmlwidgets", "DiagrammeR")
+# Check and install required packages
+required_packages <- c("devtools", "htmlwidgets", "DiagrammeR")
 
-# Forçar reinstalação do magrittr
+# Force reinstall magrittr
 install.packages("magrittr", quiet = TRUE)
 
-for (pacote in pacotes_necessarios) {
-  if (!require(pacote, character.only = TRUE)) {
-    cat(sprintf("📦 Instalando pacote: %s\n", pacote))
-    install.packages(pacote, quiet = TRUE)
+for (package in required_packages) {
+  if (!require(package, character.only = TRUE)) {
+    cat(sprintf("📦 Installing package: %s\n", package))
+    install.packages(package, quiet = TRUE)
   }
 }
 
-# Forçar reinstalação do PRISMA2020
+# Force reinstall PRISMA2020
 if (!require("PRISMA2020", character.only = TRUE)) {
-    cat("📦 Instalando PRISMA2020 do GitHub...\n")
+    cat("📦 Installing PRISMA2020 from GitHub...\n")
     devtools::install_github("prisma-flowdiagram/PRISMA2020", quiet = TRUE, force = TRUE)
 }
 
@@ -35,31 +35,31 @@ library(PRISMA2020, quietly = TRUE)
 library(htmlwidgets, quietly = TRUE)
 library(DiagrammeR, quietly = TRUE)
 
-# Carregar dados do CSV
+# Load data from CSV
 cat("======================================================================\n")
-cat("🔄 GERADOR DE FLUXOGRAMA PRISMA 2020 - VERSÃO R OFICIAL\n")
+cat("🔄 PRISMA 2020 FLOWCHART GENERATOR - OFFICIAL R VERSION\n")
 cat("======================================================================\n\n")
 
 csv_file <- "PRISMA.csv"
 
 if (!file.exists(csv_file)) {
-  cat(sprintf("❌ Arquivo %s não encontrado!\n", csv_file))
+  cat(sprintf("❌ File %s not found!\n", csv_file))
   quit(status = 1)
 }
 
-cat(sprintf("📂 Carregando dados de: %s\n", csv_file))
+cat(sprintf("📂 Loading data from: %s\n", csv_file))
 
-# Ler os dados
+# Read the data
 data <- read.csv(csv_file, sep = ";", stringsAsFactors = FALSE)
 
-cat("✅ Dados carregados com sucesso\n\n")
+cat("✅ Data loaded successfully\n\n")
 
-# Processar dados para formato correto
-cat("📊 Processando dados PRISMA...\n")
+# Process data to correct format
+cat("📊 Processing PRISMA data...\n")
 prisma_data <- PRISMA_data(data)
 
-# Gerar o fluxograma PRISMA 2020
-cat("🎨 Gerando fluxograma PRISMA 2020...\n")
+# Generate PRISMA 2020 flowchart
+cat("🎨 Generating PRISMA 2020 flowchart...\n")
 
 plot <- PRISMA_flowdiagram(
   prisma_data,
@@ -80,20 +80,20 @@ plot <- PRISMA_flowdiagram(
   side_boxes = TRUE
 )
 
-# Salvar em diferentes formatos
+# Save in different formats
 output_html <- "prisma_flowdiagram_interativo.html"
 output_pdf <- "prisma_flowdiagram.pdf"
 output_png <- "prisma_flowdiagram.png"
 output_svg <- "prisma_flowdiagram.svg"
 
-cat("\n📥 Salvando arquivos...\n")
+cat("\n📥 Saving files...\n")
 
-# HTML (com interatividade)
+# HTML (with interactivity)
 tryCatch({
   PRISMA_save(plot, filename = output_html, filetype = "HTML", overwrite = TRUE)
   cat(sprintf("✅ HTML: %s\n", output_html))
 }, error = function(e) {
-  cat(sprintf("❌ Erro ao salvar HTML: %s\n", e$message))
+  cat(sprintf("❌ Error saving HTML: %s\n", e$message))
 })
 
 # PDF
@@ -101,7 +101,7 @@ tryCatch({
   PRISMA_save(plot, filename = output_pdf, filetype = "PDF", overwrite = TRUE)
   cat(sprintf("✅ PDF: %s\n", output_pdf))
 }, error = function(e) {
-  cat(sprintf("⚠️  Aviso ao salvar PDF: %s\n", e$message))
+  cat(sprintf("⚠️  Warning saving PDF: %s\n", e$message))
 })
 
 # PNG
@@ -109,7 +109,7 @@ tryCatch({
   PRISMA_save(plot, filename = output_png, filetype = "PNG", overwrite = TRUE)
   cat(sprintf("✅ PNG: %s\n", output_png))
 }, error = function(e) {
-  cat(sprintf("⚠️  Aviso ao salvar PNG: %s\n", e$message))
+  cat(sprintf("⚠️  Warning saving PNG: %s\n", e$message))
 })
 
 # SVG
@@ -117,12 +117,12 @@ tryCatch({
   PRISMA_save(plot, filename = output_svg, filetype = "SVG", overwrite = TRUE)
   cat(sprintf("✅ SVG: %s\n", output_svg))
 }, error = function(e) {
-  cat(sprintf("⚠️  Aviso ao salvar SVG: %s\n", e$message))
+  cat(sprintf("⚠️  Warning saving SVG: %s\n", e$message))
 })
 
 cat("\n======================================================================\n")
-cat("✨ FLUXOGRAMA PRISMA 2020 GERADO COM SUCESSO!\n")
+cat("✨ PRISMA 2020 FLOWCHART GENERATED SUCCESSFULLY!\n")
 cat("======================================================================\n")
-cat(sprintf("📁 Arquivos de saída disponíveis no diretório atual\n"))
-cat(sprintf("🌐 Arquivo HTML interativo: %s\n", output_html))
-cat("📖 Para visualizar, abra o arquivo HTML em seu navegador\n\n")
+cat(sprintf("📁 Output files available in current directory\n"))
+cat(sprintf("🌐 Interactive HTML file: %s\n", output_html))
+cat("📖 To view, open the HTML file in your browser\n\n")

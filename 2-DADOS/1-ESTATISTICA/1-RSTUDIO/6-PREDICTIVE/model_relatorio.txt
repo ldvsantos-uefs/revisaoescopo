@@ -2,36 +2,36 @@
 RELATÓRIO DE MODELAGEM PREDITIVA - ML PARA INDICAÇÕES GEOGRÁFICAS
 ================================================================================
 
-Data de execução: 2025-11-16 14:43:39.548073
+Data de execução: 2025-11-20 20:57:59.154702
 
 --------------------------------------------------------------------------------
 REGRESSÃO - PREDIÇÃO DE SCORE
 --------------------------------------------------------------------------------
         Modelo     RMSE         R2
-1       Linear 12.54934 0.11195600
-2        Ridge 11.91807 0.13503227
-3        Lasso 11.91100 0.09479165
-4 RandomForest 11.81749 0.12336627
+1       Linear 13.47496 0.06761492
+2        Ridge 12.95770 0.07268013
+3        Lasso 11.74336 0.10491655
+4 RandomForest 11.64166 0.12965669
 
 Melhor modelo (RMSE):  RandomForest 
-Melhor modelo (R²):  Ridge 
+Melhor modelo (R²):  RandomForest 
 
 --------------------------------------------------------------------------------
 CLASSIFICAÇÃO - PREDIÇÃO DE HIGH_SCORE
 --------------------------------------------------------------------------------
         Modelo  Accuracy Precision    Recall        F1
-1     Logistic 0.6944444 0.6842105 0.7222222 0.7027027
-2 RandomForest 0.5277778 0.5263158 0.5555556 0.5405405
+1     Logistic 0.5833333 0.5714286 0.6666667 0.6153846
+2 RandomForest 0.6666667 0.6250000 0.8333333 0.7142857
 
-Melhor modelo (Accuracy):  Logistic 
-Melhor modelo (F1-Score):  Logistic 
+Melhor modelo (Accuracy):  RandomForest 
+Melhor modelo (F1-Score):  RandomForest 
 
 --------------------------------------------------------------------------------
 MATRIZ DE CONFUSÃO - RANDOM FOREST (CLASSIFICAÇÃO)
 --------------------------------------------------------------------------------
           Reference
 Prediction High Low
-      High   10   9
-      Low     8   9
+      High   15   9
+      Low     3   9
 
 ================================================================================

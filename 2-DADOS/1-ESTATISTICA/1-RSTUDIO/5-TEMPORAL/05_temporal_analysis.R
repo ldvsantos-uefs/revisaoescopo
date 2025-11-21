@@ -202,11 +202,11 @@ plot_algoritmos_tempo <- function(algoritmos_ano, output_file = "temporal_algori
     scale_x_continuous(breaks = seq(2010, 2025, 2)) +
     scale_color_viridis_d(option = "plasma", begin = 0.1, end = 0.9) +
     labs(
-      title = "Evolução da Adoção de Algoritmos (2010-2025)",
-      subtitle = "Frequência de uso por ano",
-      x = "Ano",
-      y = "Frequência",
-      color = "Algoritmo"
+      title = "Temporal Evolution of Machine Learning Algorithm Adoption (2010–2025)",
+      subtitle = "Frequency of use in Geographical Indications studies by year",
+      x = "Publication Year",
+      y = "Absolute Frequency",
+      color = "Algorithm"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -234,11 +234,11 @@ plot_produtos_tempo <- function(produtos_ano, output_file = "temporal_produtos.p
     scale_x_continuous(breaks = seq(2010, 2025, 2)) +
     scale_fill_viridis_d(option = "turbo") +
     labs(
-      title = "Evolução dos Produtos Estudados (2010-2025)",
-      subtitle = "Distribuição acumulada por ano",
-      x = "Ano",
-      y = "Frequência (acumulada)",
-      fill = "Produto"
+      title = "Temporal Evolution of Products Investigated in GI Studies (2010–2025)",
+      subtitle = "Cumulative frequency distribution by product category and year",
+      x = "Publication Year",
+      y = "Cumulative Frequency",
+      fill = "Product Category"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -266,13 +266,15 @@ plot_regioes_tempo <- function(regioes_ano, output_file = "temporal_regioes.png"
     geom_point(size = 3, alpha = 0.7) +
     scale_x_continuous(breaks = seq(2010, 2025, 2)) +
     scale_color_manual(values = c("Europe" = "#2E86AB", "Asia" = "#FC4E07", 
-                                   "Americas" = "#A23B72")) +
+                                   "Americas" = "#A23B72"),
+                       labels = c("Europe" = "Europe", "Asia" = "Asia", 
+                                  "Americas" = "Americas")) +
     labs(
-      title = "Distribuição Geográfica dos Estudos (2010-2025)",
-      subtitle = "Frequência por região e ano",
-      x = "Ano",
-      y = "Frequência",
-      color = "Região"
+      title = "Geographic Distribution of ML in GI Studies (2010–2025)",
+      subtitle = "Absolute frequency of publications by region and year",
+      x = "Publication Year",
+      y = "Absolute Frequency",
+      color = "Geographic Region"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -303,11 +305,11 @@ plot_heatmap_evolucao <- function(dados_temporais, output_file = "temporal_heatm
     scale_fill_viridis_c(option = "magma", direction = -1) +
     scale_x_continuous(breaks = seq(2010, 2025, 2)) +
     labs(
-      title = "Heatmap de Evolução Temporal - Algoritmos e Produtos",
-      subtitle = "Frequência de uso por ano (2010-2025)",
-      x = "Ano",
-      y = "Característica",
-      fill = "Frequência"
+      title = "Heatmap of Temporal Evolution: Algorithms and Products",
+      subtitle = "Frequency of use in Geographical Indications studies by year (2010–2025)",
+      x = "Publication Year",
+      y = "Feature (Algorithm or Product)",
+      fill = "Absolute Frequency"
     ) +
     theme_minimal(base_size = 12) +
     theme(
@@ -397,11 +399,11 @@ plot_tendencias <- function(tendencias, output_file = "temporal_tendencias.png")
     geom_vline(xintercept = 0, linetype = "dashed", color = "gray30") +
     scale_fill_viridis_d(option = "plasma", begin = 0.2, end = 0.8) +
     labs(
-      title = "Tendências Temporais Significativas (p < 0.05)",
-      subtitle = "Correlação de Spearman com o ano",
-      x = "Correlação de Spearman (ρ)",
-      y = "Característica",
-      fill = "Tipo"
+      title = "Statistically Significant Temporal Trends (p < 0.05)",
+      subtitle = "Spearman correlation coefficient (ρ) between frequency and publication year",
+      x = "Spearman Correlation (ρ)",
+      y = "Feature (Algorithm or Product)",
+      fill = "Category"
     ) +
     theme_minimal(base_size = 14) +
     theme(
