@@ -380,6 +380,7 @@ A publicação deste artigo foi financiada pelo Instituto Federal de Sergipe (IF
 Os autores agradecem à Universidade Federal de Sergipe (UFS), à Universidade Estadual de Feira de Santana (UEFS) e ao Instituto Federal de Sergipe (IFS) pelo apoio institucional e infraestrutural que viabilizou a realização desta pesquisa.
 
 ## Conflitos de Interesse
+
 Os autores declaram não haver conflitos de interesse.
 
 ## Declaração de Disponibilidade de Dados
