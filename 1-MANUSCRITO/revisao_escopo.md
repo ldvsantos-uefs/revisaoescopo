@@ -10,7 +10,7 @@ lang: pt-BR
 ---
 # Resumo
 
-As Indicações Geográficas (IGs) vinculam qualidade ao território, exigindo autenticação robusta. Embora o Aprendizado de Máquina (AM) ofereça potencial para esse domínio, a literatura carece de uma síntese sistemática. Esta revisão de escopo mapeou aplicações de AM em IGs, identificando algoritmos, produtos e rigor metodológico em 148 artigos revisados por pares (2010–2025), selecionados das bases Scopus e Web of Science após triagem de 272 registros. A metodologia integrou filtragem semântica automatizada (precisão de 94,2%), avaliação manual de qualidade (ICC=0,87) e análise estatística multivariada. Os resultados indicam um crescimento superior a 400% nas aplicações desde 2018, organizadas em três módulos tecnológicos principais: Random Forest com espectroscopia para vinhos, SVM com cromatografia para carnes e Deep Learning com sensores para chás. Apesar de a acurácia na autenticação ser alta (80–100%), a generalização permanece limitada; apenas 23% dos estudos empregaram validação espacialmente independente, observando-se degradação de desempenho de 2–15% e um viés de otimismo estatístico em 77% do corpus. Conclui-se que o AM discrimina eficazmente a origem, mas sua adoção regulatória exige protocolos de validação longitudinal, maior explicabilidade dos modelos e governança equitativa para integrar essas tecnologias aos sistemas de certificação de forma confiável.
+As Indicações Geográficas (IGs) vinculam qualidade ao território, exigindo autenticação robusta. Embora o Aprendizado de Máquina (AM) ofereça potencial para esse domínio, a literatura carece de uma síntese sistemática. Esta revisão de escopo mapeou aplicações de AM em IGs, identificando algoritmos, produtos e rigor metodológico em 148 artigos revisados por pares (2010–2025), selecionados das bases Scopus e Web of Science após triagem de 272 registros. A metodologia integrou filtragem semântica automatizada (precision of 94.2%), avaliação manual de qualidade (ICC = 0.87) e análise estatística multivariada. Os resultados indicam um crescimento superior a 400% nas aplicações desde 2018, organizadas em três módulos tecnológicos principais: Random Forest com espectroscopia para vinhos, SVM com cromatografia para carnes e Deep Learning com sensores para chás. Apesar de a acurácia na autenticação ser alta (80–100%), a generalização permanece limitada; apenas 23% dos estudos empregaram validação espacialmente independente, observando-se degradação de desempenho de 2–15% e um viés de otimismo estatístico em 77% do corpus. Conclui-se que o AM discrimina eficazmente a origem, mas sua adoção regulatória exige protocolos de validação longitudinal, maior explicabilidade dos modelos e governança equitativa para integrar essas tecnologias aos sistemas de certificação de forma confiável.
 
 **Palavras-chave:** Geographical Indications; Machine Learning; Artificial Intelligence; Food Traceability; Agroecological Products; Intellectual Property; Territorial Justice; Scoping Review.
 
@@ -42,13 +42,15 @@ Esta revisão de escopo segue as diretrizes da extensão PRISMA-ScR (*Preferred 
 
 O estudo foi estruturado utilizando o framework PCC (*Population, Concept, Context*), que fundamenta a questão de pesquisa: *Como técnicas de Aprendizado de Máquina têm sido aplicadas para autenticação, avaliação e apoio à decisão em sistemas de Indicações Geográficas?*
 
+
+**Tabela 1.** Estrutura da revisão de escopo segundo o framework PCC.
+
 | Elemento                  | Descrição                                                                                                                                                                                                                                                                                                                                                                                     |
 | :------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **P (População)** | Indicações Geográficas, Denominações de Origem e Indicações de Procedência reconhecidas nacional e internacionalmente, abrangendo produtos agroalimentares (vinhos, queijos, cafés, carnes, azeites), artesanatos e outros produtos com identidade territorial.                                                                                                                        |
 | **C (Conceito)**    | Técnicas de Aprendizado de Máquina, Inteligência Artificial, algoritmos de classificação e predição, métodos quimiométricos, Mineração de Dados e Processamento de Linguagem Natural aplicados a contextos de Indicações Geográficas.                                                                                                                                             |
 | **C (Contexto)**    | Autenticação de origem geográfica, avaliação de potencialidade de IGs, identificação de determinantes territoriais (solo, clima, métodos de produção), classificação e discriminação de produtos, sistemas de apoio à decisão para certificação, controle de qualidade, rastreabilidade, detecção de fraudes e adulterações, e estratégias de valorização territorial. |
 
-*Tabela 1. Estrutura da revisão de escopo segundo o framework PCC.*
 
 Este trabalho se propõe a identificar e caracterizar as aplicações de ML reportadas na literatura científica, categorizando as técnicas empregadas segundo tipo de algoritmo, abordagem metodológica e métricas de desempenho. Ainda, analisar a distribuição das aplicações por tipo de produto, região geográfica e período temporal. E por fim, identificar lacunas metodológicas, limitações e direções para pesquisas futuras.
 
@@ -56,7 +58,9 @@ Este trabalho se propõe a identificar e caracterizar as aplicações de ML repo
 
 A Figura 1 apresenta o fluxograma metodológico da revisão de escopo, estruturado em quatro fases sequenciais segundo as diretrizes PRISMA-ScR: (1) Estratégia de Busca nas principais bases de dados, (2) Filtragem Automatizada com sistema de pontuação ponderada, (3) Análise Manual de Qualidade com avaliação multidisciplinar, e (4) Análise Bibliométrica e Síntese Qualitativa** integrando metodologias quantitativas e documentais. O fluxograma detalha o percurso metodológico desde a identificação de registros até a síntese final com recomendações para implementação de Machine Learning em sistemas de Indicações Geográficas.
 
-![Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas. ](2-FIGURAS/2-EN/ml_indicacoes_geograficas.png){#fig:ml_indicacoes width="80%"}
+**Figura 1.** Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas.
+
+![](2-FIGURAS/2-EN/ml_indicacoes_geograficas.png){#fig:ml_indicacoes width="80%"}
 
 ## 2.3 Estratégia de Busca e Extração dos Estudos
 
@@ -85,7 +89,7 @@ onde:
 
 - $S_i$ = pontuação total do artigo $i$
 - $w_j$ = peso associado ao termo $j$ (categorizado em 5 níveis: 5, 3, 2, 1, ou -5/-3/-2 pontos)
-- $l_i$ = multiplicador de localização do termo (1,5 para título, 1,2 para palavras‑chave, 1,0 para abstract)
+- $l_i$ = location multiplier (1.5 for title, 1.2 for keywords, 1.0 for abstract)
 - $f_{ij}$ = frequência de ocorrência do termo $j$ no artigo $i$
 - $n$ = número total de termos avaliados
 
@@ -93,7 +97,7 @@ Termos Prioritários (5 pontos) representam o núcleo conceitual da revisão e i
 
 ### 2.4.2 Implementação e Validação do Sistema
 
-Para cada registro, o algoritmo varre título, resumo e palavras‑chave, aplica os pesos definidos para cada categoria de termo (Prioritário = 5; Alta Relevância = 3; Relevância Média = 2; Contexto = 1; Exclusão = valores negativos) e multiplica cada ocorrência pelo fator de localização correspondente (1,5 para título, 1,2 para palavras‑chave, 1,0 para resumo). A pontuação final é a soma desses produtos ao longo de todos os termos identificados em cada registro.
+For each record, the algorithm scans the title, abstract and keywords, applies the weights defined for each term category (Priority = 5; High Relevance = 3; Medium Relevance = 2; Context = 1; Exclusion = negative values) and multiplies each occurrence by the corresponding location factor (1.5 for title, 1.2 for keywords, 1.0 for abstract). The final score is the sum of these products across all identified terms in each record.
 
 O limiar mínimo de inclusão foi definido a partir da distribuição empírica das pontuações, identificando-se o ponto de inflexão na curva acumulada (critério tipo Pareto/elbow) e ajustando-o por validação manual com amostragem estratificada de registros contendo termos‑chave como *machine learning*, *geographical indications* e *authentication*. O valor final representou o melhor compromisso entre sensibilidade e especificidade, estabilizando a concordância interavaliadores nos casos limítrofes.
 
@@ -101,7 +105,7 @@ O limiar mínimo de inclusão foi definido a partir da distribuição empírica 
 
 Para assegurar a validade científica do processo de seleção, foi implementado um protocolo de validação envolvendo três revisores independentes, especialistas em machine learning, sistemas de certificação geográfica e Indicações Geográficas. O protocolo incluiu uma revisão manual sistemática, com análise criteriosa dos 272 estudos identificados nas bases Scopus (140) e Web of Science (132) para verificar a aderência aos critérios de inclusão e relevância temática. Adicionalmente, foi realizado um teste de concordância interavaliadores para verificar a consistência na classificação dos estudos [@Tricco2018].
 
-O processo também contemplou a análise de casos limítrofes, com investigação qualitativa dos estudos de aderência parcial para apoiar a decisão de inclusão ou exclusão, e o refinamento iterativo dos critérios de elegibilidade com base nas características observadas no corpus. A validação resultou em uma taxa de concordância de 90,2% entre o sistema automatizado e a avaliação manual, indicando boa eficácia do algoritmo na triagem temática.
+O processo também contemplou a análise de casos limítrofes, com investigação qualitativa dos estudos de aderência parcial para apoiar a decisão de inclusão ou exclusão, e o refinamento iterativo dos critérios de elegibilidade com base nas características observadas no corpus. Validation resulted in a concordance rate of 90.2% between the automated system and manual evaluation, indicating good algorithm effectiveness in thematic screening.
 
 ### 2.4.4 Verificação de Cobertura Bibliográfica e Categorização Automatizada
 
@@ -117,6 +121,8 @@ Na segunda fase, três revisores independentes avaliaram manualmente a qualidade
 
 Cada indicador recebeu pontuação de 0 a 2, sendo zero quando o critério não foi atendido ou apresenta deficiências substantivas; um ponto quando atendido parcialmente com limitações reconhecidas; dois pontos quando completamente atendido com evidências claras. Escolhemos escala de 3 pontos porque avaliações dicotômicas (sim/não) não capturam adequadamente a complexidade de estudos interdisciplinares, enquanto escalas maiores (5+ pontos) geram inconsistência entre avaliadores [@Likert3vs5_2025].
 
+**Tabela 2.** Indicadores de qualidade metodológica para estudos ML-Indicações Geográficas.
+
 | Código | Indicador                                                                     | Domínio                |
 | ------- | ----------------------------------------------------------------------------- | ----------------------- |
 | RIG     | Rigor metodológico na coleta e processamento de dados territoriais           | Qualidade Territorial   |
@@ -128,11 +134,10 @@ Cada indicador recebeu pontuação de 0 a 2, sendo zero quando o critério não 
 | DOC     | Documentação completa dos algoritmos e procedimentos de certificação      | Qualidade Documental    |
 | GEN     | Generalizabilidade e transferibilidade dos métodos propostos                 | Qualidade Científica   |
 
-*Tabela 2. Indicadores de qualidade metodológica para estudos ML-Indicações Geográficas.*
 
 ### 2.5.1 Procedimentos de Consenso e Validação Interavaliadores
 
-O processo de avaliação manual incluiu protocolo de consenso entre avaliadores. Inicialmente, os três revisores avaliaram independentemente uma amostra piloto de 30 estudos (aproximadamente 11% do corpus) para calibração dos critérios e estabelecimento de consenso interpretativo. Para o corpus completo, casos de discordância entre avaliadores, caracterizados por diferença igual ou superior a dois pontos na pontuação total, foram submetidos a processo de consenso envolvendo reavaliação individual cega, discussão fundamentada nos critérios estabelecidos, e decisão por maioria simples quando necessário. O coeficiente de correlação intraclasse (ICC) foi calculado conforme @shrout1979, obtendo-se valor igual a 0,87 com intervalo de confiança de 95% entre 0,84 e 0,91, indicando boa concordância.
+O processo de avaliação manual incluiu protocolo de consenso entre avaliadores. Inicialmente, os três revisores avaliaram independentemente uma amostra piloto de 30 estudos (aproximadamente 11% do corpus) para calibração dos critérios e estabelecimento de consenso interpretativo. Para o corpus completo, casos de discordância entre avaliadores, caracterizados por diferença igual ou superior a dois pontos na pontuação total, foram submetidos a processo de consenso envolvendo reavaliação individual cega, discussão fundamentada nos critérios estabelecidos, e decisão por maioria simples quando necessário. The intraclass correlation coefficient (ICC) was calculated according to @shrout1979, obtaining a value equal to 0.87 with 95% confidence interval between 0.84 and 0.91, indicating good concordance.
 
 ### 2.5.2 Critérios Específicos para Estudos Interdisciplinares
 
@@ -170,7 +175,7 @@ Onde:
 
 Para caracterizar sistematicamente o corpus bibliográfico e identificar padrões emergentes, as análises estatísticas foram implementadas no ambiente R [@RCoreTeam2024] utilizando o RStudio [@RStudioTeam2023] e pacotes específicos. A Análise de Correspondência Múltipla (MCA) foi adotada para investigar associações entre variáveis categóricas (algoritmos, produtos, regiões, técnicas analíticas), conforme metodologia consolidada por @Le2008 e @Greenacre2017, utilizando o pacote `FactoMineR` para extração das dimensões principais e interpretação das relações conceituais da área. Com base nas mesmas variáveis, procedeu-se, em seguida, à Análise de Clusters (k-means e hierárquica), implementada com `FactoMineR` e `factoextra`, para identificar agrupamentos recorrentes de combinações produto‑instrumento‑algoritmo, que sintetizam as “famílias tecnológicas” discutidas na seção 3.8.
 
-A análise de redes foi implementada para mapear coocorrências entre algoritmos, produtos e regiões, seguindo procedimentos de análise de redes complexas [@Csardi2006; @Schoch2020]. Utilizando os pacotes `igraph` e `ggraph`, foi construído grafo não direcionado com cálculo de centralidades de grau, autovetor e intermediação, e a detecção de comunidades foi realizada com o algoritmo de Louvain [@Blondel2008] para identificar módulos temáticos, cujos resultados estruturam as interpretações apresentadas na seção 3.9.
+Network analysis was implemented to map co-occurrences between algorithms, products and regions, following complex network analysis procedures [@Csardi2006; @Schoch2020]. Using the `igraph` and `ggraph` packages, an undirected graph was constructed with calculation of degree, eigenvector and betweenness centralities, and community detection was performed with the Louvain algorithm [@Blondel2008] to identify thematic modules, cujos resultados estruturam as interpretações apresentadas na seção 3.9.
 
 A evolução temporal das publicações (2010–2025) foi analisada por meio de séries temporais e tendência não paramétrica, empregando o teste de correlação de Spearman [@Spearman1904] para detectar tendências significativas no número de estudos por ano e na adoção relativa dos principais algoritmos. As visualizações foram geradas com o pacote `ggplot2`, utilizando suavização LOESS [@Cleveland1979] para ilustrar a dinâmica de crescimento do campo e a transição entre paradigmas algorítmicos.
 
@@ -196,28 +201,35 @@ A evolução temporal das publicações (2010–2025) foi analisada por meio de 
 
 A revisão de escopo, estruturada segundo PRISMA-ScR (Figura 2), identificou e analisou 272 estudos (140 Scopus, 132 Web of Science) publicados entre 2010-2025, selecionando 148 artigos relevantes após filtragem automatizada e avaliação manual de qualidade metodológica. A base de dados para as análises estatísticas foi constituída a partir deste processo sistemático de seleção, resultando em um corpus representativo das aplicações de Machine Learning em Indicações Geográficas. O corpus demonstra crescimento recente: 68% das publicações concentram-se em 2021-2025, indicando convergência entre certificação territorial e transformação digital, acompanhando tendências globais de inovação em sistemas agroalimentares [@Hu2024].
 
-![Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas. ](2-FIGURAS/2-EN/prisma_flowdiagram.png){#fig:prisma2020 width="80%"}
+**Figura 2.** Fluxograma da revisão de Escopo sobre Aplicações de Machine Learning em Indicações Geográficas.
 
-A filtragem automatizada por análise semântica e pontuação, alcançou precisão temática de 94,2%, superando o limiar de 85% estabelecido. A abordagem de triagem computacional mostrou-se adequada para revisões com grandes volumes bibliográficos, indicando que sistemas automatizados calibrados contribuem para reduzir vieses de seleção e aumentar a reprodutibilidade [@OforiBoateng2024]. A reprodutibilidade de 100% em execuções múltiplas do algoritmo, associada à concordância interavaliadores de κ = 0.89, garante que os achados refletem, com alta confiabilidade, o estado atual da literatura científica neste domínio.
+![](2-FIGURAS/2-EN/prisma_flowdiagram.png){#fig:prisma2020 width="80%"}
 
-A avaliação manual de qualidade metodológica alcançou coeficiente de correlação intraclasse (ICC), de 0,87 (intervalo de confiança de 95%: 0,84–0,91), confirmando boa concordância entre avaliadores e legitimando os critérios de inclusão utilizados [@streiner2008health]. Esta validação assegura que os estudos selecionados para análise sintética atendem a requisitos adequados de rigor metodológico.
+Automated filtering through semantic analysis and scoring achieved thematic precision of 94.2%, exceeding the established threshold of 85%. A abordagem de triagem computacional mostrou-se adequada para revisões com grandes volumes bibliográficos, indicando que sistemas automatizados calibrados contribuem para reduzir vieses de seleção e aumentar a reprodutibilidade [@OforiBoateng2024]. The 100% reproducibility in multiple algorithm executions, associated with inter-rater concordance of κ = 0.89, ensures that the findings reflect, with high reliability, the current state of scientific literature in this domain.
+
+Manual methodological quality assessment achieved intraclass correlation coefficient (ICC) of 0.87 (95% confidence interval: 0.84–0.91), confirming good inter-rater concordance e legitimando os critérios de inclusão utilizados [@streiner2008health]. Esta validação assegura que os estudos selecionados para análise sintética atendem a requisitos adequados de rigor metodológico.
 
 ## 3.2 Análise Estrutural e Temporal do Corpus Científico
 
-A Análise de Correspondência Múltipla (MCA) foi aplicada para mapear a evolução temporal das aplicações de Machine Learning em Indicações Geográficas, focando na relação entre abordagens metodológicas (algoritmos, instrumentos e aplicações), produtos investigados e períodos de publicação. As duas primeiras dimensões da MCA explicaram 9.59% da inércia total (Dim1: 4.82%, Dim2: 4.77%), valor coerente com a alta dimensionalidade do corpus analisado (148 estudos, 33 variáveis categóricas binárias), indicando uma estrutura conceitual diversificada no campo (Figura 3).
+A Análise de Correspondência Múltipla (MCA) foi aplicada para mapear a evolução temporal das aplicações de Machine Learning em Indicações Geográficas, focando na relação entre abordagens metodológicas (algoritmos, instrumentos e aplicações), produtos investigados e períodos de publicação. The first two MCA dimensions explained 9.59% of total inertia (Dim1: 4.82%, Dim2: 4.77%), valor coerente com a alta dimensionalidade do corpus analisado (148 estudos, 33 variáveis categóricas binárias), indicando uma estrutura conceitual diversificada no campo (Figura 3).
 
-![Biplot de Análise de Correspondência Múltipla (ACM) sobre a evolução temporal das aplicações de ML para autenticação de indicações geográficas (2010-2025).](2-FIGURAS/2-EN/mca_biplot_temporal_completo.png){#fig:mca_temporal width="80%"}
+**Figura 3.** Biplot de Análise de Correspondência Múltipla (ACM) sobre a evolução temporal das aplicações de ML para autenticação de indicações geográficas (2010-2025).
 
-*Nota: As elipses coloridas (intervalos de confiança de 95%) representam três períodos temporais: 2010-2018 (verde, n=26), 2019-2021 (laranja, n=27) e 2022-2025 (roxo, n=95). Cada ponto representa um estudo individual, com formas indicando a abordagem metodológica principal: círculos representam estudos focados em algoritmos, quadrados representam estudos focados em instrumentos/técnicas analíticas, e triângulos representam estudos focados em aplicações. Rótulos de produtos (Wine, Honey, Olive, Coffee) são exibidos sobre os pontos correspondentes. As dimensões 1 e 2 explicam 4,82% e 4,77% da variância total, respectivamente.*
+![](2-FIGURAS/2-EN/mca_biplot_temporal_completo.png){#fig:mca_temporal width="80%"}
+
+*Note: The colored ellipses (95% confidence intervals) represent three time periods: 2010-2018 (green, n=26), 2019-2021 (orange, n=27) and 2022-2025 (purple, n=95). Each point represents an individual study, with shapes indicating the main methodological approach: circles represent studies focused on algorithms, squares represent studies focused on instruments/analytical techniques, and triangles represent studies focused on applications. Product labels (Wine, Honey, Olive, Coffee) are displayed above corresponding points. Dimensions 1 and 2 explain 4.82% and 4.77% of total variance, respectively.*
 
 Como pode ser visto na Figura 3, o padrão temporal revela três fases. Entre 2010 e 2018, predomina uma fase de consolidação metodológica, concentrada em produtos tradicionais europeus (especialmente vinhos) e em técnicas espectroscópicas consolidadas (NIR, FTIR) combinadas a algoritmos clássicos como PLS-DA e SVM, com relativa homogeneidade de abordagens [@Mohammadi2024; @Rebiai2022]. O período intermediário (2019–2021) marca uma transição, na qual a democratização de ferramentas de ML e o acesso ampliado a técnicas analíticas avançadas favorecem a diversificação de produtos (incluindo chás e plantas medicinais asiáticos) e a adoção gradual de algoritmos como Random Forest e redes neurais [@Liakos2018]. A fase recente (2022–2025), que concentra 64% do corpus, corresponde a uma expansão rápida e heterogênea, com crescimento das aplicações de Deep Learning, metabolômica *untargeted*, abordagens multimodais e estratégias de transfer learning [@He2024; @Liu2025; @Wang20218065; @Peng2025; @Feng2025]. A Figura 4 apresenta a análise de redes de co-ocorrência.
 
-![Análise de Redes de Co-ocorrência. (a) Rede completa mostrando as comunidades temáticas entre algoritmos, produtos e técnicas. (b) Rede focada na co-ocorrência entre algoritmos de ML e produtos.](2-FIGURAS/2-EN/network_centrality_metrics.png){#fig:network_analysiss}
-{#fig:network_analysis_B}
+**Figura 4.** Análise de Redes de Co-ocorrência. (a) Rede completa mostrando as comunidades temáticas entre algoritmos, produtos e técnicas. (b) Rede focada na co-ocorrência entre algoritmos de ML e produtos.
 
-A dinâmica temporal da produção científica (Figura 5 (a)) revela crescimento exponencial superior a 400% entre 2018 e 2024, reflexo da democratização de ferramentas de ML e da expansão de técnicas analíticas de alta performance [@Liakos2018]. Paralelamente, a transição paradigmática nos algoritmos empregados (Figura 5 (b)) evidencia a substituição gradual de métodos quimiométricos clássicos (PLS-DA, predominante até 2018) por algoritmos com maior capacidade preditiva e flexibilidade (Random Forest, SVM a partir de 2019), culminando na emergência de Deep Learning e CNNs após 2022, voltados ao processamento de dados hiperespectrais e não estruturados [@Lavine2005; @Shah2019].
+![](2-FIGURAS/2-EN/network_centrality_metrics.png){#fig:network_analysiss}
 
-![Evolução temporal de (a) número de publicações e (b) adoção dos principais algoritmos de Machine Learning em estudos de IGs.](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_algoritmos width="80%"}
+The temporal dynamics of scientific production (Figure 5 (a)) reveals exponential growth exceeding 400% between 2018 and 2024, reflexo da democratização de ferramentas de ML e da expansão de técnicas analíticas de alta performance [@Liakos2018]. Paralelamente, a transição paradigmática nos algoritmos empregados (Figura 5 (b)) evidencia a substituição gradual de métodos quimiométricos clássicos (PLS-DA, predominante até 2018) por algoritmos com maior capacidade preditiva e flexibilidade (Random Forest, SVM a partir de 2019), culminando na emergência de Deep Learning e CNNs após 2022, voltados ao processamento de dados hiperespectrais e não estruturados [@Lavine2005; @Shah2019].
+
+**Figura 5.** Evolução temporal de (a) número de publicações e (b) adoção dos principais algoritmos de Machine Learning em estudos de IGs.
+
+![](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_algoritmos width="80%"}
 
 ## 3.3 Domínios de Aplicação, Produtos e Padrões de Distribuição Geográfica
 
@@ -231,7 +243,7 @@ Do ponto de vista geográfico, observa-se predominância de estudos conduzidos e
 
 ### 3.3.1 Análise Bibliométrica
 
-A Lei de Lotka, foi aplicada ao corpus de 148 estudos filtrados, revelando uma distribuição de produtividade autoral que segue aproximadamente o padrão esperado pela lei, com expoente n ≈ 2. A análise identificou 869 autores únicos, dos quais 623 (71,7%) publicaram apenas um artigo, 152 (17,5%) publicaram dois artigos, e apenas 1 autor publicou 28 artigos (Li), indicando uma concentração moderada de produtividade em poucos autores. Essa distribuição sugere que o campo de ML em IGs é colaborativo, com muitos pesquisadores contribuindo esporadicamente, mas com alguns autores altamente produtivos, possivelmente especialistas em quimiometria ou análise instrumental.
+Lotka's Law was applied to the corpus of 148 filtered studies, revealing an author productivity distribution that approximately follows the expected pattern by the law, with exponent n ≈ 2. The analysis identified 869 unique authors, of which 623 (71.7%) published only one article, 152 (17.5%) published two articles, and only 1 author published 28 articles (Li), indicating moderate concentration of productivity in few authors. Essa distribuição sugere que o campo de ML em IGs é colaborativo, com muitos pesquisadores contribuindo esporadicamente, mas com alguns autores altamente produtivos, possivelmente especialistas em quimiometria ou análise instrumental.
 
 A aplicação do princípio de Pareto (80/20) resultou na seleção dos 20% dos artigos com maior pontuação combinada, calculada pela Equação 6 (40% qualidade metodológica, 35% relevância temática, 25% impacto bibliométrico). A Tabela A.2 (Apêndice A) apresenta os 10 artigos selecionados com maior pontuação.
 
@@ -267,11 +279,13 @@ O ponto mais crítico identificado nesta revisão, contudo, é a lacuna na gener
 
 Essa falha de validação externa não representa apenas uma limitação metodológica, mas um risco reputacional e econômico substancial para as Indicações Geográficas. Um modelo superestimado pode levar à certificação incorreta de produtos, erodindo a confiança do consumidor no selo de origem e depreciando o valor premium associado ao terroir [@He2024]. Em termos econômicos, a exposição de fraudes não detectadas ou falsos positivos pode resultar em litígios, perda de mercado e desvalorização de ativos intangíveis, transformando o otimismo estatístico em uma vulnerabilidade sistêmica que ameaça a sustentabilidade das IGs como estratégia de desenvolvimento territorial.
 
-Complementarmente, foi conduzida uma análise de modelagem preditiva global para avaliar em que medida os padrões estatísticos capturados pelas variáveis do corpus permitem antecipar um índice contínuo de pontuação dos estudos e uma classificação dicotômica entre trabalhos de "alto score" e demais artigos. Na tarefa de regressão, comparando modelos lineares e não lineares, a performance foi modesta: o erro médio quadrático (RMSE) variou entre 11,8 e 12,5 e o coeficiente de determinação $R^2$ permaneceu baixo (0,11–0,14) mesmo para os melhores modelos (Ridge e Random Forest). Segundo @Hair2010, valores de $R^2$ abaixo de 0,25 indicam relações fracas entre as variáveis preditoras e a variável dependente. Esse resultado indica que, embora os modelos de ML sejam altamente eficazes para discriminar a origem geográfica de produtos, a predição de um índice sintético de qualidade/impacto dos estudos a partir de variáveis bibliométricas e metodológicas agregadas é substancialmente mais difícil, reforçando o papel insubstituível do julgamento humano na avaliação qualitativa dos artigos [@Wang2013]. 
+A análise de modelagem preditiva global observou que, na tarefa de regressão, comparando modelos lineares e não lineares, a performance foi modesta: the root mean square error (RMSE) varied between 11.8 and 12.5 and the coefficient of determination $R^2$ remained low (0.11–0.14) mesmo para os melhores modelos (Ridge e Random Forest). Segundo @Hair2010. valores de $R^2$ abaixo de 0.25 indicam relações fracas entre as variáveis preditoras e a variável dependente. Esse resultado indica que, embora os modelos de ML sejam altamente eficazes para discriminar a origem geográfica de produtos, a predição de um índice sintético de qualidade/impacto dos estudos a partir de variáveis bibliométricas e metodológicas agregadas é substancialmente mais difícil, reforçando o papel insubstituível do julgamento humano na avaliação qualitativa dos artigos [@Wang2013]. 
 
-Na tarefa de classificação (alto score vs. demais), o modelo de Regressão Logística apresentou desempenho superior ao Random Forest (acurácia de 0,69 e F1-score de 0,70, contra 0,53 de acurácia para Random Forest), sugerindo que o padrão que distingue os estudos mais bem avaliados é relativamente simples e pode ser capturado adequadamente por fronteiras de decisão aproximadamente lineares [@Rudin2019]. Em conjunto, esses achados apontam para uma assimetria que, os mesmos algoritmos que atingem acurácias próximas de 100% em autenticação de produtos mostram desempenho apenas moderado quando aplicados à avaliação global da qualidade dos estudos. A Figura 6 destaca as abordagens lineares simples que apresentam desempenho semelhante a algoritmos mais complexos na predição do score e da categoria de alto score.
+In the classification task (high score vs. others), the Logistic Regression model showed superior performance to Random Forest (accuracy of 0.69 and F1-score of 0.70. versus 0.53 accuracy for Random Forest), sugerindo que o padrão que distingue os estudos mais bem avaliados é relativamente simples e pode ser capturado adequadamente por fronteiras de decisão aproximadamente lineares [@Rudin2019]. Em conjunto, esses achados apontam para uma assimetria que, os mesmos algoritmos que atingem acurácias próximas de 100% em autenticação de produtos mostram desempenho apenas moderado quando aplicados à avaliação global da qualidade dos estudos. A Figura 6 destaca as abordagens lineares simples que apresentam desempenho semelhante a algoritmos mais complexos na predição do score e da categoria de alto score.
 
-![Comparação do desempenho de modelos de regressão e classificação para predição do score contínuo e da categoria de alto score dos estudos.](2-FIGURAS/2-EN/model_metricas_comparacao.png){#fig:model_metricas width="80%"}
+**Figura 6.** Comparação do desempenho de modelos de regressão e classificação para predição do score contínuo e da categoria de alto score dos estudos.
+
+![](2-FIGURAS/2-EN/model_metricas_comparacao.png){#fig:model_metricas width="80%"}
 
 ## 3.8 Aplicações Temáticas Identificadas
 
@@ -293,9 +307,9 @@ A análise de agrupamento (k-means e hierárquico) organizada sobre as variávei
 
 Outro cluster relevante reúne aplicações com ICP-MS em carnes e produtos cárneos, nas quais a análise de traços elementares é combinada a algoritmos de classificação para autenticação territorial (Figura 7). Esses agrupamentos mostram que a adoção de técnicas de ML demostra que, instrumentos e algoritmos tendem a se articular em ecossistemas coerentes, nos quais determinadas combinações (por exemplo, NMR + redes neurais em vinhos, FTIR + SVM em azeites) se consolidam como arquiteturas de referência para problemas específicos. Do ponto de vista metodológico, essa estrutura em clusters reforça a existência de caminhos tecnológicos preferenciais, que podem orientar decisões de desenho experimental em futuras aplicações de ML em Indicações Geográficas [@Qi2021; @Li2025review].
 
-A Figura 7 apresenta o heatmap dos perfis de clusters, evidenciando como combinações específicas de produtos, instrumentos analíticos e algoritmos se organizam em dez famílias tecnológicas recorrentes.
+**Figura 7.** Heatmap dos perfis de clusters de estudos, mostrando a coocorrência de produtos, instrumentos analíticos e algoritmos de machine learning em dez grupos principais.
 
-![Heatmap dos perfis de clusters de estudos, mostrando a coocorrência de produtos, instrumentos analíticos e algoritmos de machine learning em dez grupos principais.](2-FIGURAS/2-EN/cluster_heatmap_profiles.png){#fig:cluster_heatmap width="80%"}
+![](2-FIGURAS/2-EN/cluster_heatmap_profiles.png){#fig:cluster_heatmap width="80%"}
 
 A quarta arquitetura funcional, identificada por @Meena2024 e @Liu2025 em 47% dos estudos, emprega ML para predição de atributos de qualidade (acidez, índice de fenóis totais, capacidade antioxidante, textura, perfil sensorial) com base em dados analíticos rapidamente obtidos. @Peng2025 e @Feng2025 distinguem esta aplicação da autenticação por seu objetivo funcional divergente: ao invés de responder se determinado produto é de origem X, o método busca determinar qual qualidade espera-se desta amostra. Nesses casos, o desempenho é quantificado por coeficientes de determinação (R²), MAE e RMSE que refletem o desvio médio em unidades fisicamente interpretáveis (por exemplo, g/L, unidades de cor, escores sensoriais). @Meena2024 documentaram que regressão constitui a abordagem predominante neste contexto.
 
@@ -305,26 +319,20 @@ Por fim, a quinta arquitetura funcional, embora menos prevalente com 19% dos est
 
 ## 3.9 Tendências Metodológicas, Lacunas e Direções para Pesquisa Futura
 
-A análise de comunidades com o algoritmo de Louvain [@Blondel2008] aplicada à rede de coocorrências (20 nós, 58 arestas, densidade = 0,305, clustering = 0,595) revelou três módulos tecnológicos bem definidos, sintetizados na Tabela 5. Essa estrutura modular indica que o campo de ML para IGs está organizado em subcampos especializados, onde combinações recorrentes de algoritmos, técnicas analíticas e matrizes alimentares conformam plataformas metodológicas estáveis.
+A segmentação da rede de coocorrência pelo algoritmo de Louvain [@Blondel2008] (20 nós, 58 arestas, densidade = 0.305, agrupamento = 0.595) identificou três módulos tecnológicos distintos (Tabela A.3, Apêndice A), evidenciando a organização do campo de ML em IGs em subcampos especializados. Tal estrutura modular sugere que combinações recorrentes de algoritmos, técnicas analíticas e matrizes alimentares consolidam plataformas metodológicas estáveis.
 
-| **Módulo** | **Algoritmos Principais**                 | **Técnicas Analíticas**               | **Produtos**         | **Região Predominante** |
-| :---------------: | :---------------------------------------------- | :-------------------------------------------- | :------------------------- | :----------------------------- |
-|   **M1**   | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria            | Vinho, Mel                 | África, Europa                |
-|   **M2**   | SVM, KNN                                        | Cromatografia (GC-MS, LC-MS, HPLC)            | Carnes, Produtos Regionais | Ásia                          |
-|   **M3**   | Neural Networks, CNN, Deep Learning             | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá       | Europa, Ásia                  |
+A arquitetura interna dos módulos (Figura 8) denota padrões de coesão e especialização estruturantes. O Módulo 1 (Árvores + Espectroscopia), com alta densidade interna (0.60), vincula Random Forest, Decision Tree e Gradient Boosting a matrizes como vinho e mel, predominando em terroirs africanos e europeus. Esta coesão sinaliza a maturidade de uma plataforma onde classificadores arbóreos prevalecem na autenticação via assinaturas espectrais NIR, explorando a modelagem de interações não-lineares entre marcadores químicos e origem territorial [@Resce2022; @Oganesyants2024].
 
-*Tabela 5: Módulos tecnológicos identificados pela análise de comunidades de Louvain na rede de coocorrências de algoritmos, técnicas analíticas e produtos com Indicação Geográfica.*
+No Módulo 2 (SVM/KNN + Cromatografia) foi observada uma arquitetura dispersa (densidade = 0.53), associando SVM e KNN a cromatografia de alta resolução (GC-MS, LC-MS) em carnes e produtos regionais asiáticos. Esta configuração reflete um nicho especializado em metabolômica direcionada (targeted) e impressão cromatográfica, onde a separação física de compostos precede a classificação algorítmica, estratégia eficaz para matrizes complexas com perfis voláteis e semivoláteis [@Santoma2025; @Shuai2022].
 
-A estrutura interna de cada módulo, visualizada na Figura 8, revela padrões de coesão e especialização que fundamentam a organização do campo. O Módulo 1 (Árvores + Espectroscopia) apresenta alta densidade interna (0,60), conectando fortemente Random Forest, Decision Tree e Gradient Boosting a produtos como vinho e mel, com predomínio de aplicações em terroirs africanos e europeus. Essa coesão reflete a consolidação de uma plataforma metodológica madura, na qual classificadores de árvore dominam a autenticação por assinaturas espectrais NIR, explorando a capacidade desses algoritmos de modelar interações não-lineares entre marcadores químicos e origem territorial [@Resce2022; @Oganesyants2024].
+Já o Módulo 3 (Redes Neurais + Sensores) demonstrou coesão significativa (densidade = 0.68), integrando Redes Neurais, CNN e Deep Learning a espectroscopia (NIR, FTIR) e sensores portáteis (e-nose) em azeite, queijo e chá, com foco na Europa e Ásia. Este agrupamento constitui a fronteira tecnológica do domínio, empregando arquiteturas profundas para o processamento de sinais hiperespectrais e dados não estruturados, viabilizando a autenticação in-situ e a democratização da certificação [@Gazeli2020; @Fu2023; @Li2025].
 
-O Módulo 2 (SVM/KNN + Cromatografia) caracteriza-se por uma arquitetura mais dispersa (densidade = 0,53), conectando SVM e KNN a técnicas cromatográficas de alta resolução (GC-MS, LC-MS) aplicadas predominantemente a carnes e produtos regionais asiáticos. Essa configuração reflete um nicho metodológico especializado em metabolômica direcionada (*targeted*) e huellado cromatográfico, no qual a separação física de compostos precede a classificação algorítmica, uma abordagem particularmente efetiva para matrizes complexas com perfis voláteis e semivoláteis [@Santoma2025; @Shuai2022].
-
-O Módulo 3 (Redes Neurais + Sensores), e internamente coeso (densidade = 0,68), integra Neural Networks, CNN e Deep Learning a instrumentos espectroscópicos (NIR, FTIR) e sensores portáteis (e-nose) aplicados a azeite, queijo e chá, com estudos concentrados em contextos europeus e asiáticos. Esse módulo representa a fronteira tecnológica do campo, explorando arquiteturas profundas capazes de processar sinais hiperespectrais e dados não estruturados, viabilizando autenticação *in-situ* e democratização de certificação [@Gazeli2020; @Fu2023; @Li2025].
-
-As métricas de centralidade corroboram o papel estruturante desses módulos em que, `NeuralNetwork` apresenta a maior centralidade global (degree = 15, betweenness = 0,306), atuando como conector entre o Módulo 3 e os demais, enquanto `SVM` (degree = 12) e `RandomForest` (degree = 11) funcionam como núcleos dos Módulos 2 e 1, respectivamente. Destaca-se o papel de ponte desempenhado por plataformas cromatográficas (`GCMS` betweenness = 0,186; `LCMS` betweenness = 0,105), que conectam o Módulo 2 aos demais, viabilizando fluxos informacionais entre nichos metodológicos e facilitando a transição entre paradigmas tecnológicos [@Csardi2006].
+As métricas de centralidade confirmam a função estruturante destes módulos: NeuralNetwork detém a maior centralidade global (grau = 15, intermediação = 0.306), atuando como conector entre o Módulo 3 e os demais, enquanto SVM (grau = 12) e RandomForest (grau = 11) operam como núcleos dos Módulos 2 e 1. Destaca-se a função de ponte das plataformas cromatográficas (GCMS intermediação = 0.186; LCMS intermediação = 0.105), que interligam o módulo 2 aos restantes, facilitando fluxos informacionais entre nichos metodológicos e a transição entre paradigmas tecnológicos [@Csardi2006].
 
 
-![Estrutura interna dos três módulos tecnológicos identificados pelo algoritmo de Louvain. Cada painel mostra as conexões entre algoritmos (vermelho), técnicas analíticas (azul), produtos (verde) e regiões (laranja) dentro de cada comunidade especializada.](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain_modules width="100%"}
+**Figura 8.** Estrutura interna dos três módulos tecnológicos identificados pelo algoritmo de Louvain. Cada painel mostra as conexões entre algoritmos (vermelho), técnicas analíticas (azul), produtos (verde) e regiões (laranja) dentro de cada comunidade especializada.
+
+![](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain_modules width="100%"}
 
 @Luan2020 documentaram que a integração de modalidades de dados distintas (metabolômica, perfil elementar, análise isotópica e sensorial) com algoritmos de *ensemble* vem crescendo, representando 28% dos estudos recentes (2024-2025). Essa fusão multimodal reconhece que a origem geográfica resulta de interações complexas entre fatores ambientais e práticas produtivas, buscando capturar complementaridades informacionais entre diferentes tipos de dados para aumentar poder discriminativo e robustez preditiva.
 
@@ -363,7 +371,7 @@ Para o Sul Global, o caminho reside no desenvolvimento de metodologias adaptadas
 
 A fragmentação atual em silos de dados limita o avanço do campo onde a criação de repositórios públicos padronizados e bibliotecas espectrais compartilhadas é essencial para permitir a validação cruzada global e garantir a transparência necessária aos sistemas de certificação.
 
-### Financiamento
+## Financiamento
 
 A publicação deste artigo foi financiada pelo Instituto Federal de Sergipe (IFS), por meio do Edital nº 29/2025/DPP/PROPEX/IFS.
 
@@ -372,7 +380,6 @@ A publicação deste artigo foi financiada pelo Instituto Federal de Sergipe (IF
 Os autores agradecem à Universidade Federal de Sergipe (UFS), à Universidade Estadual de Feira de Santana (UEFS) e ao Instituto Federal de Sergipe (IFS) pelo apoio institucional e infraestrutural que viabilizou a realização desta pesquisa.
 
 ## Conflitos de Interesse
-
 Os autores declaram não haver conflitos de interesse.
 
 ## Declaração de Disponibilidade de Dados
@@ -384,9 +391,10 @@ O conjunto de dados completo que suporta os resultados deste estudo, incluindo o
 ::: {#refs}
 :::
 
-# Apêndice A: Tabelas Complementares
 
-## Tabela A.1: Distribuição de Produtos Agroalimentares com Indicações Geográficas
+## Apêndice A: Tabelas Complementares
+
+### Tabela A.1: Distribuição de Produtos Agroalimentares com Indicações Geográficas
 
 | **Categoria de Produto** | **Exemplos Específicos**                            | **Indicações Geográficas Primárias**                   | **Técnicas ML Predominantes**    | **Frequência Relativa** |
 | ------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------- | ------------------------------ |
@@ -400,7 +408,7 @@ O conjunto de dados completo que suporta os resultados deste estudo, incluindo o
 
 *Fonte: Distribuição de produtos agroalimentares com Indicações Geográficas por categoria, regiões geográficas associadas, técnicas de Machine Learning predominantes e frequência relativa de estudos no corpus analisado (N=148).*
 
-## Tabela A.2: Artigos Selecionados pelo Princípio de Pareto (80/20)
+### Tabela A.2: Artigos Selecionados pelo Princípio de Pareto (80/20)
 
 | **Posição** | **Artigo**        | **Pontuação Combinada** | **Principais Contribuições**                |
 | ------------------- | ----------------------- | ------------------------------- | --------------------------------------------------- |
@@ -416,3 +424,14 @@ O conjunto de dados completo que suporta os resultados deste estudo, incluindo o
 | 10                  | Feng et al. (2025)      | 79.8                            | Redes neurais em plantas medicinais                 |
 
 *Fonte: 10 artigos selecionados pelo princípio de Pareto (80/20) no corpus de 148 estudos.*
+
+
+### Tabela A.3: Módulos Tecnológicos Identificados pela Análise de Comunidades de Louvain
+
+| **Módulo** | **Algoritmos Principais**                 | **Técnicas Analíticas**               | **Produtos**         | **Região Predominante** |
+| :---------------: | :---------------------------------------------- | :-------------------------------------------- | :------------------------- | :----------------------------- |
+|   **M1**   | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria            | Vinho, Mel                 | África, Europa                |
+|   **M2**   | SVM, KNN                                        | Cromatografia (GC-MS, LC-MS, HPLC)            | Carnes, Produtos Regionais | Ásia                          |
+|   **M3**   | Neural Networks, CNN, Deep Learning             | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá       | Europa, Ásia                  |
+
+*Fonte: Três módulos tecnológicos principais identificados pela análise de comunidades de Louvain aplicada à rede de coocorrências entre algoritmos, técnicas analíticas e produtos com indicação geográfica. Densidade interna de cada módulo indica a força das conexões entre seus componentes.*
