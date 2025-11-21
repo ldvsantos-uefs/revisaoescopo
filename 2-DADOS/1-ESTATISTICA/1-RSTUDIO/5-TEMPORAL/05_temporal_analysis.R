@@ -1,19 +1,19 @@
 ################################################################################
-# ANÁLISE DE SÉRIES TEMPORAIS (2010-2025) - GGPLOT2
-# Machine Learning para Indicações Geográficas
+# TIME SERIES ANALYSIS (2010-2025) - GGPLOT2
+# Machine Learning for Geographical Indications
 #
-# Este script realiza análise temporal usando ggplot2
-# e gera visualizações elegantes
+# This script performs temporal analysis using ggplot2
+# and generates elegant visualizations
 #
 # Outputs:
-#   - temporal_publicacoes.png (Evolução de publicações)
-#   - temporal_algoritmos.png (Adoção de algoritmos)
-#   - temporal_produtos.png (Evolução de produtos)
-#   - temporal_regioes.png (Distribuição geográfica)
-#   - temporal_heatmap.png (Heatmap de evolução)
-#   - temporal_tendencias.png (Análise de tendências)
-#   - temporal_relatorio.txt (Análise completa)
-#   - temporal_*.csv (Dados processados)
+#   - temporal_publicacoes.png (Evolution of publications)
+#   - temporal_algoritmos.png (Algorithm adoption)
+#   - temporal_produtos.png (Product evolution)
+#   - temporal_regioes.png (Geographic distribution)
+#   - temporal_heatmap.png (Evolution heatmap)
+#   - temporal_tendencias.png (Trend analysis)
+#   - temporal_relatorio.txt (Complete analysis)
+#   - temporal_*.csv (Processed data)
 ################################################################################
 
 rm(list = ls())
@@ -31,15 +31,15 @@ for (pkg in packages) {
 
 cat("\n")
 cat("================================================================================\n")
-cat("ANÁLISE DE SÉRIES TEMPORAIS (2010-2025) - GGPLOT2\n")
-cat("Machine Learning para Indicações Geográficas\n")
+cat("TIME SERIES ANALYSIS (2010-2025) - GGPLOT2\n")
+cat("Machine Learning for Geographical Indications\n")
 cat("================================================================================\n\n")
 
 ################################################################################
 # FUNÇÃO: Extrair dados temporais
 ################################################################################
 extrair_dados_temporais <- function(caminho_bib) {
-  cat("📚 Extraindo dados temporais do arquivo .bib...\n")
+  cat("📚 Extracting temporal data from .bib file...\n")
   
   bib_data <- bib2df(caminho_bib)
   texto_completo <- tolower(paste(bib_data$TITLE, bib_data$ABSTRACT, bib_data$KEYWORDS, sep = " "))
@@ -82,7 +82,7 @@ extrair_dados_temporais <- function(caminho_bib) {
   # Filtrar anos válidos
   dados <- dados %>% filter(Ano >= 2010, Ano <= 2025)
   
-  cat(sprintf("✓ Total de estudos extraídos: %d (2010-2025)\n\n", nrow(dados)))
+  cat(sprintf("✓ Total studies extracted: %d (2010-2025)\n\n", nrow(dados)))
   
   return(dados)
 }
@@ -93,12 +93,12 @@ extrair_dados_temporais <- function(caminho_bib) {
 agregar_por_ano <- function(dados) {
   cat("🔬 Agregando dados por ano...\n")
   
-  # Total de publicações por ano
+  # Total publications per year
   publicacoes_ano <- dados %>%
     group_by(Ano) %>%
     summarise(Total = n(), .groups = "drop")
   
-  # Algoritmos por ano
+  # Algorithms per year
   algoritmos_ano <- dados %>%
     group_by(Ano) %>%
     summarise(
@@ -111,7 +111,7 @@ agregar_por_ano <- function(dados) {
       .groups = "drop"
     )
   
-  # Instrumentos por ano
+  # Instruments per year
   instrumentos_ano <- dados %>%
     group_by(Ano) %>%
     summarise(
@@ -124,7 +124,7 @@ agregar_por_ano <- function(dados) {
       .groups = "drop"
     )
   
-  # Produtos por ano
+  # Products per year
   produtos_ano <- dados %>%
     group_by(Ano) %>%
     summarise(
@@ -136,7 +136,7 @@ agregar_por_ano <- function(dados) {
       .groups = "drop"
     )
   
-  # Regiões por ano
+  # Regions per year
   regioes_ano <- dados %>%
     group_by(Ano) %>%
     summarise(
@@ -146,7 +146,7 @@ agregar_por_ano <- function(dados) {
       .groups = "drop"
     )
   
-  cat("✓ Agregação concluída\n\n")
+  cat("✓ Aggregation completed\n\n")
   
   return(list(
     publicacoes = publicacoes_ano,
@@ -161,7 +161,7 @@ agregar_por_ano <- function(dados) {
 # FUNÇÃO: Plot de publicações ao longo do tempo
 ################################################################################
 plot_publicacoes_tempo <- function(publicacoes_ano, output_file = "temporal_publicacoes.png") {
-  cat("📊 Gerando gráfico de publicações...\n")
+  cat("📊 Generating publications chart...\n")
   
   p <- ggplot(publicacoes_ano, aes(x = Ano, y = Total)) +
     geom_line(color = "#2E86AB", size = 1.5) +
@@ -170,11 +170,11 @@ plot_publicacoes_tempo <- function(publicacoes_ano, output_file = "temporal_publ
                 fill = "#FC4E07", alpha = 0.2, linetype = "dashed") +
     scale_x_continuous(breaks = seq(2010, 2025, 2)) +
     labs(
-      title = "Evolução das Publicações em ML para Indicações Geográficas",
-      subtitle = "Período: 2010-2025",
-      x = "Ano",
-      y = "Número de Publicações",
-      caption = "Linha tracejada: tendência LOESS"
+      title = "Evolution of Publications in ML for Geographical Indications",
+      subtitle = "Period: 2010-2025",
+      x = "Year",
+      y = "Number of Publications",
+      caption = "Dashed line: LOESS trend"
     ) +
     theme_minimal(base_size = 14) +
     theme(
@@ -184,14 +184,14 @@ plot_publicacoes_tempo <- function(publicacoes_ano, output_file = "temporal_publ
     )
   
   ggsave(output_file, plot = p, width = 12, height = 7, dpi = 300)
-  cat(sprintf("✓ Gráfico de publicações salvo: %s\n", output_file))
+  cat(sprintf("✓ Publications chart saved: %s\n", output_file))
 }
 
 ################################################################################
 # FUNÇÃO: Plot de algoritmos ao longo do tempo
 ################################################################################
 plot_algoritmos_tempo <- function(algoritmos_ano, output_file = "temporal_algoritmos.png") {
-  cat("📊 Gerando gráfico de algoritmos...\n")
+  cat("📊 Generating algorithms chart...\n")
   
   algoritmos_long <- algoritmos_ano %>%
     pivot_longer(-Ano, names_to = "Algoritmo", values_to = "Frequencia")
@@ -217,14 +217,14 @@ plot_algoritmos_tempo <- function(algoritmos_ano, output_file = "temporal_algori
     )
   
   ggsave(output_file, plot = p, width = 14, height = 8, dpi = 300)
-  cat(sprintf("✓ Gráfico de algoritmos salvo: %s\n", output_file))
+  cat(sprintf("✓ Algorithms chart saved: %s\n", output_file))
 }
 
 ################################################################################
 # FUNÇÃO: Plot de produtos ao longo do tempo
 ################################################################################
 plot_produtos_tempo <- function(produtos_ano, output_file = "temporal_produtos.png") {
-  cat("📊 Gerando gráfico de produtos...\n")
+  cat("📊 Generating products chart...\n")
   
   produtos_long <- produtos_ano %>%
     pivot_longer(-Ano, names_to = "Produto", values_to = "Frequencia")
@@ -249,14 +249,14 @@ plot_produtos_tempo <- function(produtos_ano, output_file = "temporal_produtos.p
     )
   
   ggsave(output_file, plot = p, width = 14, height = 8, dpi = 300)
-  cat(sprintf("✓ Gráfico de produtos salvo: %s\n", output_file))
+  cat(sprintf("✓ Products chart saved: %s\n", output_file))
 }
 
 ################################################################################
 # FUNÇÃO: Plot de regiões ao longo do tempo
 ################################################################################
 plot_regioes_tempo <- function(regioes_ano, output_file = "temporal_regioes.png") {
-  cat("📊 Gerando gráfico de regiões...\n")
+  cat("📊 Generating regions chart...\n")
   
   regioes_long <- regioes_ano %>%
     pivot_longer(-Ano, names_to = "Regiao", values_to = "Frequencia")
@@ -285,14 +285,14 @@ plot_regioes_tempo <- function(regioes_ano, output_file = "temporal_regioes.png"
     )
   
   ggsave(output_file, plot = p, width = 12, height = 7, dpi = 300)
-  cat(sprintf("✓ Gráfico de regiões salvo: %s\n", output_file))
+  cat(sprintf("✓ Regions chart saved: %s\n", output_file))
 }
 
 ################################################################################
 # FUNÇÃO: Heatmap de evolução
 ################################################################################
 plot_heatmap_evolucao <- function(dados_temporais, output_file = "temporal_heatmap.png") {
-  cat("📊 Gerando heatmap de evolução...\n")
+  cat("📊 Generating evolution heatmap...\n")
   
   # Combinar algoritmos e produtos
   combined <- dados_temporais$algoritmos %>%
@@ -321,14 +321,14 @@ plot_heatmap_evolucao <- function(dados_temporais, output_file = "temporal_heatm
     )
   
   ggsave(output_file, plot = p, width = 14, height = 10, dpi = 300)
-  cat(sprintf("✓ Heatmap de evolução salvo: %s\n", output_file))
+  cat(sprintf("✓ Evolution heatmap saved: %s\n", output_file))
 }
 
 ################################################################################
 # FUNÇÃO: Análise de tendências
 ################################################################################
 calcular_tendencias <- function(dados_temporais) {
-  cat("🔬 Calculando tendências temporais...\n")
+  cat("🔬 Calculating temporal trends...\n")
   
   tendencias <- list()
   
@@ -345,7 +345,7 @@ calcular_tendencias <- function(dados_temporais) {
         Correlacao = cor_test$estimate,
         PValue = cor_test$p.value,
         Significativo = cor_test$p.value < 0.05,
-        Tendencia = ifelse(cor_test$estimate > 0, "Crescente", "Decrescente"),
+        Tendencia = ifelse(cor_test$estimate > 0, "Increasing", "Decreasing"),
         stringsAsFactors = FALSE
       )
     }
@@ -364,7 +364,7 @@ calcular_tendencias <- function(dados_temporais) {
         Correlacao = cor_test$estimate,
         PValue = cor_test$p.value,
         Significativo = cor_test$p.value < 0.05,
-        Tendencia = ifelse(cor_test$estimate > 0, "Crescente", "Decrescente"),
+        Tendencia = ifelse(cor_test$estimate > 0, "Increasing", "Decreasing"),
         stringsAsFactors = FALSE
       )
     }
@@ -373,7 +373,7 @@ calcular_tendencias <- function(dados_temporais) {
   tendencias_df <- bind_rows(tendencias)
   tendencias_df <- tendencias_df %>% arrange(desc(abs(Correlacao)))
   
-  cat("✓ Tendências calculadas\n\n")
+  cat("✓ Trends calculated\n\n")
   
   return(tendencias_df)
 }
@@ -382,7 +382,7 @@ calcular_tendencias <- function(dados_temporais) {
 # FUNÇÃO: Plot de tendências significativas
 ################################################################################
 plot_tendencias <- function(tendencias, output_file = "temporal_tendencias.png") {
-  cat("📊 Gerando gráfico de tendências...\n")
+  cat("📊 Generating trends chart...\n")
   
   # Filtrar apenas tendências significativas
   tend_sig <- tendencias %>%
@@ -390,7 +390,7 @@ plot_tendencias <- function(tendencias, output_file = "temporal_tendencias.png")
     mutate(Feature = reorder(Feature, Correlacao))
   
   if (nrow(tend_sig) == 0) {
-    cat("⚠️  Nenhuma tendência significativa detectada (p < 0.05)\n")
+    cat("⚠️  No significant trends detected (p < 0.05)\n")
     return(NULL)
   }
   
@@ -414,41 +414,41 @@ plot_tendencias <- function(tendencias, output_file = "temporal_tendencias.png")
     )
   
   ggsave(output_file, plot = p, width = 12, height = 8, dpi = 300)
-  cat(sprintf("✓ Gráfico de tendências salvo: %s\n", output_file))
+  cat(sprintf("✓ Trends chart saved: %s\n", output_file))
 }
 
 ################################################################################
 # FUNÇÃO: Relatório
 ################################################################################
 gerar_relatorio <- function(dados_temporais, tendencias, output_file = "temporal_relatorio.txt") {
-  cat("\n📝 Gerando relatório estatístico...\n")
+  cat("\n📝 Generating statistical report...\n")
   
   sink(output_file)
   cat("================================================================================\n")
-  cat("RELATÓRIO DE ANÁLISE TEMPORAL - ML PARA INDICAÇÕES GEOGRÁFICAS\n")
+  cat("TEMPORAL ANALYSIS REPORT - ML FOR GEOGRAPHICAL INDICATIONS\n")
   cat("================================================================================\n\n")
   cat(sprintf("Data de execução: %s\n", Sys.time()))
   cat(sprintf("Período analisado: 2010-2025\n\n"))
   
   cat("--------------------------------------------------------------------------------\n")
-  cat("EVOLUÇÃO DAS PUBLICAÇÕES\n")
+  cat("PUBLICATIONS EVOLUTION\n")
   cat("--------------------------------------------------------------------------------\n")
   print(dados_temporais$publicacoes)
   cat("\n")
   
   cat("--------------------------------------------------------------------------------\n")
-  cat("TENDÊNCIAS TEMPORAIS SIGNIFICATIVAS (p < 0.05)\n")
+  cat("SIGNIFICANT TEMPORAL TRENDS (p < 0.05)\n")
   cat("--------------------------------------------------------------------------------\n")
   tend_sig <- tendencias %>% filter(Significativo == TRUE)
   if (nrow(tend_sig) > 0) {
     print(tend_sig)
   } else {
-    cat("Nenhuma tendência significativa detectada.\n")
+    cat("No significant trends detected.\n")
   }
   cat("\n")
   
   cat("--------------------------------------------------------------------------------\n")
-  cat("ALGORITMOS MAIS UTILIZADOS (2020-2025)\n")
+  cat("MOST USED ALGORITHMS (2020-2025)\n")
   cat("--------------------------------------------------------------------------------\n")
   alg_recente <- dados_temporais$algoritmos %>%
     filter(Ano >= 2020) %>%
@@ -459,7 +459,7 @@ gerar_relatorio <- function(dados_temporais, tendencias, output_file = "temporal
   cat("\n")
   
   cat("--------------------------------------------------------------------------------\n")
-  cat("PRODUTOS MAIS ESTUDADOS (2020-2025)\n")
+  cat("MOST STUDIED PRODUCTS (2020-2025)\n")
   cat("--------------------------------------------------------------------------------\n")
   prod_recente <- dados_temporais$produtos %>%
     filter(Ano >= 2020) %>%
@@ -472,7 +472,7 @@ gerar_relatorio <- function(dados_temporais, tendencias, output_file = "temporal
   cat("================================================================================\n")
   sink()
   
-  cat(sprintf("✓ Relatório estatístico salvo: %s\n", output_file))
+  cat(sprintf("✓ Statistical report saved: %s\n", output_file))
 }
 
 ################################################################################
@@ -484,7 +484,7 @@ salvar_dados <- function(dados_temporais, tendencias) {
   write.csv(dados_temporais$produtos, "temporal_produtos.csv", row.names = FALSE)
   write.csv(tendencias, "temporal_tendencias.csv", row.names = FALSE)
   
-  cat("\n✓ Dados salvos: temporal_*.csv\n")
+  cat("\n✓ Data saved: temporal_*.csv\n")
 }
 
 ################################################################################
@@ -494,7 +494,7 @@ main <- function() {
   caminho_bib <- "../corpus.bib"
   
   if (!file.exists(caminho_bib)) {
-    stop("❌ Erro: Arquivo .bib não encontrado em: ", caminho_bib)
+    stop("❌ Error: .bib file not found at: ", caminho_bib)
   }
   
   # 1. Extrair dados
@@ -507,7 +507,7 @@ main <- function() {
   tendencias <- calcular_tendencias(dados_temporais)
   
   # 4. Visualizações
-  cat("📊 Gerando visualizações...\n")
+  cat("📊 Generating visualizations...\n")
   plot_publicacoes_tempo(dados_temporais$publicacoes)
   plot_algoritmos_tempo(dados_temporais$algoritmos)
   plot_produtos_tempo(dados_temporais$produtos)
@@ -523,13 +523,13 @@ main <- function() {
   
   cat("\n")
   cat("================================================================================\n")
-  cat("✅ ANÁLISE TEMPORAL CONCLUÍDA COM SUCESSO!\n")
+  cat("✅ TEMPORAL ANALYSIS COMPLETED SUCCESSFULLY!\n")
   cat("================================================================================\n")
 }
 
 tryCatch({
   main()
 }, error = function(e) {
-  cat("\n❌ ERRO durante a execução:\n")
+  cat("\n❌ ERROR during execution:\n")
   cat(conditionMessage(e), "\n")
 })

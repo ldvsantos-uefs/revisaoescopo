@@ -1,12 +1,12 @@
 ================================================================================
-RELATÓRIO DE ANÁLISE TEMPORAL - ML PARA INDICAÇÕES GEOGRÁFICAS
+TEMPORAL ANALYSIS REPORT - ML FOR GEOGRAPHICAL INDICATIONS
 ================================================================================
 
-Data de execução: 2025-11-20 20:55:03.477642
+Data de execução: 2025-11-21 08:26:53.822858
 Período analisado: 2010-2025
 
 --------------------------------------------------------------------------------
-EVOLUÇÃO DAS PUBLICAÇÕES
+PUBLICATIONS EVOLUTION
 --------------------------------------------------------------------------------
 # A tibble: 16 × 2
      Ano Total
@@ -29,7 +29,7 @@ EVOLUÇÃO DAS PUBLICAÇÕES
 16  2025    31
 
 --------------------------------------------------------------------------------
-TENDÊNCIAS TEMPORAIS SIGNIFICATIVAS (p < 0.05)
+SIGNIFICANT TEMPORAL TRENDS (p < 0.05)
 --------------------------------------------------------------------------------
                  Feature      Tipo Correlacao       PValue Significativo
 rho...1              SVM Algoritmo  0.7880607 0.0002879787          TRUE
@@ -39,17 +39,17 @@ rho...4     DecisionTree Algoritmo  0.6721673 0.0043400675          TRUE
 rho...5             Wine   Produto  0.6151861 0.0111980541          TRUE
 rho...6    NeuralNetwork Algoritmo  0.5920394 0.0156847264          TRUE
 rho...7              KNN Algoritmo  0.5188223 0.0394740412          TRUE
-        Tendencia
-rho...1 Crescente
-rho...2 Crescente
-rho...3 Crescente
-rho...4 Crescente
-rho...5 Crescente
-rho...6 Crescente
-rho...7 Crescente
+         Tendencia
+rho...1 Increasing
+rho...2 Increasing
+rho...3 Increasing
+rho...4 Increasing
+rho...5 Increasing
+rho...6 Increasing
+rho...7 Increasing
 
 --------------------------------------------------------------------------------
-ALGORITMOS MAIS UTILIZADOS (2020-2025)
+MOST USED ALGORITHMS (2020-2025)
 --------------------------------------------------------------------------------
 # A tibble: 6 × 2
   Algoritmo        Total
@@ -62,7 +62,7 @@ ALGORITMOS MAIS UTILIZADOS (2020-2025)
 6 GradientBoosting     5
 
 --------------------------------------------------------------------------------
-PRODUTOS MAIS ESTUDADOS (2020-2025)
+MOST STUDIED PRODUCTS (2020-2025)
 --------------------------------------------------------------------------------
 # A tibble: 5 × 2
   Produto Total

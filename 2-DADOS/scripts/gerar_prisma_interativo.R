@@ -35,10 +35,9 @@ library(PRISMA2020, quietly = TRUE)
 library(htmlwidgets, quietly = TRUE)
 library(DiagrammeR, quietly = TRUE)
 
-# Load data from CSV
-cat("======================================================================\n")
-cat("🔄 PRISMA 2020 FLOWCHART GENERATOR - OFFICIAL R VERSION\n")
-cat("======================================================================\n\n")
+# Set working directory to script location
+script_dir <- dirname(normalizePath(commandArgs(trailingOnly = FALSE)[4]))
+setwd(script_dir)
 
 csv_file <- "PRISMA.csv"
 
@@ -50,7 +49,7 @@ if (!file.exists(csv_file)) {
 cat(sprintf("📂 Loading data from: %s\n", csv_file))
 
 # Read the data
-data <- read.csv(csv_file, sep = ";", stringsAsFactors = FALSE)
+data <- read.csv(csv_file, sep = ",", stringsAsFactors = FALSE)
 
 cat("✅ Data loaded successfully\n\n")
 
