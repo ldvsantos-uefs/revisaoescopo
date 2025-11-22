@@ -282,13 +282,13 @@ def plot_heatmap_clusters(df, labels, output_path):
     sns.heatmap(
         medias.T,
         cmap='YlGnBu', annot=True, fmt='.2f',
-        linewidths=0.5, cbar_kws={'label': 'Proporção'},
+        linewidths=0.5, cbar_kws={'label': 'Mean Occurrence'},
         ax=ax
     )
     
-    ax.set_xlabel('Cluster', fontsize=12, fontweight='bold')
-    ax.set_ylabel('Características', fontsize=12, fontweight='bold')
-    ax.set_title('Perfil de Características por Cluster', fontsize=14, fontweight='bold')
+    ax.set_xlabel('Identified Clusters', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Methodological Features', fontsize=12, fontweight='bold')
+    ax.set_title('Feature Profile per Cluster', fontsize=14, fontweight='bold')
     
     plt.tight_layout()
     plt.savefig(output_path, dpi=300, bbox_inches='tight')

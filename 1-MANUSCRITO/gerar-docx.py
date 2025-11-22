@@ -209,8 +209,8 @@ def main():
     # ========================================================================
     # GERAR REVISÃO DE ESCOPO
     # ========================================================================
-    md_rs = Path("revisao_escopo_pt.md")
-    docx_rs = Path("revisao_escopo_pt.docx")
+    md_rs = Path("revisao_escopo_en.md")
+    docx_rs = Path("revisao_escopo_en.docx")
     
     if not md_rs.exists():
         print(f"\nArquivo {md_rs} não encontrado, pulando...")
