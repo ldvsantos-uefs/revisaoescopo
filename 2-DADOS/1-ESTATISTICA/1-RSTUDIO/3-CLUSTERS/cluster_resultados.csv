@@ -1,149 +1,149 @@
 "ID","Titulo","Ano","RandomForest","SVM","NeuralNetwork","KNN","DecisionTree","GradientBoosting","NIR","FTIR","GCMS","LCMS","ICPMS","NMR","Sensor","Wine","Coffee","Olive","Honey","Cheese","Authentication","Classification","OriginDetection","Europe","Asia","Americas","Cluster_KMeans","Cluster_Hierarquico"
-1,"Multielement fingerprinting as a tool in origin authentication of pgi food products: Tropea red onion",2011,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,0,1,7,1
-2,"Laser-based classification of olive oils assisted by machine learning",2020,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,6,2
-3,"Pattern recognition in instrumental data analysis of fruit spirits: current status and future perspectives",2025,0,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,7,3
-4,"Geographic origin discrimination of millet using vis-nir spectroscopy combined with machine learning techniques",2021,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,0,1,4
-5,"Meat Authentication Based on Animal Species and Other Quality Meat Attributes (Protected Geographical Indication, Organic Production, and Halal and Kosher Products) by HPLC–UV Fingerprinting and Chemometrics",2025,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,4,5
-6,"Rapid authentication of Chinese oolong teas using atmospheric solids analysis probe-mass spectrometry (ASAP-MS) combined with supervised pattern recognition models",2022,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,1,4
-7,"Promoting LC-QToF based non-targeted fingerprinting and biomarker selection with machine learning for the discrimination of black tea geographical origin",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,1,1,0,0,0,4,5
-8,"A fast chemometric procedure based on NIR data for authentication of honey with protected geographical indication",2013,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,1,4
-9,"Predicting agri-food quality across space: A Machine Learning model for the acknowledgment of Geographical Indications",2022,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,3,5
-10,"1H NMR spectroscopy combined with multivariate data analysis for authentication of “Swabian–Hall Quality Pork” with protected geographical indication",2023,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0,6,5
-11,"Authentication of honeybush and rooibos herbal teas based on their elemental composition",2021,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,0,0,1,5
-12,"Protected Geographical Indication Discrimination of Zhejiang and Non-Zhejiang Ophiopogonis japonicus by Near-Infrared (NIR) Spectroscopy Combined with Chemometrics: The Influence of Different Stoichiometric and Spectrogram Pretreatment Methods",2023,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,5
-13,"Geographical origin of American ginseng (Panax quinquefolius L.) based on chemical composition combined with chemometric",2022,1,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,1,1,4,1
-14,"H, C, N and S stable isotopes and mineral profiles to objectively guarantee the authenticity of grated hard cheeses",2012,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,2,1
-15,"A Study of the Elemental Profiles of Wines from the North-Eastern Coast of the Black Sea",2024,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,3,5
-16,"Multivariate discrimination of Chinese vinegars using multi-element: Implications for origin traceability and dietary safety",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,5
-17,"Geographical Origin Identification of Red Chili Powder Using NIR Spectroscopy Combined with SIMCA and Machine Learning Algorithms",2024,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,4
-18,"The authentication of Yanchi tan lamb based on lipidomic combined with particle swarm optimization-back propagation neural network",2024,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,5
-19,"Data fusion of FT-NIR and ATR-FTIR spectra for accurate authentication of geographical indications for Gastrodia elata Blume",2023,0,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,6
-20,"Multi-Elemental Analysis for Geographical Tracing of Chickpeas Produced in Nearby Locations Around a Protected Geographical Indication",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,5
-21,"Stepwise strategy based on untargeted metabolomic 1H NMR fingerprinting and pattern recognition for the geographical authentication of virgin olive oils",2025,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,1,0,0,0,6,2
-22,"Metabolomics for origin traceability of lamb: An ensemble learning approach based on random forest recursive feature elimination",2025,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,4,5
-23,"Discrimination of geographical indication of Chinese green teas using an electronic nose combined with quantum neural networks: A portable strategy",2023,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,1,4
-24,"Application of hierarchical classification models and reliability estimation by bootstrapping, for authentication and discrimination of wine vinegars by UV–vis spectroscopy",2019,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,3,5
-25,"Neural networks allow the automatic verification of the type of flour, analysing the starch granule morphology, to ensure the protected geographical indication ‘Galician Bread’",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-26,"Geographical origin authentication of agricultural products in the China–EU Geographical Indications Agreement: A comprehensive review of Chinese products",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,5
-27,"Traceability of olive oil based on volatiles pattern and multivariate analysis",2010,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,6,2
-28,"Benchtop Vis-NIR spectroscopy meets machine learning for multi-task analysis in Hongmeiren citrus: Geographical origin identification and antioxidant component quantification",2025,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,8,6
-29,"Fingerprinting black tea: When spectroscopy meets machine learning a novel workflow for geographical origin identification",2024,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,1,4
-30,"Categorization and authentication of Beijing-you chicken from four breeds of chickens using near-infrared hyperspectral imaging combined with chemometrics",2020,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,1,4
-31,"Generation Z Romanian Students’ Relation with Rural Tourism—An Exploratory Study",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,3,5
-32,"The analysis of volatile compounds through flavoromics and machine learning to identify the origin of traditional Chinese fermented shrimp paste from different regions",2022,1,1,1,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,1,7
-33,"Deep Learning Model for Soil Environment Quality Classification of Pu-erh Tea",2022,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,1,5
-34,"Combing machine learning and elemental profiling for geographical authentication of Chinese Geographical Indication (GI) rice",2021,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,7,3
-35,"Robust and automated internal quality grading of a Chinese green tea (Longjing) by near-infrared spectroscopy and chemometrics",2013,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,6
-36,"Proposing Two Local Modeling Approaches for Discriminating PGI Sunite Lamb from Other Origins Using Stable Isotopes and Machine Learning",2022,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
-37,"Development of the POLIVAR model using neural networks as a tool to predict and identify monovarietal olive oils",2023,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,6,2
-38,"Screening of grated cheese authenticity by nir spectroscopy",2013,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,2,1
-39,"Authentication of Douro DO monovarietal red wines based on anthocyanin profile: Comparison of partial least squares – discriminant analysis, decision trees and artificial neural networks",2021,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,3,5
-40,"Decoding the aroma signature of Jinhua ham: Flavoromics-driven machine learning models for age-discrimination with hardware implementation",2025,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,1,0,4,5
-41,"A machine learning-based nuclear magnetic resonance profiling model to authenticate ’Jerez-Xérès-Sherry’ wines",2025,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,0,1,0,0,0,3,5
-42,"FT-NIR Spectra of Different Dimensions Combined with Machine Learning and Image Recognition for Origin Identification: An Example of Panax notoginseng",2025,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,5
-43,"Multi-Elemental Analysis and Geographical Discrimination of Greek “Gigantes Elefantes” Beans Utilizing Inductively Coupled Plasma Mass Spectrometry and Machine Learning Models",2024,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,7,3
-44,"Nir spectroscopy for discriminating and predicting the sensory profile of dry-cured beef “cecina”",2020,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,5
-45,"Chemical Profiling of Wines Produced in Bulgaria and Distinction from International Grape Varieties",2023,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,3,5
-46,"A mid-infrared spectroscopy-random forest system for the origin tracing of Chinese geographical indication Aconiti Lateralis Radix Praeparata",2023,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-47,"Feasibility study on discrimination of Polygonatum kingianum origins by NIR and MIR spectra data",2024,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,5
-48,"Pattern Recognition of GC-FID Profiles of Volatile Compounds in Brandy de Jerez Using a Chemometric Approach Based on Their Instrumental Fingerprints",2023,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,3,8
-49,"ICP-OES analysis coupled with chemometrics for the characterization and the discrimination of high added value Italian Emmer samples",2021,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,7,3
-50,"Texture Feature Extraction from 1H NMR Spectra for the Geographical Origin Traceability of Chinese Yam",2023,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,6,5
-51,"Characterization and classification of PGI Moroccan Argan oils based on their FTIR fingerprints and chemical composition",2017,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,6
-52,"Integrating mineral elements and metabolite features to distinguish Lotus seeds from different geographic origins",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,4,5
-53,"Application of ultraviolet-visible absorption spectroscopy with machine learning techniques for the classification of cretan wines",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,3,5
-54,"Rapid and nondestructive discrimination of geographical origins of longjing tea using hyperspectral imaging at two spectral ranges coupled with machine learning methods",2020,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,5
-55,"Identification of fake green tea by sensory assessment and electronic tongue",2015,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,5
-56,"FT-NIR and FT-MIR spectroscopy to discriminate competitors, non compliance and compliance grated Parmigiano Reggiano cheese",2013,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,2,1
-57,"Accuracy Improvement of Geographical Indication of Rice By Laser-Induced Breakdown Spectroscopy Using Support Vector Machine with Multi-Spectral Line",2022,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,5
-58,"A Transfer Learning Method for the Protection of Geographical Indication in China Using an Electronic Nose for the Identification of Xihu Longjing Tea",2021,1,1,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,8,7
-59,"Application of 1H NMR for the characterisation and authentication of ''Tonda Gentile Trilobata"" hazelnuts from Piedmont (Italy)",2014,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,0,0,6,5
-60,"Neural network models to classify olive oils within the protected denomination of origin framework",2013,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,6,2
-61,"Machine learning based on metabolomics to discriminate Wuyi rock tea production areas and “rock flavor” substances",2025,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,5
-62,"Identification of geographical origin of winter jujube based on GC–MS coupled with machine-learning algorithms",2023,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,8,7
-63,"Identification of Peking duck breed based on hyperspectral imaging with machine learning",2023,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,5
-64,"Class-modelling of overlapping classes. A two-step authentication approach",2022,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,1,5
-65,"A machine learning method for the fine-grained classification of green tea with geographical indication using a mos-based electronic nose",2021,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,0,0,0,1,5
-66,"Hyperspectral imaging combined with convolutional neural network for Pu'er ripe tea origin recognition",2025,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,5
-67,"Raman spectroscopy combined with machine learning algorithms to detect adulterated Suichang native honey",2022,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,1,5
-68,"Terroir and vintage discrimination of Malbec wines based on phenolic composition across multiple sites in Mendoza, Argentina",2021,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,3,5
-69,"The Impact of Brand Effect on Consumer Preference of Imported Agricultural Products Driven by Big Data Mining - The Case of BenJaRong",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-70,"Smart Sensors and Artificial Intelligence Driven Alert System for Optimizing Red Peppers Drying in Southern Italy",2025,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,5,5
-71,"Classification of Spanish red wines using artificial neural networks with enological parameters and mineral content",2018,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,3,5
-72,"What Determinants Will Enhance or Constrain the Spatiality of Agricultural Products with Geographical Indications in Northeast China? An Interpretable Learning Approach",2023,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,5
-73,"Rapid analysis of geographical origins and age of Torreya grandis seeds by NIR spectroscopy and pattern recognition methods",2013,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,5
-74,"Integrated Metabolomics-KPCA-Machine Learning framework: a solution for geographical traceability of Chinese Jujube",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,1,0,4,5
-75,"The combination of HSI and NMR techniques with deep learning for identification of geographical origin and GI markers of Lycium barbarum L.",2024,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,6,5
-76,"Application of Linear Discriminant Analysis and k-Nearest Neighbors Techniques to Recommendation Systems",2024,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,3,4
-77,"Geographical Indications for Fruits Quality and their Potential for Rural Development using Machine Learning",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,5,5
-78,"AN ANALYSIS OF THE FACTORS AFFECTING THE CONSUMPTION OF GEOGRAPHICALLY INDICATED PRODUCTS USING DECISION TREE AND ARTIFICIAL NEURAL NETWORKS",2022,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-79,"Extraction and classification of origin characteristic peaks from rice Raman spectra by principal component analysis",2021,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,5,5
-80,"Geographical traceability and multielement analysis of edible and medicinal fungi: Taking Wolfiporia cocos (F.A. Wolf) Ryvarden and Gilb. as an example",2021,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,6
-81,"Elementomics combined with DD-SIMCA and K-NN to identify the geographical origin of rice samples from China, India, and Vietnam",2022,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,7,3
-82,"Classification of slovak juniper-flavoured spirit drinks",2015,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,4
-83,"Rapid determination of geographical authenticity of Gastrodia elata f. glauca using Fourier transform infrared spectroscopy and deep learning",2025,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,6
-84,"Geographical origin identification of camellia oil based on fatty acid profiles combined with one-class classification",2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,1,5
-85,"Distinguishing pericarpium citri reticulatae of different origins using terahertz time-domain spectroscopy combined with convolutional neural networks",2023,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-86,"Determination of Saffron Flower Metabolites by Near-Infrared Spectroscopy for Quality Control",2024,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4,5
-87,"Detection of Ripening stage of Banganapalle Mango using KNN method on PCA-reduced EIS Data",2023,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
-88,"Quantitative Analysis of Protein and Polysaccharide in Lilium Lanzhou Based on Near Infrared Spectroscopy",2020,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-89,"Agricultural Geographical Indication Brand Management Based on Bi-GRU+CRF Technology and Information Extraction",2025,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-90,"Distinguishing tea stalks of Wuyuan green tea using hyperspectral imaging analysis and convolutional neural network",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,5,5
-91,"Impacts of Geographical Indications on Agricultural Growth and Farmers’ Income in Rural China",2024,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,5
-92,"Application of Information System and Computer Internet Technology in Integration of Geographical Indication Agricultural Products",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-93,"Enhanced understanding of dark tea quality through integrated GC-IMS and E-Nose analysis",2025,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,4,5
-94,"Political favouritism and inefficient management: Policy-makers’ birth town bias in EU quality certifications",2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5,8
-95,"Rapid determination of Panax notoginseng origin by terahertz spectroscopy combined with the machine learning method",2022,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,5
-96,"AuthentiQ Market Space: Leveraging Smart City Technologies for Authentic E-commerce System of Geographical Indication Products",2024,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,5,5
-97,"Genetic characterization of the local pirenaica cattle for parentage and traceability purposes",2020,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,5,8
-98,"Metabolomics as a tool for geographic origin assessment of roasted and green coffee beans",2023,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,1,0,0,0,9,9
-99,"Discrimination of the geographical origin of rice by Belousov-Zhabotinski oscillation fingerprint - Discrimination of the geographical origin of rice",2021,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-100,"Key determinants of purchase intentions for geographical indication agricultural products: A hybrid PLS-SEM and ANN approach",2025,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-101,"Comparison of appearance quality, cooking quality, and nutritional quality of geographical indication rice and their application in geographical indication discrimination",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,5
-102,"A mobile framework for geographical indication web services",2013,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,5,5
-103,"Are the Adivasi Rice Growers of Sub-Himalayan North Bengal Efficient Enough? Role of Machine Learning in Farm Business After COVID-19",2024,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,8,7
-104,"Application of hyperspectral imaging assisted with integrated deep learning approaches in identifying geographical origins and predicting nutrient contents of Coix seeds",2023,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-105,"Geographical Indication Characteristics of Aroma and Phenolic Acids of the Changping Strawberry",2023,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,5,5
-106,"An efficient architecture of decision support system for testing potential Geographical Indication in India",2012,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,1,5
-107,"Meritocracy of Intellectual Property Within the Bandwidth of Equality; Calibrating the Engine of Creativity, Commerce and Innovation",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-108,"Spectroscopy (MIR), chromatography (RP-HPLC) and chemometrics applied to soluble peptides to discriminate the geographic origin of coalho cheese",2023,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,1,0,0,1,2,1
-109,"OSADHI – An online structural and analytics based database for herbs of India",2023,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,8,7
-110,"Study on cyclic voltammetric electrochemical fingerprint method for origin traceability of rice",2021,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-111,"Artificial intelligence as object of intellectual property in Indonesian law",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-112,"Hyperspectral reflectance as a basis to discriminate olive varieties-A tool for sustainable crop management",2020,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,6,2
-113,"Algorithms for lineaments detection in processing of multispectral images",2014,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-114,"Management of scientific and ancestral knowledge: a decision-making model in mezcal industry in Mexico",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-115,"Decision Making for Knowledge Management in the Tequila Sector: A Fuzzy Logic Model",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-116,"Price Prediction of Pu’er tea based on ARIMA and BP Models",2022,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,5,5
-117,"Knowledge and innovation management model in the mezcal industry in Mexico",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-118,"Fishing for data and sorting the catch: Assessing the data quality, completeness and fitness for use of data in marine biogeographic databases",2015,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,5,8
-119,"Instrumental measurement of wine sensory descriptors using a voltammetric electronic tongue",2015,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,3,5
-120,"Class-modelling techniques that optimize the probabilities of false noncompliance and false compliance",2010,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,3,5
-121,"Vinegar metabolomics: An explorative study of commercial balsamic vinegars using gas chromatography-mass spectrometry",2016,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,6,5
-122,"Accurate origin identification of Chinese white Chrysanthemi Flos by analysis of C, N, O, H stable isotope ratios and mineral elements combined with chemometrics",2023,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,5
-123,"Detection And Identification of Ethnic Attires Using Deep Learning And GI Tags",2025,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,5
-124,"J. Agric. Food Chem.",2011,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-125,"Food Chem.",2020,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-126,"Food Chem.",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-127,"Eur. Food Res. Technol.",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-128,"Food Policy",2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-129,NA,2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-130,"Food Control",2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-131,"Foods",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-132,"Food Control",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-133,"Food Anal. Methods.",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-134,"Food Chem.",2013,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-135,NA,2011,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-136,"Separations",2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-137,NA,2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-138,"Plant Cell Environ.",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-139,NA,2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-140,NA,2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-141,NA,2013,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-142,NA,2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-143,"Food BioSci.",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-144,"J. Food Compos. Anal.",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-145,NA,2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-146,"Meat Authentication Based on Animal Species and Other Quality Meat Attributes (Protected Geographical Indication, Organic Production, and Halal and Kosher Products) by HPLC–UV Fingerprinting and Chemometrics",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,4,5
-147,"Foods",2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
-148,"Anal. Chim. Acta",2012,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,8
+1,"Multielement fingerprinting as a tool in origin authentication of pgi food products: Tropea red onion",2011,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,0,1,8,1
+2,"Laser-based classification of olive oils assisted by machine learning",2020,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,7,2
+3,"Pattern recognition in instrumental data analysis of fruit spirits: current status and future perspectives",2025,0,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,8,3
+4,"Geographic origin discrimination of millet using vis-nir spectroscopy combined with machine learning techniques",2021,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,0,2,3
+5,"Meat Authentication Based on Animal Species and Other Quality Meat Attributes (Protected Geographical Indication, Organic Production, and Halal and Kosher Products) by HPLC–UV Fingerprinting and Chemometrics",2025,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,2,4
+6,"Rapid authentication of Chinese oolong teas using atmospheric solids analysis probe-mass spectrometry (ASAP-MS) combined with supervised pattern recognition models",2022,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,2,3
+7,"Promoting LC-QToF based non-targeted fingerprinting and biomarker selection with machine learning for the discrimination of black tea geographical origin",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,1,1,0,0,0,2,4
+8,"A fast chemometric procedure based on NIR data for authentication of honey with protected geographical indication",2013,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,2,3
+9,"Predicting agri-food quality across space: A Machine Learning model for the acknowledgment of Geographical Indications",2022,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,4
+10,"1H NMR spectroscopy combined with multivariate data analysis for authentication of “Swabian–Hall Quality Pork” with protected geographical indication",2023,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0,1,4
+11,"Authentication of honeybush and rooibos herbal teas based on their elemental composition",2021,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,0,0,2,4
+12,"Protected Geographical Indication Discrimination of Zhejiang and Non-Zhejiang Ophiopogonis japonicus by Near-Infrared (NIR) Spectroscopy Combined with Chemometrics: The Influence of Different Stoichiometric and Spectrogram Pretreatment Methods",2023,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,4
+13,"Geographical origin of American ginseng (Panax quinquefolius L.) based on chemical composition combined with chemometric",2022,1,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,1,0,1,1,2,1
+14,"H, C, N and S stable isotopes and mineral profiles to objectively guarantee the authenticity of grated hard cheeses",2012,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,5,1
+15,"A Study of the Elemental Profiles of Wines from the North-Eastern Coast of the Black Sea",2024,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,1,4
+16,"Multivariate discrimination of Chinese vinegars using multi-element: Implications for origin traceability and dietary safety",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,4
+17,"Geographical Origin Identification of Red Chili Powder Using NIR Spectroscopy Combined with SIMCA and Machine Learning Algorithms",2024,1,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,2,3
+18,"The authentication of Yanchi tan lamb based on lipidomic combined with particle swarm optimization-back propagation neural network",2024,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,4,4
+19,"Data fusion of FT-NIR and ATR-FTIR spectra for accurate authentication of geographical indications for Gastrodia elata Blume",2023,0,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,2,5
+20,"Multi-Elemental Analysis for Geographical Tracing of Chickpeas Produced in Nearby Locations Around a Protected Geographical Indication",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,4
+21,"Stepwise strategy based on untargeted metabolomic 1H NMR fingerprinting and pattern recognition for the geographical authentication of virgin olive oils",2025,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,1,0,0,0,7,2
+22,"Metabolomics for origin traceability of lamb: An ensemble learning approach based on random forest recursive feature elimination",2025,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,2,4
+23,"Discrimination of geographical indication of Chinese green teas using an electronic nose combined with quantum neural networks: A portable strategy",2023,0,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,4,3
+24,"Application of hierarchical classification models and reliability estimation by bootstrapping, for authentication and discrimination of wine vinegars by UV–vis spectroscopy",2019,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,1,4
+25,"Neural networks allow the automatic verification of the type of flour, analysing the starch granule morphology, to ensure the protected geographical indication ‘Galician Bread’",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+26,"Geographical origin authentication of agricultural products in the China–EU Geographical Indications Agreement: A comprehensive review of Chinese products",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,4
+27,"Traceability of olive oil based on volatiles pattern and multivariate analysis",2010,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,7,2
+28,"Benchtop Vis-NIR spectroscopy meets machine learning for multi-task analysis in Hongmeiren citrus: Geographical origin identification and antioxidant component quantification",2025,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,2,5
+29,"Fingerprinting black tea: When spectroscopy meets machine learning a novel workflow for geographical origin identification",2024,0,1,0,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,2,3
+30,"Categorization and authentication of Beijing-you chicken from four breeds of chickens using near-infrared hyperspectral imaging combined with chemometrics",2020,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,2,3
+31,"Generation Z Romanian Students’ Relation with Rural Tourism—An Exploratory Study",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,4
+32,"The analysis of volatile compounds through flavoromics and machine learning to identify the origin of traditional Chinese fermented shrimp paste from different regions",2022,1,1,1,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,4,6
+33,"Deep Learning Model for Soil Environment Quality Classification of Pu-erh Tea",2022,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,2,4
+34,"Combing machine learning and elemental profiling for geographical authentication of Chinese Geographical Indication (GI) rice",2021,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,8,3
+35,"Robust and automated internal quality grading of a Chinese green tea (Longjing) by near-infrared spectroscopy and chemometrics",2013,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,2,5
+36,"Proposing Two Local Modeling Approaches for Discriminating PGI Sunite Lamb from Other Origins Using Stable Isotopes and Machine Learning",2022,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,3
+37,"Development of the POLIVAR model using neural networks as a tool to predict and identify monovarietal olive oils",2023,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0,7,2
+38,"Screening of grated cheese authenticity by nir spectroscopy",2013,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,5,1
+39,"Authentication of Douro DO monovarietal red wines based on anthocyanin profile: Comparison of partial least squares – discriminant analysis, decision trees and artificial neural networks",2021,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,1,4
+40,"Decoding the aroma signature of Jinhua ham: Flavoromics-driven machine learning models for age-discrimination with hardware implementation",2025,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,4
+41,"A machine learning-based nuclear magnetic resonance profiling model to authenticate ’Jerez-Xérès-Sherry’ wines",2025,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,0,1,0,0,0,4,4
+42,"FT-NIR Spectra of Different Dimensions Combined with Machine Learning and Image Recognition for Origin Identification: An Example of Panax notoginseng",2025,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,2,4
+43,"Multi-Elemental Analysis and Geographical Discrimination of Greek “Gigantes Elefantes” Beans Utilizing Inductively Coupled Plasma Mass Spectrometry and Machine Learning Models",2024,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,8,3
+44,"Nir spectroscopy for discriminating and predicting the sensory profile of dry-cured beef “cecina”",2020,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,4,4
+45,"Chemical Profiling of Wines Produced in Bulgaria and Distinction from International Grape Varieties",2023,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,1,4
+46,"A mid-infrared spectroscopy-random forest system for the origin tracing of Chinese geographical indication Aconiti Lateralis Radix Praeparata",2023,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+47,"Feasibility study on discrimination of Polygonatum kingianum origins by NIR and MIR spectra data",2024,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,4
+48,"Pattern Recognition of GC-FID Profiles of Volatile Compounds in Brandy de Jerez Using a Chemometric Approach Based on Their Instrumental Fingerprints",2023,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,1,7
+49,"ICP-OES analysis coupled with chemometrics for the characterization and the discrimination of high added value Italian Emmer samples",2021,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,8,3
+50,"Texture Feature Extraction from 1H NMR Spectra for the Geographical Origin Traceability of Chinese Yam",2023,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+51,"Characterization and classification of PGI Moroccan Argan oils based on their FTIR fingerprints and chemical composition",2017,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,5
+52,"Integrating mineral elements and metabolite features to distinguish Lotus seeds from different geographic origins",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,2,4
+53,"Application of ultraviolet-visible absorption spectroscopy with machine learning techniques for the classification of cretan wines",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,1,4
+54,"Rapid and nondestructive discrimination of geographical origins of longjing tea using hyperspectral imaging at two spectral ranges coupled with machine learning methods",2020,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,4
+55,"Identification of fake green tea by sensory assessment and electronic tongue",2015,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,4,4
+56,"FT-NIR and FT-MIR spectroscopy to discriminate competitors, non compliance and compliance grated Parmigiano Reggiano cheese",2013,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,5,1
+57,"Accuracy Improvement of Geographical Indication of Rice By Laser-Induced Breakdown Spectroscopy Using Support Vector Machine with Multi-Spectral Line",2022,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,4
+58,"A Transfer Learning Method for the Protection of Geographical Indication in China Using an Electronic Nose for the Identification of Xihu Longjing Tea",2021,1,1,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,4,6
+59,"Application of 1H NMR for the characterisation and authentication of ''Tonda Gentile Trilobata"" hazelnuts from Piedmont (Italy)",2014,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,0,0,1,4
+60,"Neural network models to classify olive oils within the protected denomination of origin framework",2013,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,7,2
+61,"Machine learning based on metabolomics to discriminate Wuyi rock tea production areas and “rock flavor” substances",2025,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,4
+62,"Identification of geographical origin of winter jujube based on GC–MS coupled with machine-learning algorithms",2023,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,2,6
+63,"Identification of Peking duck breed based on hyperspectral imaging with machine learning",2023,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,4
+64,"Class-modelling of overlapping classes. A two-step authentication approach",2022,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,2,4
+65,"A machine learning method for the fine-grained classification of green tea with geographical indication using a mos-based electronic nose",2021,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,1,0,0,0,4,4
+66,"Hyperspectral imaging combined with convolutional neural network for Pu'er ripe tea origin recognition",2025,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,4
+67,"Raman spectroscopy combined with machine learning algorithms to detect adulterated Suichang native honey",2022,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,1,0,2,4
+68,"Terroir and vintage discrimination of Malbec wines based on phenolic composition across multiple sites in Mendoza, Argentina",2021,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,1,4
+69,"The Impact of Brand Effect on Consumer Preference of Imported Agricultural Products Driven by Big Data Mining - The Case of BenJaRong",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+70,"Smart Sensors and Artificial Intelligence Driven Alert System for Optimizing Red Peppers Drying in Southern Italy",2025,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,4,4
+71,"Classification of Spanish red wines using artificial neural networks with enological parameters and mineral content",2018,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,1,4
+72,"What Determinants Will Enhance or Constrain the Spatiality of Agricultural Products with Geographical Indications in Northeast China? An Interpretable Learning Approach",2023,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,4
+73,"Rapid analysis of geographical origins and age of Torreya grandis seeds by NIR spectroscopy and pattern recognition methods",2013,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,4
+74,"Integrated Metabolomics-KPCA-Machine Learning framework: a solution for geographical traceability of Chinese Jujube",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,4
+75,"The combination of HSI and NMR techniques with deep learning for identification of geographical origin and GI markers of Lycium barbarum L.",2024,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+76,"Application of Linear Discriminant Analysis and k-Nearest Neighbors Techniques to Recommendation Systems",2024,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,2,3
+77,"Geographical Indications for Fruits Quality and their Potential for Rural Development using Machine Learning",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,4
+78,"AN ANALYSIS OF THE FACTORS AFFECTING THE CONSUMPTION OF GEOGRAPHICALLY INDICATED PRODUCTS USING DECISION TREE AND ARTIFICIAL NEURAL NETWORKS",2022,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+79,"Extraction and classification of origin characteristic peaks from rice Raman spectra by principal component analysis",2021,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,4
+80,"Geographical traceability and multielement analysis of edible and medicinal fungi: Taking Wolfiporia cocos (F.A. Wolf) Ryvarden and Gilb. as an example",2021,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,2,5
+81,"Elementomics combined with DD-SIMCA and K-NN to identify the geographical origin of rice samples from China, India, and Vietnam",2022,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,8,3
+82,"Classification of slovak juniper-flavoured spirit drinks",2015,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,2,3
+83,"Rapid determination of geographical authenticity of Gastrodia elata f. glauca using Fourier transform infrared spectroscopy and deep learning",2025,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,5
+84,"Geographical origin identification of camellia oil based on fatty acid profiles combined with one-class classification",2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,2,4
+85,"Distinguishing pericarpium citri reticulatae of different origins using terahertz time-domain spectroscopy combined with convolutional neural networks",2023,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+86,"Determination of Saffron Flower Metabolites by Near-Infrared Spectroscopy for Quality Control",2024,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,2,4
+87,"Detection of Ripening stage of Banganapalle Mango using KNN method on PCA-reduced EIS Data",2023,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,3
+88,"Quantitative Analysis of Protein and Polysaccharide in Lilium Lanzhou Based on Near Infrared Spectroscopy",2020,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+89,"Agricultural Geographical Indication Brand Management Based on Bi-GRU+CRF Technology and Information Extraction",2025,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+90,"Distinguishing tea stalks of Wuyuan green tea using hyperspectral imaging analysis and convolutional neural network",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,4
+91,"Impacts of Geographical Indications on Agricultural Growth and Farmers’ Income in Rural China",2024,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,4
+92,"Application of Information System and Computer Internet Technology in Integration of Geographical Indication Agricultural Products",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+93,"Enhanced understanding of dark tea quality through integrated GC-IMS and E-Nose analysis",2025,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,4,4
+94,"Political favouritism and inefficient management: Policy-makers’ birth town bias in EU quality certifications",2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,7
+95,"Rapid determination of Panax notoginseng origin by terahertz spectroscopy combined with the machine learning method",2022,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,4
+96,"AuthentiQ Market Space: Leveraging Smart City Technologies for Authentic E-commerce System of Geographical Indication Products",2024,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,4,4
+97,"Genetic characterization of the local pirenaica cattle for parentage and traceability purposes",2020,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,7
+98,"Metabolomics as a tool for geographic origin assessment of roasted and green coffee beans",2023,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,1,0,0,0,6,8
+99,"Discrimination of the geographical origin of rice by Belousov-Zhabotinski oscillation fingerprint - Discrimination of the geographical origin of rice",2021,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+100,"Key determinants of purchase intentions for geographical indication agricultural products: A hybrid PLS-SEM and ANN approach",2025,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+101,"Comparison of appearance quality, cooking quality, and nutritional quality of geographical indication rice and their application in geographical indication discrimination",2024,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,4
+102,"A mobile framework for geographical indication web services",2013,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,4
+103,"Are the Adivasi Rice Growers of Sub-Himalayan North Bengal Efficient Enough? Role of Machine Learning in Farm Business After COVID-19",2024,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,6
+104,"Application of hyperspectral imaging assisted with integrated deep learning approaches in identifying geographical origins and predicting nutrient contents of Coix seeds",2023,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+105,"Geographical Indication Characteristics of Aroma and Phenolic Acids of the Changping Strawberry",2023,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,4
+106,"An efficient architecture of decision support system for testing potential Geographical Indication in India",2012,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,2,4
+107,"Meritocracy of Intellectual Property Within the Bandwidth of Equality; Calibrating the Engine of Creativity, Commerce and Innovation",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+108,"Spectroscopy (MIR), chromatography (RP-HPLC) and chemometrics applied to soluble peptides to discriminate the geographic origin of coalho cheese",2023,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,1,0,0,1,5,1
+109,"OSADHI – An online structural and analytics based database for herbs of India",2023,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,6
+110,"Study on cyclic voltammetric electrochemical fingerprint method for origin traceability of rice",2021,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+111,"Artificial intelligence as object of intellectual property in Indonesian law",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+112,"Hyperspectral reflectance as a basis to discriminate olive varieties-A tool for sustainable crop management",2020,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,7,2
+113,"Algorithms for lineaments detection in processing of multispectral images",2014,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+114,"Management of scientific and ancestral knowledge: a decision-making model in mezcal industry in Mexico",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+115,"Decision Making for Knowledge Management in the Tequila Sector: A Fuzzy Logic Model",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+116,"Price Prediction of Pu’er tea based on ARIMA and BP Models",2022,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,4
+117,"Knowledge and innovation management model in the mezcal industry in Mexico",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+118,"Fishing for data and sorting the catch: Assessing the data quality, completeness and fitness for use of data in marine biogeographic databases",2015,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,7
+119,"Instrumental measurement of wine sensory descriptors using a voltammetric electronic tongue",2015,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,4,4
+120,"Class-modelling techniques that optimize the probabilities of false noncompliance and false compliance",2010,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,4
+121,"Vinegar metabolomics: An explorative study of commercial balsamic vinegars using gas chromatography-mass spectrometry",2016,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+122,"Accurate origin identification of Chinese white Chrysanthemi Flos by analysis of C, N, O, H stable isotope ratios and mineral elements combined with chemometrics",2023,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,1,4
+123,"Detection And Identification of Ethnic Attires Using Deep Learning And GI Tags",2025,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,4
+124,"J. Agric. Food Chem.",2011,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+125,"Food Chem.",2020,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+126,"Food Chem.",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+127,"Eur. Food Res. Technol.",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+128,"Food Policy",2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+129,NA,2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+130,"Food Control",2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+131,"Foods",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+132,"Food Control",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+133,"Food Anal. Methods.",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+134,"Food Chem.",2013,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+135,NA,2011,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+136,"Separations",2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+137,NA,2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+138,"Plant Cell Environ.",2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+139,NA,2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+140,NA,2025,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+141,NA,2013,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+142,NA,2024,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+143,"Food BioSci.",2023,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+144,"J. Food Compos. Anal.",2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+145,NA,2021,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+146,"Meat Authentication Based on Animal Species and Other Quality Meat Attributes (Protected Geographical Indication, Organic Production, and Halal and Kosher Products) by HPLC–UV Fingerprinting and Chemometrics",2025,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,4
+147,"Foods",2022,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7
+148,"Anal. Chim. Acta",2012,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,7

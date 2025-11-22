@@ -244,7 +244,7 @@ plot_heatmap_profiles <- function(dados, kmeans_result, output_file = "cluster_h
   
   cluster_profiles <- dados_cluster %>%
     group_by(Cluster) %>%
-    summarise(across(all_of(features_cols), mean, na.rm = TRUE)) %>%
+    summarise(across(all_of(features_cols), \(x) mean(x, na.rm = TRUE))) %>%
     column_to_rownames("Cluster")
   
   # Transpor para ter clusters como colunas
@@ -252,6 +252,10 @@ plot_heatmap_profiles <- function(dados, kmeans_result, output_file = "cluster_h
   
   # Gerar heatmap
   png(output_file, width = 2400, height = 3000, res = 300)
+  
+  # Criar margem extra para os rótulos dos eixos
+  par(oma = c(3, 3, 2, 0))
+  
   pheatmap(
     cluster_profiles_t,
     color = colorRampPalette(c("#3B4992", "#FFFFFF", "#EE0000"))(100),
@@ -260,12 +264,28 @@ plot_heatmap_profiles <- function(dados, kmeans_result, output_file = "cluster_h
     fontsize = 10,
     fontsize_row = 9,
     fontsize_col = 12,
-    main = "Characteristic Profile by Cluster\nK-Means Clustering Analysis",
+    main = "Feature Profile per Cluster",
     angle_col = 0,
     border_color = NA,
     cellwidth = 30,
-    cellheight = 10
+    cellheight = 10,
+    legend_breaks = seq(0, 1, 0.25),
+    legend_labels = c("0%", "25%", "50%", "75%", "100%"),
+    legend = TRUE,
+    annotation_legend = TRUE
   )
+  
+  # Adicionar rótulos dos eixos e legenda usando grid
+  library(grid)
+  grid.text("Identified Clusters", x = 0.5, y = 0.02, 
+            gp = gpar(fontsize = 13, fontface = "bold"))
+  grid.text("Methodological Features", x = 0.02, y = 0.5, rot = 90,
+            gp = gpar(fontsize = 13, fontface = "bold"))
+  
+  # Adicionar título da legenda
+  grid.text("Mean Occurrence\n(Proportion)", x = 0.92, y = 0.78, 
+            gp = gpar(fontsize = 10, fontface = "bold"))
+  
   dev.off()
   
   cat(sprintf("✓ Heatmap de perfis salvo: %s\n", output_file))

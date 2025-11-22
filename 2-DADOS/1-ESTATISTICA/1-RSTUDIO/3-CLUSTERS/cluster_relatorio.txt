@@ -2,51 +2,102 @@
 RELATÓRIO DE ANÁLISE DE CLUSTERS - ML PARA INDICAÇÕES GEOGRÁFICAS
 ================================================================================
 
-Data de execução: 2025-11-20 20:53:52.638467
+Data de execução: 2025-11-22 08:12:26.238351
 Total de observações: 148
-Número de clusters: 9
+Número de clusters: 8
 
 --------------------------------------------------------------------------------
 K-MEANS CLUSTERING - ESTATÍSTICAS
 --------------------------------------------------------------------------------
-Between SS / Total SS: 40.54%
-Total Within SS: 2097.85
+Between SS / Total SS: 35.87%
+Total Within SS: 2262.39
 
 Tamanho dos clusters (K-Means):
 
- 1  2  3  4  5  6  7  8  9 
-43  4 14 10 54 11  6  5  1 
+ 1  2  3  4  5  6  7  8 
+59 33 27 12  4  1  6  6 
 
 --------------------------------------------------------------------------------
 CLUSTERING HIERÁRQUICO - ESTATÍSTICAS
 --------------------------------------------------------------------------------
 Tamanho dos clusters (Hierárquico):
 
- 1  2  3  4  5  6  7  8  9 
- 6  6  5 11 79  6  5 29  1 
+ 1  2  3  4  5  6  7  8 
+ 6  6 16 79  6  5 29  1 
 
 --------------------------------------------------------------------------------
 PERFIL DOS CLUSTERS (K-Means) - Características Dominantes
 --------------------------------------------------------------------------------
 
-=== CLUSTER 1 (n=43) ===
+=== CLUSTER 1 (n=59) ===
+
+Top 10 características mais frequentes:
+# A tibble: 10 × 2
+   Feature          Media
+   <chr>            <dbl>
+ 1 OriginDetection 1     
+ 2 NeuralNetwork   0.356 
+ 3 Classification  0.305 
+ 4 Authentication  0.220 
+ 5 Wine            0.186 
+ 6 RandomForest    0.169 
+ 7 Asia            0.153 
+ 8 SVM             0.119 
+ 9 NMR             0.102 
+10 DecisionTree    0.0508
+
+=== CLUSTER 2 (n=33) ===
 
 Top 10 características mais frequentes:
 # A tibble: 10 × 2
    Feature         Media
    <chr>           <dbl>
  1 OriginDetection 1    
- 2 Classification  0.721
- 3 SVM             0.465
- 4 Authentication  0.419
- 5 NeuralNetwork   0.395
- 6 Asia            0.395
- 7 NIR             0.302
- 8 RandomForest    0.279
- 9 KNN             0.233
-10 Honey           0.233
+ 2 Classification  0.697
+ 3 SVM             0.545
+ 4 Authentication  0.424
+ 5 Asia            0.394
+ 6 NIR             0.364
+ 7 Honey           0.333
+ 8 RandomForest    0.303
+ 9 KNN             0.303
+10 LCMS            0.242
 
-=== CLUSTER 2 (n=4) ===
+=== CLUSTER 3 (n=27) ===
+
+Top 10 características mais frequentes:
+# A tibble: 10 × 2
+   Feature           Media
+   <chr>             <dbl>
+ 1 Europe           0.0741
+ 2 RandomForest     0     
+ 3 SVM              0     
+ 4 NeuralNetwork    0     
+ 5 KNN              0     
+ 6 DecisionTree     0     
+ 7 GradientBoosting 0     
+ 8 NIR              0     
+ 9 FTIR             0     
+10 GCMS             0     
+
+=== CLUSTER 4 (n=12) ===
+
+Top 10 características mais frequentes:
+# A tibble: 10 × 2
+   Feature         Media
+   <chr>           <dbl>
+ 1 Sensor          1    
+ 2 OriginDetection 1    
+ 3 NeuralNetwork   0.75 
+ 4 Classification  0.583
+ 5 SVM             0.333
+ 6 GCMS            0.25 
+ 7 Authentication  0.25 
+ 8 Asia            0.25 
+ 9 RandomForest    0.167
+10 DecisionTree    0.167
+
+=== CLUSTER 5 (n=4) ===
 
 Top 10 características mais frequentes:
 # A tibble: 10 × 2
@@ -63,109 +114,7 @@ Top 10 características mais frequentes:
  9 DecisionTree     0.25
 10 LCMS             0.25
 
-=== CLUSTER 3 (n=14) ===
-
-Top 10 características mais frequentes:
-# A tibble: 10 × 2
-   Feature         Media
-   <chr>           <dbl>
- 1 Wine            1    
- 2 OriginDetection 1    
- 3 Classification  0.429
- 4 RandomForest    0.214
- 5 NeuralNetwork   0.214
- 6 DecisionTree    0.214
- 7 Authentication  0.214
- 8 SVM             0.143
- 9 NMR             0.143
-10 Sensor          0.143
-
-=== CLUSTER 4 (n=10) ===
-
-Top 10 características mais frequentes:
-# A tibble: 10 × 2
-   Feature         Media
-   <chr>           <dbl>
- 1 LCMS              1  
- 2 OriginDetection   1  
- 3 Classification    0.5
- 4 Authentication    0.4
- 5 Asia              0.4
- 6 GCMS              0.3
- 7 RandomForest      0.2
- 8 SVM               0.2
- 9 DecisionTree      0.2
-10 Honey             0.2
-
-=== CLUSTER 5 (n=54) ===
-
-Top 10 características mais frequentes:
-# A tibble: 10 × 2
-   Feature          Media
-   <chr>            <dbl>
- 1 OriginDetection 0.5   
- 2 NeuralNetwork   0.222 
- 3 Europe          0.0741
- 4 RandomForest    0.0370
- 5 SVM             0.0370
- 6 Sensor          0.0370
- 7 Authentication  0.0370
- 8 Classification  0.0370
- 9 Asia            0.0370
-10 DecisionTree    0.0185
-
-=== CLUSTER 6 (n=11) ===
-
-Top 10 características mais frequentes:
-# A tibble: 10 × 2
-   Feature          Media
-   <chr>            <dbl>
- 1 OriginDetection 1     
- 2 NMR             0.545 
- 3 Olive           0.545 
- 4 Authentication  0.545 
- 5 Classification  0.545 
- 6 NeuralNetwork   0.364 
- 7 Europe          0.273 
- 8 SVM             0.182 
- 9 GCMS            0.182 
-10 RandomForest    0.0909
-
-=== CLUSTER 7 (n=6) ===
-
-Top 10 características mais frequentes:
-# A tibble: 10 × 2
-   Feature         Media
-   <chr>           <dbl>
- 1 ICPMS           1    
- 2 OriginDetection 1    
- 3 Authentication  0.833
- 4 Classification  0.667
- 5 SVM             0.333
- 6 NeuralNetwork   0.333
- 7 RandomForest    0.167
- 8 KNN             0.167
- 9 DecisionTree    0.167
-10 GCMS            0.167
-
-=== CLUSTER 8 (n=5) ===
-
-Top 10 características mais frequentes:
-# A tibble: 10 × 2
-   Feature          Media
-   <chr>            <dbl>
- 1 GradientBoosting   1  
- 2 OriginDetection    1  
- 3 RandomForest       0.6
- 4 NeuralNetwork      0.6
- 5 SVM                0.4
- 6 DecisionTree       0.4
- 7 Classification     0.4
- 8 Asia               0.4
- 9 NIR                0.2
-10 FTIR               0.2
-
-=== CLUSTER 9 (n=1) ===
+=== CLUSTER 6 (n=1) ===
 
 Top 10 características mais frequentes:
 # A tibble: 10 × 2
@@ -181,5 +130,39 @@ Top 10 características mais frequentes:
  8 KNN                  0
  9 DecisionTree         0
 10 GradientBoosting     0
+
+=== CLUSTER 7 (n=6) ===
+
+Top 10 características mais frequentes:
+# A tibble: 10 × 2
+   Feature         Media
+   <chr>           <dbl>
+ 1 Olive           1    
+ 2 OriginDetection 1    
+ 3 Authentication  0.667
+ 4 Classification  0.667
+ 5 NeuralNetwork   0.5  
+ 6 Europe          0.333
+ 7 RandomForest    0.167
+ 8 SVM             0.167
+ 9 DecisionTree    0.167
+10 GCMS            0.167
+
+=== CLUSTER 8 (n=6) ===
+
+Top 10 características mais frequentes:
+# A tibble: 10 × 2
+   Feature         Media
+   <chr>           <dbl>
+ 1 ICPMS           1    
+ 2 OriginDetection 1    
+ 3 Authentication  0.833
+ 4 Classification  0.667
+ 5 SVM             0.333
+ 6 NeuralNetwork   0.333
+ 7 RandomForest    0.167
+ 8 KNN             0.167
+ 9 DecisionTree    0.167
+10 GCMS            0.167
 
 ================================================================================
