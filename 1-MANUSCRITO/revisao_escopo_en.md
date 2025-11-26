@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning for Geographical Indications: A Scoping Review on Authentication, Certification and Open Data Ecosystems"
+title: "Machine Learning for Geographical Indications: A Critical Integrative Review of Authentication and Certification"
 author: "Catuxe Varjão de Santana Oliveira, Paulo Roberto Gagliardi, Luiz Diego Vidal Santos, Gustavo da Silva Quirino, Ana Karla de Souza Abud, Cristiane Toniolo Dias"
 bibliography: referencias.bib   
 csl: apa.csl
@@ -11,10 +11,9 @@ lang: en-US
 
 # Abstract
 
-Geographical Indications (GIs) link product quality to specific territories, necessitating reliable authentication methods. Machine Learning (ML) has emerged as a powerful tool for verifying product origin, yet comprehensive synthesis of its applications remains limited. Here we conducted a scoping review of 148 peer-reviewed studies (2010–2025), employing automated semantic filtering, manual quality assessment, and multivariate analyses to map ML techniques in GI authentication. Results reveal a 400% increase in publications since 2018, with predominant algorithmic clusters: Random Forest with spectroscopy for wines, Support Vector Machines with chromatography for meats, and Deep Learning with sensor arrays for teas. Despite reported accuracies between 80% and 100%, only 23% of studies applied spatially independent validation, exposing generalization challenges. These findings suggest ML effectively discriminates geographical origin but require rigorous longitudinal validation, enhanced interpretability, and equitable governance to support integration into GI certification frameworks.
+Geographical Indications (GIs) are intellectual property assets that link product quality to territory and require auditable, reproducible authentication. This review provides a critical, integrative synthesis of Machine Learning (ML) applications in GI systems (2010–2025), focusing on how analytical signatures (spectral, elemental, isotopic, metabolomic, and geospatial) support origin discrimination, fraud detection, quality prediction, and traceability. Across 148 peer‑reviewed studies, supervised classifiers dominate: Random Forest and Support Vector Machines are prevalent in spectroscopy and chromatography for wines, meats, oils, and teas; Deep Learning emerges for hyperspectral and image data; and PLS‑DA/PCA remain central for chemometrics and dimensionality reduction. Typical accuracies range from 80% to 100% in laboratory settings, yet generalization is often overestimated: only 23% of studies perform spatially independent validation and fewer include longitudinal tests, with performance drops of 2%–15% under distribution shifts. To be incorporated into certification, ML models must demonstrate rigorous external and temporal validation, provide clear interpretability to identify territorial markers with legal defensibility, and operate within transparent data governance that supports public repositories and reproducible pipelines. We synthesize methodological patterns into technological families (algorithm–instrument–matrix), outline practical guidance for certifiers, and highlight opportunities for Global South products (coffee, cocoa, cheeses, cachaça). ML can strengthen GI certification when paired with careful validation and explainability; otherwise, statistical optimism risks eroding consumer trust and asset value.
 
-
-**Keywords:** Geographical Indications; Machine Learning; Artificial Intelligence; Food Traceability; Intellectual Property; Territorial Justice.
+**Keywords:** Geographical Indications; Machine Learning; Authentication; Chemometrics; Traceability; Explainability.
 
 # 1. Introduction
 
@@ -34,19 +33,19 @@ In the GI context, Machine Learning supports origin authentication, fraud detect
 
 The selection of variables and algorithms—such as Random Forest, SVM, PLS-DA, PCA, and feature selection methods like Boruta and RFE—not only influences technical performance but also plays a crucial role in regulatory processes by determining which territorial markers are recognized as valid evidence of authenticity [@Salam2021; @Malik2023].
 
-Despite growing academic and technological interest, there is a lack of scoping reviews that systematically synthesize the scientific evidence, catalog the techniques used, assess performance across different products and regions, and highlight future research needs. This gap limits methodological progress and impedes the effective transfer of knowledge to GI certification and control systems.
+Despite growing academic and technological interest, there is a lack of comprehensive reviews that systematically synthesize the scientific evidence, catalog the techniques used, assess performance across different products and regions, and highlight future research needs. This gap limits methodological progress and impedes the effective transfer of knowledge to GI certification and control systems.
 
-This scoping review systematically maps Machine Learning applications in Geographical Indications, using the PCC framework (*Population, Concept, Context*) to synthesize scientific evidence on integrating ML with territorial aspects. We hypothesize that Machine Learning techniques support authentication, evaluation, and decision-making processes in GIs, revealing methodological patterns that consolidate knowledge for developing computational models in geographical certification.
+This review systematically maps Machine Learning applications in Geographical Indications, using the PCC framework (*Population, Concept, Context*) to synthesize scientific evidence on integrating ML with territorial aspects. We hypothesize that Machine Learning techniques support authentication, evaluation, and decision-making processes in GIs, revealing methodological patterns that consolidate knowledge for developing computational models in geographical certification.
 
 # 2. Materials and Methods
 
-This scoping review follows the PRISMA-ScR guidelines (*Preferred Reporting Items for Systematic Reviews and Meta-Analyses extension for Scoping Reviews*) to ensure methodological transparency and reproducibility. The protocol is registered on the Open Science Framework to facilitate public access and replicability.
+This review follows PRISMA-ScR guidance (*Preferred Reporting Items for Systematic Reviews and Meta-Analyses extension for Scoping Reviews*) as a transparency framework to ensure methodological clarity and reproducibility. The protocol is registered on the Open Science Framework to facilitate public access and replicability.
 
 ## 2.1 Research Question
 
 The study employs the PCC framework (*Population, Concept, Context*) to formulate the research question: *How have Machine Learning techniques been applied for authentication, evaluation, and decision support in Geographical Indications systems?*
 
-**Table 1.** Structure of the scoping review according to the PCC framework.
+**Table 1.** Structure of the review according to the PCC framework.
 
 | Element                  | Description                                                                                                                                                                                                                                                                                                                                                                                     |
 | :------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,9 +59,9 @@ This study identifies and characterizes ML applications reported in the literatu
 
 Figure 1 presents the methodological flowchart, structured in four sequential phases: (1) Main database search strategies, (2) Automated filtering with a weighted scoring system, (3) Manual quality assessment with multidisciplinary evaluation, and (4) Bibliometric analysis and qualitative synthesis integrating quantitative and documentary methodologies. The flowchart details the path from record identification to final synthesis, offering recommendations for Machine Learning implementation in Geographical Indications systems.
 
-**Figure 1.** Scoping Review Flowchart on Machine Learning Applications in Geographical Indications.
+**Figure 1.** Flowchart of screening, eligibility, and synthesis for ML applications in Geographical Indications.
 
-![](2-FIGURAS/2-EN/ml_indicacoes_geograficas.png){#fig:ml_indicacoes width="80%"}
+![Flowchart of ML-GI review process](2-FIGURAS/2-EN/ml_indicacoes_geograficas.png){#fig:ml_indicacoes width="80%"}
 
 ## 2.3 Search Strategy and Study Extraction
 
@@ -80,7 +79,7 @@ Data extraction utilized a standardized form to record bibliographic metadata (a
 
 ### 2.4.1 Weighted Scoring Algorithm
 
-Complementing manual screening, an automated filtering system assigns thematic relevance scores based on descriptor presence and location in the title, abstract, and keywords. Implemented in Python (NLTK, spaCy), the algorithm applies a hierarchical weighting scheme to each identified term. The scoring system adheres to Analytic Hierarchy Process (AHP) principles (Equation 1), organizing descriptors into five categories with differentiated weights [@SAATY1991].
+Complementing manual screening, an automated filtering system assigns thematic relevance scores based on descriptor presence and location in the title, abstract, and keywords. Implemented in Python (NLTK, spaCy), the algorithm applies a hierarchical weighting scheme to each identified term. The scoring system adheres to Analytic Hierarchy Process (AHP) principles. Equation (1) organizes descriptors into five categories with differentiated weights [@SAATY1991].
 
 
 $$
@@ -157,7 +156,7 @@ The fourth phase systematically integrated findings with documentary analysis of
 
 The final synthesis combined thematic qualitative analysis with selection based on the Pareto principle (80/20), prioritizing the top 20% of articles by combined score (40% methodological quality, 35% thematic relevance, 25% bibliometric impact).
 
-The final combined score was calculated using Equation 2:
+The final combined score was calculated using Equation (2):
 
 $$
 P_{final} = (0.40 \cdot Q_{met}) + (0.35 \cdot Q_{tem}) + (0.25 \cdot Q_{biblio})
@@ -196,13 +195,13 @@ Temporal evolution (2010–2025) was analyzed using Spearman's correlation test 
 
 # 3. Results and Discussion
 
-## 3.1 Executive Synthesis of the Scoping Review
+## 3.1 Executive Synthesis of the Review
 
-This scoping review, structured according to PRISMA-ScR guidelines (Figure 2), identified and analyzed 272 studies (140 from Scopus, 132 from Web of Science) published between 2010 and 2025. Following automated filtering and manual methodological quality assessment, 148 relevant articles were selected. This systematic selection process established a representative corpus of Machine Learning (ML) applications in Geographical Indications (GIs). The data reveals significant recent growth, with 68% of publications concentrated in the 2021–2025 period. This trend indicates a convergence between territorial certification and digital transformation, aligning with global innovation patterns in agri-food systems [@Hu2024].
+This review, structured according to PRISMA-ScR guidelines (Figure 2), identified and analyzed 272 studies (140 from Scopus, 132 from Web of Science) published between 2010 and 2025. Following automated filtering and manual methodological quality assessment, 148 relevant articles were selected. This systematic selection process established a representative corpus of Machine Learning (ML) applications in Geographical Indications (GIs). The data reveals significant recent growth, with 68% of publications concentrated in the 2021–2025 period. This trend indicates a convergence between territorial certification and digital transformation, aligning with global innovation patterns in agri-food systems [@Hu2024].
 
-**Figure 2.** Scoping Review Flowchart on Machine Learning Applications in Geographical Indications.
+**Figure 2.** PRISMA-style flow diagram of identification, screening, and inclusion.
 
-![](2-FIGURAS/2-EN/prisma_flowdiagram.png){#fig:prisma2020 width="80%"}
+![PRISMA-style flow diagram](2-FIGURAS/2-EN/prisma_flowdiagram.png){#fig:prisma2020 width="80%"}
 
 Automated filtering via semantic analysis and scoring achieved a thematic precision of 94.2%, surpassing the established 85% threshold. This computational screening approach proved effective for reviews involving large bibliographic volumes, suggesting that calibrated automated systems reduce selection bias and enhance reproducibility [@OforiBoateng2024]. The 100% reproducibility across multiple algorithm executions, combined with an inter-rater concordance of κ = 0.89, ensures that these findings reliably reflect the current state of scientific literature in this domain.
 
@@ -212,9 +211,9 @@ Manual methodological quality assessment yielded an intraclass correlation coeff
 
 Multiple Correspondence Analysis (MCA) mapped the temporal evolution of ML applications in GIs, examining relationships between methodological approaches (algorithms, instruments, applications), investigated products, and publication periods. The first two MCA dimensions explained 9.59% of total inertia (Dim1: 4.82%, Dim2: 4.77%). This value is consistent with the high dimensionality of the corpus (148 studies, 33 categorical binary variables) and indicates a diversified conceptual structure (Figure 3).
 
-**Figure 3.** Biplot of Multiple Correspondence Analysis (MCA) on the temporal evolution of ML applications for Geographical Indications authentication (2010-2025).
+**Figure 3.** MCA biplot of temporal evolution of ML applications for GI authentication (2010–2025).
 
-![](2-FIGURAS/2-EN/mca_biplot_temporal_completo.png){#fig:mca_temporal width="80%"}
+![MCA biplot of temporal evolution](2-FIGURAS/2-EN/mca_biplot.png){#fig:mca_temporal width="80%"}
 
 *Note: Colored ellipses (95% confidence intervals) represent three time periods: 2010–2018 (green, n=26), 2019–2021 (orange, n=27), and 2022–2025 (purple, n=95). Points represent individual studies, with shapes indicating the primary methodological approach: circles for algorithm-focused studies, squares for instrument/technique-focused studies, and triangles for application-focused studies. Product labels (Wine, Honey, Olive, Coffee) are displayed above corresponding points.*
 
@@ -222,13 +221,13 @@ The temporal trajectory delineates three distinct phases (Figure 3). The period 
 
 **Figure 4.** Co-occurrence Network Analysis. (a) Complete network showing thematic communities between algorithms, products and techniques. (b) Network focused on co-occurrence between ML algorithms and products.
 
-![](2-FIGURAS/2-EN/network_centrality_metrics.png){#fig:network_analysiss}
+![Network analysis with communities and centrality metrics](2-FIGURAS/2-EN/network_centrality_metrics.png){#fig:network_analysiss}
 
 Scientific production dynamics (Figure 5a) show exponential growth exceeding 400% between 2018 and 2024, driven by accessible ML tools and high-performance analytical techniques [@Liakos2018]. Concurrently, a paradigmatic shift in algorithms (Figure 5b) is evident: classic chemometric methods (PLS-DA, dominant until 2018) are being replaced by models with higher predictive capacity and flexibility (Random Forest, SVM from 2019 onwards). Post-2022, Deep Learning and CNNs have emerged, specifically for processing hyperspectral and unstructured data [@Lavine2005; @Shah2019].
 
 **Figure 5.** Temporal evolution of (a) number of publications and (b) adoption of main Machine Learning algorithms in GI studies.
 
-![](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_algoritmos width="80%"}
+![Temporal evolution of publications and algorithm adoption](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_algoritmos width="80%"}
 
 ## 3.3 Application Domains, Products, and Geographic Distribution
 
@@ -278,7 +277,7 @@ In global predictive modeling, regression tasks showed modest performance (RMSE 
 
 **Figure 6.** Comparison of regression and classification model performance for predicting continuous score and high score category of studies.
 
-![](2-FIGURAS/2-EN/model_metricas_comparacao.png){#fig:model_metricas width="80%"}
+![Model performance comparison (regression vs. classification)](2-FIGURAS/2-EN/model_metricas_comparacao.png){#fig:model_metricas width="80%"}
 
 ## 3.6 Identified Thematic Applications
 
@@ -302,7 +301,7 @@ Another relevant cluster gathers applications using ICP-MS in meats and meat pro
 
 **Figure 7.** Heatmap of study cluster profiles, showing co-occurrence of products, analytical instruments, and machine learning algorithms.
 
-![](2-FIGURAS/2-EN/cluster_heatmap_profiles.png){#fig:cluster_heatmap width="80%"}
+![Heatmap of clusters by product, instrument, and algorithm](2-FIGURAS/2-EN/cluster_heatmap_profiles.png){#fig:cluster_heatmap width="80%"}
 
 The fourth functional architecture, identified by @Meena2024 and @Liu2025 in 47% of studies, employs ML for predicting quality attributes (acidity, total phenol index, antioxidant capacity, texture, sensory profile) based on rapidly obtained analytical data. @Peng2025 and @Feng2025 distinguish this application from authentication by its divergent functional objective, instead of answering whether a certain product is from origin X, the method seeks to determine what quality is expected from this sample. In these cases, performance is quantified by coefficients of determination ($R^2$), MAE, and RMSE, which reflect the mean deviation in physically interpretable units (e.g., g/L, color units, sensory scores). @Meena2024 documented that regression constitutes the predominant approach in this context.
 
@@ -324,7 +323,7 @@ Centrality metrics confirm the structuring function of these modules: NeuralNetw
 
 **Figure 8.** Internal structure of the three technological modules identified by the Louvain algorithm. Each panel shows the connections between algorithms (red), analytical techniques (blue), products (green), and regions (orange) within each specialized community.
 
-![](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain_modules width="100%"}
+![Louvain modules linking algorithms, techniques, products, and regions](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain_modules width="100%"}
 
 The integration of distinct data modalities (metabolomics, elemental profiling, isotopic, and sensory analysis) with ensemble algorithms, as documented by @Luan2020, constitutes a growing trend, accounting for 28% of recent studies (2024–2025). This multimodal fusion is grounded in the premise that geographical origin stems from complex interactions between environmental determinants and production practices, leveraging informational complementarities to maximize discriminative power and predictive robustness.
 
@@ -352,7 +351,7 @@ The consolidation of ML in GI systems finally requires a support ecosystem artic
 
 # 4. Conclusions
 
-This scoping review maps the convergence of Machine Learning and origin certification, revealing a field undergoing methodological maturation. Algorithmic choices currently reflect an ecology of informational and regulatory constraints rather than mere technological progress.
+This review maps the convergence of Machine Learning and origin certification, revealing a field undergoing methodological maturation. Algorithmic choices currently reflect an ecology of informational and regulatory constraints rather than mere technological progress.
 
 The predominance of *in silico* validations and the scarcity of longitudinal and spatial tests undermine the legal robustness of models, necessitating rigorous validation protocols.
 
@@ -377,6 +376,22 @@ The authors declare no conflicts of interest.
 # Data Availability Statement
 
 The complete dataset supporting the results of this study, including the bibliographic corpus, analysis scripts, and intermediate results, is publicly available in the Open Science Framework (OSF) repository under DOI: <https://doi.org/10.17605/OSF.IO/2EKYQ>.
+
+# Author Contribution Statement
+
+Conceptualization: LDVS, CVS, PRG; Methodology: LDVS, GSQ; Data curation: LDVS, AKSA; Formal analysis: LDVS; Investigation: LDVS, CVS; Resources: AKSA, CTD; Writing—original draft: LDVS; Writing—review & editing: all authors; Visualization: LDVS; Supervision: PRG; Project administration: LDVS; Funding acquisition: LDVS. Roles are aligned with CRediT taxonomy.
+
+# AI Use Disclosure
+
+Generative AI tools were used for language polishing and drafting assistance under author supervision. All outputs were verified for factual accuracy; sources were cited where applicable. No figures or photos were created or altered with GenAI.
+
+# Ethics Statement
+
+This review does not involve human participants, animal experiments, cell lines, or specimen collection. No ethics approval or consent was required.
+
+# Positionality/Community Involvement (Optional)
+
+Where relevant, community perspectives from producer organizations and certifiers informed interpretation of practical constraints in GI systems; no identifiable information was included.
 
 # References
 
