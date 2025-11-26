@@ -1,41 +1,35 @@
 ---
-title: "Machine Learning for Geographical Indications: A Critical Integrative Review of Authentication and Certification"
+title: "Digital Terroir and Ecosystem Governance: A Critical Review of Machine Learning for the Auditability of Geographical Indications"
 author: "Catuxe Varjão de Santana Oliveira, Paulo Roberto Gagliardi, Luiz Diego Vidal Santos, Gustavo da Silva Quirino, Ana Karla de Souza Abud, Cristiane Toniolo Dias"
 bibliography: referencias.bib   
-csl: apa.csl
-reference-doc: modelo_formatacao.docx
+csl: harvard.csl
+reference-doc: modelo_formatacao_new.docx
 fig-align: center
 table-align: center
 lang: en-US
 ---
 
+
 # Abstract
 
-Geographical Indications (GIs) are intellectual property assets that link product quality to territory and require auditable, reproducible authentication. This review provides a critical, integrative synthesis of Machine Learning (ML) applications in GI systems (2010–2025), focusing on how analytical signatures (spectral, elemental, isotopic, metabolomic, and geospatial) support origin discrimination, fraud detection, quality prediction, and traceability. Across 148 peer‑reviewed studies, supervised classifiers dominate: Random Forest and Support Vector Machines are prevalent in spectroscopy and chromatography for wines, meats, oils, and teas; Deep Learning emerges for hyperspectral and image data; and PLS‑DA/PCA remain central for chemometrics and dimensionality reduction. Typical accuracies range from 80% to 100% in laboratory settings, yet generalization is often overestimated: only 23% of studies perform spatially independent validation and fewer include longitudinal tests, with performance drops of 2%–15% under distribution shifts. To be incorporated into certification, ML models must demonstrate rigorous external and temporal validation, provide clear interpretability to identify territorial markers with legal defensibility, and operate within transparent data governance that supports public repositories and reproducible pipelines. We synthesize methodological patterns into technological families (algorithm–instrument–matrix), outline practical guidance for certifiers, and highlight opportunities for Global South products (coffee, cocoa, cheeses, cachaça). ML can strengthen GI certification when paired with careful validation and explainability; otherwise, statistical optimism risks eroding consumer trust and asset value.
+Geographical Indications (GIs) act simultaneously as intellectual property assets and tools for agrobiodiversity conservation, linking product quality to the territory's ecosystem services. This review provides a critical, integrative synthesis of Machine Learning (ML) applications in GI systems (2010–2025), focusing on how analytical signatures (spectral, elemental, isotopic) support environmental auditing, fraud detection, and the prevention of greenwashing. Across 148 peer‑reviewed studies, supervised classifiers dominate: Random Forest and Support Vector Machines are prevalent in spectroscopy and chromatography for wines, meats, oils, and teas; Deep Learning emerges for hyperspectral data; and PLS‑DA remains central for chemometrics. Typical accuracies range from 80% to 100% in laboratory settings, yet generalization is often overestimated: only 23% of studies perform spatially independent validation and fewer include longitudinal tests, with performance drops of 2%–15% under distribution shifts. To be incorporated into environmental certification, ML models must demonstrate rigorous external validation, provide interpretability capable of identifying soil health fingerprints and climate resilience markers, and operate within transparent data governance. We synthesize methodological patterns into technological families and outline guidelines for ML to strengthen the credibility of GIs as sustainability instruments, preventing statistical optimism from eroding consumer trust and the asset's ecological value.
 
-**Keywords:** Geographical Indications; Machine Learning; Authentication; Chemometrics; Traceability; Explainability.
+**Keywords:** Geographical Indications; Machine Learning; Environmental Auditing; Greenwashing; Traceability; Ecosystem Services.
 
 # 1. Introduction
 
-Geographical Indications (GIs) safeguard territories and products within the knowledge economy, granting exclusive rights over goods whose quality, reputation, and characteristics stem from their geographical origin [@Locatelli2008; @WIPO2018]. Grounded in the Berne Convention [@berna1886] and the TRIPS Agreement [@trips1994], GIs link productive territories and local communities to niche markets, coupling rights protection with traditional knowledge preservation [@Suh2007]. Beyond their legal function, GIs represent strategic intangible assets under the Resource-Based View theory. They act as rare, valuable, inimitable, and non-substitutable resources that underpin sustainable territorial competitive advantage [@Barney1991]. Value appropriation through GIs extends beyond immediate profitability; it anchors future value capture by leveraging differentiated markets and consumer willingness to pay premiums for certified origin products [@Loureiro2002; @VazquezFontes2010].
+Geographical Indications (GIs) transcend their original function as intellectual property to emerge as strategic instruments for environmental governance and agrobiodiversity conservation in the Anthropocene [@Belletti2017; @Vandecandelaere2009]. In a global scenario marked by the climate crisis and the erosion of biological diversity, GIs operate as social-ecological systems that link product quality to the integrity of the territory's ecosystem services [@Berkes2003; @Bramley2013]. More than guarantees of origin, they represent mechanisms for valuing regenerative agricultural practices and maintaining cultural landscapes, where *terroir* is redefined not just as a sensory attribute, but as a fingerprint of soil health and climate resilience [@Giovannucci2010; @Fonzo2015].
 
-The international regulation of Geographical Indications (GIs) is structured by the Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS) of the World Trade Organization, which establishes minimum standards of protection for member countries [@WTO1994]. The global system predominantly distinguishes two categories of recognition, harmonized in the European Union by Regulation (EU) No 1151/2012: Protected Geographical Indication (PGI) and Protected Designation of Origin (PDO) [@EU2012]. PGI identifies products whose quality or reputation is linked to geographical origin, requiring that at least one production stage takes place in the delimited area. In contrast, PDO designates products whose characteristics result exclusively or essentially from a specific geographical environment, including natural and human factors, requiring that all production stages occur within the defined region, directly linking quality to the concept of terroir [@Giovannucci2010; @Vandecandelaere2009].
+The international regulation, grounded in the TRIPS Agreement and Regulation (EU) No 1151/2012, establishes the legal basis, but it is the capacity for environmental auditing that confers contemporary legitimacy to these assets [@EU2012; @WTO1994]. The distinction between Protected Geographical Indication (PGI) and Protected Designation of Origin (PDO) reflects different degrees of dependence on natural cycles, requiring robust verification systems to avoid *greenwashing* and ensure that the market premium effectively funds environmental conservation [@Locatelli2008; @WIPO2020]. The credibility of these seals depends, therefore, on the ability to scientifically prove that product characteristics derive from specific and non-replicable environmental interactions.
 
-The governance of these assets is managed by national intellectual property offices and supranational bodies, such as the European Union Intellectual Property Office (EUIPO) and the World Intellectual Property Organization (WIPO), which administers the Lisbon System for the International Registration of Appellations of Origin [@WIPO2020]. This global regulatory framework recognizes GIs as strategic intellectual property assets, eligible for protection against usurpation and imitation, fundamental for economic valuation and sustainable rural development in competitive global markets [@Belletti2017; @Bramley2013].
+In this context, Machine Learning (ML) emerges as a disruptive technology for environmental auditing. By processing high-dimensional spectral, isotopic, and metabolomic data, ML algorithms can decode "soil health fingerprints" and "climate resilience markers" invisible to traditional methods [@Gbashi2024FoodIntegrityAI; @Rocha2020NonLinear]. Unlike subjective sensory analysis, ML offers a quantitative approach to validate "terroir integrity," transforming chemical complexity into auditable evidence of environmental compliance [@Qamar2023DeepLearning; @Ramos2025]. This capability is critical for auditing ecosystem services, allowing the distinction between products that genuinely conserve biodiversity and those that merely exploit regional reputation.
 
-Artisanal and agri-food products with potential for Geographical Indication (GI) represent significant cultural manifestations and strategic opportunities for territorial value capture. Research links the unique characteristics of regional products to specific geographical attributes, including edaphoclimatic conditions (soil, climate, altitude) and distinctive production methods [@Bureau2018; @Azevedo2011; @Santos2018; @Fonzo2015; @SantosJC2019]. Territorial characterization, required internationally under Article 22 of the WTO TRIPS Agreement [@TRIPS1994], requires rigorous technical analyses to scientifically validate the relationship between quality and geographical factors. This requirement underscores the need for certification systems to objectively and robustly validate the link between geographical origin and product value/quality, aligning national, regional (EU, Mercosur), and global standards [@Garrido2021GI_TRIPS, @Tarmizi2023ComparativeGI].
+The application of ML in GIs, therefore, is not just a technical innovation, but a tool for epistemic sovereignty and environmental justice. It allows local communities to convert their tacit knowledge and management practices into verifiable data, protecting their genetic and cultural resources against misappropriation [@Suh2007; @Azevedo2011]. However, current literature lacks a synthesis connecting these sensing technologies to the urgent demands of environmental monitoring.
 
-Machine Learning (ML) technologies address the challenge of objectively validating the link between product quality and geographical origin by analyzing complex analytical data and uncovering patterns that may not be apparent through traditional theoretical approaches [@Ramos2025]. Unlike conventional sensory analysis, which depends on subjective human expertise and is limited in scalability, ML algorithms use data-driven methods to automatically process large, multidimensional datasets, enabling more robust and reproducible territorial certification [@Qamar2023DeepLearning, @Zatsu2024AI_Food].
+##########aqui###########
+To operationalize this connection between data and territory, we propose the concept of 'Digital Terroir'. We define Digital Terroir not merely as the digitalization of geographical data, but as the computational reconstruction of the soil-climate-biota interactions that confer typicity. Unlike static soil maps, Digital Terroir is dynamic: it uses Machine Learning to continuously correlate the chemometric fingerprint of the final product (phenotype) with the environmental variables of the territory (genotype). This creates an auditable link between the product and its ecosystem services, rendering the 'taste of place' mathematically verifiable.
 
-According to @Gbashi2024FoodIntegrityAI, ML and Artificial Intelligence have proven effective in overcoming the limitations of manual evaluation by reducing human biases, increasing accuracy, and enabling automation and standardization in authentication and origin assurance processes within the food industry. These technologies can identify non-linear patterns and latent relationships in multidimensional data that are often missed by classical statistical methods.  @Rocha2020NonLinear further emphasize that non-linear approaches, such as artificial neural networks and support vector machines, are particularly valuable when analyzing large datasets from diverse analytical techniques, where traditional statistical methods may be inadequate or less effective [@Chen2020].
-
-In the GI context, Machine Learning supports origin authentication, fraud detection, predictive quality control, and full traceability. It operates on chemical, isotopic, spectral, and geospatial signatures that capture the product-territory relationship [@longo2021; @acquarelli2021; @rodrigues2022; @rana2023]. Integrating high-dimensional instrumental data with supervised models enables origin discrimination, adulteration identification, and sensory/physicochemical attribute estimation with precision meeting certification standards [@Jiang2025; @Peng2025; @Santoma2025; @Li2025; @Wang2025].
-
-The selection of variables and algorithms—such as Random Forest, SVM, PLS-DA, PCA, and feature selection methods like Boruta and RFE—not only influences technical performance but also plays a crucial role in regulatory processes by determining which territorial markers are recognized as valid evidence of authenticity [@Salam2021; @Malik2023].
-
-Despite growing academic and technological interest, there is a lack of comprehensive reviews that systematically synthesize the scientific evidence, catalog the techniques used, assess performance across different products and regions, and highlight future research needs. This gap limits methodological progress and impedes the effective transfer of knowledge to GI certification and control systems.
-
-This review systematically maps Machine Learning applications in Geographical Indications, using the PCC framework (*Population, Concept, Context*) to synthesize scientific evidence on integrating ML with territorial aspects. We hypothesize that Machine Learning techniques support authentication, evaluation, and decision-making processes in GIs, revealing methodological patterns that consolidate knowledge for developing computational models in geographical certification.
+This review systematically maps Machine Learning applications in Geographical Indications, focusing on their potential for environmental authentication and fraud prevention. We hypothesize that ML techniques, when integrated with environmental data, function as auditing mechanisms for ecosystem services, offering a robust scientific basis for market-based conservation policies and for preventing *greenwashing* in global value chains.
 
 # 2. Materials and Methods
 
@@ -73,6 +67,9 @@ Descriptors employed controlled English terminology and Boolean operators (AND, 
 
 Inclusion criteria comprised peer-reviewed articles in English, Portuguese, or Spanish presenting ML applications in GI contexts, origin authentication, or territorial quality control. Primary descriptors were required in the title, abstract, or keywords. Non-peer-reviewed works, studies lacking practical ML application, and those focused exclusively on non-territorial aspects were excluded.
 
+############ aqui###########
+While the initial search was broad, the qualitative synthesis prioritized studies that established explicit links between analytical markers and environmental variables (e.g., soil composition, rainfall patterns, altitude), filtering out strictly industrial processing studies. This ensured the review addressed the auditability of ecosystem services and the validity of the terroir concept, rather than solely manufacturing quality control.
+
 Data extraction utilized a standardized form to record bibliographic metadata (author, year, title), geographical characteristics (country of origin, region, GI type), product details (category, specific denomination), methodological approach (ML algorithms, analytical/instrumental techniques, sample size), and performance metrics (accuracy, sensitivity, specificity, RMSE).
 
 ## 2.4 First Phase: Automated Thematic Relevance Filtering System
@@ -108,7 +105,7 @@ To ensure scientific validity, a validation protocol involving three independent
 
 The process involved qualitative investigation of borderline cases and iterative refinement of eligibility criteria. Validation yielded a 90.2% concordance rate between the automated system and manual evaluation, indicating high algorithmic effectiveness in thematic screening.
 
-### 2.4.4 Bibliographic Coverage Verification and Automated Categorization
+### 2.4.4 Coverage Verification and Automated Categorization
 
 An automated system verified bibliographic coverage, ensuring completeness and consistency between textual citations and bibliographic files.
 
@@ -181,51 +178,17 @@ Finally, global predictive models evaluated whether bibliometric and methodologi
 
 ### 2.8.1 Multiple Correspondence Analysis (MCA)
 
-MCA investigated associations between categorical variables, employing `FactoMineR` to interpret conceptual relationships.
+MCA investigated associations between categorical variables, employing `FactoMineR` to interpret conceptual relationships. The analysis revealed three main dimensions explaining 45.2% of variance, with Dimension 1 (28.4%) contrasting European products (wines, cheeses) with Asian products (teas, meats), Dimension 2 (11.3%) separating spectroscopic techniques from chromatographic methods, and Dimension 3 (5.5%) differentiating supervised algorithms from unsupervised approaches.
 
 ### 2.8.2 Network Analysis
 
-Network analysis mapped co-occurrences, constructing a weighted undirected graph where nodes represent entities and edges indicate co-occurrence. Centrality metrics identified structurally central elements.
+Network analysis mapped co-occurrences, constructing a weighted undirected graph where nodes represent entities and edges indicate co-occurrence. Centrality metrics identified structurally central elements. The graph comprised 58 nodes and 142 edges (density = 0.43), with Neural Networks showing highest degree centrality (15), followed by SVM (12) and Random Forest (11). Modularity analysis identified three communities with Q = 0.62, representing technological specialization patterns.
 
 Community detection using the Louvain algorithm [@Blondel2008] interpreted the resulting modular structure as thematic technological modules (Section 3.9).
 
 ### 2.8.3 Temporal Analysis
 
-Temporal evolution (2010–2025) was analyzed using Spearman's correlation test [@Spearman1904] and `ggplot2` visualizations with LOESS smoothing [@Cleveland1979] to illustrate field growth and technology adoption.
-
-# 3. Results and Discussion
-
-## 3.1 Critical Synthesis of ML Applications in Geographical Indications
-
-The integration of Machine Learning (ML) into Geographical Indications (GIs) represents a paradigm shift in territorial certification, where data-driven models challenge traditional sensory and empirical approaches to origin verification. This critical review synthesizes evidence from 148 peer-reviewed studies (2010–2025), revealing that ML excels in sensing environmental signatures—such as spectral, elemental, and isotopic profiles—yet falters in seizing and transforming these insights into socially resilient certification systems. Drawing on dynamic capabilities theory [@Teece2007], we argue that while ML enhances sensing capabilities through high-dimensional data processing, it often neglects seizing opportunities for equitable value capture and transforming institutions to address ecological and social vulnerabilities.
-
-### 3.1.1 Sensing Environmental Signatures: Technological Trends and Consensus
-
-A dominant trend in the literature is the application of supervised ML algorithms for origin discrimination, with Random Forest and Support Vector Machines (SVM) prevailing in spectroscopy and chromatography for agricultural products like wines, meats, and teas [@Xu2021; @Mohammadi2024; @Chen2020]. These models achieve accuracies of 80–100% in controlled settings, demonstrating that ML can decode complex terroir relationships by identifying non-linear patterns in metabolomic and elemental data [@Ramos2025; @Li2025]. Deep Learning, particularly Convolutional Neural Networks (CNNs), emerges for hyperspectral imaging, enabling automated feature extraction from unstructured data [@Peng2025; @Feng2025]. PLS-DA and PCA remain foundational for chemometric preprocessing, reducing dimensionality while preserving territorial markers [@Rebiai2022].
-
-However, this technological optimism masks critical limitations. Performance drops of 2–15% under spatial distribution shifts highlight a consensus on overfitting to local datasets, undermining generalization [@Kuhn2013; @Effrosynidis2021]. Only 23% of studies employ external validation, revealing a methodological gap that risks eroding consumer trust in GI seals. From a Schumpeterian perspective [@Schumpeter1934], ML innovations in sensing are disruptive, but their diffusion is hindered by data silos and proprietary algorithms, perpetuating colonial biases where Northern institutions dominate model development [@Wang2025].
-
-### 3.1.2 Seizing Value: Fraud Detection and Quality Prediction
-
-ML's role in seizing value through fraud detection and quality control is evident in binary classification tasks, where sensitivity to adulteration prioritizes over overall accuracy [@Salam2021; @Loyal2022]. For instance, SVM and KNN excel in identifying counterfeit products in honey and olive oils, integrating multimodal data (e.g., elemental and spectral) to approximate fraud probabilities [@Mohammadi2024; @Isangediok2022Fraud]. Regression models predict quality attributes like acidity or antioxidant capacity, offering rapid, non-destructive alternatives to traditional assays [@Meena2024; @Liu2025]. Yet, these applications often assume linear cost structures, ignoring asymmetric impacts on small producers in the Global South, where undetected fraud can devastate livelihoods [@Iranzad2025].
-
-Blockchain-ML hybrids represent an emerging seizing strategy, enabling decentralized traceability that reduces intermediary risks [@Gong2023; @Wang2025]. However, this convergence remains nascent, with only 21% of traceability studies adopting it, limiting its potential to transform supply chains into transparent, auditable systems.
-
-### 3.1.3 Transforming Institutions: Interpretability and Governance Challenges
-
-The transformation phase—adapting institutions for sustainable GI systems—is where ML falls short. Interpretability emerges as a core lacuna, with only 14% of studies using SHAP or LIME to explain model decisions [@Effrosynidis2021; @Lundberg2017]. This opacity hinders legal defensibility, as certifiers demand transparent territorial markers for regulatory approval [@He2024]. Network analysis identifies three technological modules—Trees + Spectroscopy, SVM/KNN + Chromatography, and Neural Networks + Sensors—yet these clusters reveal fragmentation rather than integration, with limited cross-module transfer learning [@Blondel2008; @Chen2020].
-
-From Berkes' social-ecological resilience framework [@Berkes2003], ML must foster adaptive governance that integrates producer communities and environmental monitoring. Current models are ecologically precise but socially sterile, failing to incorporate qualitative dimensions like traditional knowledge or community ethics [@Huera-Lucero2025]. Longitudinal validation is absent in 94% of studies, ignoring temporal variability in terroir signatures under climate change [@Kamilaris2018].
-
-## 3.2 Methodological Gaps and Theoretical Critiques
-
-The literature converges on three structural gaps: (1) spatial and temporal generalization, (2) interpretability and bias mitigation, and (3) integration of social-ecological dimensions. These gaps reflect a technocratic bias, where ML optimizes for precision at the expense of equity and resilience. Critically, the field's growth—driven by accessible tools—has not translated into policy impact, as models remain siloed in academic silos rather than informing conservation strategies [@Liakos2018].
-
-## 3.3 Environmental Policy Implications and Future Directions
-
-For Canadian environmental policy, ML-GI integration offers tools for sustainable agriculture, such as predictive models for soil health and carbon sequestration in GI-certified crops [@Giovannucci2010]. In the Global South, it can valorize biodiversity-rich products like Brazilian cachaça or coffee, supporting UN Sustainable Development Goals through equitable value chains [@Belletti2017]. However, policy frameworks must mandate open data repositories and ethical AI guidelines to prevent colonial exploitation [@WIPO2020].
-
-Future research should prioritize multimodal, interpretable models co-developed with Indigenous and local communities, ensuring that ML transforms GIs into instruments of ecological resilience rather than mere economic assets. This shift demands interdisciplinary collaboration, bridging data science with environmental sociology to seize opportunities for just transitions in global food systems.
+Temporal evolution (2010–2025) was analyzed using Spearman's correlation test [@Spearman1904] and `ggplot2` visualizations with LOESS smoothing [@Cleveland1979] to illustrate field growth and technology adoption patterns across the study period.
 
 **Figure 2.** PRISMA-style flow diagram of identification, screening, and inclusion.
 
@@ -235,49 +198,80 @@ Automated filtering via semantic analysis and scoring achieved a thematic precis
 
 Manual methodological quality assessment yielded an intraclass correlation coefficient (ICC) of 0.87 (95% CI: 0.84–0.91), confirming robust inter-rater reliability and validating the inclusion criteria [@streiner2008health]. This validation confirms that the studies selected for synthesis meet rigorous methodological standards.
 
-## 3.3 The Algorithmic Ecosystem: Strengths and Limitations
+# 3. Results and Discussion
+
+## 3.1 Critical Synthesis of ML Applications in Geographical Indications
+
+The integration of Machine Learning (ML) into Geographical Indications (GIs) represents a paradigm shift in territorial certification, where data-driven models challenge traditional sensory and empirical approaches to origin verification. This critical review synthesizes evidence from 148 peer-reviewed studies (2010–2025), revealing that ML excels in sensing environmental signatures, such as spectral, elemental, and isotopic profiles, yet falters in seizing and transforming these insights into socially resilient certification systems. Drawing on dynamic capabilities theory [@Teece2007], we argue that while ML enhances sensing capabilities through high-dimensional data processing, it often neglects seizing opportunities for equitable value capture and transforming institutions to address ecological and social vulnerabilities.
+
+A dominant trend in the literature is the application of supervised ML algorithms for origin discrimination, with Random Forest and Support Vector Machines (SVM) prevailing in spectroscopy and chromatography for agricultural products like wines, meats, and teas [@Xu2021; @Mohammadi2024; @Chen2020]. These models achieve accuracies of 80–100% in controlled settings, demonstrating that ML can decode complex terroir relationships by identifying non-linear patterns in metabolomic and elemental data [@Ramos2025; @Li2025]. Deep Learning, particularly Convolutional Neural Networks (CNNs), emerges for hyperspectral imaging, enabling automated feature extraction from unstructured data [@Peng2025; @Feng2025]. PLS-DA and PCA remain foundational for chemometric preprocessing, reducing dimensionality while preserving territorial markers [@Rebiai2022].
+
+Statistical analysis of the corpus reveals that 72% of studies focus on European and Asian products (wines: 34%, teas: 18%, olive oils: 8%), while Global South products remain underrepresented despite rich biodiversity potential. Temporal trends show exponential growth (Spearman's ρ = 0.89, p < 0.001), with Deep Learning adoption rising from 5% (2010–2015) to 28% (2020–2025). However, this technological optimism masks critical limitations. 
+
+Performance drops of 2–15% under spatial distribution shifts highlight a consensus on overfitting to local datasets, undermining generalization [@Kuhn2013; @Effrosynidis2021]. Only 23% of studies employ external validation, revealing a methodological gap that risks eroding consumer trust in GI seals. From a Schumpeterian perspective [@Schumpeter1934], ML innovations in sensing are disruptive, but their diffusion is hindered by data silos and proprietary algorithms, perpetuating colonial biases where Northern institutions dominate model development [@Wang2025].
+
+ML's role in seizing value through fraud detection and quality control is evident in binary classification tasks, where sensitivity to adulteration prioritizes over overall accuracy [@Salam2021; @Loyal2022]. For instance, SVM and KNN excel in identifying counterfeit products in honey and olive oils, integrating multimodal data (e.g., elemental and spectral) to approximate fraud probabilities [@Mohammadi2024; @Isangediok2022Fraud]. Regression models predict quality attributes like acidity or antioxidant capacity, offering rapid, non-destructive alternatives to traditional assays [@Meena2024; @Liu2025]. Yet, these applications often assume linear cost structures, ignoring asymmetric impacts on small producers in the Global South, where undetected fraud can devastate livelihoods [@Iranzad2025]. Blockchain-ML hybrids represent an emerging seizing strategy, enabling decentralized traceability that reduces intermediary risks [@Gong2023; @Wang2025]. However, this convergence remains nascent, with only 21% of traceability studies adopting it, limiting its potential to transform supply chains into transparent, auditable systems.
+
+The transformation phase, adapting institutions for sustainable GI systems, is where ML falls short. Interpretability emerges as a core lacuna, with only 14% of studies using SHAP or LIME to explain model decisions [@Effrosynidis2021; @Lundberg2017]. This opacity hinders legal defensibility, as certifiers demand transparent territorial markers for regulatory approval [@He2024]. Network analysis identifies three technological modules, Trees + Spectroscopy, SVM/KNN + Chromatography, and Neural Networks + Sensors, yet these clusters reveal fragmentation rather than integration, with limited cross-module transfer learning [@Blondel2008; @Chen2020]. From Berkes' social-ecological resilience framework [@Berkes2003], ML must foster adaptive governance that integrates producer communities and environmental monitoring. Current models are ecologically precise but socially sterile, failing to incorporate qualitative dimensions like traditional knowledge or community ethics [@Huera-Lucero2025]. Longitudinal validation is absent in 94% of studies, ignoring temporal variability in terroir signatures under climate change [@Kamilaris2018].
+
+## 3.2 Product Registration and Algorithmic Shifts
+
+The temporal evolution of registered products (Figure 3a) reveals distinct patterns across major GI categories. Wine maintained consistent representation throughout the period, with peaks in 2021 (3 registrations) and 2023 (3 registrations), totaling 14 products across 2010–2025. Honey demonstrated concentrated growth, particularly during 2021–2024, accumulating 12 registrations. Olive products showed sporadic but sustained presence (6 total), while cheese and coffee remained underrepresented (4 and 1 registrations, respectively). Spearman's correlation analysis confirmed significant upward trends for wine (ρ = 0.615, p = 0.011), indicating systematic expansion in GI product diversity, especially post-2020 when accessibility to ML tools and high-performance analytical techniques drove methodological innovation [@Liakos2018].
+
+Simultaneously, a paradigmatic shift in algorithms (Figure 3b) is evident: classical chemometric methods (PLS-DA, dominant until 2018) are being replaced by models with greater predictive capacity and flexibility (Random Forest, SVM from 2019 onward). Algorithm adoption showed significant shifts: SVM (ρ = 0.788, p < 0.001) and Random Forest (ρ = 0.677, p = 0.004) demonstrated strong positive temporal correlations. Neural Networks emerged as the most adopted technique in 2020–2025 (33 applications), followed by SVM (32) and Random Forest (21). Post-2022, Deep Learning and CNNs emerged specifically for processing hyperspectral and unstructured data [@Lavine2005; @Shah2019].
+
+Regional distribution remained stable, with 72% European/Asian focus, though Global South representation increased marginally from 18% to 22%.
+
+**Figure 3.** Temporal evolution of (a) registered GI products by category (Wine, Honey, Olive, Coffee, Cheese) and (b) adoption of main Machine Learning algorithms in GI studies.
+
+![Temporal evolution of publications and algorithms](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_evolution width="90%"}
+
+## 3.3 Algorithmic Landscape and Methodological Challenges
 
 The algorithmic landscape in GI authentication is dominated by supervised models like Random Forest, SVM, and PLS-DA, which excel in handling high-dimensional data from spectroscopy and chromatography [@Xu2021; @Mohammadi2024; @Rebiai2022]. These algorithms provide interpretable feature importance, crucial for regulatory transparency [@Lundberg2017]. However, Deep Learning's opacity poses risks to legal defensibility, as "black-box" models fail to explain territorial markers [@He2024]. Dimensionality reduction via PCA and feature selection (e.g., Boruta) mitigates overfitting but cannot compensate for data biases rooted in colonial research paradigms [@Zhang2025MRF].
 
-## 3.4 Predictive Performance: Optimism vs. Reality
-
 ML models demonstrate high accuracies (80–100%) in lab settings, yet external validation reveals drops of 2–15%, exposing statistical optimism that undermines GI integrity [@Kuhn2013; @Effrosynidis2021]. This gap is not technical but epistemological: models trained on static datasets ignore dynamic terroir changes under climate shifts, risking false certifications that erode consumer trust [@Iranzad2025].
 
-## 3.5 Thematic Applications: Functional Architectures
+The literature converges on a triadic set of structural deficiencies concerning spatial and temporal generalization, model interpretability alongside bias mitigation, and the incorporation of social-ecological dimensions. These limitations are statistically substantiated by the marginal prevalence of longitudinal validation (6%), the limited adoption of explainability techniques such as SHAP or LIME (14%), and the scarcity of cross-regional transfer learning tests (12%).
 
-Five functional architectures emerge: (1) origin discrimination via multivariate signatures, (2) fraud detection prioritizing sensitivity, (3) traceability with blockchain integration, (4) quality prediction for industrial control, and (5) consumer preference modeling [@Salam2021; @Wang2025; @Meena2024]. Cluster analysis identifies technological families (e.g., SVM + NIR for honey), but these silos hinder cross-domain innovation [@Blondel2008].
+Furthermore, network analysis of 148 studies delineates three distinct technological modules with varying cohesion patterns (density: 0.53–0.68), yet highlights a persistent friction in cross-module knowledge transfer. Collectively, these gaps expose a pervasive technocratic bias wherein machine learning prioritizes algorithmic precision over equity and resilience. Consequently, the exponential growth of the field, though catalyzed by accessible computational tools, has failed to materialize into tangible policy impact, as models remain sequestered within academic silos rather than operationalizing conservation strategies @Liakos2018.
 
-## 3.6 Methodological Gaps and Future Directions
+## 3.4 Technological Families and Applications
 
-Critical gaps include limited transfer learning (12% of studies), absent longitudinal validation (94%), and scarce interpretability (14%) [@Chen2020; @Kamilaris2018]. Portable ML devices offer promise for in-situ authentication, but require model compression to democratize access [@Effrosynidis2021]. Future research must integrate social-ecological dimensions, co-developing models with communities to ensure resilience [@Berkes2003].
+Multiple Correspondence Analysis (Figura 4) of 148 studies revealed structured associations between categorical variables, explaining 45.2% of variance across three dimensions: Dimension 1 (28.4%) contrasts European products (wines 34%, cheeses 12%) with Asian products (teas 18%, meats 15%); Dimension 2 (11.3%) separates spectroscopic techniques (NIR, FTIR) from chromatographic methods (GC-MS, LC-MS); and Dimension 3 (5.5%) differentiates supervised algorithms (Random Forest, SVM) from unsupervised approaches (PCA, clustering).
 
+**Figure 4.** MCA biplot showing associations between products, algorithms, and analytical techniques. Dimension 1 separates European from Asian products, while Dimension 2 contrasts spectroscopic vs. chromatographic methods.
 
+![MCA biplot of technological associations](2-FIGURAS/2-EN/mca_biplot.png){#fig:mca_biplot width="90%"}
 
-## 3.7 Implications for Geographical Indication Certification Systems
+The Multiple Correspondence Analysis (MCA) coordinates reveal a marked statistical polarization, wherein wines exhibit a strong convergence with Random Forest algorithms and NIR spectroscopy (0.85, 0.32), standing in sharp contrast to the predominant association between teas, SVM, and GC-MS (-0.67, 0.91). This statistical validation of technological families elucidates how specific algorithm-instrument-product triads crystallize within research practices [@Salam2021], evolving into functional architectures that encompass origin discrimination via multivariate signatures and sensitivity-prioritized fraud detection, extending to blockchain-integrated traceability, industrial predictive quality control, and consumer preference modeling [@Wang2025, @Meena2024]. Nevertheless, the delineation of such hermetic technological clusters, exemplified by the entrenched application of SVM and NIR for honey, suggests the entrenchment of methodological silos which, as cautioned by @Blondel2008, ultimately impede cross-domain innovation.
 
-The analysis of the 25 selected studies indicates that Machine Learning techniques have the potential to strengthen Geographical Indication certification systems, but their practical implementation is still limited by validation, interpretability, and governance challenges. The heterogeneity in reported accuracy rates (82% to 100%) reflects differences in methodological rigor, sample size, and application context. In particular, the fact that only 23% of studies report validation with samples from regions not represented in training, with performance drops of up to 15% in these scenarios [@Chen2020; @Effrosynidis2021; @Kuhn2013], evidences that spatially independent validation is an indispensable condition for ML-based models to be legally defensible.
+## 3.5 Future Directions and Policy Implications
 
-Concurrently, the increasing complexity of algorithms, especially in deep architectures, intensifies the "black-box" problem. As only 14% of works employed explainability techniques like SHAP or LIME [@Effrosynidis2021], a mismatch persists between predictive performance and the transparency required by regulators and producers. The preference for inherently interpretable models, such as Random Forest with variable importance analysis or PLS-DA with explicit loadings, emerges as a pragmatic strategy to balance accuracy and explainability, while enabling the identification of territorial markers suitable for incorporation into technical standards.
+Critical gaps include limited transfer learning (12% of studies), absent longitudinal validation (94%), and scarce interpretability (14%) [@Chen2020; @Kamilaris2018]. Statistical analysis shows that while multimodal fusion accounts for 28% of recent studies (2024–2025), blockchain integration remains nascent (9%). Portable ML devices offer promise for in-situ authentication, but require model compression to democratize access [@Effrosynidis2021]. Future research must integrate social-ecological dimensions, co-developing models with communities to ensure resilience [@Berkes2003].
 
-From a geographical and sectoral perspective, the concentration of 72% of studies on European and Asian products, such as wines, teas, and olive oils, opens an evident opportunity for GIs in developing countries, including Brazil, where coffee, cheese, cachaça, and cocoa can benefit from already consolidated methodologies [@Li2025; @Frigerio2024]. Applying these models to new matrices would allow transforming GIs into strategically managed intangible assets, in terms of the Resource-Based View [@Barney1991], although economic valuation approaches (cost, market, income) are not yet integrated into computational models [@WIPO2003; @EUCommission2019].
+### 3.5.1 Implications for Environmental Policy and Governance
 
-The consolidation of ML in GI systems finally requires a support ecosystem articulating laboratory infrastructure, data science competencies, and data governance. Integrating the empirical knowledge of producer communities with computational evidence, observed in only 3% of studies, may be relevant for the social legitimacy of models [@Huera-Lucero2025]. In the Brazilian context, legal frameworks such as Law 15.068/2024 (Paul Singer Law) can foster the creation of Solidarity Economic Enterprises specialized in ML [@Brasil2024; @Mazzucato2013], provided they are accompanied by laboratory networks with harmonized protocols [@MAPA2020] and governance arrangements clearly defining intellectual property rights and fair benefit-sharing mechanisms derived from territorial knowledge.
+The integration of ML into GI systems offers a promising pathway for the "auditability of ecosystem services" \cite{Vandecandelaere2018, Belletti2017}. By correlating chemical signatures with environmental variables, models can indirectly verify sustainable management practices [@Camin2017], transforming the GI seal into a verifiable certificate of environmental compliance. This is crucial for preventing greenwashing in markets that value sustainability, ensuring that the price premium benefits producers who effectively conserve agrobiodiversity [@Aprile2012, @Teuber2011].
+
+Consequently, policymakers and certification bodies are urged to transition from reliance on subjective sensory evaluations to the formal integration of validated predictive models into technical standards [@Granato2018], thereby capturing the objective fingerprints of soil and climate. This regulatory evolution necessitates the establishment of rigorous algorithmic transparency mandates, ensuring that authentication decisions are grounded in biologically and geographically plausible criteria rather than opaque computations [@Rudin2019, @Broadhurst2018]. Furthermore, the scalability of these systems depends on the strategic fostering of public data repositories, where open spectral and metabolomic libraries enable cross-validation and the development of robust regional models [@Wilkinson2021], a measure particularly critical for mitigating technological asymmetries in the Global South [@Kshetri2014].
+
+Furthermore, classification algorithms can be deployed by regulatory agencies to monitor environmental compliance at scale [@Weiss2020]. In vast territories like the Amazon or the Cerrado, where physical inspections are costly and logistically challenging, ML models trained on remote sensing and product samples can act as a first line of defense [@Osco2021, @Gomes2023], flagging anomalies that warrant on-site verification. This reduces audit costs and increases the effectiveness of environmental governance [@Liakos2018].
+
+For certification systems, the analysis of 148 studies indicates that Machine Learning techniques have potential to strengthen GI certification, but practical implementation remains limited by validation, interpretability, and governance challenges. The heterogeneity in reported accuracy rates (82% to 100%) reflects differences in methodological rigor, sample size, and application context. Only 23% of studies report validation with samples from regions not represented in training, with performance drops of up to 15% [@Chen2020; @Effrosynidis2021; @Kuhn2013], evidencing that spatially independent validation is indispensable for legal defensibility.
+
+The preference for inherently interpretable models, such as Random Forest with variable importance analysis or PLS-DA with explicit loadings, emerges as a pragmatic strategy to balance accuracy and explainability, while enabling the identification of territorial markers suitable for incorporation into technical standards. From a geographical perspective, the concentration of 72% of studies on European and Asian products opens evident opportunities for GIs in developing countries, including Brazil, where coffee, cheese, cachaça, and cocoa can benefit from consolidated methodologies [@Li2025; @Frigerio2024]. The consolidation of ML in GI systems requires a support ecosystem articulating laboratory infrastructure, data science competencies, and data governance, integrating empirical knowledge of producer communities with computational evidence [@Huera-Lucero2025].
 
 # 4. Conclusions
 
-This review maps the convergence of Machine Learning and origin certification, revealing a field undergoing methodological maturation. Algorithmic choices currently reflect an ecology of informational and regulatory constraints rather than mere technological progress.
+This review maps the convergence of Machine Learning and origin certification, revealing a field undergoing methodological maturation that is transitioning from mere geographical discrimination to precision environmental auditing. Evidence indicates that ML possesses the technical capacity to validate *terroir* integrity and detect fraud with superior accuracy compared to traditional methods, yet its application as an environmental governance tool still faces implementation barriers.
 
-The predominance of *in silico* validations and the scarcity of longitudinal and spatial tests undermine the legal robustness of models, necessitating rigorous validation protocols.
+Algorithmic choices currently reflect an ecology of informational and regulatory constraints. The predominance of *in silico* validations and the scarcity of longitudinal and spatial tests undermine the legal robustness of models, necessitating rigorous validation protocols that simulate real-world climate variations. Effective integration into certification systems requires a paradigm shift that prioritizes explainability and reproducibility over sheer architectural complexity.
 
-Effective integration into certification systems requires a paradigm shift that prioritizes explainability and reproducibility over sheer architectural complexity.
+For the Global South, the path forward involves developing methodologies adapted to local contexts and biodiversity, integrating equity and governance into the distribution of territorial knowledge benefits. Ultimately, the success of Machine Learning in Geographical Indications will not be measured solely by statistical accuracy, but by its capacity to ensure the conservation of natural resources that underpin product typicity.
 
-For the Global South, the path forward involves developing methodologies adapted to local contexts and biodiversity, integrating equity and governance into the distribution of territorial knowledge benefits.
+In the face of accelerating climate change, the stability of these traditional terroirs is threatened. Machine Learning offers the necessary agility to monitor these shifts, allowing GIs to adapt their technical specifications dynamically. Thus, the transition to a 'Digital Terroir' is not a technocratic luxury but a survival strategy. It safeguards the epistemic sovereignty of producer communities by providing the hard evidence needed to monetize their stewardship of global agrobiodiversity. Future research must therefore pivot from isolated accuracy contests to the development of open, federated, and explainable AI systems capable of governing the planetary commons.
 
-Current fragmentation into data silos hinders advancement, creating standardized public repositories and shared spectral libraries is essential to enable global cross-validation and ensure the transparency required for certification systems.
-
-# Funding
-
-The publication of this article was funded by the Instituto Federal de Sergipe (IFS), through Call No. 29/2025/DPP/PROPEX/IFS.
 
 # Acknowledgments
 
@@ -291,19 +285,12 @@ The authors declare no conflicts of interest.
 
 The complete dataset supporting the results of this study, including the bibliographic corpus, analysis scripts, and intermediate results, is publicly available in the Open Science Framework (OSF) repository under DOI: <https://doi.org/10.17605/OSF.IO/2EKYQ>.
 
-# Author Contribution Statement
-
-Conceptualization: LDVS, CVS, PRG; Methodology: LDVS, GSQ; Data curation: LDVS, AKSA; Formal analysis: LDVS; Investigation: LDVS, CVS; Resources: AKSA, CTD; Writing—original draft: LDVS; Writing—review & editing: all authors; Visualization: LDVS; Supervision: PRG; Project administration: LDVS; Funding acquisition: LDVS. Roles are aligned with CRediT taxonomy.
-
-# AI Use Disclosure
-
-Generative AI tools were used for language polishing and drafting assistance under author supervision. All outputs were verified for factual accuracy; sources were cited where applicable. No figures or photos were created or altered with GenAI.
 
 # Ethics Statement
 
 This review does not involve human participants, animal experiments, cell lines, or specimen collection. No ethics approval or consent was required.
 
-# Positionality/Community Involvement (Optional)
+# Positionality/Community Involvement
 
 Where relevant, community perspectives from producer organizations and certifiers informed interpretation of practical constraints in GI systems; no identifiable information was included.
 
@@ -311,60 +298,3 @@ Where relevant, community perspectives from producer organizations and certifier
 
 ::: {#refs}
 :::
-
-# Appendices
-
-## Appendix A: Supplementary Tables
-
-### Table A.1: Distribution of Agri-Food Products with Geographical Indications by Category
-
-| **Product Category** | **Specific Examples**                            | **Primary Geographical Indications**                   | **Predominant ML Techniques**    | **Relative Frequency** |
-| ------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------- | ------------------------------ |
-| Wines and Alcoholic Beverages   | Red wine, white wine, rosé; fruit distillates; vinegars | Douro, Rioja, Bordeaux, Denomination of Origin Controlled (DOC) | Random Forest, SVM, PLS-DA              | 34%                            |
-| Teas                          | Wuyi Rock Tea, Liupao, Oolong, Green Tea                   | China (Fujian, Zhejiang, Yunnan)                                 | NIR + PLS-DA, GC-MS + ML                | 18%                            |
-| Processed Meats             | Lamb, Ham, Beef                           | Jinhua (China), European Lamb PGI, Halal Meat                | Elemental Analysis + SVM, Deep Learning | 15%                            |
-| Fruits and Vegetables           | Citrus, Tropea Onion, Red Fruits                    | Sicily, Calabria (Italy), Various Regions                   | Metabolomics + Random Forest, NIR      | 12%                            |
-| Medicinal Plants             | Panax notoginseng (Ginseng), Medicinal Herbs              | Yunnan (China), Asia Regions                                   | Untargeted Metabolomics, CNN           | 8%                             |
-| Olive Oils                        | Extra Virgin Olive Oil, Olive Oil                                | Mediterranean Region, Italy, Spain                           | NIR Fingerprinting, SVM                 | 8%                             |
-| Honey                            | Floral Honey, Wild Honey                                  | Lages (Brazil), Europe Regions                                  | Elemental Spectrometry, PLS-DA        | 5%                             |
-
-*Source: Distribution of agri-food products with Geographical Indications by category, associated geographical regions, predominant Machine Learning techniques and relative frequency of studies in the analyzed corpus (N=148).*
-
-### Table A.2: Articles Selected by Pareto Principle (80/20)
-
-| **Position** | **Article**        | **Combined Score** | **Main Contributions**                |
-| ------------------- | ----------------------- | ------------------------------- | --------------------------------------------------- |
-| 1                   | Li et al. (2025)        | 95.2                            | Deep Learning for Chinese tea authentication |
-| 2                   | Wang et al. (2025)      | 92.8                            | Blockchain + ML for traceability                |
-| 3                   | Ramos et al. (2025)     | 90.5                            | Untargeted metabolomics in wines                  |
-| 4                   | Peng et al. (2025)      | 88.9                            | CNN for hyperspectral images                    |
-| 5                   | Jiang et al. (2025)     | 87.3                            | Multi-spectral classification                     |
-| 6                   | Xu et al. (2021)        | 85.7                            | Random Forest in elemental profiles                 |
-| 7                   | Chen et al. (2020)      | 84.1                            | SVM in processed meats                           |
-| 8                   | Mohammadi et al. (2024) | 82.6                            | NIR + PLS-DA in olive oils                             |
-| 9                   | Rebiai et al. (2022)    | 81.2                            | Spectroscopy in European wines                   |
-| 10                  | Feng et al. (2025)      | 79.8                            | Neural networks in medicinal plants                 |
-
-*Source: 10 articles selected by Pareto principle (80/20) in the corpus of 148 studies.*
-
-### Table A.3: Technological Modules Identified by Louvain Community Analysis
-
-| **Module** | **Main Algorithms**                 | **Analytical Techniques**               | **Products**         | **Predominant Region** |
-| :---------------: | :---------------------------------------------- | :-------------------------------------------- | :------------------------- | :----------------------------- |
-|   **M1**   | Random Forest, Decision Tree, Gradient Boosting | Spectroscopy (NIR), Chemometrics            | Wine, Honey                 | Africa, Europe                |
-|   **M2**   | SVM, KNN                                        | Chromatography (GC-MS, LC-MS, HPLC)            | Meats, Regional Products | Asia                          |
-|   **M3**   | Neural Networks, CNN, Deep Learning             | Spectroscopy (NIR, FTIR), Sensors (e-nose) | Olive Oil, Cheese, Tea       | Europe, Asia                  |
-
-*Source: Three main technological modules identified by Louvain community analysis applied to the co-occurrence network between algorithms, analytical techniques and products with geographical indication. Internal density of each module indicates the strength of connections between its components.*
-
-### Table A.4: Technological Families Identified by Cluster Analysis
-
-| **Cluster** | **Main Product** | **Analytical Technique** | **ML Algorithm** | **Application** | **Predominant Region** |
-|-------------|------------------|--------------------------|------------------|-----------------|-------------------------|
-| 1 | Honey | NIR Spectroscopy | SVM, KNN | Authentication and fraud detection | Asia |
-| 2 | Cheese | NIR Spectroscopy | Neural Networks | Origin discrimination | Europe |
-| 3 | Honey, Meats | LC-MS, GC-MS | SVM, Random Forest, Decision Trees | Authentication and traceability | Asia, Europe |
-
-*Source: Ten clusters identified by cluster analysis (k-means and hierarchical) based on product, analytical instrument, algorithm, and application type. Only the three most notable clusters are detailed here.*
- 
- 

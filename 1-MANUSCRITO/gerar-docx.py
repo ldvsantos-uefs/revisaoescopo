@@ -71,7 +71,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     ])
     
     # Adicionar modelo de formatação se existir
-    modelo = Path("modelo_formatacao_new.docx")
+    modelo = Path("modelo_formatacao.docx")
     if modelo.exists():
         cmd.extend(["--reference-doc", str(modelo)])
     
@@ -204,19 +204,31 @@ def main():
     
     # Contador de sucesso
     sucessos = 0
-    total = 1
+    total = 2
     
     # ========================================================================
     # GERAR REVISÃO DE ESCOPO
     # ========================================================================
-    md_rs = Path("revisao_escopo_en.md")
-    docx_rs = Path("revisao_escopo_en.docx")
+    # Versão EN
+    md_en = Path("revisao_escopo_en.md")
+    docx_en = Path("revisao_escopo_en.docx")
     
-    if not md_rs.exists():
-        print(f"\nArquivo {md_rs} não encontrado, pulando...")
+    if not md_en.exists():
+        print(f"\nArquivo {md_en} não encontrado, pulando EN...")
     else:
-        result = gerar_docx(md_rs, docx_rs, bib_file, csl_file)
+        result = gerar_docx(md_en, docx_en, bib_file, csl_file)
         if result == 0:
+            sucessos += 1
+
+    # Versão PT
+    md_pt = Path("revisao_escopo_pt.md")
+    docx_pt = Path("revisao_escopo_pt.docx")
+
+    if not md_pt.exists():
+        print(f"\nArquivo {md_pt} não encontrado, pulando PT...")
+    else:
+        result_pt = gerar_docx(md_pt, docx_pt, bib_file, csl_file)
+        if result_pt == 0:
             sucessos += 1
 
     # Gerar PDF opcionalmente
