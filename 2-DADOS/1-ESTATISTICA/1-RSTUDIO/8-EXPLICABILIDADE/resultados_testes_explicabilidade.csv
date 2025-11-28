@@ -1,0 +1,5 @@
+teste,estatistica,p_valor,interpretacao
+t-test (Acurácia),1.26447882479187,0.2180416236293452,ns
+Mann-Whitney (Tempo),505,1.3985344869087461e-5,Sig.
+Mann-Whitney (Confiança),62.5,4.849528085591301e-13,Sig.***
+Spearman (Expl. vs Acur.),-0.4813035040726464,5.929827809282568e-10,ρ = -0.481

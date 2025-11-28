@@ -1,0 +1,9 @@
+algoritmo,categoria_explicabilidade,n,explicabilidade_score,acuracia_media,uso_xai_pct
+Deep Learning,Low,15,2,94.69947404146228,6.666666666666667
+XGBoost,Medium,2,6,93.0324718244631,0
+Neural Network,Low,28,3,92.11702647926397,14.285714285714285
+Random Forest,Medium,33,5,90.51040126376961,6.0606060606060606
+SVM,Medium,47,4,90.42511576277194,23.404255319148938
+Decision Tree,High,11,9,84.66885212762455,0
+PLS-DA,High,8,7,84.62820234793082,25
+Naive Bayes,High,4,8,83.49535589636625,0

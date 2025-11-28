@@ -1,0 +1,6 @@
+metodo_xai,n,percentual
+SHAP,10,50
+LIME,5,25
+Attention Mechanisms,2,10
+Feature Importance,2,10
+Partial Dependence,1,5

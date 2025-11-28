@@ -71,7 +71,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     ])
     
     # Adicionar modelo de formatação se existir
-    modelo = Path("modelo_formatacao.docx")
+    modelo = Path("modelo_formatacao_new.docx")
     if modelo.exists():
         cmd.extend(["--reference-doc", str(modelo)])
     

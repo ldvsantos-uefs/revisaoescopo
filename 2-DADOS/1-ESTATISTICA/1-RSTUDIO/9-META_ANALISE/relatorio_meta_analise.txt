@@ -1,0 +1,77 @@
+=============================================================================
+RELATÓRIO: META-ANÁLISE DE ACURÁCIAS EM ML PARA IG
+Framework: Digital Terroir - Quantitative Synthesis
+Data: 28/11/2025 
+=============================================================================
+
+1. SÍNTESE GERAL
+----------------
+Estudos incluídos: 129 
+Acurácia pooled (efeitos aleatórios): 90.66% [IC 95%: 89.81 - 91.45]
+Heterogeneidade (I²): 58.00% 
+Interpretação: Moderada 
+
+2. HETEROGENEIDADE ENTRE ESTUDOS
+--------------------------------
+Tau² (variância entre estudos): 0.1704
+H² (heterogeneidade relativa): 2.38
+Teste Q: Q(128) = 309.71, p = 0.0000
+Conclusão: Heterogeneidade SIGNIFICATIVA entre estudos 
+
+3. ACURÁCIAS POR ALGORITMO (TOP 5)
+----------------------------------
+1. PLS-DA: 92.95% [89.28 - 95.43] (n=8)
+2. Random Forest: 91.33% [89.68 - 92.75] (n=37)
+3. Neural Network: 90.81% [88.75 - 92.52] (n=32)
+4. Deep Learning: 90.51% [87.08 - 93.09] (n=15)
+5. SVM: 90.33% [88.84 - 91.65] (n=47)
+
+4. ACURÁCIAS POR PRODUTO (TOP 5)
+--------------------------------
+1. Mel: 92.34% [90.53 - 93.83] (n=26)
+2. Queijo: 91.53% [88.89 - 93.59] (n=17)
+3. Café: 90.36% [87.45 - 92.65] (n=15)
+4. Chá: 90.35% [88.30 - 92.08] (n=28)
+5. Vinho: 90.11% [88.26 - 91.70] (n=45)
+
+5. META-REGRESSÃO
+-----------------
+Efeito do ANO (por ano): 0.0211 (p = 0.0866)
+Interpretação: Sem tendência temporal significativa 
+
+Efeito do TAMANHO AMOSTRAL: -0.0875 (p = 0.0449)
+Interpretação: Amostras maiores associadas a maior acurácia 
+
+6. VIÉS DE PUBLICAÇÃO
+---------------------
+Teste de Egger: z = 40.02, p = 0.0000
+Rank Correlation: τ = 0.991, p = 0.0000
+Trim-and-Fill: 42 estudos faltantes imputados
+Conclusão geral: VIÉS DE PUBLICAÇÃO DETECTADO (estudos negativos sub-reportados) 
+
+7. IMPLICAÇÕES PARA O TERROIR DIGITAL
+--------------------------------------
+• Acurácia média consolidada: ~91% (robusta entre estudos)
+• Heterogeneidade: MODERADA (generalizável com cautela)
+• Algoritmos mais eficazes: Deep Learning, Neural Network, Random Forest
+• Produtos com melhor desempenho: Vinho, Mel, Café
+• Recomendação: Estabelecer threshold mínimo de 85% para operacionalização
+• Necessidade: Validação externa obrigatória para mitigar viés de publicação
+
+8. LIMITAÇÕES
+-------------
+• Alta heterogeneidade (I² > 75%) limita generalizações diretas
+• Possível viés de publicação (estudos falhos não reportados)
+• Variabilidade em métodos de validação entre estudos
+• Ausência de padronização em métricas de performance
+
+=============================================================================
+Arquivos gerados:
+  - dados_meta_analise.csv
+  - meta_analise_geral.csv
+  - meta_analise_por_[algoritmo|produto|regiao|validacao].csv
+  - meta_regressao_coeficientes.csv
+  - analise_vies_publicacao.csv
+  - 7 visualizações (PNG)
+  - relatorio_meta_analise.txt
+=============================================================================

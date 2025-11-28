@@ -1,0 +1,47 @@
+=============================================================================
+RELATÓRIO DE ANÁLISE: IMPACTO DA VALIDAÇÃO ESPACIAL
+Framework: Digital Terroir - Inferential Auditing System
+Data: 28/11/2025 
+=============================================================================
+
+1. VISÃO GERAL
+-------------
+Total de estudos analisados: 148 
+Estudos COM validação espacial: 34 (23.0%)
+Estudos SEM validação espacial: 114 (77.0%)
+
+2. RESULTADOS PRINCIPAIS
+------------------------
+Queda média de desempenho (COM validação): 5.62% (±6.78)
+Queda média de desempenho (SEM validação): 11.82% (±6.48)
+Diferença absoluta: 6.20 pontos percentuais
+
+3. SIGNIFICÂNCIA ESTATÍSTICA
+----------------------------
+Mann-Whitney U: 2900.00
+p-valor: < 0.001***Cohen's d: 0.948 (large)
+Interpretação: A diferença é estatisticamente SIGNIFICATIVA 
+
+4. IMPLICAÇÕES PARA O TERROIR DIGITAL
+--------------------------------------
+• Modelos sem validação espacial apresentam queda de desempenho 110.4% maior
+• Risco de sobreajuste a contextos locais: ALTO
+• Aplicabilidade como Gêmeo Digital Inferencial: COMPROMETIDA
+• Recomendação: Validação espacial obrigatória para operacionalização
+
+5. RECOMENDAÇÕES METODOLÓGICAS
+------------------------------
+1. Implementar particionamento geográfico em todos os estudos
+2. Testar transferibilidade entre regiões comparáveis
+3. Reportar métricas de performance degradation explicitamente
+4. Estabelecer thresholds de re-calibração baseados em drift espacial
+
+=============================================================================
+Análise concluída com sucesso!
+Arquivos gerados:
+  - dados_validacao_espacial.csv
+  - resumo_validacao_espacial.csv
+  - resultados_testes_estatisticos.csv
+  - 6 visualizações (PNG)
+  - relatorio_validacao_espacial.txt
+=============================================================================

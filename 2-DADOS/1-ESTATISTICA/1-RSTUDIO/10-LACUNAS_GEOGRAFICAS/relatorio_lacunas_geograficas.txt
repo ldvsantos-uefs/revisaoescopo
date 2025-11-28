@@ -1,0 +1,88 @@
+=============================================================================
+RELATÓRIO: LACUNAS GEOGRÁFICAS EM PESQUISA DE ML PARA IG
+Framework: Digital Terroir - Global Coverage Assessment
+Data: 28/11/2025 
+=============================================================================
+
+1. VISÃO GERAL
+-------------
+Total de estudos: 148 
+Total de países: 25 
+Total de continentes: 4 
+Período analisado: 2010-2025
+
+2. DISTRIBUIÇÃO POR CONTINENTE
+------------------------------
+1. Europe: 67 estudos (45.3%) em 8 países
+2. Asia: 40 estudos (27.0%) em 6 países
+3. Americas: 29 estudos (19.6%) em 7 países
+4. Africa: 12 estudos (8.1%) em 4 países
+
+3. CONCENTRAÇÃO GEOGRÁFICA
+--------------------------
+Europa + Ásia: 72.3% dos estudos
+Resto do mundo: 27.7% dos estudos
+Índice de Herfindahl (concentração): 0.323
+
+4. PAÍSES COM LACUNAS CRÍTICAS (Top 5)
+--------------------------------------
+1. China: 15 estudos para 2500 IGs (taxa: 0.60 estudos/100 IGs)
+2. Itália: 12 estudos para 842 IGs (taxa: 1.43 estudos/100 IGs)
+3. Estados Unidos: 4 estudos para 280 IGs (taxa: 1.43 estudos/100 IGs)
+4. França: 15 estudos para 560 IGs (taxa: 2.68 estudos/100 IGs)
+5. Índia: 10 estudos para 370 IGs (taxa: 2.70 estudos/100 IGs)
+
+5. CORRELAÇÃO IGs vs ESTUDOS
+----------------------------
+Spearman's ρ: 0.835
+p-valor: 0.0000
+Interpretação: Correlação POSITIVA FORTE (mais IGs = mais estudos) 
+
+6. PRODUTOS MAIS ESTUDADOS POR REGIÃO
+-------------------------------------
+Europa: Vinho (dominante em países mediterrâneos)
+Ásia: Chá (China, Índia, Japão)
+Américas: Café, Mel (Brasil, Colômbia)
+África: SUB-REPRESENTADA em todos os produtos
+
+7. TENDÊNCIAS TEMPORAIS
+-----------------------
+Crescimento 2010-2025:
+  Africa: +1 estudos (+25%)
+  Americas: +14 estudos (+233%)
+  Asia: +16 estudos (+400%)
+  Europe: +23 estudos (+256%)
+
+8. IMPLICAÇÕES PARA O TERROIR DIGITAL
+--------------------------------------
+• Concentração excessiva: 72% dos estudos em Europa/Ásia
+• África e Oceania: CRITICAMENTE SUB-REPRESENTADAS
+• Necessidade: Expandir pesquisa para regiões com alta densidade de IGs
+  (China, Índia, Brasil, África do Sul)
+• Risco: Framework desenvolvido com viés geográfico (clima temperado)
+• Recomendação: Estabelecer parcerias Sul-Sul para transferência tecnológica
+
+9. REGIÕES PRIORITÁRIAS PARA EXPANSÃO
+-------------------------------------
+1. China (2500 IGs, apenas ~15 estudos)
+2. Índia (370 IGs, ~10 estudos)
+3. Brasil (98 IGs, ~10 estudos)
+4. Estados Unidos (280 IGs, ~4 estudos)
+5. África Subsaariana (baixíssima cobertura)
+
+10. LIMITAÇÕES
+--------------
+• Dados de IGs podem estar desatualizados/incompletos
+• Análise baseada em publicações em inglês (viés linguístico)
+• Possível sub-representação de estudos locais não indexados
+
+=============================================================================
+Arquivos gerados:
+  - dados_lacunas_geograficas.csv
+  - resumo_por_continente.csv / resumo_top15_paises.csv
+  - analise_lacunas_criticas.csv
+  - temporal_por_continente.csv / crescimento_por_periodo.csv
+  - matriz_produto_regiao.csv
+  - 8 visualizações (PNG)
+  - relatorio_lacunas_geograficas.txt
+=============================================================================

@@ -1,0 +1,4 @@
+teste,estatistica,p_valor,interpretacao
+Mann-Whitney (queda),2900,1.1714607263598583e-5,p < 0.001***
+Teste t (externa),-4.043450810410457,1.716297294778695e-4,p < 0.001***
+Cohen's d,0.9477995361134485,NA,0.95 (large)

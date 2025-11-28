@@ -1,0 +1,13 @@
+pais,continente,iso3c,n_estudos,n_igs,taxa_pesquisa,categoria
+China,Asia,CHN,15,2500,0.6,Gap crítico
+Itália,Europe,ITA,12,842,1.4251781472684086,Gap crítico
+Estados Unidos,Americas,USA,4,280,1.4285714285714286,Gap crítico
+França,Europe,FRA,15,560,2.6785714285714284,Gap moderado
+Índia,Asia,IND,10,370,2.7027027027027026,Gap moderado
+Reino Unido,Europe,GBR,3,85,3.5294117647058822,Gap moderado
+Alemanha,Europe,DEU,4,95,4.2105263157894735,Gap moderado
+Grécia,Europe,GRC,5,110,4.545454545454546,Gap moderado
+Japão,Asia,JPN,6,120,5,Cobertura baixa
+Espanha,Europe,ESP,10,190,5.263157894736842,Cobertura baixa
+Portugal,Europe,PRT,8,145,5.517241379310345,Cobertura baixa
+Brasil,Americas,BRA,10,98,10.204081632653061,Cobertura adequada

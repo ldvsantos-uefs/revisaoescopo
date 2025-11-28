@@ -1,0 +1,47 @@
+========== REGRESSÃO LOGÍSTICA ==========
+
+
+Call:
+glm(formula = alta_performance ~ validacao_espacial + algoritmo + 
+    produto, family = binomial(link = "logit"), data = dados)
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)             -4.921e-01  7.984e-01  -0.616    0.538    
+validacao_espacialSim    1.781e+00  4.520e-01   3.939 8.17e-05 ***
+algoritmoNeural Network -5.975e-01  6.862e-01  -0.871    0.384    
+algoritmoPLS-DA         -1.690e+01  1.205e+03  -0.014    0.989    
+algoritmoRandom Forest  -3.667e-01  6.996e-01  -0.524    0.600    
+algoritmoSVM            -4.909e-03  6.559e-01  -0.007    0.994    
+produtoCafé             -3.039e-01  7.864e-01  -0.387    0.699    
+produtoChá              -2.049e-01  7.373e-01  -0.278    0.781    
+produtoMel               2.152e-01  7.408e-01   0.291    0.771    
+produtoQueijo           -1.135e-01  8.258e-01  -0.137    0.891    
+produtoVinho            -3.556e-01  6.456e-01  -0.551    0.582    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 195.30  on 147  degrees of freedom
+Residual deviance: 171.41  on 137  degrees of freedom
+AIC: 193.41
+
+Number of Fisher Scoring iterations: 15
+
+
+
+========== ODDS RATIOS ==========
+
+                                  OR     2.5 %       97.5 %
+(Intercept)             6.113347e-01 0.1193679 2.856553e+00
+validacao_espacialSim   5.934300e+00 2.5121510 1.497440e+01
+algoritmoNeural Network 5.501811e-01 0.1446403 2.217374e+00
+algoritmoPLS-DA         4.571753e-08        NA 1.763461e+60
+algoritmoRandom Forest  6.930000e-01 0.1770781 2.860012e+00
+algoritmoSVM            9.951031e-01 0.2805654 3.824323e+00
+produtoCafé             7.379015e-01 0.1532222 3.453281e+00
+produtoChá              8.146940e-01 0.1891902 3.498090e+00
+produtoMel              1.240123e+00 0.2907257 5.453343e+00
+produtoQueijo           8.926740e-01 0.1709674 4.527279e+00
+produtoVinho            7.007198e-01 0.1973689 2.549387e+00
