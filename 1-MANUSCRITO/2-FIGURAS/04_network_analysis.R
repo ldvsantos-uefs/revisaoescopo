@@ -1,18 +1,28 @@
 ################################################################################
-# ANÁLISE DE REDES (NETWORK ANALYSIS) - GGPLOT2
-# Machine Learning para Indicações Geográficas
+# ANÁLISE DE REDES (NETWORK ANALYSIS) - GGRAPH + GGPLOT2
+# Machine Learning para Indicações Geográficas - FRAMEWORK "TERROIR DIGITAL"
 #
-# Este script realiza análise de redes de co-ocorrências usando igraph/ggraph
-# e gera visualizações com ggplot2
+# Este script realiza análise de redes de co-ocorrências estruturadas em torno dos
+# pilares metodológicos do trabalho: Validação Espacial, Explicabilidade (XAI),
+# Conformidade FAIR e Meta-análise. Utiliza igraph/ggraph com ggplot2.
+#
+# Objetivos:
+#   1. Mapear relações tecnológicas entre algoritmos, instrumentos e produtos
+#   2. Identificar módulos tecnológicos e especialização por produto-instrumento-algoritmo
+#   3. Avaliar integração de práticas FAIR, validação espacial e XAI na literatura
+#   4. Detectar lacunas de transferência de conhecimento entre domínios
 #
 # Outputs:
-#   - network_completa.png (Rede completa de co-ocorrências)
-#   - network_algoritmo_produto.png (Rede específica)
-#   - network_instrumento_produto.png (Rede específica)
+#   - network_completa_terroir.png (Rede completa com comunidades Louvain)
+#   - network_algoritmo_produto_terroir.png (Especialização metodológica)
+#   - network_instrumento_produto_terroir.png (Especialização instrumental)
+#   - network_validacao_espacial.png (Práticas de validação espacial)
+#   - network_xai_adoption.png (Adoção de explicabilidade)
+#   - network_fair_compliance.png (Conformidade FAIR)
 #   - network_centrality_metrics.png (Métricas de centralidade)
-#   - network_communities.png (Detecção de comunidades)
-#   - network_relatorio.txt (Métricas de rede)
-#   - network_*.graphml (Arquivos para importar em Gephi)
+#   - network_modulos_tecnologicos.png (Módulos detectados com densidade)
+#   - network_relatorio_terroir.txt (Métricas analíticas)
+#   - network_*.graphml (Arquivos para Gephi)
 ################################################################################
 
 rm(list = ls())
@@ -31,7 +41,9 @@ for (pkg in packages) {
 cat("\n")
 cat("================================================================================\n")
 cat("ANÁLISE DE REDES (NETWORK ANALYSIS) - GGRAPH + GGPLOT2\n")
-cat("Machine Learning para Indicações Geográficas\n")
+cat("Framework 'TERROIR DIGITAL': Análise Estruturada de Metodologias em ML-IG\n")
+cat("================================================================================\n")
+cat("Pilares metodológicos:  [Validação Espacial] [XAI] [FAIR] [Meta-análise]\n")
 cat("================================================================================\n\n")
 
 ################################################################################

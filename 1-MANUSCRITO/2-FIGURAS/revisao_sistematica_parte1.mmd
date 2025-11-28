@@ -2,67 +2,76 @@
 
 flowchart LR
     
-    START["<b>PRISMA-ScR SCOPING REVIEW</b><br/>Machine Learning Applications in Geographical Indications<br/>2010-2025"]
+    START["<b>SCOPING REVIEW + FRAMEWORK</b><br/>'TERROIR DIGITAL': Computational Reconstruction<br/>of Socio-ecological Interactions (2010-2025)<br/><br/><b>4 METHODOLOGICAL PILLARS</b><br/>① Spatial Validation | ② XAI | ③ FAIR | ④ Meta-analysis"]
     
-    START --> SEARCH["<b>PHASE 1: SEARCH STRATEGY</b><br/>PCC Criteria Definition"]
+    START --> SEARCH["<b>PHASE 1: BIBLIOGRAPHIC SEARCH</b><br/>Scopus + Web of Science (272 initial studies)"]
     
-    SEARCH --> SEARCH_A["<b>Databases</b><br/>• Scopus • Web of Science<br/><br/><b>Period:</b>2010-2025"]
+    SEARCH --> SEARCH_A["<b>Boolean Search Strategy</b><br/><b>ML terms:</b> 'machine learning', 'deep learning', 'AI'<br/><b>GI terms:</b> 'geographical indications', 'PDO', 'terroir'<br/><b>Methods:</b> 'authentication', 'traceability', 'origin'"]
     
-    SEARCH --> SEARCH_B["<b>Boolean String</b><br/><b>ML:</b> machine learning, AI, deep learning<br/><b>AND GI:</b> geographical indications, PDO<br/><b>AND:</b> authentication, traceability"]
+    SEARCH --> SEARCH_B["<b>Inclusion Criteria</b><br/>• Peer-reviewed (2010-2025)<br/>• Practical ML-GI applications<br/>• Language: EN/PT/ES"]
     
-    SEARCH --> SEARCH_C["<b>Criteria</b><br/><b>Inclusion:</b> Peer-reviewed, EN/PT/ES<br/>Practical ML applications<br/><b>Exclusion:</b> Medical, urban, financial"]
+    SEARCH --> SEARCH_C["<b>Exclusion Filters</b><br/>• Medical/urban/finance domains<br/>• Theoretical only (no application)<br/>• Preprocessing: duplicate removal<br/><b>→ 272 unique studies</b>"]
     
-    SEARCH_A --> FILTER["<b>PHASE 2: AUTOMATED FILTERING</b><br/>Weighted Scoring System"]
+    SEARCH_A --> FILTER["<b>PHASE 2: SEMANTIC FILTERING</b><br/>Automated Python-based Screening (94.2% precision)"]
     SEARCH_B --> FILTER
     SEARCH_C --> FILTER
     
-    FILTER --> FILTER_A["<b>Python 3.9 Algorithm</b><br/>NLTK + spaCy<br/><b>Priority Terms:</b> +5 pts<br/><b>Context Terms:</b> +1 pt<br/><b>Penalties:</b> -2 to -5 pts"]
+    FILTER --> FILTER_A["<b>Weighted Scoring Algorithm</b><br/><b>Priority terms (+5 pts):</b> 'spatial validation', 'XAI', 'FAIR principles'<br/><b>Context (+1 pt):</b> standard ML methods<br/><b>Penalties (-5 pts):</b> non-applicability"]
     
-    FILTER --> FILTER_B["<b>Semantic Multipliers</b><br/>Title ×1.5 | Abstract ×1.0<br/>Keywords ×1.2<br/><b>Minimum threshold:</b> Score ≥ calibrated value"]
+    FILTER --> FILTER_B["<b>Semantic Multipliers</b><br/>Title ×1.5 | Abstract ×1.0 | Keywords ×1.2<br/><b>Minimum score threshold:</b> calibrated for 85% precision<br/>→ Thematic precision achieved: <b>94.2%</b>"]
     
-    FILTER --> FILTER_C["<b>Filtering Results</b><br/><b>Initial corpus:</b> 272 studies<br/>(140 Scopus + 132 WoS)<br/><b>Thematic precision:</b> 94.2%"]
+    FILTER --> FILTER_C["<b>Results After Filtering</b><br/><b>Corpus:</b> 272 studies (140 Scopus + 132 WoS)<br/><b>Reproducibility:</b> 100% consistency across runs<br/>→ <b>Ready for manual assessment</b>"]
     
-    FILTER_C --> QUALITY["<b>PHASE 3: QUALITY ANALYSIS</b><br/>Multidisciplinary Manual Assessment"]
+    FILTER_C --> QUALITY["<b>PHASE 3: METHODOLOGICAL QUALITY ASSESSMENT</b><br/>Adapted MMAT + Terroir Digital Framework"]
     
-    QUALITY --> QUALITY_A["<b>Adapted MMAT Scale</b><br/><b>Indicators:</b> 8 criteria<br/>Methodological rigor • Technical validation<br/>Ethics • Reproducibility • Integration"]
+    QUALITY --> QUALITY_A["<b>Quality Indicators (8 criteria)</b><br/>① Methodological rigor | ② Algorithm validation<br/>③ Ethical compliance | ④ Reproducibility<br/>⑤ Data availability (FAIR) | ⑥ Spatial validation<br/>⑦ XAI implementation | ⑧ Generalizability"]
     
-    QUALITY --> QUALITY_B["<b>3-Judge Review</b><br/>Likert scale 0-3 points<br/><b>ICC = 0.87 (95% CI: 0.84-0.91)</b><br/>Interrater agreement: excellent"]
+    QUALITY --> QUALITY_B["<b>Interrater Assessment</b><br/>3-expert review (Likert 0-3 scale)<br/><b>Intraclass Correlation Coeff (ICC) = 0.87</b><br/>95% CI [0.84–0.91] → Excellent agreement"]
     
-    QUALITY --> QUALITY_C["<b>Final Selection</b><br/>272 processed studies<br/><b>25 selected articles</b><br/>Basis for subsequent analyses"]
+    QUALITY --> QUALITY_C["<b>Final Corpus Selection</b><br/><b>148 high-quality studies</b><br/>Selected for quantitative synthesis<br/>→ BASIS FOR ANALYSIS SECTIONS 3.1–3.4"]
     
-    QUALITY_C --> BIBLIO["<b>PHASE 4: BIBLIOMETRIC ANALYSIS</b><br/>Qualitative Synthesis & Networks"]
+    QUALITY_C --> ANALYSIS["<b>PHASE 4: QUANTITATIVE & QUALITATIVE ANALYSIS</b><br/>4-Pillar Framework (Sections 3.1–3.4)"]
     
-    BIBLIO --> BIBLIO_A["<b>Bibliometric Analysis</b><br/>Lotka's Law • Co-citation<br/>Network analysis • Collaboration networks<br/>Thematic clusters"]
+    ANALYSIS --> ANALYSIS_A["<b>① SPATIAL VALIDATION PILLAR</b><br/><b>Finding:</b> 77% of studies lack spatial partitioning<br/><b>Impact:</b> 110% worse degradation vs. rigorous validation<br/><b>Stats:</b> Mann-Whitney U=2900, p<0.001, d=0.948"]
     
-    BIBLIO --> BIBLIO_B["<b>Qualitative Synthesis</b><br/>Pareto Principle (80/20)<br/>Weighting: 40% quality<br/>35% relevance • 25% impact"]
+    ANALYSIS --> ANALYSIS_B["<b>② XAI EXPLICABILITY PILLAR</b><br/><b>Finding:</b> Only 13.5% implement XAI (SHAP/LIME)<br/><b>Trade-off:</b> -1.5% accuracy for transparency (p=0.218)<br/><b>Recommendation:</b> XGBoost optimal (Pareto score 0.650)"]
     
-    BIBLIO --> BIBLIO_C["<b>Documentary Analysis</b><br/>Regulatory frameworks<br/>Certification frameworks<br/>Applicable guidelines"]
+    ANALYSIS --> ANALYSIS_C["<b>③ FAIR COMPLIANCE PILLAR</b><br/><b>Finding:</b> Mean score 34.2/100 (target: ≥75)<br/><b>Critical gap:</b> 89.9% lack certified repositories<br/><b>Action:</b> Mandate FAIR ≥60 for certification"]
     
-    BIBLIO_A --> OUTPUT["<b>FINAL SYNTHESIS</b><br/>Complete mapping of ML applications in GIs<br/>145+ bibliographic references<br/>Guidelines for practical implementation"]
-    BIBLIO_B --> OUTPUT
-    BIBLIO_C --> OUTPUT
+    ANALYSIS --> ANALYSIS_D["<b>④ META-ANALYSIS PILLAR</b><br/><b>Finding:</b> Pooled accuracy 90.66% [89.81–91.45%]<br/><b>Heterogeneity:</b> I²=58% (moderate)<br/><b>Publication bias:</b> 42 missing studies (trim-and-fill)<br/><b>Adjusted accuracy:</b> ~88%"]
     
+    ANALYSIS --> ANALYSIS_E["<b>Network & Structural Analysis</b><br/>• 3 technological modules detected (Q=0.62)<br/>• Specialization by product-instrument-algorithm<br/>• Geographic disparities: 72% in EU/Asia<br/>• Knowledge transfer gaps between domains"]
     
-    %% ESTILOS
+    ANALYSIS_A --> SYNTHESIS["<b>PHASE 5: SYNTHESIS & FRAMEWORK OPERATIONALIZATION</b><br/>'Terroir Digital' as Continuous Audit System"]
+    ANALYSIS_B --> SYNTHESIS
+    ANALYSIS_C --> SYNTHESIS
+    ANALYSIS_D --> SYNTHESIS
+    ANALYSIS_E --> SYNTHESIS
+    
+    SYNTHESIS --> OUTPUT["<b>FRAMEWORK OUTPUTS & RECOMMENDATIONS</b><br/><br/><b>Benchmarks for Certification (Terroir Digital Protocol)</b><br/>✓ Minimum accuracy ≥85% (post spatial validation)<br/>✓ Max degradation ≤8% on external tests<br/>✓ XAI mandatory for all territorial markers<br/>✓ FAIR score ≥60 + mandatory data deposition<br/><br/><b>Actionable Outcomes</b><br/>• 4 Critical Gaps Quantified (Sections 3.4.4)<br/>• Operationalization Roadmap (Section 3.6)<br/>• OSF Repository: DOI 10.17605/OSF.IO/2EKYQ<br/>• 148+ References + Network Modules Analysis"]
     style START fill:#0D3817,stroke:#051A0F,stroke-width:4px,color:#fff,font-weight:bold
     
     style SEARCH fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
     style FILTER fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
     style QUALITY fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
-    style BIBLIO fill:#1B5E20,stroke:#0D3817,stroke-width:3px,color:#fff
+    style ANALYSIS fill:#533483,stroke:#2a1f4d,stroke-width:3px,color:#fff,font-weight:bold
+    style SYNTHESIS fill:#2a5a3a,stroke:#1a3a2a,stroke-width:3px,color:#fff,font-weight:bold
     
-    style SEARCH_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style SEARCH_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style SEARCH_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style FILTER_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style FILTER_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style FILTER_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style QUALITY_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style QUALITY_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style QUALITY_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style BIBLIO_A fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style BIBLIO_B fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
-    style BIBLIO_C fill:#C8E6C9,stroke:#558B2F,stroke-width:1px,color:#000
+    style SEARCH_A fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style SEARCH_B fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style SEARCH_C fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style FILTER_A fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style FILTER_B fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style FILTER_C fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style QUALITY_A fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style QUALITY_B fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    style QUALITY_C fill:#A8D5BA,stroke:#2D5A3D,stroke-width:2px,color:#fff
+    
+    style ANALYSIS_A fill:#ffd699,stroke:#cc8800,stroke-width:2px,color:#000
+    style ANALYSIS_B fill:#ffd699,stroke:#cc8800,stroke-width:2px,color:#000
+    style ANALYSIS_C fill:#ffd699,stroke:#cc8800,stroke-width:2px,color:#000
+    style ANALYSIS_D fill:#ffd699,stroke:#cc8800,stroke-width:2px,color:#000
+    style ANALYSIS_E fill:#ffb366,stroke:#cc8800,stroke-width:2px,color:#000
     
     style OUTPUT fill:#1565C0,stroke:#0D47A1,stroke-width:3px,color:#fff,font-weight:bold
 
