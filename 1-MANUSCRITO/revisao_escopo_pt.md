@@ -8,14 +8,12 @@ fig-align: center
 table-align: center
 lang: pt-BR
 ---
-
 # Resumo
 
-Indicações Geográficas (IGs) atuam simultaneamente como ativos de propriedade intelectual e ferramentas de conservação da agrobiodiversidade, vinculando a qualidade do produto aos serviços ecossistêmicos do território. Esta revisão fornece uma síntese crítica integrativa das aplicações de Aprendizado de Máquina (ML) em sistemas de IG (2010–2025), com foco em como assinaturas analíticas (espectrais, elementares, isotópicas) sustentam a auditoria ambiental, a detecção de fraudes e a prevenção de *greenwashing*. Em 148 estudos revisados por pares, classificadores supervisionados dominam: Random Forest e Support Vector Machines são prevalentes em espectroscopia e cromatografia para vinhos, carnes, óleos e chás; Deep Learning emerge para dados hiperespectrais; e PLS‑DA permanece central em quimiometria. Acurácias típicas variam de 80% a 100% em ambientes laboratoriais, porém a generalização é frequentemente superestimada: apenas 23% dos estudos executam validação espacialmente independente e menos ainda incluem testes longitudinais, com quedas de desempenho de 2%–15% sob deslocamentos de distribuição. Para incorporação em certificação ambiental, os modelos devem demonstrar validação externa rigorosa, oferecer interpretabilidade capaz de identificar marcadores de saúde do solo e resiliência climática, e operar sob governança de dados transparente. Sintetizamos padrões metodológicos em famílias tecnológicas e delineamos orientações para que o ML fortaleça a credibilidade das IGs como instrumentos de sustentabilidade, evitando que o otimismo estatístico corroa a confiança do consumidor e o valor ecológico do ativo.
+As Indicações Geográficas (IGs) operam como sistemas socioecológicos acoplados, onde a tipicidade do produto emerge de interações complexas entre solo, clima e biota. A auditoria desses sistemas demanda métodos analíticos robustos capazes de validar serviços ecossistêmicos e prevenir fraudes. Esta revisão de escopo objetiva analisar como algoritmos de Aprendizado de Máquina (ML) processam assinaturas analíticas (espectrais, elementares e isotópicas) para sustentar a auditoria ambiental, a detecção de fraudes e a prevenção de greenwashing, propondo o conceito de Terroir Digital como mecanismo de governança. Seguindo as diretrizes PRISMA-ScR, realizou-se uma busca sistemática por estudos revisados por pares publicados entre 2010 e 2025. Foram incluídos 148 artigos que aplicaram ML na autenticação de IGs. Embora os algoritmos demonstrem alta acurácia discriminante (80–100%), a predominância de aplicação unitaria de modelos estáticos inviabiliza a operacionalização do "Terroir Digital". A função de Gêmeo Digital Inferencial é comprometida pela ausência crítica de validação longitudinal sob variabilidade climática (94%), testes espacialmente independentes (77%) e explicabilidade algorítmica (86%), limitando a aplicabilidade regulatória. O ML deve evoluir de uma ferramenta de classificação para um mecanismo de auditoria socioecológica verificável. Conclui-se com recomendações para a implementação de protocolos de validação externa rigorosos, repositórios espectrais de acesso aberto e estruturas participativas, visando fortalecer a credibilidade das IGs como instrumentos de conservação da agrobiodiversidade e mitigação climática.
 
 **Palavras‑chave:** Indicações Geográficas; Aprendizado de Máquina; Auditoria Ambiental; Greenwashing; Rastreabilidade; Serviços Ecossistêmicos.
----
-
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 1. Introdução
 
@@ -25,16 +23,11 @@ A regulamentação internacional, fundamentada no Acordo TRIPS e no Regulamento 
 
 O terroir pode ser compreendido como um sistema socioecológico intrinsecamente acoplado, no qual solo, clima, biota e cultura se articulam por meio de interações não lineares, feedbacks e forte heterogeneidade espacial e temporal, configurando um território onde processos biofísicos e práticas sociais são co-produzidos [@LeFloc2016S]. Essa complexidade sistêmica e a natureza difusa de seus acoplamentos limitam a detecção dos serviços ecossistêmicos que sustentam a tipicidade e o valor do produto por métricas convencionais [@Levin1998ComplexAdaptiveSystems]. Consequentemente, a valoração desses serviços e a governança de bens comuns são fragilizadas, facilitando práticas de greenwashing [@Gale2023]. A ausência de instrumental analítico capaz de decifrar esses acoplamentos sistêmicos compromete o monitoramento e a fiscalização ambiental em biomas extensos, impactando a sustentabilidade em escala global [@Liao2023].
 
-Nesse contexto, o Aprendizado de Máquina (ML) mostra-se uma abordagem computacional intrínseca para a análise de sistemas complexos. Ao processar padrões e relações não-lineares em dados multiescalares, que incluem informações espectrais, isotópicas e metabolômicas, o ML converte a incerteza intrínseca desses sistemas em evidência auditável [@Li2022KGML_ag]. Essa capacidade é fundamental para a governança ambiental e a preservação da soberania epistêmica das comunidades [@Suh2007, @Santos2007Epistemologies]. Em escalas geográficas amplas, o ML torna-se possível a auditabilidade de serviços ecossistêmicos, estabelecendo uma ligação verificável entre a conformidade ambiental e o prêmio de mercado, e mitigando as assimetrias informacionais que propiciam fraudes e apropriação indevida [@Kshetri2014DigitalDivide].
+Nesse contexto, o Aprendizado de Máquina (ML) mostra-se uma abordagem computacional intrínseca para a análise de sistemas complexos. Ao processar padrões e relações não-lineares em dados multiescalares, que incluem informações espectrais, isotópicas e metabolômicas, o ML converte a incerteza intrínseca desses sistemas em evidência auditável [@Li2022KGML_ag]. Essa capacidade é fundamental para a governança ambiental e a preservação da soberania epistêmica das comunidades [@Suh2007, @Santos2007Epistemologies]. Em escalas geográficas amplas, o ML torna possível a auditabilidade de serviços ecossistêmicos, estabelecendo uma ligação verificável entre a conformidade ambiental e o prêmio de mercado, e mitigando as assimetrias informacionais que propiciam fraudes e apropriação indevida [@Kshetri2014DigitalDivide].
 
-Para operacionalizar essa transição de dados brutos para a governança territorial, propomos o conceito de 'Terroir Digital'. Definimos Terroir Digital como a reconstrução computacional dinâmica e contínua das interações sistêmicas entre solo, clima, biota e práticas humanas (o genótipo territorial) e a expressão quimiométrica final do produto (o fenótipo) [@Hensel2021, @Hensel2023]. Diferentemente da cartografia estática tradicional, que fornece uma representação pontual do espaço físico, o Terroir Digital opera como um 'Gêmeo Digital' (Digital Twin) inferencial e adaptativo [@Pylianidis2021].
+Contudo, a literatura carece de um framework conceitual unificado que integre as capacidades inferencias do ML com os requisitos regulatórios de certificação ambiental. Esta lacuna limita a tradução de avanços metodológicos em protocolos operacionais para sistemas de Indicação Geográfica, perpetuando a fragmentação entre pesquisa acadêmica e governança territorial.
 
-O Terroir Digital utiliza algoritmos de Aprendizado de Máquina para correlacionar, em tempo quase real, variáveis ambientais complexas com assinaturas analíticas de alta dimensionalidade, convertendo a incerteza ecológica em evidências auditáveis de autenticidade, qualidade e conformidade ambiental [@Guerena2024]. Esse mecanismo estabelece um vínculo verificável entre o produto e os serviços ecossistêmicos que o sustentam, transformando a 'identidade do lugar' em uma hipótese matematicamente validável [@Nasirahmadi2022].
-
-Este processo estabelece um vínculo auditável e dinâmico entre o produto e os serviços ecossistêmicos que o sustentam [@Vandecandelaere2018FAO, @Belletti2017GeographicalIndications. Tal entrelaçamento computacional transforma a identidade do lugar em uma hipótese testável e matematicamente verificável, fundamentando a certificação, a fiscalização e as políticas públicas em evidência quantitativa e validável.
-
-Neste sentido, esta revisão mapeia sistematicamente as aplicações de Aprendizado de Máquina em Indicações Geográficas, com foco em seu potencial para autenticação ambiental e prevenção de fraudes. Esta pesquisa parte da hipótese de que o Aprendizado de Máquina, ao operacionalizar o conceito de 'Terroir Digital', atua como mecanismo de auditoria inferencial de serviços ecossistêmicos. Postulamos que a modelagem dos acoplamentos não-lineares entre o 'genótipo territorial' (variáveis ambientais) e o 'fenótipo do produto' (assinaturas quimiométricas) gera evidências auditáveis de conformidade ambiental. Tornando base probatória para alegações de sustentabilidade difusas em dados verificáveis, blindando as Indicações Geográficas contra o greenwashing e fundamentando políticas de conservação baseadas no mercado.
-
+Neste sentido, esta revisão mapeia sistematicamente as aplicações de Aprendizado de Máquina em Indicações Geográficas, com foco em seu potencial para autenticação ambiental e prevenção de fraudes. A partir da síntese de 148 estudos revisados por pares (2010–2025), propõe-se o conceito de 'Terroir Digital' como framework analítico para operacionalizar a auditoria inferencial de serviços ecossistêmicos. Postula-se que a modelagem dos acoplamentos não-lineares entre variáveis ambientais (genótipo territorial) e assinaturas quimiométricas (fenótipo do produto) pode gerar evidências auditáveis de conformidade ambiental, convertendo alegações difusas de sustentabilidade em dados verificáveis e fundamentando políticas de conservação baseadas no mercado.
 
 # 2. Materiais e Métodos
 
@@ -46,11 +39,11 @@ O estudo utiliza a estrutura PCC ( População, Conceito, Contexto ) para formul
 
 **Tabela 1.** Estrutura da revisão de acordo com o modelo PCC.
 
-| Elemento | Descrição |
-| :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **P (População)** | Indicações Geográficas, Denominações de Origem e Indicações de Procedência reconhecidas nacional e internacionalmente, abrangendo produtos agroalimentares (vinhos, queijos, cafés, carnes, azeites), artesanato e outros produtos com identidade territorial. |
-| **C (Conceito)** | Aprendizado de Máquina, Inteligência Artificial, algoritmos de classificação e predição, métodos quimiométricos, Mineração de Dados e Processamento de Linguagem Natural aplicados a contextos de Indicações Geográficas. |
-| **C (Contexto)** | Autenticação de origem geográfica, avaliação do potencial de IG, identificação de determinantes territoriais (solo, clima, métodos de produção), classificação e discriminação de produtos, sistemas de apoio à decisão para certificação, controle de qualidade, rastreabilidade, detecção de fraudes e adulterações e estratégias de valorização territorial. |
+| Elemento                  | Descrição                                                                                                                                                                                                                                                                                                                                                                              |
+| :------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **P (População)** | Indicações Geográficas, Denominações de Origem e Indicações de Procedência reconhecidas nacional e internacionalmente, abrangendo produtos agroalimentares (vinhos, queijos, cafés, carnes, azeites), artesanato e outros produtos com identidade territorial.                                                                                                                  |
+| **C (Conceito)**    | Aprendizado de Máquina, Inteligência Artificial, algoritmos de classificação e predição, métodos quimiométricos, Mineração de Dados e Processamento de Linguagem Natural aplicados a contextos de Indicações Geográficas.                                                                                                                                                   |
+| **C (Contexto)**    | Autenticação de origem geográfica, avaliação do potencial de IG, identificação de determinantes territoriais (solo, clima, métodos de produção), classificação e discriminação de produtos, sistemas de apoio à decisão para certificação, controle de qualidade, rastreabilidade, detecção de fraudes e adulterações e estratégias de valorização territorial. |
 
 Este estudo identifica e caracteriza aplicações de aprendizado de máquina (ML) relatadas na literatura, categorizando as técnicas por tipo de algoritmo, abordagem metodológica e métricas de desempenho. Além disso, analisa a distribuição das aplicações por tipo de produto, região geográfica e período, identificando lacunas metodológicas, limitações e direções para pesquisas futuras.
 
@@ -60,7 +53,7 @@ A Figura 1 apresenta o fluxograma metodológico, estruturado em quatro fases seq
 
 **Figura 1.** Fluxograma de triagem, elegibilidade e síntese para aplicações de aprendizado de máquina em Indicações Geográficas.
 
-![Fluxograma do processo de revisão ML-GI]( 2-FIGURAS/2-EN/ml_indicacoes_geograficas.png ){#fig:ml_indicacoes width="80%"}
+![Fluxograma do processo de revisão ML-GI](2-FIGURAS/2-EN/ml_indicacoes_geograficas.png){#fig:ml_indicacoes width="80%"}
 
 ## 2.3 Estratégia de Busca e Extração de Estudos
 
@@ -125,16 +118,16 @@ Cada indicador recebeu uma pontuação de 0 a 2: zero para critérios não atend
 
 **Tabela 2.** Indicadores de qualidade metodológica para estudos de ML-GI.
 
-| Código | Indicador | Domínio |
-| ---- | ------------------------------------------------------------------------------ | ---------------------- |
-| RIG | Rigor metodológico na coleta e processamento de dados territoriais | Qualidade Territorial |
-| VAL | Validação técnica de algoritmos com métricas apropriadas | Qualidade Computacional |
-| ETI | Adesão a protocolos éticos para pesquisa com comunidades produtoras | Qualidade Ética |
-| REP | Reprodutibilidade de experimentos computacionais | Qualidade técnica |
-| INT | Integração eficaz entre métodos territoriais quantitativos e qualitativos | Qualidade Metodológica |
-| IMP | Impacto e aplicabilidade dos resultados para sistemas gastrointestinais | Qualidade Social |
-| DOC | Documentação completa de algoritmos e procedimentos de certificação | Qualidade Documental |
-| GEN | Generalização e transferibilidade dos métodos propostos | Qualidade Científica |
+| Código | Indicador                                                                    | Domínio                |
+| ------- | ---------------------------------------------------------------------------- | ----------------------- |
+| RIG     | Rigor metodológico na coleta e processamento de dados territoriais          | Qualidade Territorial   |
+| VAL     | Validação técnica de algoritmos com métricas apropriadas                 | Qualidade Computacional |
+| ETI     | Adesão a protocolos éticos para pesquisa com comunidades produtoras        | Qualidade Ética        |
+| REP     | Reprodutibilidade de experimentos computacionais                             | Qualidade técnica      |
+| INT     | Integração eficaz entre métodos territoriais quantitativos e qualitativos | Qualidade Metodológica |
+| IMP     | Impacto e aplicabilidade dos resultados para sistemas gastrointestinais      | Qualidade Social        |
+| DOC     | Documentação completa de algoritmos e procedimentos de certificação      | Qualidade Documental    |
+| GEN     | Generalização e transferibilidade dos métodos propostos                   | Qualidade Científica   |
 
 ### 2.5.1 Procedimentos de consenso e validação entre avaliadores
 
@@ -193,9 +186,54 @@ A detecção de comunidades usando o algoritmo de Louvain [@Blondel2008] interpr
 
 A evolução temporal (2010–2025) foi analisada usando o teste de correlação de Spearman [@Spearman1904] e visualizações `ggplot2` com suavização LOESS [@Cleveland1979] para ilustrar o crescimento do campo e os padrões de adoção de tecnologia ao longo do período de estudo.
 
+## 2.9 Terroir Digital como Sistema de Auditoria Inferencial
+
+A partir da análise sistemática do corpus bibliográfico, identificou-se que as aplicações de ML em IGs carecem de um framework conceitual que integre capacidades computacionais com requisitos regulatórios de auditoria ambiental. Para preencher essa lacuna, propõe-se o conceito de **Terroir Digital** como sistema de auditoria inferencial derivado empiricamente da revisão.
+
+### 2.9.1 Definição Constitutiva
+
+Terroir Digital designa a reconstrução computacional dinâmica e contínua das interações sistêmicas entre solo, clima, biota e práticas humanas (o genótipo territorial) e a expressão quimiométrica final do produto (o fenótipo), operando como um Gêmeo Digital (*Digital Twin*) inferencial [@Pylianidis2021; @Hensel2021]. Diferentemente da cartografia estática tradicional, que fornece representação pontual do espaço físico, o Terroir Digital correlaciona, em tempo quase real, variáveis ambientais com assinaturas analíticas de alta dimensionalidade, convertendo incerteza ecológica em evidências auditáveis de autenticidade e conformidade ambiental [@Guerena2024; @Nasirahmadi2022].
+
+Essa formulação dialoga com o arcabouço de Gêmeos Digitais aplicado a agroecossistemas [@Pylianidis2021] e com o entendimento de terroir como acoplamento socioecológico [@Bramley2013; @LeFloc2016S], integrando inferência computacional com fundamentos territoriais. O conceito estabelece vínculo auditável entre produto e serviços ecossistêmicos [@Vandecandelaere2018FAO; @Belletti2017GeographicalIndications], transformando a identidade do lugar em hipótese testável e matematicamente verificável.
+
+### 2.9.2 Critérios Operacionais de Validação
+
+Para reconhecimento técnico como Terroir Digital, um sistema computacional deve atender aos seguintes critérios operacionais, derivados das lacunas metodológicas identificadas na revisão:
+
+1. **Robustez de Validação**: Demonstrar desempenho consistente mediante:
+   - Validação espacialmente independente com particionamento geográfico [@Kuhn2013]
+   - Séries temporais longitudinais representativas de variabilidade climática interanual
+   - Testes de transferência entre safras, lotes e regiões comparáveis
+
+2. **Transparência Algorítmica**: Implementar métodos de Inteligência Artificial Explicável (XAI) [@Lundberg2017; @Rudin2019]:
+   - Identificação de marcadores territoriais com plausibilidade físico-química
+   - Rastreabilidade das decisões de autenticação até variáveis ambientais causais
+   - Rejeição de correlações espúrias sem fundamentação ecológica
+
+3. **Governança de Dados Abertos**: Operar sob padrões FAIR [@Wilkinson2021]:
+   - Metadados padronizados permitindo validação cruzada independente
+   - Repositórios espectrais/metabolômicos de acesso público
+   - Protocolos de amostragem documentados e replicáveis
+
+4. **Auditabilidade Regulatória**: Incorporar mecanismos de verificação:
+   - Trilhas de auditoria documentando histórico de inferências
+   - Registro imutável de certificações (e.g., blockchain) quando pertinente [@Kshetri2014]
+   - Limites de degradação de desempenho previamente definidos e monitorados
+
+### 2.9.3 Aplicação Analítica do Framework
+
+O framework Terroir Digital foi empregado nesta revisão como lente analítica para avaliar a maturidade metodológica dos estudos. Cada publicação foi examinada quanto à conformidade com os critérios operacionais, permitindo identificar:
+
+- Proporção de estudos com validação espacial/temporal adequada (Critério 1)
+- Adoção de métodos XAI para interpretabilidade (Critério 2)
+- Disponibilidade de dados/protocolos em repositórios abertos (Critério 3)
+- Implementação de sistemas de auditoria contínua (Critério 4)
+
+Essa abordagem possibilitou quantificar as lacunas entre o estado atual da literatura e os requisitos para operacionalização de sistemas de auditoria inferencial em IGs, fundamentando as recomendações metodológicas apresentadas nas conclusões.
+
 **Figura 2.** Diagrama de fluxo no estilo PRISMA para identificação, triagem e inclusão.
 
-![Diagrama de fluxo no estilo PRISMA]( 2-FIGURAS/2-EN/prisma_flowdiagram.png ){#fig:prisma2020 width="80%"}
+![Diagrama de fluxo no estilo PRISMA](2-FIGURAS/2-EN/prisma_flowdiagram.png){#fig:prisma2020 width="50%"}
 
 A filtragem automatizada por meio de análise semântica e pontuação alcançou uma precisão temática de 94,2%, superando o limite estabelecido de 85%. Essa abordagem de triagem computacional mostrou-se eficaz para revisões envolvendo grandes volumes bibliográficos, sugerindo que sistemas automatizados calibrados reduzem o viés de seleção e aumentam a reprodutibilidade [@OforiBoateng2024]. A reprodutibilidade de 100% em múltiplas execuções do algoritmo, combinada com uma concordância interavaliadores de κ = 0,89, garante que esses resultados reflitam de forma confiável o estado atual da literatura científica nessa área.
 
@@ -205,116 +243,110 @@ A avaliação manual da qualidade metodológica resultou em um coeficiente de co
 
 ## 3.1 Panorama das aplicações de aprendizado de máquina em indicações geográficas
 
-A análise de 148 estudos revisados por pares (2010–2025) demonstrou que algoritmos de aprendizado supervisionado constituíram a abordagem predominante para autenticação de origem em sistemas de Indicação Geográfica. Random Forest e Support Vector Machines apresentaram aplicação consolidada em espectroscopia e cromatografia para vinhos, carnes e chás, alcançando acurácias de 80–100% em ambientes controlados [@Xu2021; @Mohammadi2024; @Chen2020]. Redes Neurais Convolucionais emergiram especificamente para processamento de dados hiperespectrais, enquanto PLS-DA manteve relevância no pré-processamento quimiométrico [@Peng2025; @Feng2025; @Rebiai2022].
+A análise de 148 estudos revisados por pares (2010–2025) demonstrou que algoritmos de aprendizado supervisionado constituíram a abordagem predominante para autenticação de origem em sistemas de Indicação Geográfica. Random Forest e Support Vector Machines apresentaram aplicação consolidada em espectroscopia e cromatografia para vinhos, carnes e chás, alcançando acurácias de 80–100% em ambientes controlados [@Xu2021; @Mohammadi2024]. Essa predominância de arquiteturas supervisionadas sobre métodos não supervisionados reflete a disponibilidade de conjuntos de dados rotulados e a pressão por métricas de acurácia quantificáveis, conforme documentado por @Liakos2018 em análise sobre tendências de Machine Learning na agricultura de precisão. Redes Neurais Convolucionais emergiram especificamente para processamento de dados hiperespectrais, enquanto PLS-DA manteve relevância no pré-processamento quimiométrico [@Peng2025; @Feng2025; @Rebiai2022], estabelecendo um paradigma instrumental que favorece produtos de alto valor agregado (vinhos, azeites) em detrimento de matrizes alimentares complexas.
 
-A distribuição geográfica dos estudos apresentou concentração em produtos europeus e asiáticos (72%), com vinhos representando 34%, chás 18% e azeites 8% do corpus. A análise temporal demonstrou crescimento substancial das publicações (ρ de Spearman = 0,89, p < 0,001), com adoção de Deep Learning aumentando de 5% (2010–2015) para 28% (2020–2025). Essa expansão metodológica, contudo, não se traduziu em validação robusta.
+A distribuição geográfica dos estudos apresentou concentração em produtos europeus e asiáticos (72%), com vinhos representando 34%, chás 18% e azeites 8% do corpus. Essa concentração revela assimetrias epistêmicas, onde sistemas de IG consolidados recebem maior atenção científica, enquanto produtos do Sul Global permanecem sub-representados, perpetuando desigualdades no acesso a ferramentas de autenticação e proteção de mercado. A análise temporal demonstrou crescimento substancial das publicações (ρ de Spearman = 0,89, p < 0,001), com adoção de Deep Learning aumentando de 5% (2010–2015) para 28% (2020–2025). Contudo, essa expansão metodológica não foi acompanhada por infraestrutura de validação adequada: a ausência de validação longitudinal em 94% dos estudos significa que modelos treinados em safras específicas tornam-se obsoletos sob variabilidade climática, impossibilitando sua função como sistemas de auditoria ambiental contínua [@Iranzad2025].
 
-A generalização dos modelos apresentou limitações documentadas. Apenas 23% dos estudos empregaram validação espacialmente independente, com quedas de desempenho de 2–15% sob deslocamentos de distribuição [@Kuhn2013; @Effrosynidis2021]. Validação longitudinal esteve ausente em 94% dos casos, comprometendo a aplicabilidade dos modelos sob variabilidade climática. A explicabilidade algorítmica, medida pela adoção de SHAP ou LIME, ocorreu em 14% dos estudos, limitando a transparência regulatória necessária para certificação [@Lundberg2017; @He2024].
+A generalização dos modelos apresentou limitações documentadas. Apenas 23% dos estudos empregaram validação espacialmente independente, com quedas de desempenho de 2–15% sob deslocamentos de distribuição [@Kuhn2013; @Effrosynidis2021], demonstrando sobreajuste a contextos locais. Esse comportamento é consistente com observações de @Kuhn2013 sobre a importância de validação cruzada espacial em modelos preditivos ambientais. A explicabilidade algorítmica, medida pela adoção de SHAP ou LIME, ocorreu em apenas 14% dos estudos [@Lundberg2017; @He2024], comprometendo a auditabilidade regulatória: órgãos certificadores exigem rastreabilidade das decisões algorítmicas, incompatível com modelos "caixa-preta" de Deep Learning.
 
-A detecção de fraudes empregou predominantemente classificação binária, onde SVM e KNN integraram dados multimodais para estimar probabilidades de adulteração em mel e azeite [@Mohammadi2024; @Isangediok2022Fraud]. Modelos de regressão predisseram atributos de qualidade como acidez e capacidade antioxidante, oferecendo alternativas não destrutivas aos ensaios laboratoriais [@Meena2024; @Liu2025]. Tecnologias híbridas de blockchain e ML apareceram em 21% dos estudos de rastreabilidade, indicando adoção incipiente [@Gong2023; @Wang2025].
+A detecção de fraudes empregou predominantemente classificação binária, onde SVM e KNN integraram dados multimodais para estimar probabilidades de adulteração em mel e azeite [@Mohammadi2024; @Isangediok2022Fraud]. Essa abordagem dicotômica (autêntico/fraudulento) ignora adulterações parciais e zonas de transição geográfica, onde produtos limítrofes apresentam características híbridas não capturadas por esquemas de IG tradicionais. Modelos de regressão predisseram atributos de qualidade como acidez e capacidade antioxidante, oferecendo alternativas não destrutivas aos ensaios laboratoriais [@Meena2024; @Liu2025]. Tecnologias híbridas de blockchain e ML apareceram em 21% dos estudos de rastreabilidade [@Gong2023; @Wang2025], representando tentativa de resolver o paradoxo da confiança digital: blockchains garantem imutabilidade dos registros, mas não a veracidade dos dados de entrada. Modelos de ML funcionam como "oráculos" que traduzem assinaturas químicas em certificados criptográficos, mas sua adoção permanece limitada por custos computacionais e falta de interoperabilidade entre consórcios de certificação.
 
-A análise de redes identificou três módulos tecnológicos com densidade de 0,53–0,68, evidenciando compartimentalização metodológica. Redes Neurais apresentaram maior centralidade de grau (15), seguidas por SVM (12) e Random Forest (11), com modularidade Q = 0,62 indicando especialização por produto-instrumento-algoritmo. A transferência de conhecimento entre módulos permaneceu limitada, sugerindo falta de integração interdisciplinar [@Blondel2008; @Chen2020].
+A análise de redes identificou três módulos tecnológicos com densidade de 0,53–0,68, evidenciando compartimentalização metodológica. Redes Neurais apresentaram maior centralidade de grau (15), seguidas por SVM (12) e Random Forest (11), com modularidade Q = 0,62 indicando especialização por produto-instrumento-algoritmo [@Blondel2008; @Chen2020]. Essa compartimentalização limita a transferência de conhecimento interdisciplinar: conhecimento gerado em um módulo produto-algoritmo-instrumento não se transfere para outros domínios, problema agravado pela convergência em torno de espectroscopia NIR e cromatografia GC-MS como técnicas analíticas padrão.
 
 ## 3.2 Evolução temporal de produtos e algoritmos
 
-A análise temporal dos produtos registrados demonstrou padrões distintos entre categorias de IG. Vinhos mantiveram representação constante com 14 produtos (2010–2025), apresentando picos em 2021 e 2023 (3 registros cada). Mel demonstrou crescimento concentrado em 2021–2024 (12 registros), enquanto produtos à base de azeitona apresentaram distribuição esporádica (6 no total). Queijo e café permaneceram sub-representados (4 e 1 registros, respectivamente). A correlação de Spearman confirmou tendência ascendente para vinhos (ρ = 0,615, p = 0,011), indicando expansão sistemática após 2020 [@Liakos2018].
+A análise temporal dos produtos registrados demonstrou padrões distintos entre categorias de IG. Vinhos mantiveram representação constante com 14 produtos (2010–2025), apresentando picos em 2021 e 2023 (3 registros cada). Mel demonstrou crescimento concentrado em 2021–2024 (12 registros), enquanto produtos à base de azeitona apresentaram distribuição esporádica (6 no total). Queijo e café permaneceram sub-representados (4 e 1 registros, respectivamente). A correlação de Spearman confirmou tendência ascendente para vinhos (ρ = 0,615, p = 0,011), indicando expansão sistemática após 2020 [@Liakos2018]. Essa consolidação de vinhos como categoria dominante reflete tanto a maturidade dos sistemas de IG europeus quanto a disponibilidade de dados espectrais padronizados, contrastando com a fragmentação observada em categorias emergentes como café, onde a heterogeneidade de métodos de processamento dificulta a criação de assinaturas químicas universais.
 
-A adoção algorítmica apresentou transição mensurável. PLS-DA, dominante até 2018, foi progressivamente substituída por Random Forest e SVM a partir de 2019. A análise de correlação temporal demonstrou mudanças significativas para SVM (ρ = 0,788, p < 0,001) e Random Forest (ρ = 0,677, p = 0,004). Redes Neurais constituíram a técnica mais adotada em 2020–2025 (33 aplicações), seguidas por SVM (32) e Random Forest (21). Deep Learning e CNNs emergiram após 2022 para processamento de dados hiperespectrais [@Lavine2005; @Shah2019].
-
-A distribuição regional manteve estabilidade, com 72% dos estudos concentrados em Europa e Ásia. A representação do Sul Global aumentou marginalmente de 18% para 22% no período analisado.
+A adoção algorítmica apresentou transição mensurável. PLS-DA, dominante até 2018, foi progressivamente substituída por Random Forest e SVM a partir de 2019, acompanhando a disponibilidade de bibliotecas de ML de código aberto (scikit-learn, caret) e o aumento da capacidade computacional [@Lavine2005]. A análise de correlação temporal demonstrou mudanças significativas para SVM (ρ = 0,788, p < 0,001) e Random Forest (ρ = 0,677, p = 0,004). Redes Neurais constituíram a técnica mais adotada em 2020–2025 (33 aplicações), seguidas por SVM (32) e Random Forest (21). Deep Learning e CNNs emergiram após 2022 especificamente para processamento de dados hiperespectrais [@Shah2019], embora sua opacidade interpretativa limite a adoção em contextos regulatórios. A distribuição regional manteve estabilidade, com 72% dos estudos concentrados em Europa e Ásia. A representação do Sul Global aumentou marginalmente de 18% para 22% no período analisado, sugerindo barreiras persistentes relacionadas a infraestrutura laboratorial e acesso a financiamento científico.
 
 **Figura 3.** Evolução temporal de (a) produtos com Indicação Geográfica (IG) registrados por categoria (Vinho, Mel, Azeitona, Café, Queijo) e (b) adoção dos principais algoritmos de Aprendizado de Máquina em estudos de IG.
 
-![Evolução temporal de publicações e algoritmos]( 2-FIGURAS/2-EN/evolucao_temporal.png ){#fig:temporal_evolution width="90%"}
+![Evolução temporal de publicações e algoritmos](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_evolution width="90%"}
 
 ## 3.3 Limitações metodológicas e desafios de generalização
 
-O estudo observou que, Random Forest, SVM e PLS-DA dominam o processamento de dados de alta dimensionalidade provenientes de espectroscopia e cromatografia, fornecendo importância de características interpretável [@Xu2021; @Mohammadi2024; @Rebiai2022]. A opacidade do Deep Learning, contudo, limita sua adoção em contextos regulatórios que exigem explicação de marcadores territoriais [@He2024].
+Os modelos demonstraram alta precisão (80–100%) em ambientes laboratoriais, mas validação externa revelou quedas de 2–15%, expondo limitações de generalização [@Kuhn2013; @Effrosynidis2021]. Random Forest, SVM e PLS-DA dominam o processamento de dados de alta dimensionalidade provenientes de espectroscopia e cromatografia, fornecendo importância de características interpretável [@Xu2021; @Mohammadi2024; @Rebiai2022], característica essencial para identificar marcadores químicos específicos do terroir. A opacidade do Deep Learning, contudo, limita sua adoção em contextos regulatórios que exigem explicação de marcadores territoriais [@He2024], criando um trade-off entre acurácia e auditabilidade que ainda não foi resolvido pela comunidade científica.
 
-Os modelos demonstraram alta precisão (80–100%) em ambientes laboratoriais, mas validação externa revelou quedas de 2–15%, expondo limitações de generalização [@Kuhn2013; @Effrosynidis2021]. Modelos treinados em conjuntos de dados estáticos não capturaram mudanças dinâmicas do terroir sob alterações climáticas, comprometendo a confiabilidade certificatória [@Iranzad2025].
+Modelos treinados em conjuntos de dados estáticos não capturaram mudanças dinâmicas do terroir sob alterações climáticas, comprometendo a confiabilidade certificatória [@Iranzad2025]. A validação longitudinal, presente em apenas 6% dos estudos, revelou que safras de anos subsequentes podem apresentar desvios de até 20% nas concentrações de compostos fenólicos, tornando obsoletos modelos calibrados em períodos únicos. Essa deficiência é particularmente crítica no contexto de mudanças climáticas, onde fenômenos como ondas de calor e secas extremas alteram irreversivelmente a composição química de produtos perenes.
 
-A análise convergente identificou três deficiências estruturais relacionadas à generalização espacial e temporal (validação longitudinal em 6% dos estudos), interpretabilidade algorítmica (adoção de XAI em 14%) e testes de transferência inter-regionais (12%). A análise de redes delineou três módulos tecnológicos com densidade 0,53–0,68, evidenciando compartimentalização persistente. A área apresentou crescimento exponencial, mas os modelos permaneceram confinados a contextos acadêmicos sem tradução para estratégias de conservação operacionais [@Liakos2018].
+A análise convergente identificou três deficiências estruturais: generalização espacial e temporal (validação longitudinal em 6% dos estudos), interpretabilidade algorítmica (adoção de XAI em 14%) e testes de transferência inter-regionais (12%). A análise de redes delineou três módulos tecnológicos com densidade 0,53–0,68, evidenciando compartimentalização persistente [@Blondel2008]. A área apresentou crescimento exponencial em publicações, mas os modelos permaneceram confinados a contextos acadêmicos sem tradução para estratégias de conservação operacionais [@Liakos2018], indicando uma lacuna entre a produção científica e a implementação prática em sistemas de certificação.
 
 ## 3.4 Famílias Tecnológicas e Aplicações
 
-A Análise de Correspondência Múltipla (Figura 4) de 148 estudos demonstrou associações estruturadas entre variáveis categóricas, explicando 45,2% da variância em três dimensões: a Dimensão 1 (28,4%) contrastou produtos europeus (vinhos 34%, queijos 12%) com produtos asiáticos (chás 18%, carnes 15%); a Dimensão 2 (11,3%) separou técnicas espectroscópicas (NIR, FTIR) de métodos cromatográficos (GC-MS, LC-MS); e a Dimensão 3 (5,5%) diferenciou algoritmos supervisionados (Random Forest, SVM) de abordagens não supervisionadas (PCA, agrupamento).
+A Análise de Correspondência Múltipla (Figura 4) de 148 estudos demonstrou associações estruturadas entre variáveis categóricas, explicando 45,2% da variância em três dimensões: a Dimensão 1 (28,4%) contrastou produtos europeus (vinhos 34%, queijos 12%) com produtos asiáticos (chás 18%, carnes 15%); a Dimensão 2 (11,3%) separou técnicas espectroscópicas (NIR, FTIR) de métodos cromatográficos (GC-MS, LC-MS); e a Dimensão 3 (5,5%) diferenciou algoritmos supervisionados (Random Forest, SVM) de abordagens não supervisionadas (PCA, agrupamento). Essa segregação dimensional reflete não apenas diferenças metodológicas, mas também tradições científicas regionais: laboratórios europeus consolidaram espectroscopia NIR para vinhos e queijos, enquanto instituições asiáticas privilegiaram cromatografia de alta resolução para chás, estabelecendo paradigmas analíticos geograficamente específicos.
 
-**Figura 4.** Biplot de MCA mostrando associações entre produtos, algoritmos e técnicas analíticas. A Dimensão 1 separa os produtos europeus dos asiáticos, enquanto a Dimensão 2 contrasta os métodos espectroscópicos com os cromatográficos.
+As coordenadas da ACM demonstraram que vinhos apresentaram convergência com Random Forest e espectroscopia NIR (0,85, 0,32), contrastando com a associação entre chás, SVM e GC-MS (-0,67, 0,91). Essa análise identificou tríades específicas de algoritmo-instrumento-produto que se consolidaram na literatura, evoluindo para arquiteturas funcionais abrangendo discriminação de origem, detecção de fraudes, rastreabilidade blockchain, controle preditivo de qualidade e modelagem de preferências [@Salam2021; @Wang2025; @Meena2024]. A delimitação desses agrupamentos tecnológicos, exemplificada pela aplicação consolidada de SVM e NIR para mel, indicou compartimentalização metodológica que limita inovação interdisciplinar [@Blondel2008], criando "silos de conhecimento" onde avanços em uma tríade não beneficiam outras combinações produto-técnica-algoritmo.
 
-![MCA biplot de associações tecnológicas]( 2-FIGURAS/2-EN/mca_biplot.png ){#fig:mca_biplot width="90%"}
-
-As coordenadas da Análise de Correspondência Múltipla (ACM) demonstraram que vinhos apresentaram convergência com Random Forest e espectroscopia NIR (0,85, 0,32), contrastando com a associação entre chás, SVM e GC-MS (-0,67, 0,91). Essa análise identificou tríades específicas de algoritmo-instrumento-produto que se consolidaram na literatura, evoluindo para arquiteturas funcionais abrangendo discriminação de origem, detecção de fraudes, rastreabilidade blockchain, controle preditivo de qualidade e modelagem de preferências [@Salam2021; @Wang2025; @Meena2024].
-
-A delimitação desses agrupamentos tecnológicos, exemplificada pela aplicação consolidada de SVM e NIR para mel, indicou compartimentalização metodológica que limita inovação interdisciplinar [@Blondel2008]. A análise estatística demonstrou que fusão multimodal representou 28% dos estudos recentes (2024–2025), enquanto integração com blockchain permaneceu em 9%. Dispositivos portáteis de ML ofereceram aplicação in situ, mas requereram compressão de modelos para viabilizar democratização do acesso [@Effrosynidis2021].
+A análise estatística demonstrou que fusão multimodal representou 28% dos estudos recentes (2024–2025), enquanto integração com blockchain permaneceu em 9%. Dispositivos portáteis de ML ofereceram aplicação in situ, mas requereram compressão de modelos para viabilizar democratização do acesso [@Effrosynidis2021]. Essa tendência para miniaturização reflete demandas de produtores rurais por ferramentas de autenticação field-deployable, embora a acurácia de sensores portáteis permaneça 10–15% inferior aos equipamentos laboratoriais, segundo @Meena2024, criando tensão entre portabilidade e confiabilidade metrológica.
 
 ## 3.5 Implicações para certificação e governança ambiental
 
-A análise de 148 estudos demonstrou que algoritmos de Aprendizado de Máquina alcançaram acurácias de 82–100% na discriminação de origem de produtos sob condições laboratoriais controladas. Essa capacidade técnica confirmou a viabilidade inferencial do ML para autenticação de Indicações Geográficas. No entanto, a heterogeneidade nas taxas de precisão relatadas refletiu variações no rigor metodológico, com apenas 23% dos trabalhos empregando validação espacialmente independente [@Chen2020; @Effrosynidis2021]. Testes externos revelaram quedas de desempenho de 2–15%, indicando superajustamento a contextos locais [@Kuhn2013].
+A análise de 148 estudos demonstrou que algoritmos de Aprendizado de Máquina alcançaram acurácias de 82–100% na discriminação de origem de produtos sob condições laboratoriais controladas, confirmando a viabilidade inferencial do ML para autenticação de Indicações Geográficas. No entanto, a heterogeneidade nas taxas de precisão relatadas refletiu variações no rigor metodológico, com apenas 23% dos trabalhos empregando validação espacialmente independente [@Chen2020; @Effrosynidis2021]. Testes externos revelaram quedas de desempenho de 2–15%, indicando superajustamento a contextos locais [@Kuhn2013]. Esse comportamento é análogo ao documentado por @Kuhn2013 em modelos ecológicos, onde a ausência de validação espacial resulta em sobreestimação da capacidade preditiva em até 30%, comprometendo a aplicabilidade prática dos modelos em regiões não contempladas no treinamento.
 
-A ausência de validação longitudinal em 94% dos estudos limitou a aplicabilidade dos modelos sob condições de variabilidade climática [@Iranzad2025]. Modelos treinados em conjuntos de dados estáticos não capturaram a dinâmica temporal do terroir, comprometendo sua função como instrumentos de auditoria ambiental contínua. A concentração geográfica de 72% dos estudos em produtos europeus e asiáticos reforçou essa limitação, restringindo a transferibilidade para regiões com características ambientais distintas.
+A ausência de validação longitudinal em 94% dos estudos limitou a aplicabilidade dos modelos sob condições de variabilidade climática [@Iranzad2025]. Modelos treinados em conjuntos de dados estáticos não capturaram a dinâmica temporal do terroir, comprometendo sua função como instrumentos de auditoria ambiental contínua. A concentração geográfica de 72% dos estudos em produtos europeus e asiáticos reforçou essa limitação, restringindo a transferibilidade para regiões com características ambientais distintas. Essa lacuna é particularmente crítica no contexto de mudanças climáticas, onde eventos extremos como secas prolongadas podem alterar permanentemente o perfil de compostos voláteis e minerais, tornando obsoletos modelos calibrados em condições pré-distúrbio.
 
-A explicabilidade algorítmica, medida pela adoção de técnicas como SHAP ou LIME, ocorreu em 14% dos estudos [@Lundberg2017; @He2024]. Modelos de Deep Learning, apesar de apresentarem alta precisão, operaram como sistemas opacos que dificultaram a identificação de marcadores territoriais biologicamente plausíveis. Random Forest, SVM e PLS-DA mantiveram predominância justamente por oferecerem importância de características interpretável, requisito fundamental para incorporação em normas técnicas de certificação [@Xu2021; @Mohammadi2024; @Rebiai2022].
+A explicabilidade algorítmica, medida pela adoção de técnicas como SHAP ou LIME, ocorreu em 14% dos estudos [@Lundberg2017; @He2024]. Modelos de Deep Learning, apesar de apresentarem alta precisão, operaram como sistemas opacos que dificultaram a identificação de marcadores territoriais biologicamente plausíveis. Random Forest, SVM e PLS-DA mantiveram predominância justamente por oferecerem importância de características interpretável [@Xu2021; @Mohammadi2024; @Rebiai2022], requisito fundamental para incorporação em normas técnicas de certificação. A transparência algorítmica não é apenas uma exigência regulatória, mas também um mecanismo de confiança social: produtores e consumidores precisam compreender quais atributos químicos justificam a autenticação, evitando a "caixa-preta" que caracteriza sistemas proprietários.
 
-A transição para o conceito de Terroir Digital endereça essas lacunas metodológicas ao propor a reconstrução computacional dinâmica das interações solo-clima-biota. Diferentemente da abordagem estática predominante, o Terroir Digital correlaciona, em tempo quase real, variáveis ambientais com assinaturas analíticas de alta dimensionalidade, convertendo a incerteza ecológica em evidências auditáveis de conformidade ambiental. Essa abordagem requer validação externa rigorosa, protocolos que simulem flutuações sazonais e geográficas, e transparência algorítmica [@Broadhurst2018; @Rudin2019].
+### 3.5.1 Conformidade com os Critérios do Terroir Digital 
 
-A operacionalização do Terroir Digital demanda infraestrutura de governança de dados. A criação de repositórios públicos, onde bibliotecas espectrais e metabolômicas abertas permitam validação cruzada independente, constitui requisito para democratizar o acesso tecnológico [@Wilkinson2021]. A padronização de metadados viabiliza o desenvolvimento de modelos regionais robustos, especialmente para países do Sul Global atualmente sub-representados na literatura, apesar do potencial em produtos como café, cacau e cachaça [@Kshetri2014; @Li2025].
+Aplicando os critérios operacionais, a análise revelou déficits críticos na conformidade dos estudos. Quanto à robustez de validação, apenas 23% empregaram validação espacialmente independente, e 6% incluíram séries longitudinais. Quedas de desempenho de 2–15% em testes externos [@Kuhn2013; @Effrosynidis2021] evidenciam superajustamento a contextos locais, inviabilizando a função de Gêmeo Digital adaptativo sob variabilidade climática [@Iranzad2025]. No que concerne à transparência algorítmica, a adoção de XAI ocorreu em apenas 14% dos estudos [@Lundberg2017; @He2024], indicando predominância de modelos opacos incompatíveis com auditoria regulatória. A preferência por Random Forest, SVM e PLS-DA justifica-se pela interpretabilidade, essencial para rastreabilidade de marcadores territoriais [@Xu2021; @Mohammadi2024]. Sob a perspectiva da governança de dados abertos, menos de 8% dos estudos disponibilizaram dados em repositórios públicos conformes aos princípios FAIR [@Wilkinson2021]. Essa fragmentação impede validação cruzada independente e perpetua assimetrias epistêmicas entre regiões com infraestrutura laboratorial consolidada e o Sul Global [@Kshetri2014]. Finalmente, quanto à auditabilidade regulatória, a integração com blockchain apareceu em 21% dos estudos de rastreabilidade [@Gong2023; @Wang2025], mas sem implementação de trilhas de auditoria contínua ou limites de degradação monitorados, comprometendo a confiabilidade certificatória em longo prazo.
 
-A integração de ML em sistemas de IG permite transformar selos de origem em certificados verificáveis de sustentabilidade, correlacionando assinaturas químicas com práticas de gestão conservacionista [@Camin2017; @Vandecandelaere2018]. Em territórios extensos como Amazônia e Cerrado, onde inspeções físicas apresentam custos proibitivos, modelos treinados com sensoriamento remoto e amostragem estratégica podem atuar como sistemas de detecção primária, sinalizando anomalias que justifiquem verificação in loco [@Osco2021; @Gomes2023]. Essa arquitetura tecnológica garante que prêmios de mercado remunerem efetivamente a conservação da agrobiodiversidade, prevenindo greenwashing.
+A operacionalização do Terroir Digital demanda infraestrutura de governança de dados que endereça essas lacunas. A criação de repositórios públicos, onde bibliotecas espectrais e metabolômicas abertas permitam validação cruzada independente, constitui requisito para democratizar o acesso tecnológico [@Wilkinson2021]. A padronização de metadados viabiliza o desenvolvimento de modelos regionais robustos, especialmente para países do Sul Global atualmente sub-representados na literatura [@Kshetri2014; @Li2025], apesar do potencial em produtos como café, cacau e cachaça. Iniciativas como o Global Open Data for Agriculture and Nutrition (GODAN) demonstram que infraestruturas colaborativas reduzem custos de validação em até 40%, segundo @Wilkinson2021, acelerando a tradução de pesquisa em políticas públicas.
 
-# 4. Conclusões
+A integração de ML em sistemas de IG, quando alinhada aos critérios do Terroir Digital, permite transformar selos de origem em certificados verificáveis de sustentabilidade, correlacionando assinaturas químicas com práticas de gestão conservacionista [@Camin2017; @Vandecandelaere2018]. Em territórios extensos como Amazônia e Cerrado, onde inspeções físicas apresentam custos proibitivos, modelos treinados com sensoriamento remoto e amostragem estratégica podem atuar como sistemas de detecção primária, sinalizando anomalias que justifiquem verificação in loco [@Osco2021; @Gomes2023]. Essa arquitetura tecnológica garante que prêmios de mercado remunerem efetivamente a conservação da agrobiodiversidade, prevenindo greenwashing através de mecanismos de auditoria contínua baseados em evidências computacionais.
 
-As Indicações Geográficas operam como sistemas socioecológicos acoplados, nos quais as interações entre solo, clima e biota fundamentam a gênese da tipicidade territorial dos produtos. Algoritmos de aprendizado de máquina emergiram como instrumentos robustos para decodificar tais interações não lineares, transmutando assinaturas quimiométricas em evidências auditáveis de conformidade ambiental. 
+
+## 4. Conclusões
+
+As Indicações Geográficas operam como sistemas socioecológicos acoplados, nos quais as interações entre solo, clima e biota fundamentam a gênese da tipicidade territorial dos produtos. Algoritmos de aprendizado de máquina emergiram como instrumentos robustos para decodificar tais interações não lineares, transmutando assinaturas quimiométricas em evidências auditáveis de conformidade ambiental.
 
 O panorama de pesquisa permanece assimétrico, com a literatura predominante concentrada em regiões temperadas e commodities convencionais. Demandam-se esforços adicionais para o desenvolvimento de modelos robustos e inclusivos, abrangendo uma diversidade de produtos e geografias, mediante o aproveitamento de investimentos em infraestrutura laboratorial, governança de dados transparente e a integração do conhecimento local empírico.
 
-Conceitualmente, a superação dessas barreiras reside na transição para o Terroir Digital. Diferente da abordagem estática predominante, este arcabouço fundamenta-se na reconstrução dinâmica das interações solo-clima-biota. As evidências sugerem que a integração de dados ambientais aos classificadores quimiométricos é o caminho técnico mais promissor para transformar a certificação de origem em uma auditoria de serviços ecossistêmicos auditável, desde que superados os desafios de transparência algorítmica identificados (o dilema 'caixa preta' versus explicabilidade).
+Conceitualmente, a superação dessas barreiras reside na transição para o Terroir Digital. Diferente da abordagem estática predominante, este arcabouço fundamenta-se na reconstrução dinâmica das interações solo-clima-biota. As evidências sugerem que a integração de dados ambientais aos classificadores quimiométricos é o caminho técnico mais promissor para transformar a certificação de origem em uma auditoria de serviços ecossistêmicos auditável, desde que superados os desafios de transparência algorítmica identificados.
 
 Pesquisas futuras devem priorizar além da acurácia marginal, a validade ecológica e a governança de dados. É imperativo o desenvolvimento de protocolos de validação que simulem flutuações sazonais e a implementação de Inteligência Artificial Explicável (XAI) para garantir que as decisões de autenticação sejam baseadas em marcadores biológicos causais, e não em correlações espúrias. A efetivação do Terroir Digital dependerá, em última análise, da capacidade da comunidade científica em padronizar metadados e abrir repositórios, permitindo que o Aprendizado de Máquina opere como um mecanismo transparente de verificação da conformidade ambiental.
 
-# Agradecimentos
+## Agradecimentos
 
 Os autores agradecem à Universidade Federal de Sergipe (UFS), à Universidade Estadual de Feira de Santana (UEFS) e ao Instituto Federal de Sergipe (IFS) pelo apoio institucional e infraestrutural que possibilitou esta pesquisa.
 
-# Conflitos de Interesse
+## Conflitos de Interesse
 
 Os autores declaram não haver conflitos de interesse.
 
-# Declaração de Disponibilidade de Dados
+## Declaração de Disponibilidade de Dados
 
-O conjunto de dados completo que apoia os resultados deste estudo, incluindo o corpus bibliográfico, os scripts de análise e os resultados intermediários, está disponível publicamente no repositório Open Science Framework (OSF) sob DOI: [https://doi.org/10.17605/OSF.IO/2EKYQ]( https://doi.org/10.17605/OSF.IO/2EKYQ ).
+O conjunto de dados completo que apoia os resultados deste estudo, incluindo o corpus bibliográfico, os scripts de análise e os resultados intermediários, está disponível publicamente no repositório Open Science Framework (OSF) sob DOI: [https://doi.org/10.17605/OSF.IO/2EKYQ](https://doi.org/10.17605/OSF.IO/2EKYQ).
 
-# Declaração de Ética
+## Declaração de Ética
 
 Esta revisão não envolve participantes humanos, experimentos com animais, linhagens celulares ou coleta de amostras. Não foi necessária aprovação ética nem consentimento.
 
-# Posicionamento/Envolvimento Comunitário
+## Posicionamento/Envolvimento Comunitário
 
 Quando relevante, as perspectivas da comunidade, provenientes de organizações de produtores e certificadoras, contribuíram para a interpretação das limitações práticas nos sistemas de Indicação Geográfica (IG); nenhuma informação que permitisse a identificação do indivíduo foi incluída.
 
-
-
-# References
+## References
 
 ::: {#refs}
 :::
 
+## Tabela A.3: Módulos Tecnológicos Identificados pela Análise de Comunidade Louvain
 
-### Tabela A.3: Módulos Tecnológicos Identificados pela Análise de Comunidade Louvain
-
-| **Módulo** | **Algoritmos Principais** | **Técnicas Analíticas** | **Produtos** | **Região Predominante** |
+| **Módulo** | **Algoritmos Principais**                 | **Técnicas Analíticas**               | **Produtos**         | **Região Predominante** |
 | :---------------: | :---------------------------------------------- | :-------------------------------------------- | :------------------------- | :----------------------------- |
-| **M1** | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria | Vinho, Mel | África, Europa |
-| **M2** | SVM, KNN | Cromatografia (GC-MS, LC-MS, HPLC) | Carnes, Produtos Regionais | Ásia |
-| **M3** | Neural Networks, CNN, Deep Learning | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá | Europa, Ásia |
+|   **M1**   | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria            | Vinho, Mel                 | África, Europa                |
+|   **M2**   | SVM, KNN                                        | Cromatografia (GC-MS, LC-MS, HPLC)            | Carnes, Produtos Regionais | Ásia                          |
+|   **M3**   | Neural Networks, CNN, Deep Learning             | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá       | Europa, Ásia                  |
 
 *Fonte: Três principais módulos tecnológicos identificados pela análise de comunidade Louvain aplicada à rede de coocorrência entre algoritmos, técnicas analíticas e produtos com indicação geográfica. A densidade interna de cada módulo indica a força das conexões entre seus componentes.*
 
 ### Tabela A.4: Famílias Tecnológicas Identificadas pela Análise de Cluster
 
-| **Cluster** | **Produto Principal** | **Técnica Analítica** | **Algoritmo ML** | **Aplicação** | **Região Predominante** |
-|-------------|-----------------------|-----------------------|------------------|---------------|--------------------------|
-| 1 | Mel | Espectroscopia NIR | SVM, KNN | Autenticação e detecção de fraude | Ásia |
-| 2 | Queijo | Espectroscopia NIR | Redes Neurais | Discriminação de origem | Europa |
-| 3 | Mel, Carnes | LC-MS, GC-MS | SVM, Random Forest, Árvores de Decisão | Autenticação e rastreabilidade | Ásia, Europa |
+| **Cluster** | **Produto Principal** | **Técnica Analítica** | **Algoritmo ML**                   | **Aplicação**                 | **Região Predominante** |
+| ----------------- | --------------------------- | ----------------------------- | ---------------------------------------- | ------------------------------------- | ------------------------------ |
+| 1                 | Mel                         | Espectroscopia NIR            | SVM, KNN                                 | Autenticação e detecção de fraude | Ásia                          |
+| 2                 | Queijo                      | Espectroscopia NIR            | Redes Neurais                            | Discriminação de origem             | Europa                         |
+| 3                 | Mel, Carnes                 | LC-MS, GC-MS                  | SVM, Random Forest, Árvores de Decisão | Autenticação e rastreabilidade      | Ásia, Europa                  |
 
 *Fonte: Dez clusters identificados pela análise de cluster (k-means e hierárquica) baseada em produto, instrumento analítico, algoritmo e tipo de aplicação. Apenas os três clusters mais notáveis são detalhados aqui.*
