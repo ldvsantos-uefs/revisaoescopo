@@ -32,7 +32,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     
     # Remover arquivo antigo se existir
     if output_file.exists():
-        print(f"📝 Removendo arquivo antigo: {output_file.name}")
+        print(f"[INFO] Removendo arquivo antigo: {output_file.name}")
         max_attempts = 5
         for attempt in range(max_attempts):
             try:
@@ -40,10 +40,10 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
                 break
             except PermissionError:
                 if attempt < max_attempts - 1:
-                    print(f"⚠️  Tentativa {attempt + 1}/{max_attempts}: Arquivo em uso, aguardando...")
+                    print(f"[AVISO] Tentativa {attempt + 1}/{max_attempts}: Arquivo em uso, aguardando...")
                     time.sleep(0.6)
                 else:
-                    print(f"Erro: não foi possível remover '{output_file.name}'.")
+                    print(f"Erro: nao foi possivel remover '{output_file.name}'.")
                     print("Certifique-se de que o arquivo não está aberto no Word ou OneDrive.")
                     return 1
     
@@ -56,7 +56,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     # Adicionar apêndices ANTES do --citeproc
     if apendices_file and apendices_file.exists():
         cmd.append(str(apendices_file))
-        print(f"📎 Incluindo apêndices: {apendices_file.name}")
+        print(f"[INFO] Incluindo apendices: {apendices_file.name}")
     
     # Adicionar resource-path para encontrar figuras
     cmd.extend([
@@ -204,7 +204,7 @@ def main():
     
     # Contador de sucesso
     sucessos = 0
-    total = 2
+    total = 0
     
     # ========================================================================
     # GERAR REVISÃO DE ESCOPO
@@ -212,21 +212,25 @@ def main():
     # Versão EN
     md_en = Path("revisao_escopo_en.md")
     docx_en = Path("revisao_escopo_en.docx")
+    result_en = 1
     
     if not md_en.exists():
         print(f"\nArquivo {md_en} não encontrado, pulando EN...")
     else:
-        result = gerar_docx(md_en, docx_en, bib_file, csl_file)
-        if result == 0:
+        total += 1
+        result_en = gerar_docx(md_en, docx_en, bib_file, csl_file)
+        if result_en == 0:
             sucessos += 1
 
     # Versão PT
     md_pt = Path("revisao_escopo_pt.md")
     docx_pt = Path("revisao_escopo_pt.docx")
+    result_pt = 1
 
     if not md_pt.exists():
         print(f"\nArquivo {md_pt} não encontrado, pulando PT...")
     else:
+        total += 1
         result_pt = gerar_docx(md_pt, docx_pt, bib_file, csl_file)
         if result_pt == 0:
             sucessos += 1
@@ -234,11 +238,16 @@ def main():
     # Gerar PDF opcionalmente
     # Use argumento de linha de comando: python gerar-docx.py --pdf
     if len(sys.argv) > 1 and sys.argv[1] in ("--pdf", "-p"):
-        pdf_rs = Path("revisao_escopo_en.pdf")
-        print("\n📄 Opção de PDF detectada — gerando PDF com xelatex...")
-        result_pdf = gerar_pdf(md_rs, pdf_rs, bib_file, csl_file, pdf_engine="xelatex")
-        if result_pdf == 0:
-            sucessos += 1
+        md_for_pdf = md_pt if md_pt.exists() else md_en
+        pdf_output = Path("revisao_escopo.pdf")
+        print("\n[INFO] Opcao de PDF detectada - gerando PDF com xelatex...")
+        if md_for_pdf.exists():
+            total += 1
+            result_pdf = gerar_pdf(md_for_pdf, pdf_output, bib_file, csl_file, pdf_engine="xelatex")
+            if result_pdf == 0:
+                sucessos += 1
+        else:
+            print("[AVISO] Nenhum arquivo Markdown encontrado para gerar PDF")
     
     # ========================================================================
     # RESUMO FINAL
@@ -246,7 +255,7 @@ def main():
     print("\n" + "=" * 70)
     print("📊 RESUMO DA GERAÇÃO")
     print("=" * 70)
-    print(f"✅ Arquivos gerados com sucesso: {sucessos}/{total}")
+    print(f"[OK] Arquivos gerados com sucesso: {sucessos}/{total}")
     
     if sucessos == total:
         print("\nTodos os arquivos foram gerados com sucesso.")
