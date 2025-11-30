@@ -280,44 +280,141 @@ write_csv(vies_publicacao, "analise_vies_publicacao.csv")
 
 # -----------------------------------------------------------------------------
 # 7. VISUALIZAÇÕES
-# -----------------------------------------------------------------------------
+# Importar forcats para manipulação de fatores
+library(forcats)
 
 cat("\n========== GERANDO VISUALIZAÇÕES ==========\n")
 
-# 7.1 Forest plot geral (top 30 estudos por peso)
-# Filtrar apenas estudos sem NA
-dados_validos <- dados_meta %>%
-  filter(!is.na(yi) & !is.na(vi))
-
-dados_forest <- dados_validos %>%
+# Preparar dados para forestplot com ggplot2
+dados_forest_prep <- dados %>%
   mutate(
-    peso = weights(meta_geral),
-    acuracia_pct = transf.ilogit(yi) * 100,
-    ic_inf = transf.ilogit(yi - 1.96*sqrt(vi)) * 100,
-    ic_sup = transf.ilogit(yi + 1.96*sqrt(vi)) * 100
+    acuracia_pct = acuracia,
+    ic_inf = ic_inferior,
+    ic_sup = ic_superior,
+    peso = 100 / variancia,  # peso inverso da variância
+    peso_norm = peso / sum(peso) * 100  # normalizar para 0-100%
+  )
+
+# Categorizar algoritmos em grupos funcionais
+# (análogo aos grupos Físico, Químico, Biológico do modelo OLD)
+dados_forest_prep <- dados_forest_prep %>%
+  mutate(
+    grupo_algoritmo = case_when(
+      algoritmo %in% c("Random Forest", "Decision Tree", "XGBoost") ~ "Ensemble",
+      algoritmo %in% c("SVM", "Neural Network", "Deep Learning") ~ "Kernel/Neural",
+      algoritmo == "PLS-DA" ~ "Quimiometria",
+      TRUE ~ "Outros"
+    ),
+    grupo_algoritmo = factor(grupo_algoritmo, levels = c("Ensemble", "Quimiometria", "Kernel/Neural", "Outros")),
+    
+    # Shape por algoritmo
+    shape_algoritmo = case_when(
+      algoritmo == "Random Forest" ~ 21,
+      algoritmo == "SVM" ~ 22,
+      algoritmo == "Neural Network" ~ 24,
+      algoritmo == "Deep Learning" ~ 25,
+      algoritmo == "PLS-DA" ~ 23,
+      algoritmo == "XGBoost" ~ 21,
+      TRUE ~ 23
+    ),
+    
+    # Label único para cada estudo
+    studlab = paste0(autor_ano, " - ", algoritmo, 
+                     " (n=", n_amostral, ")")
   ) %>%
-  arrange(desc(peso)) %>%
-  slice(1:30)
+  arrange(grupo_algoritmo, desc(acuracia_pct))
 
-png("plot1_forest_plot_top30.png", width = 12, height = 16, units = "in", res = 300)
+# Mapa de cores por grupo funcional (análogo ao modelo OLD)
+cores_grupo <- c(
+  "Ensemble" = "#0072B2",      # Azul (como Físico)
+  "Quimiometria" = "#009E73",  # Verde (como Químico)
+  "Kernel/Neural" = "#D55E00", # Laranja (como Biológico)
+  "Outros" = "gray60"
+)
 
-# Pegar índices dos top 30 por peso
-indices_top30 <- order(weights(meta_geral), decreasing = TRUE)[1:30]
-dados_top30 <- dados_validos[indices_top30, ]
+# Forestplot com ggplot2 (estilo do modelo OLD)
+# Top 40 estudos por peso para melhor visualização
+dados_top40 <- dados_forest_prep %>%
+  arrange(desc(peso_norm)) %>%
+  slice(1:40) %>%
+  mutate(
+    studlab = fct_reorder(studlab, acuracia_pct),
+    ordem = row_number()
+  )
 
-# Criar modelo apenas com top 30
-meta_top30 <- rma(yi, vi, data = dados_top30, method = "REML")
+p_forest <- ggplot(dados_top40, 
+                    aes(x = acuracia_pct, y = studlab, 
+                        fill = grupo_algoritmo, shape = grupo_algoritmo)) +
+  
+  # Ponto central (estimativa pontual)
+  geom_point(size = 4, color = "black", stroke = 1.1, 
+             position = position_nudge(y = 0)) +
+  
+  # Barras de erro (intervalo de confiança)
+  geom_errorbarh(aes(xmin = ic_inf, xmax = ic_sup), 
+                 height = 0.2, color = "gray30", linewidth = 0.8) +
+  
+  # Linha vertical em 0 (linha nula)
+  geom_vline(xintercept = 50, linetype = "dashed", color = "darkred", 
+             linewidth = 0.8, alpha = 0.7) +
+  
+  # Escala de cores (análogo ao modelo OLD)
+  scale_fill_manual(values = cores_grupo, name = "Grupo") +
+  scale_shape_manual(values = c("Ensemble" = 21, 
+                                 "Quimiometria" = 23,
+                                 "Kernel/Neural" = 24, 
+                                 "Outros" = 22),
+                     name = "Grupo") +
+  
+  # Labels e títulos
+  labs(
+    title = "Forest Plot: Pooled Accuracy by Study (Top 40 Weighted)",
+    subtitle = sprintf("k = %d studies | Overall pooled = %.2f%% [%.2f - %.2f]",
+                       nrow(dados), acuracia_pooled, 
+                       ic_inferior_pooled, ic_superior_pooled),
+    x = "Accuracy (%)",
+    y = "Study (Algorithm)"
+  ) +
+  
+  # Temas e formatação
+  theme_minimal(base_size = 10) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5, size = 13),
+    plot.subtitle = element_text(hjust = 0.5, size = 10, color = "gray40"),
+    legend.position = "top",
+    legend.title = element_text(face = "bold"),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_line(color = "gray90", linewidth = 0.3),
+    axis.text.y = element_text(size = 7),
+    axis.text.x = element_text(size = 9)
+  )
 
+ggsave("plot1_forest_plot_top40_styled.png", p_forest, width = 14, height = 16, dpi = 300)
+cat("✓ Forest plot (estilo) salvo: plot1_forest_plot_top40_styled.png\n")
+
+# 7.1b Forest plot geral via metafor (formato clássico)
+png("plot1_forest_plot_classico.png", width = 12, height = 14, units = "in", res = 300)
 par(mar = c(5, 10, 4, 2))
-forest(meta_top30,
-       slab = dados$autor_ano[indices_top30],
+
+# Pegar índices dos top 40 por peso
+indices_top40 <- order(weights(meta_geral), decreasing = TRUE)[1:40]
+dados_top40_metafor <- dados_validos[indices_top40, ]
+
+# Criar modelo apenas com top 40
+meta_top40 <- rma(yi, vi, data = dados_top40_metafor, method = "REML")
+
+forest(meta_top40,
+       slab = dados$autor_ano[indices_top40],
        atransf = transf.ilogit,
        xlab = "Accuracy (proportion)", 
-       header = "Study", 
-       cex = 0.8,
-       col = "darkblue")
+       header = "Study",
+       cex = 0.75,
+       col = "darkblue",
+       digits = 3)
 
 dev.off()
+cat("✓ Forest plot clássico salvo: plot1_forest_plot_classico.png\n")
 
 # 7.2 Funnel plot (viés de publicação)
 png("plot2_funnel_plot.png", width = 10, height = 8, units = "in", res = 300)
@@ -325,16 +422,79 @@ funnel(meta_geral, xlab = "Logit-transformed Accuracy",
        main = "Funnel Plot: Publication Bias Assessment",
        col = "steelblue", back = "lightgray")
 dev.off()
+cat("✓ Funnel plot salvo: plot2_funnel_plot.png\n")
 
-# 7.3 Funnel plot com trim-and-fill
+# 7.3 Forestplot por produto com estilo OLD
+# Mapa de cores por produto (análogo aos grupos funcionais)
+cores_produto <- c(
+  "Vinho" = "#0072B2",    # Azul
+  "Chá" = "#009E73",      # Verde
+  "Mel" = "#D55E00",      # Laranja
+  "Azeite" = "#CC79A7",   # Roxo
+  "Queijo" = "#F0E442",   # Amarelo
+  "Café" = "#999999",     # Cinza
+  "Outros" = "lightgray"
+)
+
+# Preparar dados por produto (top 35 estudos)
+dados_product_forest <- dados_forest_prep %>%
+  arrange(desc(peso_norm)) %>%
+  slice(1:35) %>%
+  mutate(
+    produto = factor(produto, 
+                    levels = names(cores_produto)),
+    studlab_prod = paste0(autor_ano, " - ", produto,
+                         " (n=", n_amostral, ")"),
+    studlab_prod = fct_reorder(studlab_prod, acuracia_pct)
+  )
+
+p_forest_prod <- ggplot(dados_product_forest, 
+                         aes(x = acuracia_pct, y = studlab_prod, 
+                             fill = produto, shape = produto)) +
+  
+  geom_point(size = 4, color = "black", stroke = 1.1) +
+  geom_errorbarh(aes(xmin = ic_inf, xmax = ic_sup), 
+                 height = 0.2, color = "gray30", linewidth = 0.8) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "darkred", 
+             linewidth = 0.8, alpha = 0.7) +
+  
+  scale_fill_manual(values = cores_produto, name = "Product") +
+  scale_shape_manual(values = c("Vinho" = 21, "Chá" = 22, "Mel" = 24,
+                                 "Azeite" = 25, "Queijo" = 23, "Café" = 19,
+                                 "Outros" = 22),
+                     name = "Product") +
+  
+  labs(
+    title = "Forest Plot: Pooled Accuracy by Product Type (Top 35)",
+    subtitle = sprintf("Products colored by category | Overall = %.2f%%",
+                       acuracia_pooled),
+    x = "Accuracy (%)",
+    y = "Study (Product)"
+  ) +
+  
+  theme_minimal(base_size = 10) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5, size = 13),
+    plot.subtitle = element_text(hjust = 0.5, size = 10, color = "gray40"),
+    legend.position = "top",
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = "gray90", linewidth = 0.3),
+    axis.text.y = element_text(size = 7)
+  )
+
+ggsave("plot1b_forest_plot_by_product.png", p_forest_prod, width = 14, height = 14, dpi = 300)
+cat("✓ Forest plot por produto salvo: plot1b_forest_plot_by_product.png\n")
+
+# 7.3b Funnel plot com trim-and-fill
 png("plot3_funnel_trimfill.png", width = 10, height = 8, units = "in", res = 300)
 funnel(trimfill, xlab = "Logit-transformed Accuracy",
        main = "Trim-and-Fill Method")
 legend("topright", legend = c("Observed", "Imputed"), 
        pch = c(19, 1), col = c("black", "black"))
 dev.off()
+cat("✓ Funnel plot (trim-and-fill) salvo: plot3_funnel_trimfill.png\n")
 
-# 7.4 Forest plot por algoritmo
+# 7.4 Forest plot por algoritmo (via metafor com rótulos customizados)
 png("plot4_forest_algoritmo.png", width = 12, height = 10, units = "in", res = 300)
 par(mar = c(5, 10, 4, 2))
 
