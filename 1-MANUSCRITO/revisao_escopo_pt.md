@@ -293,13 +293,16 @@ Quanto à transparência, apenas 13,5% dos trabalhos adotaram técnicas de Intel
 
 **Figura 6.** Trade-off entre explicabilidade algorítmica e desempenho preditivo.
 
-![](2-FIGURAS/2-EN/tradeoff_explicabilidade.png){#fig:tradeoff_xai width="85%"} *Nota: Algoritmos mais explicáveis apresentam correlação negativa moderada com acurácia (*$\rho = -0,481$, $p < 0,001$), mas o custo absoluto é modesto (\~1,5 pontos percentuais). XGBoost destaca-se como algoritmo com melhor balanço multi-critério (score de Pareto = 0,650, considerando acurácia 93%, explicabilidade 6/10 e tempo 12 min). $n = 148$ estudos.
+![](2-FIGURAS/2-EN/tradeoff_explicabilidade.png){#fig:tradeoff_xai width="85%"} 
+
+*Nota: Algoritmos mais explicáveis apresentam correlação negativa moderada com acurácia (*$\rho = -0,481$, $p < 0,001$), mas o custo absoluto é modesto (\~1,5 pontos percentuais). XGBoost destaca-se como algoritmo com melhor balanço multi-critério (score de Pareto = 0,650, considerando acurácia 93%, explicabilidade 6/10 e tempo 12 min). $n = 148$ estudos.
 
 A meta-análise de 129 estudos indicou uma acurácia global (pooled) de 90,66% [IC 95%: 89,8–91,4%]. O algoritmo PLS-DA obteve o melhor desempenho médio (92,95%), seguido por Random Forest (91,33%). Entretanto, o teste de Egger detectou viés de publicação severo ($z = 40,02, p < 0,001$). A correção pelo método trim-and-fill (imputação de 42 estudos teóricos faltantes) reduziu a acurácia ajustada para ~88%, sugerindo que a literatura atual superestima a maturidade tecnológica dos modelos (Figura 7).
 
 **Figura 7.** Meta-análise de acurácias por algoritmo de Machine Learning.
 
-![](2-FIGURAS/2-EN/meta_analise_algoritmos.png){#fig:meta_algoritmo width="90%"} *Nota: PLS-DA e Random Forest apresentam as maiores acurácias consolidadas, enquanto SVM demonstra maior robustez (menor variância entre estudos). A heterogeneidade moderada (*$I^2 = 58\%$) indica variabilidade metodológica substancial entre estudos. Os intervalos de confiança representam estimativas de efeitos aleatórios (modelo REML). $k = 129$ estudos.
+![](2-FIGURAS/2-EN/meta_analise_algoritmos.png){#fig:meta_algoritmo width="90%"} 
+*Nota: PLS-DA e Random Forest apresentam as maiores acurácias consolidadas, enquanto SVM demonstra maior robustez (menor variância entre estudos). A heterogeneidade moderada (*$I^2 = 58\%$) indica variabilidade metodológica substancial entre estudos. Os intervalos de confiança representam estimativas de efeitos aleatórios (modelo REML). $k = 129$ estudos.
 
 Por fim, a governança de dados avaliada pelos princípios FAIR atingiu um score médio crítico de 34,2/100. A dimensão Accessible foi a mais deficitária, com apenas 10,1% dos estudos depositando dados em repositórios públicos. A análise temporal não indicou melhorias significativas ($\rho = 0,235, p = 0,379$), evidenciando a estagnação de uma cultura de "caixa-preta" que impede a reprodutibilidade e a validação independente (Figura 8).
 
