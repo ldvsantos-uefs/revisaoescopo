@@ -247,35 +247,20 @@ The lack of bridge edges and articulating nodes (unfilled structural holes) impl
 
 *Note: Nodes sized by weighted degree; colors represent modules (modularity $Q = 0.62$). The absence of bridge edges between spectroscopic and chromatographic clusters highlights a break in transferability and the need for multimodal architecture for adaptive generalization.*
 
-Louvain community analysis revealed three distinct technological modules (Table 3), each characterized by specific combinations of algorithms, analytical techniques, and products. Module M1, predominant in wines and honey from African and European regions, focuses on spectroscopic techniques (NIR) associated with ensemble algorithms (Random Forest, Gradient Boosting). 
+The joint analysis of Louvain communities and hierarchical clusters revealed distinct technological patterns, synthesized in Table 3. Module M1, predominant in wines and honey from African and European regions, focuses on spectroscopic techniques (NIR) associated with ensemble algorithms (Random Forest, Gradient Boosting). Module M2, focused on Asian meats and regional products, predominantly uses chromatography (GC-MS, LC-MS) combined with SVM and KNN. Module M3 integrates advanced Deep Learning and CNN techniques for spectral and sensory data processing in olive oils, cheeses, and teas, reflecting the analytical complexity of European and Asian matrices. This technological compartmentalization highlights regional specialization, but also exposes the lack of universal protocols that hinders the transfer of knowledge between different biogeographical contexts.
 
-Module M2, focused on Asian meats and regional products, predominantly uses chromatography (GC-MS, LC-MS) combined with SVM and KNN. Module M3 integrates advanced Deep Learning and CNN techniques for spectral and sensory data processing in olive oils, cheeses, and teas, reflecting the analytical complexity of European and Asian matrices. This technological compartmentalization highlights regional specialization, but also exposes the lack of universal protocols that hinders the transfer of knowledge between different biogeographical contexts.
+**Table 3.** Synthesis of Technological Patterns Identified by Network Analysis (Louvain) and Clustering.
 
-**Table 3.** Technological Modules Identified by Louvain Community Analysis
+| Technological Pattern | Main Algorithms | Analytical Techniques | Products | Predominant Region | Main Application | Methodological Convergence |
+|:---|:---|:---|:---|:---|:---|:---|
+| **Spectroscopy and Ensemble** | Random Forest, Decision Tree, Gradient Boosting | Spectroscopy (NIR), Chemometrics | Wine, Honey | Africa, Europe | Authentication and Classification | Module M1 (Louvain) |
+| **Chromatography and Discriminants** | SVM, KNN, Random Forest | Chromatography (GC-MS, LC-MS, HPLC) | Meat, Honey, Regional Products | Asia, Europe | Traceability and Fraud Detection | Module M2 / Cluster 3 |
+| **Deep Learning and Sensors** | Neural Networks, CNN, Deep Learning | Spectroscopy (NIR, FTIR), Sensors (e-nose) | Olive Oil, Cheese, Tea | Europe, Asia | Origin Discrimination and Quality | Module M3 / Cluster 2 |
+| **Spectroscopy and Discriminants** | SVM, KNN | Spectroscopy (NIR) | Honey | Asia | Authentication and Fraud Detection | Cluster 1 |
 
-| Module | Main Algorithms | Analytical Techniques | Products | Predominant Region |
-| :---: | :---- | :---- | :---- | :---- |
-| **M1** | Random Forest, Decision Tree, Gradient Boosting | Spectroscopy (NIR), Chemometrics | Wine, Honey | Africa, Europe |
-| **M2** | SVM, KNN | Chromatography (GC-MS, LC-MS, HPLC) | Meat, Regional Products | Asia |
-| **M3** | Neural Networks, CNN, Deep Learning | Spectroscopy (NIR, FTIR), Sensors (e-nose) | Olive Oil, Cheese, Tea | Europe, Asia |
+*Source: Synthesis of technological patterns identified by the joint analysis of Louvain communities and hierarchical clusters. The convergence between the methods confirms the existence of "specialized technological islands".*
 
-*Source: Three main technological modules identified by Louvain community analysis applied to the co-occurrence network between algorithms, analytical techniques, and products with geographical indication. The internal density of each module indicates the strength of the connections between its components.*
-
-In addition, k-means and hierarchical cluster analysis identified recurring technological families that transcend modular boundaries (Table 4). Cluster 1, focused on Asian honey, combines NIR spectroscopy with discriminant algorithms (SVM, KNN) for authentication and fraud detection, reflecting market pressure for traceability in high-value chains. 
-
-Cluster 2, focused on European cheeses, employs neural networks for origin discrimination, exploiting the sensory and chemical complexity of these matrices. Cluster 3 integrates honey and meat from multiple regions (Asia and Europe), using advanced chromatography (LC-MS, GC-MS) associated with robust algorithms (Random Forest, SVM) for authentication and traceability. This methodological diversification indicates the convergence of sophisticated analytical techniques in high- y products with a high risk of adulteration, although low interoperability between clusters limits the scalability of the protocols developed.
-
-**Table 4.** Technological Families Identified by Cluster Analysis
-
-| Cluster | Main Product | Analytical Technique | Algorithm | Application | Predominant Region |
-| ----- | ----- | ----- | ----- | ----- | ----- |
-| 1 | Honey | NIR spectroscopy | SVM, KNN | Authentication and Fraud Detection | Asia |
-| 2 | Cheese | NIR spectroscopy | Neural Networks | Discrimination of origin | Europe |
-| 3 | Honey, Meat | LC-MS, GC-MS | SVM, Random Forest, Decision Trees | Authentication and traceability | Asia, Europe |
-
-*Source: Ten clusters identified by cluster analysis (k-means and hierarchical) based on product, analytical instrument, algorithm, and application type. Only the three most notable clusters are detailed here.*
-
-The convergence between the Louvain modules (network structure) and hierarchical clusters (clustering by similarity) confirms the existence of “specialized technological islands.” High value-added products (wines, cheeses, honey) concentrate the most sophisticated analytical infrastructure, while complex matrices from the Global South remain underrepresented. This epistemic asymmetry not only reflects economic disparities but also perpetuates barriers to the implementation of Digital Terroir systems in biodiverse regions that would most benefit from auditable environmental certification tools. Overcoming this fragmentation requires federated protocols that allow the reuse of parameters across different biogeographic contexts, enabling economies of scale in the validation of emerging Geographical Indications.
+The convergence between the Louvain modules (network structure) and hierarchical clusters (clustering by similarity) confirms the existence of "specialized technological islands". High value-added products (wines, cheeses, honey) concentrate the most sophisticated analytical infrastructure, while complex matrices from the Global South remain underrepresented. This epistemic asymmetry not only reflects economic disparities but also perpetuates barriers to the implementation of Digital Terroir systems in biodiverse regions that would most benefit from auditable environmental certification tools. Overcoming this fragmentation requires federated protocols that allow the reuse of parameters across different biogeographic contexts, enabling economies of scale in the validation of emerging Geographical Indications.
 
 ## 3.5 Quantitative evidence and meta-analyses
 
@@ -299,7 +284,7 @@ The meta-analysis of 129 studies indicated an overall (pooled) accuracy of 90.66
 
 **Figure 7.** Meta-analysis of accuracies by Machine Learning algorithm.
 
-![](2-FIGURAS/2-EN/tradeoff_explicabilidade.png){#fig:tradeoff_xai width="85%"}
+![](2-FIGURAS/2-EN/meta_analise_algoritmos.png){#fig:tradeoff_xai width="85%"}
 
 
 *Note: PLS-DA and Random Forest have the highest consolidated accuracies, while SVM demonstrates greater robustness (lower variance between studies). Moderate heterogeneity (*$I^2 = 58\%$) indicates substantial methodological variability between studies. Confidence intervals represent estimates of random effects (REML model). $k = 129$ studies.
@@ -326,6 +311,7 @@ To rectify these deficiencies and operationalize the Digital Terroir, we propose
 ## 3.6 Barriers to Auditability and the Failure of Static Digital Terroir
 
 Current algorithmic sophistication fails to translate into robustness for environmental governance. The assumption of stationarity, implicit in the dominant methodology, represents the fundamental ontological limitation. High laboratory accuracy (80–100%) reflects the ability of models to memorize chemical signatures of specific crops, not to grasp the causality of terroir. The absence of longitudinal validation in 94% of studies and spatially independent tests in 77% indicates low external robustness of the models [@Moran2020].  
+
 This methodological omission precludes the capture of phenotypic plasticity, where the chemical expression of plants varies naturally in response to environmental fluctuations, compromising the causality of terroir [@GeneEnvironment2022]. According to @Kuhn2013, this flaw invalidates continuous auditing, as algorithms fail to operate as Inference Digital Twins under climatic dynamics. Consequently, dynamic Digital Terroir emerges as a solution, reconstructing systemic couplings between soil, climate, and biota.
 
 Regarding temporal obsolescence, models calibrated in ideal time windows become blind to chemical drifts induced by extreme weather events, which can alter the composition of secondary metabolites by more than 20% between production cycles [@Urvieta2021; @Iranzad2025]. By disregarding the nonlinearity and dynamic couplings between climate, soil, and biota, current systems degrade into static classifiers, unable to operate as Inferential Digital Twins in climate change scenarios [@Kuhn2013; @Celette2016WaterStress].

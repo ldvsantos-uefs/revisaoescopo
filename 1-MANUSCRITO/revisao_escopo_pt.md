@@ -255,29 +255,18 @@ Ausência de arestas ponte e de nós articuladores (structural holes não preenc
 ![](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain width="85%"}
 *Nota: Nós dimensionados por grau ponderado; cores representam módulos (modularidade $Q = 0,62$). Ausência de arestas ponte entre clusters espectroscópicos e cromatográficos evidencia ruptura de transferibilidade e necessidade de arquitetura multimodal para generalização adaptativa.*
 
-A análise de comunidades Louvain revelou três módulos tecnológicos distintos (Tabela 3), cada um caracterizado por combinações específicas de algoritmos, técnicas analíticas e produtos. O Módulo M1, predominante em vinhos e mel das regiões africanas e europeias, concentra-se em técnicas espectroscópicas (NIR) associadas a algoritmos de ensemble (Random Forest, Gradient Boosting). O Módulo M2, focado em carnes e produtos regionais asiáticos, utiliza predominantemente cromatografia (GC-MS, LC-MS) combinada com SVM e KNN. Já o Módulo M3 integra técnicas avançadas de Deep Learning e CNNs para processamento de dados espectrais e sensoriais em azeites, queijos e chás, refletindo a complexidade analítica das matrizes europeias e asiáticas. Essa compartimentalização tecnológica evidencia a especialização regional, mas também expõe a falta de protocolos universais que dificulta a transferência de conhecimento entre contextos biogeográficos distintos.
+A análise de comunidades Louvain e a análise de clusters hierárquicos revelaram padrões tecnológicos distintos, sintetizados na Tabela 3. O Módulo M1, predominante em vinhos e mel das regiões africanas e europeias, concentra-se em técnicas espectroscópicas (NIR) associadas a algoritmos de ensemble (Random Forest, Gradient Boosting). O Módulo M2, focado em carnes e produtos regionais asiáticos, utiliza predominantemente cromatografia (GC-MS, LC-MS) combinada com SVM e KNN. Já o Módulo M3 integra técnicas avançadas de Deep Learning e CNNs para processamento de dados espectrais e sensoriais em azeites, queijos e chás, refletindo a complexidade analítica das matrizes europeias e asiáticas. Essa compartimentalização tecnológica evidencia a especialização regional, mas também expõe a falta de protocolos universais que dificulta a transferência de conhecimento entre contextos biogeográficos distintos.
 
-**Tabela 3.** Módulos Tecnológicos Identificados pela Análise de Comunidade Louvain
+**Tabela 3.** Síntese dos Padrões Tecnológicos Identificados por Análise de Redes (Louvain) e Agrupamento (Cluster).
 
-| **Módulo** | **Algoritmos Principais** | **Técnicas Analíticas** | **Produtos** | **Região Predominante** |
-|:-------------:|:--------------|:--------------|:--------------|:--------------|
-| **M1** | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria | Vinho, Mel | África, Europa |
-| **M2** | SVM, KNN | Cromatografia (GC-MS, LC-MS, HPLC) | Carnes, Produtos Regionais | Ásia |
-| **M3** | Neural Networks, CNN, Deep Learning | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá | Europa, Ásia |
+| Padrão Tecnológico | Algoritmos Principais | Técnicas Analíticas | Produtos | Região Predominante | Aplicação Principal | Convergência Metodológica |
+|:---|:---|:---|:---|:---|:---|:---|
+| **Espectroscopia e Ensemble** | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria | Vinho, Mel | África, Europa | Autenticação e Classificação | Módulo M1 (Louvain) |
+| **Cromatografia e Discriminantes** | SVM, KNN, Random Forest | Cromatografia (GC-MS, LC-MS, HPLC) | Carnes, Mel, Produtos Regionais | Ásia, Europa | Rastreabilidade e Detecção de Fraude | Módulo M2 / Cluster 3 |
+| **Deep Learning e Sensores** | Redes Neurais, CNN, Deep Learning | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá | Europa, Ásia | Discriminação de Origem e Qualidade | Módulo M3 / Cluster 2 |
+| **Espectroscopia e Discriminantes** | SVM, KNN | Espectroscopia (NIR) | Mel | Ásia | Autenticação e Detecção de Fraude | Cluster 1 |
 
-*Fonte: Três principais módulos tecnológicos identificados pela análise de comunidade Louvain aplicada à rede de coocorrência entre algoritmos, técnicas analíticas e produtos com indicação geográfica. A densidade interna de cada módulo indica a força das conexões entre seus componentes.*
-
-Complementarmente, a análise de clusters k-means e hierárquica identificou famílias tecnológicas recorrentes que transcendem as fronteiras modulares (Tabela 4). O Cluster 1, centrado em mel asiático, combina espectroscopia NIR com algoritmos discriminantes (SVM, KNN) para autenticação e detecção de fraudes, refletindo a pressão de mercado por rastreabilidade em cadeias de alto valor. O Cluster 2, focado em queijos europeus, emprega redes neurais para discriminação de origem, explorando a complexidade sensorial e química dessas matrizes. O Cluster 3 integra mel e carnes de múltiplas regiões (Ásia e Europa), utilizando cromatografia avançada (LC-MS, GC-MS) associada a algoritmos robustos (Random Forest, SVM) para autenticação e rastreabilidade. Essa diversificação metodológica indica a convergência de técnicas analíticas sofisticadas em produtos com alto risco de adulteração, embora a baixa interoperabilidade entre clusters limite a escalabilidade dos protocolos desenvolvidos.
-
-**Tabela 4.** Famílias Tecnológicas Identificadas pela Análise de Cluster
-
-| **Cluster** | **Produto Principal** | **Técnica Analítica** | **Algoritmo ML** | **Aplicação** | **Região Predominante** |
-|------------|------------|------------|------------|------------|------------|
-| 1 | Mel | Espectroscopia NIR | SVM, KNN | Autenticação e detecção de fraude | Ásia |
-| 2 | Queijo | Espectroscopia NIR | Redes Neurais | Discriminação de origem | Europa |
-| 3 | Mel, Carnes | LC-MS, GC-MS | SVM, Random Forest, Árvores de Decisão | Autenticação e rastreabilidade | Ásia, Europa |
-
-*Fonte: Dez clusters identificados pela análise de cluster (k-means e hierárquica) baseada em produto, instrumento analítico, algoritmo e tipo de aplicação. Apenas os três clusters mais notáveis são detalhados aqui.*
+*Fonte: Síntese dos padrões tecnológicos identificados pela análise conjunta de comunidades Louvain e clusters hierárquicos. A convergência entre os métodos confirma a existência de "ilhas tecnológicas" especializadas.*
 
 A convergência entre os módulos Louvain (estrutura de rede) e os clusters hierárquicos (agrupamento por similaridade) confirma a existência de "ilhas tecnológicas" especializadas. Produtos de alto valor agregado (vinhos, queijos, mel) concentram a infraestrutura analítica mais sofisticada, enquanto matrizes complexas do Sul Global permanecem sub-representadas. Essa assimetria epistêmica não apenas reflete disparidades econômicas, mas também perpetua barreiras à implementação de sistemas de Terroir Digital em regiões biodiversas que mais se beneficiariam de ferramentas auditáveis de certificação ambiental. A superação dessa fragmentação demanda protocolos federados que permitam a reutilização de parâmetros entre contextos biogeográficos distintos, viabilizando economias de escala na validação de Indicações Geográficas emergentes.
 
