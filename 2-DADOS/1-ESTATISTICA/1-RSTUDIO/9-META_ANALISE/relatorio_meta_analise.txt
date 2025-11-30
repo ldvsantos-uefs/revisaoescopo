@@ -1,7 +1,7 @@
 =============================================================================
 RELATÓRIO: META-ANÁLISE DE ACURÁCIAS EM ML PARA IG
 Framework: Digital Terroir - Quantitative Synthesis
-Data: 28/11/2025 
+Data: 30/11/2025 
 =============================================================================
 
 1. SÍNTESE GERAL

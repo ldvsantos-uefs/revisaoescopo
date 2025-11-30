@@ -399,7 +399,7 @@ par(mar = c(5, 10, 4, 2))
 
 # Pegar índices dos top 40 por peso
 indices_top40 <- order(weights(meta_geral), decreasing = TRUE)[1:40]
-dados_top40_metafor <- dados_validos[indices_top40, ]
+dados_top40_metafor <- dados_meta[indices_top40, ]
 
 # Criar modelo apenas com top 40
 meta_top40 <- rma(yi, vi, data = dados_top40_metafor, method = "REML")
@@ -494,27 +494,153 @@ legend("topright", legend = c("Observed", "Imputed"),
 dev.off()
 cat("✓ Funnel plot (trim-and-fill) salvo: plot3_funnel_trimfill.png\n")
 
-# 7.4 Forest plot por algoritmo (via metafor com rótulos customizados)
-png("plot4_forest_algoritmo.png", width = 12, height = 10, units = "in", res = 300)
-par(mar = c(5, 10, 4, 2))
+# 7.4 Forest plot por algoritmo - Estilo híbrido tradicional
+# Preparar dados por algoritmo
+dados_algo_forest <- acuracias_algoritmo %>%
+  mutate(
+    grupo_algoritmo = case_when(
+      algoritmo %in% c("Random Forest", "Decision Tree", "XGBoost") ~ "Ensemble",
+      algoritmo %in% c("SVM", "Neural Network", "Deep Learning") ~ "Kernel/Neural",
+      algoritmo == "PLS-DA" ~ "Quimiometria",
+      TRUE ~ "Outros"
+    ),
+    grupo_algoritmo = factor(grupo_algoritmo, levels = c("Ensemble", "Quimiometria", "Kernel/Neural", "Outros")),
+    acuracia_pct = acuracia_pooled,
+    ic_inf = ic_inferior,
+    ic_sup = ic_superior,
+    peso_pct = (n_estudos / sum(n_estudos)) * 100
+  ) %>%
+  # Ordenar por acurácia decrescente
+  arrange(desc(acuracia_pct))
 
-acuracias_algoritmo <- acuracias_algoritmo %>%
+# Criar forest plot limpo seguindo o padrão da imagem de referência
+png("plot4_forest_algoritmo_styled.png", width = 14, height = 9, units = "in", res = 300)
+
+# Configurar margens
+par(mar = c(5, 15, 4, 2))
+par(cex = 0.75, font = 1)
+
+# Preparar dados para metafor (proporções em logit)
+acuracias_algoritmo_plot <- dados_algo_forest %>%
+  mutate(
+    yi = transf.logit(acuracia_pct / 100),
+    sei = (transf.logit(ic_sup / 100) - transf.logit(ic_inf / 100)) / (2 * 1.96)
+  )
+
+# Criar modelo meta
+meta_alg_plot <- rma(yi, sei = sei, data = acuracias_algoritmo_plot, method = "REML")
+
+# Mapear cores e shapes por grupo
+cores_por_algoritmo <- sapply(acuracias_algoritmo_plot$grupo_algoritmo, function(g) {
+  cores_grupo[as.character(g)]
+})
+
+shapes_por_algoritmo <- sapply(acuracias_algoritmo_plot$grupo_algoritmo, function(g) {
+  switch(as.character(g),
+         "Ensemble" = 15,
+         "Quimiometria" = 18,
+         "Kernel/Neural" = 17,
+         "Outros" = 16)
+})
+
+# Forest plot
+forest(meta_alg_plot,
+       slab = paste0(acuracias_algoritmo_plot$algoritmo, " (n=", acuracias_algoritmo_plot$n_estudos, ")"),
+       atransf = transf.ilogit,
+       xlim = c(-2.8, 2.8),
+       alim = c(0.5, 1.0),
+       at = transf.logit(c(0.622, 0.7, 0.731)),
+       xlab = "Acurácia Consolidada (proporção)",
+       
+       # Colunas de informação
+       ilab = cbind(
+         acuracias_algoritmo_plot$n_estudos,
+         sprintf("%.1f", acuracias_algoritmo_plot$acuracia_pct),
+         sprintf("[%.1f, %.1f]", acuracias_algoritmo_plot$ic_inf, acuracias_algoritmo_plot$ic_sup),
+         sprintf("%.1f", acuracias_algoritmo_plot$peso_pct)
+       ),
+       ilab.xpos = c(-2.30, -1.85, -1.30, -0.80),
+       ilab.pos = 4,
+       
+       # Símbolos por grupo
+       pch = shapes_por_algoritmo,
+       col = cores_por_algoritmo,
+       psize = 1.3,
+       
+       # Linha de referência vertical pontilhada
+       refline = NA,
+       
+       # Diamante do modelo no TOPO (row negativo coloca acima)
+       addfit = FALSE,
+       showweights = FALSE,
+       
+       # Espaçamento das linhas
+       rows = c(1:meta_alg_plot$k),
+       ylim = c(-1, meta_alg_plot$k + 3.5),
+       
+       # Cabeçalhos
+       header = c("Algoritmo", "Estimativa [IC 95%]"),
+       top = 2,
+       
+       # Ajustes de texto
+       cex = 0.75,
+       cex.lab = 1.0,
+       cex.axis = 0.85,
+       digits = 3L)
+
+# Cabeçalhos das colunas extras
+text(c(-2.30, -1.85, -1.30, -0.80), meta_alg_plot$k + 2.5,
+     c("n", "% Acurácia", "IC 95%", "Peso (%)"),
+     cex = 0.75, font = 2, pos = 4)
+
+# Linha vertical pontilhada de referência
+abline(v = transf.logit(0.5), lty = 3, col = "gray40")
+
+# DIAMANTE NO TOPO (acima das linhas dos estudos)
+addpoly(meta_alg_plot,
+        row = meta_alg_plot$k + 1,
+        atransf = transf.ilogit,
+        mlab = "  Modelo de Efeitos Aleatórios",
+        col = "gray70",
+        border = "black",
+        cex = 0.75)
+
+# Legenda
+legend("bottomright",
+       legend = c("Métodos Ensemble", "Quimiometria (PLS-DA)", "Métodos Kernel/Neural"),
+       pch = c(15, 18, 17),
+       col = c(cores_grupo["Ensemble"], cores_grupo["Quimiometria"], cores_grupo["Kernel/Neural"]),
+       pt.cex = 1.3,
+       bty = "n",
+       cex = 0.75,
+       inset = c(0.02, 0.02))
+
+dev.off()
+cat("✓ Forest plot por algoritmo (estilo híbrido) salvo: plot4_forest_algoritmo_styled.png\n")
+
+# 7.4b Forest plot por algoritmo clássico (metafor)
+png("plot4_forest_algoritmo_classico.png", width = 12, height = 9, units = "in", res = 300)
+par(mar = c(5, 12, 4, 2))
+
+acuracias_algoritmo_meta <- acuracias_algoritmo %>%
   mutate(
     yi = transf.logit(acuracia_pooled / 100),
     sei = (transf.logit(ic_superior / 100) - transf.logit(ic_inferior / 100)) / (2 * 1.96)
   )
 
 # Criar modelo meta apenas para plotagem
-meta_alg <- rma(yi, sei = sei, data = acuracias_algoritmo, method = "REML")
+meta_alg <- rma(yi, sei = sei, data = acuracias_algoritmo_meta, method = "REML")
 
 forest(meta_alg,
-       slab = paste0(acuracias_algoritmo$algoritmo, " (n=", acuracias_algoritmo$n_estudos, ")"),
+       slab = paste0(acuracias_algoritmo_meta$algoritmo, " (n=", acuracias_algoritmo_meta$n_estudos, ")"),
        atransf = transf.ilogit,
        xlab = "Pooled Accuracy (proportion)",
        header = "Algorithm",
-       col = "darkgreen")
+       cex = 0.85,
+       col = "#0072B2")
 
 dev.off()
+cat("✓ Forest plot por algoritmo (clássico) salvo: plot4_forest_algoritmo_classico.png\n")
 
 # 7.5 Bar plot: Acurácia por produto
 p5 <- ggplot(acuracias_produto, aes(x = reorder(produto, acuracia_pooled), 
@@ -536,13 +662,17 @@ p5 <- ggplot(acuracias_produto, aes(x = reorder(produto, acuracia_pooled),
 ggsave("plot5_acuracia_por_produto.png", p5, width = 10, height = 7, dpi = 300)
 
 # 7.6 Scatter: Meta-regressão (Ano)
-dados_plot_ano <- dados_validos %>%
+# Filtrar dados apenas para os válidos (sem NAs)
+dados_validos_idx <- !is.na(dados_meta$yi)
+dados_plot_ano <- dados_meta[dados_validos_idx, ] %>%
   mutate(
     acuracia_pct = transf.ilogit(yi) * 100,
-    peso = weights(meta_geral)
+    peso = weights(meta_geral),
+    ano = dados$ano[dados_validos_idx],
+    ano_cent = ano - mean(dados$ano)
   )
 
-p6 <- ggplot(dados_plot_ano, aes(x = ano_cent + mean(dados$ano), y = acuracia_pct, 
+p6 <- ggplot(dados_plot_ano, aes(x = ano, y = acuracia_pct, 
                                  size = peso, alpha = peso)) +
   geom_point(color = "steelblue") +
   geom_smooth(method = "lm", se = TRUE, color = "darkred", linetype = "dashed") +
