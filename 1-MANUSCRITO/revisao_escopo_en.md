@@ -81,7 +81,9 @@ Data extraction used a standardized form to record bibliographic metadata (autho
 
 Supplementing manual screening, an automated filtering system assigns thematic relevance scores based on the presence and location of descriptors in the title, abstract, and keywords. Implemented in Python (NLTK, spaCy), the algorithm applies a hierarchical weighting scheme to each identified term. The scoring system follows the principles of the Analytic Hierarchy Process (AHP). Equation (1) stratifies the descriptors into five categories with different weights [@SAATY1991]:
 
-$$S_i = \sum_{j=1}^{n} w_j \cdot l_i \cdot f_{ij}$$ {#eq:scoring}
+$$
+S_i = \sum_{j=1}^{n} w_j \cdot l_i \cdot f_{ij}
+$$ {#eq:weighted_score}
 
 where:  
 $S_i$ = total score of the article $i$  
@@ -148,12 +150,15 @@ The final synthesis combined qualitative thematic analysis with selection based 
 
 The final combined score was calculated using Equation (2):
 
-Pfinal=(0,40Qmet)+(0,35Qtem)+(0,25Qbiblio)  
+$$
+P_{final} = (0.40 \cdot Q_{met}) + (0.35 \cdot Q_{tem}) + (0.25 \cdot Q_{biblio})
+$$ {#eq:final_score}
+
 Where:  
-Pfinal \= final selection score  
-Qmet \= normalized methodological quality (0-1)  
-Qtem \= normalized thematic relevance (0-1)  
-Qbiblio \= normalized bibliometric impact (0-1)
+$P_{final}$ = final selection score  
+$Q_{met}$ = normalized methodological quality (0–1)  
+$Q_{tem}$ = normalized thematic relevance (0–1)  
+$Q_{biblio}$ = normalized bibliometric impact (0–1)
 
 ## 2.7 Statistical Analyses
 
@@ -171,7 +176,7 @@ To empirically quantify methodological gaps and substantiate the operational cri
 
 To investigate the trade-off between explainability and algorithmic performance, the relationship between algorithmic explainability (ordinal scale 0–10 based on @Rudin2019) and accuracy was analyzed using Spearman's correlation [@Spearman1904]. Differences in accuracy between models with XAI (n=20 ) and without XAI (n=128 ) were evaluated by Student's t-test (t ) [@Student1908], verifying normality via Shapiro-Wilk [@Shapiro1965]. Computational overhead was compared using Mann-Whitney. Pareto analysis [@Pareto1896; @Deb2001] identified optimal algorithms under weighted utility function:U=0,4acurácia\+0,4explicabilidade\+0,2×(1-tempo normalizado) .
 
-To assess the accuracy reported in the studies and detect potential publication bias, a random effects meta-analysis [@Borenstein2009] was conducted using the metafor package [@Viechtbauer2010], transforming accuracies via logit to stabilize variances [@Barendregt2013]:logit(p)=ln\[p/(1-p)\] . Pooled accuracy was estimated by the REML model [@DerSimonian1986] with 95% CI. Heterogeneity was quantified by theI2 statistic [@Higgins2003]: low (\<25% ), moderate (25% –75% ), or high (\>75% ). Cochran's Q test [@Cochran1954] assessed the significance of heterogeneity (\=0,05 ). Meta-regression [@Thompson2002] investigated the effects of year of publication and sample size. Publication bias was detected by Egger's test [@Egger1997] and the trim-and-fill method [@Duval2000]. Stratified forest plots were generated following @Balduzzi2019.
+To assess the accuracy reported in the studies and detect potential publication bias, a random effects meta-analysis [@Borenstein2009] was conducted using the metafor package [@Viechtbauer2010], transforming accuracies via logit to stabilize variances [@Barendregt2013]:logit(p)=ln\[p/(1-p)\] . Pooled accuracy was estimated by the REML model [@DerSimonian1986] with 95% CI. Heterogeneity was quantified by theI2 statistic [@Higgins2003]: low (<25% ), moderate (25% –75% ), or high (>75% ). Cochran's Q test [@Cochran1954] assessed the significance of heterogeneity (=0,05). Meta-regression [@Thompson2002] investigated the effects of year of publication and sample size. Publication bias was detected by Egger's test [@Egger1997] and the trim-and-fill method [@Duval2000]. Stratified forest plots were generated following @Balduzzi2019.
 
 Finally, to assess compliance with open data governance principles, FAIR compliance was quantified using a standardized score (0–100 points) based on 12 binary indicators from @Wilkinson2016: DOI (F1), rich metadata (F2), public repository (A1), access protocol (A2), license (R1.1), source code (R1.2), interoperable format (I1), controlled vocabulary (I2), provenance (R1.3), community standard (I3), accessible API (A1.1), and versioning (R1.2). Each indicator contributed t100/128,33 ts. Scores were aggregated across the four FAIR dimensions by arithmetic mean. Temporal analysis employed Spearman's correlation [@Spearman1904]. Comparisons between studies with/without blockchain used Mann-Whitney. Multidimensional radar charts visualized FAIR profiles with the European Commission benchmark (75/100) [@EC2018].
 
