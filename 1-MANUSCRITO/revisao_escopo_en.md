@@ -53,7 +53,7 @@ Figure 1 presents the methodological flowchart, structured in four sequential ph
 
 **Figure 1.** Screening flowchart, eligibility, and synthesis for Machine Learning applications in Geographical Indications.
 
-![](2-FIGURAS/2-EN/ml_indicatescoes_geograficas.png){#fig:ml_indicatescoes width="80%"}
+![](2-FIGURAS/2-EN/ml_indicacoes_geograficas.png){#fig:ml_indicacoes width="80%"}
 
 ## 2.2 Search Strategy and Study Extraction
 
@@ -205,7 +205,7 @@ Manual methodological quality assessment resulted in an intraclass correlation c
 
 We adopt in this study the constitutive definition of Digital Terroir as the dynamic and continuous computational reconstruction of systemic interactions among soil, climate, biota, and human practices (the territorial genotype) and the final chemometric expression of the product (the phenotype), operating as an inferential Digital Twin [@Pylianidis2021; @Hensel2021]. Unlike traditional static cartography, which provides point representation of physical space, Digital Terroir correlates, in near real-time, environmental variables with high-dimensionality analytical signatures, converting ecological uncertainty into auditable evidence of authenticity and environmental compliance [@Guerena2024; @Nasirahmadi2022].
 
-This formulation dialogues with the Digital Twins framework applied to agroecosystems [@Pylianidis2021] and with the understanding of terroir as socioecological coupling [@Bramley2013; @LeFloc2016S], integrating computational inference with territorial foundations. The concept establishes an auditable link between product and ecosystem services [@Vandecandelaare2018FAO; @Belletti2017GeographicalIndications], transforming place identity into a testable and mathematically verifiable hypothesis.
+This formulation dialogues with the Digital Twins framework applied to agroecosystems [@Pylianidis2021] and with the understanding of terroir as socioecological coupling [@Bramley2013; @LeFloc2016S], integrating computational inference with territorial foundations. The concept establishes an auditable link between product and ecosystem services [@Vandecandelaare2018; @Belletti2017GeographicalIndications], transforming place identity into a testable and mathematically verifiable hypothesis.
 
 For technical operational recognition as Digital Terroir, a computational system must meet structured operational criteria, derived from methodological gaps identified in the review. Validation robustness constitutes primary requirement, demanding consistent performance through spatially independent validation with geographical partitioning [@Kuhn2013], longitudinal time series representative of climate variability interannual and transfer tests across comparable harvests, batches, and regions. Algorithmic transparency demands implementation of methods of Explainable Artificial Intelligence (XAI) [@Lundberg2017; @Rudin2019] capable of identifying territorial markers with physicochemical plausibility, tracing authentication decisions to causal environmental variables, and rejecting spurious correlations without ecological foundation.
 
@@ -273,7 +273,7 @@ Finally, data governance evaluated by FAIR principles reached a critical mean sc
 
 **Figure 7.** FAIR principles compliance for data governance. (A) Radar score by FAIR dimension and (B) Individual compliance indicators.
 
-![](2-FIGURAS/2-EN/fair_radar.png){#fig:fair_radar width="45%"} ![](2-FIGURAS/2-EN/fair_indicatesdores.png){#fig:fair_indicatesdores width="45%"}
+![](2-FIGURAS/2-EN/fair_radar.png){#fig:fair_radar width="45%"} ![](2-FIGURAS/2-EN/fair_indicadores.png){#fig:fair_indicadores width="45%"}
 
 
 ## 3.5.4 Inferential Synthesis and Operational Implications

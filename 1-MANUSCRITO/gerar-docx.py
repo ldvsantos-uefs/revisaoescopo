@@ -71,7 +71,7 @@ def gerar_docx(md_file, output_file, bib_file, csl_file, apendices_file=None):
     ])
     
     # Adicionar modelo de formatação se existir
-    modelo = Path("modelo_formatacao_new.docx")
+    modelo = Path("modelo_formatacao.docx")
     if modelo.exists():
         cmd.extend(["--reference-doc", str(modelo)])
     
@@ -189,7 +189,7 @@ def main():
     
     # Arquivos comuns
     bib_file = Path("referencias.bib")
-    csl_file = Path("apa.csl")
+    csl_file = Path("harvard.csl")
     apendices_pt = Path("apendices.md")
     
     # Verificar arquivos necessários
