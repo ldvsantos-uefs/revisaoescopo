@@ -253,6 +253,26 @@ Ausência de arestas ponte e de nós articuladores (structural holes não preenc
 ![](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain width="85%"}
 *Nota: Nós dimensionados por grau ponderado; cores representam módulos (modularidade $Q = 0,62$). Ausência de arestas ponte entre clusters espectroscópicos e cromatográficos evidencia ruptura de transferibilidade e necessidade de arquitetura multimodal para generalização adaptativa.*
 
+**Tabela 3.** Módulos Tecnológicos Identificados pela Análise de Comunidade Louvain
+
+| **Módulo** | **Algoritmos Principais** | **Técnicas Analíticas** | **Produtos** | **Região Predominante** |
+|:-------------:|:--------------|:--------------|:--------------|:--------------|
+| **M1** | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria | Vinho, Mel | África, Europa |
+| **M2** | SVM, KNN | Cromatografia (GC-MS, LC-MS, HPLC) | Carnes, Produtos Regionais | Ásia |
+| **M3** | Neural Networks, CNN, Deep Learning | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá | Europa, Ásia |
+
+*Fonte: Três principais módulos tecnológicos identificados pela análise de comunidade Louvain aplicada à rede de coocorrência entre algoritmos, técnicas analíticas e produtos com indicação geográfica. A densidade interna de cada módulo indica a força das conexões entre seus componentes.*
+
+**Tabela 4.** Famílias Tecnológicas Identificadas pela Análise de Cluster
+
+| **Cluster** | **Produto Principal** | **Técnica Analítica** | **Algoritmo ML** | **Aplicação** | **Região Predominante** |
+|------------|------------|------------|------------|------------|------------|
+| 1 | Mel | Espectroscopia NIR | SVM, KNN | Autenticação e detecção de fraude | Ásia |
+| 2 | Queijo | Espectroscopia NIR | Redes Neurais | Discriminação de origem | Europa |
+| 3 | Mel, Carnes | LC-MS, GC-MS | SVM, Random Forest, Árvores de Decisão | Autenticação e rastreabilidade | Ásia, Europa |
+
+*Fonte: Dez clusters identificados pela análise de cluster (k-means e hierárquica) baseada em produto, instrumento analítico, algoritmo e tipo de aplicação. Apenas os três clusters mais notáveis são detalhados aqui.*
+
 ## 3.5 Evidências quantitativas e meta‑análises
 
 A avaliação da robustez metodológica revelou que 77% dos estudos não implementaram particionamento geograficamente independente. Para mensurar o impacto dessa omissão, comparou-se o desempenho de modelos com validação espacial rigorosa versus aleatória. Conforme a Figura 5, a ausência de validação espacial resultou em uma queda média de acurácia de 11,82% em testes externos, comparada a 5,62% em modelos validados espacialmente. Essa discrepância (degradação relativa de 110%) foi estatisticamente significativa ($U = 2900, p < 0,001, d = 0,948$), corroborando a hipótese de superajuste espacial descrita por @Kuhn2013, onde a autocorrelação inflaciona métricas internas e compromete a utilidade certificatória.
@@ -343,23 +363,3 @@ Quando relevante, as perspectivas da comunidade, provenientes de organizações 
 
 ::: {#refs}
 :::
-
-## Tabela A.3: Módulos Tecnológicos Identificados pela Análise de Comunidade Louvain
-
-| **Módulo** | **Algoritmos Principais** | **Técnicas Analíticas** | **Produtos** | **Região Predominante** |
-|:-------------:|:--------------|:--------------|:--------------|:--------------|
-| **M1** | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria | Vinho, Mel | África, Europa |
-| **M2** | SVM, KNN | Cromatografia (GC-MS, LC-MS, HPLC) | Carnes, Produtos Regionais | Ásia |
-| **M3** | Neural Networks, CNN, Deep Learning | Espectroscopia (NIR, FTIR), Sensores (e-nose) | Azeite, Queijo, Chá | Europa, Ásia |
-
-*Fonte: Três principais módulos tecnológicos identificados pela análise de comunidade Louvain aplicada à rede de coocorrência entre algoritmos, técnicas analíticas e produtos com indicação geográfica. A densidade interna de cada módulo indica a força das conexões entre seus componentes.*
-
-### Tabela A.4: Famílias Tecnológicas Identificadas pela Análise de Cluster
-
-| **Cluster** | **Produto Principal** | **Técnica Analítica** | **Algoritmo ML** | **Aplicação** | **Região Predominante** |
-|------------|------------|------------|------------|------------|------------|
-| 1 | Mel | Espectroscopia NIR | SVM, KNN | Autenticação e detecção de fraude | Ásia |
-| 2 | Queijo | Espectroscopia NIR | Redes Neurais | Discriminação de origem | Europa |
-| 3 | Mel, Carnes | LC-MS, GC-MS | SVM, Random Forest, Árvores de Decisão | Autenticação e rastreabilidade | Ásia, Europa |
-
-*Fonte: Dez clusters identificados pela análise de cluster (k-means e hierárquica) baseada em produto, instrumento analítico, algoritmo e tipo de aplicação. Apenas os três clusters mais notáveis são detalhados aqui.*
