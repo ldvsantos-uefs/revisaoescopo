@@ -5,8 +5,8 @@ from pathlib import Path
 root = Path(r"c:\Users\vidal\OneDrive\Documentos\13 - CLONEGIT\revisaoescopo")
 manus_dir = root / "1-MANUSCRITO"
 bib_path = manus_dir / "referencias.bib"
-input_md = manus_dir / "revisao_escopo_pt_ajustado en-US.md"
-output_md = manus_dir / "revisao_escopo_en_synced.md"
+input_md = manus_dir / "revisao_escopo_en.md"
+output_md = manus_dir / "revisao_escopo_en.md"
 
 # Build mapping: (first_author_lower, year) -> citekey
 entry_re = re.compile(r"@\w+\{([^,\s]+)")
@@ -121,6 +121,4 @@ if "::: {#refs}" not in text:
 
 # Write synced copy and also update the original adjusted file
 output_md.write_text(text, encoding="utf-8")
-input_md.write_text(text, encoding="utf-8")
 print("Citations mapped. Output:", output_md)
-print("Original updated:", input_md)
