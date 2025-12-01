@@ -29,7 +29,9 @@ Terroir constitutes an intrinsically coupled socio-ecological system in which so
 
 The systemic complexity and diffuse nature of biogeochemical couplings limit the detection of ecosystem services by conventional metrics [@Levin1998ComplexAdaptiveSystems], weakening the governance of common goods and facilitating *greenwashing* practices [@Gale2023]. Given the inadequacy of classical analytical tools for landscape-scale monitoring [@Liao2023], this study proposes Digital Terroir as an Inferential Digital *Twin*. This approach is based on the dynamic computational reconstruction of interactions between the territorial genotype (soil, climate, and biota) and the product phenotype, converting ecological uncertainty into auditable evidence of environmental compliance [@Pylianidis2021; @Hensel2021; @Guerena2024].
 
-The operational validation of this system requires compliance with auditability criteria derived from methodological gaps identified in the literature. Inferential robustness is imperative, ensured through spatially independent validation and longitudinal stability in the face of climate variability [@Kuhn2013]. Simultaneously, causal transparency becomes mandatory, requiring Explainable Artificial Intelligence (XAI) methods to discriminate physical-chemical markers from spurious correlations [@Rudin2019]. Finally, data sovereignty must be guaranteed by adherence to FAIR principles and immutable audit trails, ensuring the reproducibility and traceability of inference [@Wilkinson2021; @Kshetri2014]. Consequently, Machine Learning serves as an intrinsic analytical mechanism to process the non-linearity of multiscale data, enabling the epistemic sovereignty of producing communities [@Li2022KGML_ag; @Santos2007Epistemologies]
+The operational validation of this system requires compliance with auditability criteria derived from methodological gaps identified in the literature. Inferential robustness is imperative, ensured through spatially independent validation and longitudinal stability in the face of climate variability [@Kuhn2013]. Simultaneously, causal transparency becomes mandatory, requiring Explainable Artificial Intelligence (XAI) methods to discriminate physical-chemical markers from spurious correlations [@Rudin2019]. 
+
+Finally, data sovereignty must be guaranteed by adherence to FAIR principles and immutable audit trails, ensuring the reproducibility and traceability of inference [@Wilkinson2021; @Kshetri2014]. Consequently, Machine Learning serves as an intrinsic analytical mechanism to process the non-linearity of multiscale data, enabling the epistemic sovereignty of producing communities [@Li2022KGML_ag; @Santos2007Epistemologies]
 
 On broad geographic scales, ML enables the auditability of ecosystem services, establishing a verifiable link between environmental compliance and market premiums, and mitigating the information asymmetries that lead to fraud and misappropriation [@Kshetri2014DigitalDivide].
 
@@ -47,7 +49,7 @@ The study employs the PCC (Population, Concept, Context) framework to formulate 
 **Table 1.** Review structure according to the PCC model.
 
 | Element | Description |
-| :---- | :---- |
+|:--------|:------------|
 | **P (Population)** | Geographical Indications, Designations of Origin, and Indications of Source recognized nationally and internationally, covering agri-food products (wines, cheeses, coffees, meats, olive oils), handicrafts, and other products with territorial identity. |
 | **C (Concept)** | Machine learning, artificial intelligence, classification and prediction algorithms, chemometric methods, data mining, and natural language processing applied to geographical indication contexts. |
 | **C (Context)** | Authentication of geographical origin, assessment of GI potential, identification of territorial determinants (soil, climate, production methods), classification and discrimination of products, decision support systems for certification, quality control, traceability, detection of fraud and adulteration, and territorial enhancement strategies. |
@@ -65,6 +67,7 @@ Figure 1 presents the methodological flowchart, structured in four sequential ph
 ## 2.2 Study Search and Extraction Strategy
 
 Databases queried included Scopus (Elsevier) and Web of Science (Clarivate Analytics), crossing three main thematic domains: machine learning and artificial intelligence techniques; geographic certification systems; and Geographical Indications/Designations of Origin.  
+
 The descriptors used controlled terminology in English and Boolean operators (AND, OR, NOT), covering publications from 2010 to 2025 to capture the state of the art. The search strategy followed this logic:
 
 *("machine learning OR "artificial intelligence OR "deep learning OR "supervised learning OR "unsupervised learning OR "ensemble methods) AND (“geographical indications OR “designations of origin OR “protected designations of origin) AND (“authentication OR “traceability OR “quality control OR “fraud detection OR “geospatial analysis)*.
@@ -97,11 +100,13 @@ Priority terms (5 points) represent the core conceptual review (e.g., *geographi
 ### 2.3.2 Algorithm Implementation and Validation
 
 For each record, the algorithm examines the title, abstract, and keywords, applies the category weights, and multiplies each occurrence by the location factor. The final score adds these products for all identified terms.  
+
 The empirical score distribution determined the minimum inclusion threshold, identifying the inflection point in the cumulative curve (Pareto/elbow criterion) and adjusting it through manual validation with stratified sampling. The final value represents the ideal balance between sensitivity and specificity, stabilizing the agreement between evaluators in borderline cases.
 
 ### 2.3.3 Participatory Validation and Algorithm Refinement
 
 To ensure scientific rigor, a validation protocol involving three independent reviewers specializing in machine learning and GI systems was implemented. The protocol included a systematic manual review of 272 studies to verify adherence to the inclusion criteria. An inter-rater agreement test verified the consistency of the classification [@Tricco2018].  
+
 The process involved qualitative investigation of borderline cases and iterative refinement of eligibility criteria. Validation resulted in a 90.2% agreement rate between the automated system and manual assessment, indicating high algorithmic effectiveness in thematic screening.
 
 ### 2.3.4 Coverage Verification and Automated Categorization
@@ -119,8 +124,8 @@ Each indicator received a score from 0 to 2: zero for unmet criteria or substant
 
 **Table 2.** Methodological quality indicators for ML-GI studies.
 
-| Code | Indicator | Domain |
-| :---: | :---: | :---: |
+| **Code** | **Indicator** | **Domain** |
+|:--------:|:--------------|:-----------|
 | RIG | Methodological rigor in the collection and processing of territorial data | Territorial Quality |
 | VAL | Technical validation of algorithms with appropriate metrics | Computational Quality |
 | ETI | Adherence to ethical protocols for research with producer communities | Ethical Quality |
@@ -137,6 +142,7 @@ The manual assessment included a consensus protocol. Initially, reviewers indepe
 ### 2.4.2 Specific Criteria for Interdisciplinary Studies
 
 Given the interdisciplinary nature of the studies, the quality criteria examined the consistency of quantitative-qualitative integration, validation in multiple geographic contexts, algorithmic transparency, ethical adherence, and practical applicability for certification.  
+
 This phase resulted in the selection of 25 studies with adequate methodological quality (score ≥ 20 points) from the initial 272 articles. These formed the basis for subsequent analyses. The distribution included 1 article of excellence (≥40 points), 2 of high relevance (≥30 points), and 22 adequate (≥20 points).
 
 ## 2.5 Third Phase: Bibliometric Analysis
@@ -172,9 +178,11 @@ Network analysis [@Csardi2006; @Schoch2020] was utilized to map co-occurrences b
 
 ### 2.7.2 Inferential Analyses for Validating Operational Criteria
 
-To empirically quantify methodological gaps and substantiate the operational criteria of Digital Terroir, four complementary inferential analyses were conducted. Seeking to analyze the impact of spatial validation on predictive performance, models with geographically independent partitioning ($n = 70$) were compared to conventional random partitioning ($n = 78$), calculating the percentage degradation in performance between internal validation and external tests. Differences were evaluated using Mann-Whitney U [@Mann1947], with effect size quantified by Cohen's $d$ [@Cohen1988]: small ($d = 0.2$), medium ($d = 0.5$), or large ($d = 0.8$) according to @Sawilowsky2009. Logistic regression [@Hosmer2013] estimated the odds ratio of high-performance (accuracy $\ge 85\%$) as a function of spatial validation, controlling for algorithm and product, following @Kuhn2013. 
+To empirically quantify methodological gaps and substantiate the operational criteria of Digital Terroir, four complementary inferential analyses were conducted. Seeking to analyze the impact of spatial validation on predictive performance, models with geographically independent partitioning ($n = 70$) were compared to conventional random partitioning ($n = 78$), calculating the percentage degradation in performance between internal validation and external tests. Differences were evaluated using Mann-Whitney U [@Mann1947], with effect size quantified by Cohen's $d$ [@Cohen1988], small ($d = 0.2$), medium ($d = 0.5$), or large ($d = 0.8$) according to @Sawilowsky2009. Logistic regression [@Hosmer2013] estimated the odds ratio of high-performance (accuracy $\ge 85\%$) as a function of spatial validation, controlling for algorithm and product, following @Kuhn2013. 
 
-To investigate the trade-off between explainability and algorithmic performance, the relationship between algorithmic explainability (ordinal scale 0–10 based on @Rudin2019) and accuracy was analyzed using Spearman's correlation [@Spearman1904]. Differences in accuracy between models with XAI ($n = 20$) and without XAI ($n = 128$) were evaluated by Student's t-test ($t$) [@Student1908], verifying normality via Shapiro-Wilk [@Shapiro1965]. Computational overhead was compared using Mann-Whitney. Pareto analysis [@Pareto1896; @Deb2001] identified optimal algorithms under weighted utility function: $$U = 0.4 \cdot \text{accuracy} + 0.4 \cdot \text{explainability} + 0.2 \cdot (1 - \text{normalized time})$$
+To investigate the trade-off between explainability and algorithmic performance, the relationship between algorithmic explainability (ordinal scale 0–10 based on @Rudin2019) and accuracy was analyzed using Spearman's correlation [@Spearman1904]. Differences in accuracy between models with XAI ($n = 20$) and without XAI ($n = 128$) were evaluated by Student's t-test ($t$) [@Student1908], verifying normality via Shapiro-Wilk [@Shapiro1965].
+
+Computational overhead was compared using Mann-Whitney. Pareto analysis [@Pareto1896; @Deb2001] identified optimal algorithms under weighted utility function: $$U = 0.4 \cdot \text{accuracy} + 0.4 \cdot \text{explainability} + 0.2 \cdot (1 - \text{normalized time})$$
 
 To assess the accuracy reported in the studies and detect potential publication bias, a random effects meta-analysis [@Borenstein2009] was conducted using the metafor package [@Viechtbauer2010], transforming accuracies via logit to stabilize variances [@Barendregt2013]: $\text{logit}(p) = \ln[p/(1-p)]$. Pooled accuracy was estimated by the REML model [@DerSimonian1986] with 95% CI. Heterogeneity was quantified by the $I^2$ statistic [@Higgins2003]: low ($< 25\%$), moderate ($25\% \text{--} 75\%$), or high ($> 75\%$). Cochran's Q test [@Cochran1954] assessed the significance of heterogeneity ($\alpha = 0.05$). Meta-regression [@Thompson2002] investigated the effects of year of publication and sample size. Publication bias was detected by Egger's test [@Egger1997] and the trim-and-fill method [@Duval2000]. Stratified forest plots were generated following @Balduzzi2019.
 
@@ -203,6 +211,7 @@ Manual assessment of methodological quality resulted in an intraclass correlatio
 ## 3.1 Overview of machine learning applications in geographical indications
 
 Analysis of 148 peer-reviewed studies (2010–2025) assesses the extent to which the current state of the art in machine learning applied to geographical indications meets the criteria of validation, transparency, data governance, and auditability proposed in Terroir Digital. Data indicate that supervised learning algorithms constitute the predominant approach for origin authentication in Geographical Indication systems. Random Forest and Support Vector Machines have been widely applied in spectroscopy and chromatography for wines, meats, and teas, achieving accuracies of 80–100% in controlled environments [@Xu2021; @Mohammadi2024].  
+
 The prevalence of supervised architectures over unsupervised methods reflects the availability of labeled datasets and the pressure for quantifiable accuracy metrics, as documented by @Liakos2018 in an analysis of Machine Learning trends in precision agriculture. Convolutional neural networks have become established specifically for hyperspectral data processing, while PLS-DA has remained relevant in chemometric preprocessing [@Rebiai2022; @Peng2025; @Feng2025], establishing an instrumental paradigm that favors high value-added products (wines, olive oils) over complex food matrices.
 
 Geographic distribution reveals a representativeness imbalance, with 72% of the corpus concentrated on European and Asian products, predominantly wines (34%), teas (18%), and olive oils (8%). This concentration indicates that the digital authentication infrastructure is advancing primarily in consolidated GI systems, while regions in the Global South have a lower volume of publications, reflecting disparities in access to analytical characterization technologies [@Belletti2017].
@@ -218,6 +227,7 @@ Network analysis corroborates the formation of distinct methodological clusters 
 ## 3.2 Temporal evolution of products and algorithms
 
 The temporal analysis of registered products showed distinct patterns between GI categories. Wines maintained constant representation with 14 products (2010–2025), peaking in 2021 and 2023 (3 registrations each). Honey showed concentrated growth in 2021–2024 (12 registrations), while olive-based products showed sporadic distribution (6 in total). Cheese and coffee remained underrepresented (4 and 1 registrations, respectively).  
+
 Spearman's correlation confirmed an upward trend for wines ($\rho = 0.615$, $p = 0.011$), indicating systematic expansion after 2020 [@Liakos2018]. This consolidation of wines as a dominant category reflects both the maturity of European GI systems and the availability of standardized spectral data, contrasting with the fragmentation observed in emerging categories such as coffee, where the heterogeneity of processing methods hinders the creation of universal chemical signatures.
 
 Algorithmic adoption showed a measurable transition. PLS-DA, dominant until 2018, was progressively replaced by Random Forest and SVM from 2019 onwards, following the availability of open-source ML libraries (scikit-learn, caret) and increased computational capacity [@Lavine2005]. Temporal correlation analysis showed significant changes for SVM ($\rho = 0.788$, $p < 0.001$) and Random Forest ($\rho = 0.677$, $p = 0.004$).
@@ -227,7 +237,6 @@ Neural Networks were the most widely adopted technique in 2020–2025 (33 applic
 Regional distribution remained stable, with 72% of studies concentrated in Europe and Asia. Representation of the Global South increased marginally from 18% to 22% in the period analyzed, suggesting persistent barriers related to laboratory infrastructure and access to scientific funding.
 
 **Figure 3.** Temporal evolution of (a) products with Geographical Indication (GI) registered by category and (b) adoption of the main Machine Learning algorithms in GI studies.
-
 ![](2-FIGURAS/2-EN/evolucao_temporal.png){#fig:temporal_evolution width="90%"}
 
 ## 3.3 Technological Families and Applications
@@ -243,7 +252,6 @@ The lack of bridge edges and articulating nodes (unfilled structural holes) impl
 
 **Figure 4.** Louvain communities in the algorithm–product–technique network.
  ![](2-FIGURAS/2-EN/louvain_modules_detailed.png){#fig:louvain width="85%"}
-
 
 *Note: Nodes sized by weighted degree; colors represent modules (modularity $Q = 0.62$). The absence of bridge edges between spectroscopic and chromatographic clusters highlights a break in transferability and the need for multimodal architecture for adaptive generalization.*
 
@@ -289,15 +297,18 @@ The meta-analysis of 129 studies indicated an overall (pooled) accuracy of 90.66
 
 *Note: PLS-DA and Random Forest have the highest consolidated accuracies, while SVM demonstrates greater robustness (lower variance between studies). Moderate heterogeneity (*$I^2 = 58\%$) indicates substantial methodological variability between studies. Confidence intervals represent estimates of random effects (REML model). $k = 129$ studies.
 
-Finally, data governance assessed by FAIR principles achieved a critical average score of 34.2/100. The Accessible dimension was the most deficient, with only 10.1% of studies depositing data in public repositories. The temporal analysis did not indicate significant improvements ($\rho = 0.235$, $p = 0.379$), evidencing the stagnation of a “black box” culture that prevents reproducibility and independent validation (Figure 8).
+Data governance assessed by FAIR principles revealed a critical structural deficit with an average score of 34.2/100 (±13.1), where only 12.8% of studies achieved the minimum adequacy threshold (≥50). As shown in Figure 8a, the radar plot of FAIR dimensions demonstrates that Findable presented the best relative performance (62%), driven by high DOI adoption rates. In contrast, Accessible emerged as the most deficient dimension (14.5%), with only 10.1% of studies depositing data in public repositories. The Interoperable (32%) and Reusable (28.3%) dimensions also fell substantially below European Commission benchmarks (target: 75/100). 
+
+Figure 8b details individual compliance indicators, revealing that only 10% provide data in repositories, 15% share source code, and 2% offer accessible APIs. Temporal analysis showed no significant improvement trend (Spearman $\rho = 0.235$, $p = 0.379$), indicating stagnation in open data culture. These deficits compromise independent cross-validation and perpetuate epistemic asymmetries between regions with consolidated laboratory infrastructure and the Global South.
 
 **Figure 8.** Compliance with FAIR principles of data governance. (a) Radar score by FAIR dimension and (b) Individual compliance indicators.
 
-![](2-FIGURAS/2-EN/fair_radar_2.png){#fig:fair_radar width="80%"} 
+![](2-FIGURAS/2-EN/fair_radar_2.png){#fig:fair_radar width="80%"}
 
 ## 3.5.4 Inferential Synthesis and Operational Implications
 
 The inferential synthesis of the corpus delineates four structural fractures that compromise the transition from current predictive models to an auditable Digital Terroir infrastructure. The first fracture constitutes an illusion of robustness derived from poor spatial validation. The omission of geographically independent partitioning in 77% of the studies precipitates a 110% greater performance degradation in external tests, with an average accuracy drop of 11.82% versus 5.62% in spatially validated models ($U = 2900$, $p < 0.001$, $d = 0.948$).  
+
 This methodological flaw, driven by residual spatial autocorrelation, hinders systems from functioning as "Adaptive Digital Twins," because by over-adjusting to local contexts, they become obsolete in the face of actual climate variability and fail to audit ecosystem services in analogous territories [@Kuhn2013; @Wadoux2021].
 
 Simultaneously, regulatory auditability is compromised by the marginalization of explainability. The predominance of opaque architectures in 86.5% of investigations contradicts guidelines for high-risk decisions [@Rudin2019], based on the false premise of a performance trade-off. Statistical evidence refutes this narrative, demonstrating that the difference in accuracy between black-box models and XAI models is statistically insignificant ($p = 0.218$), with the XGBoost algorithm emerging as the optimal solution (Pareto score $= 0.650$) by balancing accuracy and transparency. The insistence on opacity makes the legal defense of certification unfeasible, since regulatory agencies require causal traceability between chemical markers and environmental variables, and not just latent correlations that cannot be translated.
@@ -325,11 +336,12 @@ Operationalizing Digital Terroir relies not on increasing accuracy, but in restr
 ## 4. Conclusions
 
 This research reinforces the conceptualization of Geographical Indications as coupled socio-ecological systems, whose typicality emerges from nonlinear interactions between edaphoclimatic variables and cultural practices. Critical analysis confirms that while the inferential architecture of Machine Learning has the technical capacity to convert chemometric signatures into evidence of environmental compliance and , the current state of the art lacks the operational maturity necessary to sustain a full Inferential Digital Twin. This limitation is aggravated by the methodological concentration on consolidated chains in temperate regions, which not only reproduces epistemic asymmetries but also severely restricts technology transfer to the complex agrobiodiversity matrices of the Global South.  
+
 Continuous computational certification remains unfeasible due to critical structural deficits, notably the absence of independent spatial validation and the neglect of longitudinal testing under interannual climate variability. Overcoming this scenario and the consequent operationalization of Digital Terroir as an analytical layer of adaptive monitoring therefore requires the establishment of strict thresholds of regulatory robustness, defined by spatial post-validation accuracy and maximum performance degradation in external tests.
 
 Algorithmic explainability (XAI) must serve as a criterion for environmental due diligence, converting latent variables into traceable chemical-ecological justifications. Simultaneously, adherence to FAIR principles and the implementation of data security mechanisms ensure the integrity and immutability of records, which are indispensable requirements for enabling third-party auditing and shielding the system against fraud. Such operational thresholds transform performance metrics into safeguards of regulatory legitimacy.
 
-Attaining epistemic sovereignty demands a paradigmatic reorientation that replaces incremental competition for internal accuracy metrics with the construction of transparent computational governance based on open repositories. This structural change enables the transition to the Digital Terroir, which transcends mere instrumental advancement to constitute an ontological redefinition of certification: by computationally reconstructing the dynamic couplings between the territorial genotype and the product phenotype, the framework converts climate uncertainty into auditable evidence of ecosystem services, shielding Geographical Indications from greenwashing.
+Attaining epistemic sovereignty demands a paradigmatic reorientation that replaces incremental competition for internal accuracy metrics with the construction of transparent computational governance based on open repositories. This structural change enables the transition to the Digital Terroir, which transcends mere instrumental advancement to constitute an ontological redefinition of certification, by computationally reconstructing the dynamic couplings between the territorial genotype and the product phenotype, the framework converts climate uncertainty into auditable evidence of ecosystem services, shielding Geographical Indications from greenwashing.
 
 ## Acknowledgments
 

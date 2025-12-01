@@ -124,7 +124,7 @@ Cada indicador recebeu uma pontuação de 0 a 2: zero para critérios não atend
 **Tabela 2.** Indicadores de qualidade metodológica para estudos de ML-GI.
 
 | Código | Indicador | Domínio |
-|-------------------|----------------------------------|-------------------|
+|:------:|:----------|:----------|
 | RIG | Rigor metodológico na coleta e processamento de dados territoriais | Qualidade Territorial |
 | VAL | Validação técnica de algoritmos com métricas apropriadas | Qualidade Computacional |
 | ETI | Adesão a protocolos éticos para pesquisa com comunidades produtoras | Qualidade Ética |
@@ -134,7 +134,7 @@ Cada indicador recebeu uma pontuação de 0 a 2: zero para critérios não atend
 | DOC | Documentação completa de algoritmos e procedimentos de certificação | Qualidade Documental |
 | GEN | Generalização e transferibilidade dos métodos propostos | Qualidade Científica |
 
-### 2.4.1 Procedimentos de consenso e validação entre avaliadores
+### 2.4.1 Procedimentos de Consenso e Validação entre Avaliadores
 
 A avaliação manual incluiu um protocolo de consenso. Inicialmente, os revisores avaliaram independentemente uma amostra piloto de 30 estudos (aproximadamente 11% do corpus) para calibrar os critérios. Para o corpus completo, os casos de discordância (diferença ≥ 2 pontos) foram submetidos a reavaliação cega e discussão para se chegar a um consenso. O coeficiente de correlação intraclasse (CCI) foi calculado de acordo com @shrout1979, obtendo-se um valor de 0,87 (IC 95%: 0,84–0,91), indicando boa concordância.
 
@@ -259,7 +259,7 @@ A análise de comunidades Louvain e a análise de clusters hierárquicos revelar
 
 **Tabela 3.** Síntese dos Padrões Tecnológicos Identificados por Análise de Redes (Louvain) e Agrupamento (Cluster).
 
-| Padrão Tecnológico | Algoritmos Principais | Técnicas Analíticas | Produtos | Região Predominante | Aplicação Principal | Convergência Metodológica |
+| **Padrão Tecnológico** | **Algoritmos Principais** | **Técnicas Analíticas** | **Produtos** | **Região Predominante** | **Aplicação Principal** | **Convergência Metodológica** |
 |:---|:---|:---|:---|:---|:---|:---|
 | **Espectroscopia e Ensemble** | Random Forest, Decision Tree, Gradient Boosting | Espectroscopia (NIR), Quimiometria | Vinho, Mel | África, Europa | Autenticação e Classificação | Módulo M1 (Louvain) |
 | **Cromatografia e Discriminantes** | SVM, KNN, Random Forest | Cromatografia (GC-MS, LC-MS, HPLC) | Carnes, Mel, Produtos Regionais | Ásia, Europa | Rastreabilidade e Detecção de Fraude | Módulo M2 / Cluster 3 |
@@ -291,9 +291,9 @@ A meta-análise de 129 estudos indicou uma acurácia global (pooled) de 90,66% [
 **Figura 7.** Meta-análise de acurácias por algoritmo de Machine Learning.
 
 ![](2-FIGURAS/2-EN/meta_analise_algoritmos.png){#fig:meta_algoritmo width="90%"} 
-*Nota: PLS-DA e Random Forest apresentam as maiores acurácias consolidadas, enquanto SVM demonstra maior robustez (menor variância entre estudos). A heterogeneidade moderada (*$I^2 = 58\%$) indica variabilidade metodológica substancial entre estudos. Os intervalos de confiança representam estimativas de efeitos aleatórios (modelo REML). $k = 129$ estudos.
+*Nota: (a) Forest plot mostrando que PLS-DA apresenta maior acurácia pooled (93%), enquanto SVM demonstra maior robustez (menor variância). (b) Meta-regressão temporal evidenciando tendência marginalmente positiva (slope = 0,021, $p = 0,087$, $R^2 = 6,6\%$). A heterogeneidade moderada ($I^2 = 58\%$) indica variabilidade metodológica substancial. Modelo REML, $k = 129$ estudos.
 
-Por fim, a governança de dados avaliada pelos princípios FAIR atingiu um score médio crítico de 34,2/100. A dimensão Accessible foi a mais deficitária, com apenas 10,1% dos estudos depositando dados em repositórios públicos. A análise temporal não indicou melhorias significativas ($\rho = 0,235, p = 0,379$), evidenciando a estagnação de uma cultura de "caixa-preta" que impede a reprodutibilidade e a validação independente (Figura 8).
+A governança de dados avaliada pelos princípios FAIR revelou um déficit estrutural crítico com score médio de 34,2/100 (±13,1), onde apenas 12,8% dos estudos alcançaram o limiar mínimo de adequação (≥50). Conforme demonstrado na Figura 8a, o radar das dimensões FAIR evidencia que Findable apresentou o melhor desempenho relativo (62%), impulsionado por alta taxa de adoção de DOIs. Em contraste, Accessible emergiu como a dimensão mais deficitária (14,5%), com apenas 10,1% dos estudos depositando dados em repositórios públicos. As dimensões Interoperable (32%) e Reusable (28,3%) também ficaram substancialmente abaixo dos benchmarks da Comissão Europeia (meta: 75/100). A Figura 8b detalha os indicadores individuais de conformidade, revelando que apenas 10% disponibilizam dados em repositórios, 15% compartilham código-fonte e 2% fornecem APIs acessíveis. A análise temporal não identificou tendência significativa de melhoria (Spearman $\rho = 0,235$, $p = 0,379$), indicando estagnação na cultura de dados abertos. Esses déficits comprometem a validação cruzada independente e perpetuam assimetrias epistêmicas entre regiões com infraestrutura laboratorial consolidada e o Sul Global.
 
 **Figura 8.** Conformidade com princípios FAIR de governança de dados. (a) Score radar por dimensão FAIR e (b) Indicadores individuais de conformidade.
 
